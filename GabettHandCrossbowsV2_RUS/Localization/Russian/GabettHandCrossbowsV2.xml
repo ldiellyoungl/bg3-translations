@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<!--Weapon names and descriptions-->
+  <content contentuid="hbf5f6417gc365g4387gb8d0g777efacec8d5" version="1">Погибель Ахиллеса</content>
+  <content contentuid="h746916ffgb222g4b79g917ag15b63989e883" version="1">Этот ручной арбалет исключительно хорошо находит слабые места вашей цели.</content>
+  <content contentuid="h460f5590g3178g4fd4gbc4bg7c1e34a49675" version="1">Крадущийся в тенях</content>
+  <content contentuid="h75e37793g1a40g45c0gbbebg717e36508e2b" version="1">Ваши враги никогда не увидят вас.</content>
+  <content contentuid="hac175e73gad45g4d51gb3c0ge66af104043a" version="1">Быстрый ум</content>
+  <content contentuid="hc19acfabg60e1g4e3agb9f7gda2515d874ab" version="1">Действуй быстро — побеждай.</content>
+  <content contentuid="hac50a56agfa70g4b69g9095g247d07fedb8a" version="1">Тактик</content>
+  <content contentuid="h22f988beg0847g4f86g89e4gf036634fba09" version="1">Развивай преимущество.</content>
+  <content contentuid="h61b028adgf440g4c1dgb06cg1bef15585090" version="1">Болт на все случаи</content>
+  <content contentuid="hbc36e4abg5b43g47e5g8ec3gf09c6f922331" version="1">Вы смотрите на болты этого арбалета: они пылают оранжевым огнём. Нет, они блестят ледяным инеем. Нет, погодите, они потрескивают электричеством. Погодите, вообще-то... Вы перестаёте смотреть на болты арбалета.</content>
+  <content contentuid="h540d59a4g7ffag4609gb866gd5b1dffee285" version="1">Болт на некоторые случаи</content>
+  <content contentuid="h6f911b03gb020g43b9ga895gb52957384835" version="1">Младший братик Болта на все случаи.</content>
+  <content contentuid="hd6716261g82f7g40adgb6adg3f70b0f7bdbd" version="1">Водяной пистолет</content>
+  <content contentuid="h48deabd5gd7cag4fdcgb361gbf3f29d5a5fa" version="1">Вам даже владение огнестрельным оружием не нужно!</content>
+  <content contentuid="h34a7bfb4g3ee0g4183g9571g4a8c07114052" version="1">Электрошокер</content>
+  <content contentuid="h6a7a62eeg45d1g4479g8507g0b1a86597712" version="1">Поразительно, до чего удобен этот арбалет.</content>
+  <content contentuid="h21862491ga516g45fcg9c7dge2afa735a7a9" version="1">Подходящий инструмент</content>
+  <content contentuid="h53dc7f25gba5eg4b01g993agf74672a597e0" version="1">Импровизируй. Адаптируйся. Побеждай.</content>
+  <content contentuid="hbbfe74cag6d7eg4dc9g9d8bg8fe757330627" version="1">Безпромах Делюкс</content>
+  <content contentuid="h2021e836g3bc9g4374gb293g19cda8603dea" version="1">Отправьте врагов в нокдаун.</content>
+  <content contentuid="ha9e61b9ege501g4366gb457g8830870a73e2" version="1">Очаровательный ручной арбалет</content>
+  <content contentuid="h4e6cb6dagf700g4ca6g9285g8f6d73221648" version="1">В этом арбалете есть что-то... неотразимое.</content>
+  <content contentuid="h8ce112afg0fc9g461bgbbb6g212a67d362cd" version="1">Мудрый ручной арбалет</content>
+	<content contentuid="h4f0b2644g6068g42edgbe92gf41d13cd7551" version="1">«Я изрекаю мудрость». «Что за мудрость?» «Царап — самый хороший мальчик». «Это хорошая мудрость».</content>
+  <content contentuid="h08dbb4a9g53a3g4891gb8d3g3f2548427ca5" version="1">Умный ручной арбалет</content>
+  <content contentuid="h338d1605gf655g4632g9e5bg6d5aee8d9597" version="1">Не даст врагам блеснуть умом.</content>
+  <content contentuid="h471828c1gcbe9g4e05gbceeg5eb07ff00b73" version="1">Тинкертоп Болтбластер 1000</content>
+  <content contentuid="hcdf7d095g753bg4276ga86eg25c0982e00d9" version="1">Прототип арбалета, изобретённый Клеффом Тинкерторпом из города Хаппердук.</content>
+  <content contentuid="ha69374d6g3b39g42eag9338gdb85c316042d" version="1">Безпромах Ультра-Делюкс</content>
+  <content contentuid="h624862ecgd17ag4ba0gaacbg7a7ee56f5f81" version="1">Сила, с которой считаются.</content>
+  <content contentuid="h121ecaf4g0b28g4592g93c3g909f4dbaa6d8" version="1">Дань</content>
+  <content contentuid="h0184a0c8g8e6fg49deg8b1dg3f59ebdc823e" version="1">На этом арбалете с любовью выгравирована череда имён: dezitk, dimzki, dmarquez, Grimpreacher, HEIIFIREJINX, ZazyMomba.</content>
+  <content contentuid="ha632f6ffg4925g439eg8f65gbe3f7522a6e0" version="1">Фазовый удар</content>
+  <content contentuid="hf9c204f7gce60g4317ga4e2ga35b2f950ead" version="1">Эфирный ручной арбалет, он вибрирует между реальностями, отражая сущность фазовых пауков.</content>
+  <content contentuid="h3b4dc6b9gc1ffg47aag877dg1d939ae6c033" version="1">Арканный бластер</content>
+  <content contentuid="heeea5d1cg546ag4ac9gb454gaba70db632cd" version="1">Этот ручной арбалет украшен арканными символами и испускает слабую магическую ауру.</content>
+  <content contentuid="h1d38bfeeg2ac0g485eg9488gfb1950ff6659" version="1">Жалохвост</content>
+  <content contentuid="ha00fe9a6gd91eg4f47g8eadg896ed09d022b" version="1">У этого ручного арбалета резная рукоять в форме хвоста скорпиона, и он слабо светится зелёным.</content>
+  <content contentuid="hb97a9312g9018g4cecga78egceda1a15a540" version="1">Ручной арбалет «Двойной выстрел»</content>
+  <content contentuid="h722202d4g23ceg414cga19eg0dd7579a96a0" version="1">У этого арбалета два параллельных стрелковых канала и болты для двойного выстрела.</content>
+  <content contentuid="h3397a405gd06eg45e9g8c10g95d3c200ca42" version="1">Похититель душ</content>
+  <content contentuid="h977a4fe0g2150g4c6egbdbbga6bf80a510b1" version="1">Этот жуткий ручной арбалет сделан из тёмного дерева и украшен теневыми гравировками.</content>
+
+	<!--Passive names and descriptions-->
+  <content contentuid="hd6eec9b1g4715g4b30ga8afgea956b1f9235" version="1">Арбалет стихий</content>
+  <content contentuid="hc0c9f4e6gaa56g49dcgae36g8f316b8b6a02" version="1">В зависимости от того какой урон это оружие нанесёт может наложить статус: &lt;LSTag Type="Status" Tooltip="ACID"&gt;Кислота&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Отравлен&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="CHILLED"&gt;Оледенение&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Горение&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="SHOCKED"&gt;Шок&lt;/LSTag&gt; или &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;Потеря равновесия&lt;/LSTag&gt;, если цель не преуспеет в спасброске Телосложения &lt;LSTag Tooltip="SavingThrow"&gt;&lt;/LSTag&gt;.</content>
+  <content contentuid="h17f31ca6g5a2dg4c5ag92adg446fafc9b50d" version="1">Очаровывающее оружие</content>
+  <content contentuid="h8c5c44a2g0f34g49d1g99f1gac1cd59b5b0c" version="1">Это оружие наносит дополнительный урон, равный вашему модификатору &lt;LSTag Tooltip="AbilityModifier"&gt;Харизмы&lt;/LSTag&gt;.</content>
+  <content contentuid="hbdddfa88gb092g4792gaeadg990112114fb9" version="1">Мудрое оружие</content>
+  <content contentuid="hf20b88e1ga26cg411egb938ge0f6d1663fbe" version="1">Это оружие наносит дополнительный урон, равный вашему модификатору &lt;LSTag Tooltip="AbilityModifier"&gt;Мудрости&lt;/LSTag&gt;.</content>
+  <content contentuid="h1b8f4ddbgd910g42ebga115gacfee5ff117e" version="1">Умное оружие</content>
+  <content contentuid="h0715577fgd225g4f1ag9c1cg4dbd13f090a4" version="1">Это оружие наносит дополнительный урон, равный вашему модификатору &lt;LSTag Tooltip="AbilityModifier"&gt;Интеллекта&lt;/LSTag&gt;.</content>
+  <content contentuid="hd444a3f4gc18eg42a3g81f0gd9166fc99f39" version="1">Быстрые пальцы</content>
+  <content contentuid="hda4c3529gf7f7g425dg9d95g578ed1e175eb" version="1">Когда вы наносите &lt;LSTag Tooltip="CriticalHit"&gt;критический удар&lt;/LSTag&gt; этим оружием, вы получаете  &lt;LSTag Tooltip="Action"&gt;дополнительное действие&lt;/LSTag&gt;.</content>
+  <content contentuid="h62b7a45dg38e7g4fcegb590gcc50bcd89b4d" version="1">Осечка</content>
+  <content contentuid="h05987fd2g32e8g4004gb735ga5f43b6b67bb" version="1">При критическом промахе арбалет даёт осечку, нанося владельцу 1d6 колющего урона.</content>
+  <content contentuid="h52b99f39g85e4g4662g9e9bg166962bd2879" version="1">Мощный</content>
+  <content contentuid="hbf4762ceg827ag4552ga73ega77b7ec52d14" version="1">При успешном попадании может наложить статус &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;Потеря равновесия&lt;/LSTag&gt;.</content>
+  <content contentuid="ha83e6b8dg63beg4d23gbff2ga24bf7e78bec" version="1">Благодарность создателя</content>
+
+	
+	<!--Spell names and descriptions-->
+  <content contentuid="h955acab7g1c59g42f9ga481g7fae4123ce4f" version="1">Стихийный болт</content>
+  <content contentuid="h33239a24gabc9g4303ga4b9g5475871cccb1" version="1">Даёт вашему оружию +1 к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и дополнительный урон кислотой, ядом, холодом, огнём, электричеством или громом в размере 1d4 при попадании, в зависимости от выбранного типа болта.</content>
+  <content contentuid="hb2ab3a0ege6bag4215g8271gadc9181ab84f" version="1">Арбалет можно снять и снова надеть, но он должен оставаться при заклинателе.</content>
+  <content contentuid="h28c18268g1787g4acbgbfe4g8ae705703829" version="1">Болт кислоты</content>
+  <content contentuid="hab0acfbbg657eg4d17ga392g8daa0a589cb6" version="1">Болт яда</content>
+  <content contentuid="hbfba4659g1262g441ag8001g22cbf0890e43" version="1">Болт льда</content>
+  <content contentuid="h278de668gd0ceg4b2eg840bgccf85c2cc639" version="1">Болт огня</content>
+  <content contentuid="hdce0673agfe1cg4851g9e40gbe7f4a4f1f33" version="1">Болт молнии</content>
+  <content contentuid="h8dc376e2g8474g47d6gbdc6g1e355d4363f4" version="1">Болт грома</content>
+  <content contentuid="hb1a94583g6520g4932gb6a1gd3126f6d9476" version="1">Даёт +1 к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и наносит дополнительный [1]</content>
+  <content contentuid="hd93118a6g8f0ag4a9fgafe1gb3fa1b8c55a2" version="1">Арканный залп</content>
+  <content contentuid="hac1c00f7g9668g473dg83d3g2a89b8a46a94" version="1">Раз за бой вы можете использовать &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, чтобы совершить дальнобойную атаку по до 3 отдельным целям в пределах дистанции. Каждая цель получает 1d6 урона силовой урон.</content>
+  <content contentuid="hea6df4b0gac60g464eg871ag4505657bee2a" version="1">Ядовитое жало</content>
+  <content contentuid="h636b51aag06a2g4690gaba7g84d5e1dd59d5" version="1">Раз за бой вы можете использовать &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, чтобы выпустить ядовитый болт, который наносит 1d6 колющего урона и 1d6 урона ядом при попадании, и дополнительный 1d4 урона ядом в начале следующих 2 ходов цели. Если атака промахивается, цель всё равно получает половину изначального урона, но не получает урона в последующих ходах.</content>
+  <content contentuid="hc242fe27g5fedg4721g874bg4d413644aa51" version="3">Ужален</content>
+  <content contentuid="h66a1f536gd34bg430fg9422g247241c403e9" version="3">Получает [1] в начале своего хода.</content>
+  <content contentuid="h5bba7a07g3678g45b0g9f49gf6ce5d896d2d" version="1">Двойные болты</content>
+  <content contentuid="h51f23f07g5de2g4c6bg89b5g275daea90918" version="1">Раз за бой вы можете использовать &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, чтобы выпустить два болта одновременно в одну и ту же цель. При промахе вы получаете штраф 1d4 к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и &lt;LSTag Tooltip="SavingThrow"&gt;спасброскам&lt;/LSTag&gt; на 1 ход.</content>
+  <content contentuid="h5acc08c9gc54bg4097g8814g12b5ec24dbf7" version="1">Вытягивание сущности</content>
+  <content contentuid="h5da7d8b5ge945g4fc3ga0a5ge597014cdc0a" version="1">Раз за бой вы можете использовать &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, чтобы совершить дальнобойную атаку, которая наносит дополнительный 1d6 некротического урона и восстанавливает вам 1d6 &lt;LSTag Tooltip="HitPoints"&gt;очков здоровья&lt;/LSTag&gt;.</content>
+</contentList>
+

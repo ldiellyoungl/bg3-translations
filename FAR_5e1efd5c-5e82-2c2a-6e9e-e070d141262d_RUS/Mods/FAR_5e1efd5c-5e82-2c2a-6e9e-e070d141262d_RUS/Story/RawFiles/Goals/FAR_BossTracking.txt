@@ -1,0 +1,374 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+LevelLoaded(_)
+AND
+NOT DB_FAR_BossKillCount(_)
+THEN
+DB_FAR_BossKillCount(0);
+
+IF
+SavegameLoaded()
+AND
+NOT DB_FAR_BossKillCount(_)
+THEN
+DB_FAR_BossKillCount(0);
+
+// NPC that aren't flagged as IsBoss are now SetIsBoss
+IF
+LevelLoaded(_)
+THEN
+SetIsBoss((GUIDSTRING)S_FOR_OwlBear_e903a41f-8ef7-46dc-a847-7d0ec2804d08, 1);
+SetIsBoss((GUIDSTRING)S_DEN_DruidLeader_95eb2b0b-a522-4ea5-8167-c5f4d1418156, 1);
+SetIsBoss((GUIDSTRING)S_PLA_ConflictedFlind_Boss_34464430-fed8-4f50-86d5-bd35846920a0, 1);
+SetIsBoss((GUIDSTRING)S_UND_Myconid_BroodingSovereign_82af0858-d739-4c9d-84c8-5e6760e22e46, 1);
+SetIsBoss((GUIDSTRING)S_UND_PetrifiedDrow_Spectator_39ff8241-fadd-4fbe-ab89-fc5a8b7638a0, 1);
+SetIsBoss((GUIDSTRING)S_UND_TheDrowNere_06bf05c5-216b-4eaf-91f5-8f1dd3d57f30, 1);
+SetIsBoss((GUIDSTRING)S_SCL_Drider_aa59ce01-3d2e-42e8-a539-c07e0ea292ab, 1);
+SetIsBoss((GUIDSTRING)S_GLO_Orthon_1dc8091d-2af6-4d33-9268-998ef266d19c, 1);
+SetIsBoss((GUIDSTRING)S_SCL_BlightCombat2_Mound_01_1b294fe0-f1a1-4e81-9d4c-8d86bbda7d2b, 1);
+SetIsBoss((GUIDSTRING)S_LOW_Guildhall_NineFingers_ef1b7a12-6439-470a-885c-fa47851728cd, 1);
+SetIsBoss((GUIDSTRING)S_LOW_Lorroakan_a9d4b71d-b0ef-429e-8210-6dc8be986ee9, 1);
+
+IF
+LevelGameplayStarted(_, _)
+THEN
+SetIsBoss((GUIDSTRING)S_FOR_OwlBear_e903a41f-8ef7-46dc-a847-7d0ec2804d08, 1);
+SetIsBoss((GUIDSTRING)S_DEN_DruidLeader_95eb2b0b-a522-4ea5-8167-c5f4d1418156, 1);
+SetIsBoss((GUIDSTRING)S_PLA_ConflictedFlind_Boss_34464430-fed8-4f50-86d5-bd35846920a0, 1);
+SetIsBoss((GUIDSTRING)S_UND_Myconid_BroodingSovereign_82af0858-d739-4c9d-84c8-5e6760e22e46, 1);
+SetIsBoss((GUIDSTRING)S_UND_PetrifiedDrow_Spectator_39ff8241-fadd-4fbe-ab89-fc5a8b7638a0, 1);
+SetIsBoss((GUIDSTRING)S_UND_TheDrowNere_06bf05c5-216b-4eaf-91f5-8f1dd3d57f30, 1);
+SetIsBoss((GUIDSTRING)S_SCL_Drider_aa59ce01-3d2e-42e8-a539-c07e0ea292ab, 1);
+SetIsBoss((GUIDSTRING)S_GLO_Orthon_1dc8091d-2af6-4d33-9268-998ef266d19c, 1);
+SetIsBoss((GUIDSTRING)S_SCL_BlightCombat2_Mound_01_1b294fe0-f1a1-4e81-9d4c-8d86bbda7d2b, 1);
+SetIsBoss((GUIDSTRING)S_LOW_Guildhall_NineFingers_ef1b7a12-6439-470a-885c-fa47851728cd, 1);
+SetIsBoss((GUIDSTRING)S_LOW_Lorroakan_a9d4b71d-b0ef-429e-8210-6dc8be986ee9, 1);
+
+IF
+LevelGameplayStarted(_, _)
+THEN
+PROC_FAR_InitTrackerPassive();
+
+IF
+SavegameLoaded()
+THEN
+PROC_FAR_InitTrackerPassive();
+PROC_FAR_SyncBossUI();
+
+IF
+DB_PartyMembers((CHARACTER)_PartyMember)
+THEN
+PROC_FAR_GrantTrackerPassive(_PartyMember);
+
+PROC
+PROC_FAR_InitTrackerPassive()
+AND
+DB_Players((CHARACTER)_Player)
+THEN
+PROC_FAR_GrantTrackerPassive(_Player);
+
+PROC
+PROC_FAR_GrantTrackerPassive((CHARACTER)_Player)
+AND
+NOT HasPassive(_Player, "FAR_BossCounter_Passive", 1)
+THEN
+AddPassive(_Player, "FAR_BossCounter_Passive");
+
+// Kill Counter
+IF
+Died((CHARACTER)_Boss)
+AND
+IsBoss(_Boss, 1)
+AND
+DB_FAR_BossKillCount(_CurrentCount)
+AND
+IntegerSum(_CurrentCount, 1, _NewCount)
+THEN
+NOT DB_FAR_BossKillCount(_CurrentCount);
+DB_FAR_BossKillCount(_NewCount);
+PROC_FAR_ApplyBossDeathTracker();
+PROC_FAR_SyncBossUI();
+
+PROC
+PROC_FAR_ApplyBossDeathTracker()
+AND
+DB_PartyMembers(_PartyMember)
+THEN
+ApplyStatus(_PartyMember, "FAR_BOSS_DEATH_TRACKER", 6.0, 1);
+
+IF
+TeleportedToCamp((CHARACTER)_Character)
+AND
+DB_Avatars(_Character)
+AND
+NOT DB_FAR_CampSequenceActive(_Character)
+THEN
+DB_FAR_CampSequenceActive(_Character);
+TimerLaunch("FAR_CampSequenceTimer", 4000);
+
+IF
+TimerFinished("FAR_CampSequenceTimer")
+AND
+DB_Avatars(_Character)
+AND
+NOT QRY_FAR_IsCutscenePlaying(_Character)
+THEN
+NOT DB_FAR_CampSequenceActive(_Character);
+PROC_FAR_EvaluateCampSequence(_Character);
+
+IF
+TimerFinished("FAR_CampSequenceTimer")
+AND
+DB_Avatars(_Character)
+AND
+QRY_FAR_IsCutscenePlaying(_Character)
+THEN
+TimerLaunch("FAR_CampSequenceTimer", 2000);
+
+// Opens Yes/No prompt after message box is closed
+IF
+MessageBoxClosed((CHARACTER)_Character, _Message)
+AND
+DB_FAR_WaitingForCampMessageClose(_Character)
+AND
+DB_FAR_UIEnabled(1)
+AND
+GetHostCharacter((CHARACTER)_Host)
+THEN
+NOT DB_FAR_WaitingForCampMessageClose(_Character);
+OpenMessageBoxYesNo(_Host, "Вы по-прежнему хотите, чтобы счетчик боссов был включен?");
+
+IF
+MessageBoxClosed((CHARACTER)_Character, _Message)
+AND
+DB_FAR_WaitingForCampMessageClose(_Character)
+AND
+NOT DB_FAR_UIEnabled(1)
+AND
+GetHostCharacter((CHARACTER)_Host)
+THEN
+NOT DB_FAR_WaitingForCampMessageClose(_Character);
+OpenMessageBoxYesNo(_Host, "Хотите отобразить счётчик боссов?");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Player, "Вы по-прежнему хотите, чтобы счетчик боссов был включен?", 1)
+THEN
+DB_FAR_UIEnabled(1);
+PROC_FAR_SyncBossUI();
+ShowNotification(_Player, "Boss Counter Enabled.");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Player, "Вы по-прежнему хотите, чтобы счетчик боссов был включен?", 0)
+THEN
+NOT DB_FAR_UIEnabled(1);
+PROC_FAR_SyncBossUI();
+ShowNotification(_Player, "Boss Counter Hidden.");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Player, "Хотите отобразить счётчик боссов?", 1)
+THEN
+DB_FAR_UIEnabled(1);
+PROC_FAR_SyncBossUI();
+ShowNotification(_Player, "Boss Counter Enabled.");
+
+IF
+MessageBoxYesNoClosed((CHARACTER)_Player, "Хотите отобразить счётчик боссов?", 0)
+THEN
+NOT DB_FAR_UIEnabled(1);
+PROC_FAR_SyncBossUI();
+ShowNotification(_Player, "Boss Counter Hidden.");
+
+PROC
+PROC_FAR_SyncBossUI()
+AND
+GetHostCharacter((CHARACTER)_Host)
+AND
+DB_FAR_BossKillCount(_Count)
+AND
+IntegerToReal(_Count, _CountReal)
+AND
+RealSubtract(0.0, 9999.0, _Floor)
+THEN
+PartyIncreaseActionResourceValue(_Host, "FAR_BossCount", _Floor);
+PartyIncreaseActionResourceValue(_Host, "FAR_BossCount", _CountReal);
+PROC_FAR_SyncUIVisibility(_Host);
+
+PROC
+PROC_FAR_SyncUIVisibility((CHARACTER)_Host)
+AND
+DB_FAR_UIEnabled(1)
+THEN
+PROC_FAR_SetUIVisibility(_Host, 1);
+
+PROC
+PROC_FAR_SyncUIVisibility((CHARACTER)_Host)
+AND
+NOT DB_FAR_UIEnabled(1)
+THEN
+PROC_FAR_SetUIVisibility(_Host, 0);
+
+PROC
+PROC_FAR_SetUIVisibility((CHARACTER)_Host, (INTEGER)_State)
+AND
+IntegerToReal(_State, _StateReal)
+AND
+RealSubtract(0.0, 9999.0, _Floor)
+THEN
+PartyIncreaseActionResourceValue(_Host, "FAR_BossCount_Visible", _Floor);
+PartyIncreaseActionResourceValue(_Host, "FAR_BossCount_Visible", _StateReal);
+
+// No pop up if in cutscene or dialog
+QRY
+QRY_FAR_IsCutscenePlaying((CHARACTER)_Character)
+AND
+DB_DialogPlayers(_,_,_)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_FAR_IsCutscenePlaying((CHARACTER)_Character)
+AND
+DB_DialogRequestCache_SpeakerList_Players(_,_,_,_)
+THEN
+DB_NOOP(1);
+
+QRY
+QRY_FAR_IsCutscenePlaying((CHARACTER)_Character)
+AND
+DB_Camp_Faded(_Character, _)
+THEN
+DB_NOOP(1);
+
+PROC
+PROC_FAR_EvaluateCampSequence((CHARACTER)_Character)
+AND
+DB_FAR_BossKillCount(_Count)
+AND
+_Count < 3
+AND
+NOT DB_FAR_MessageShown_Tier(0)
+THEN
+DB_FAR_WaitingForCampMessageClose(_Character);
+OpenMessageBox(_Character, "Уничтожение могущественных врагов усиливает вашу связь с Древним Плетением.<br>Победите 3 боссов, чтобы пробудить свой разум и открыть необычные руны усиления.");
+DB_FAR_MessageShown_Tier(0);
+
+PROC
+PROC_FAR_EvaluateCampSequence((CHARACTER)_Character)
+AND
+DB_FAR_BossKillCount(_Count)
+AND
+_Count >= 3
+AND
+_Count < 10
+AND
+NOT DB_FAR_MessageShown_Tier(3)
+THEN
+DB_FAR_WaitingForCampMessageClose(_Character);
+OpenMessageBox(_Character, "Ваша обостренная связь с Древним Плетением позволяет вам расшифровывать Необычные Руны Улучшения. Теперь вы можете использовать их, и торговцы начнут предлагать их на продажу.<br>Победите 10 боссов, чтобы понять Редкие Руны.");
+PROC_FAR_ApplyUnlockToParty("FAR_UNCOMMON_UNLOCKED");
+DB_FAR_MessageShown_Tier(3);
+
+PROC
+PROC_FAR_EvaluateCampSequence((CHARACTER)_Character)
+AND
+DB_FAR_BossKillCount(_Count)
+AND
+_Count >= 10
+AND
+_Count < 20
+AND
+NOT DB_FAR_MessageShown_Tier(10)
+THEN
+DB_FAR_WaitingForCampMessageClose(_Character);
+OpenMessageBox(_Character, "Дальнейшее знакомство с Древним Плетением проясняет ваше зрение. Теперь вы можете читать и использовать Редкие Руны Улучшения, и торговцы расширят свой ассортимент в соответствии с ними.<br>Победите 20 боссов, чтобы расшифровать Очень Редкие Руны.");
+PROC_FAR_ApplyUnlockToParty("FAR_UNCOMMON_UNLOCKED");
+PROC_FAR_ApplyUnlockToParty("FAR_RARE_UNLOCKED");
+DB_FAR_MessageShown_Tier(3);
+DB_FAR_MessageShown_Tier(10);
+
+PROC
+PROC_FAR_EvaluateCampSequence((CHARACTER)_Character)
+AND
+DB_FAR_BossKillCount(_Count)
+AND
+_Count >= 20
+AND
+_Count < 30
+AND
+NOT DB_FAR_MessageShown_Tier(20)
+THEN
+DB_FAR_WaitingForCampMessageClose(_Character);
+OpenMessageBox(_Character, "Ваш разум всё глубже погружается в Древнее Плетение. Теперь вы можете расшифровывать Очень редкие руны Улучшения, и торговцы будут предлагать их вам.<br>Победите 30 боссов, чтобы получить в своё распоряжение Легендарные руны.");
+PROC_FAR_ApplyUnlockToParty("FAR_UNCOMMON_UNLOCKED");
+PROC_FAR_ApplyUnlockToParty("FAR_RARE_UNLOCKED");
+PROC_FAR_ApplyUnlockToParty("FAR_VERYRARE_UNLOCKED");
+DB_FAR_MessageShown_Tier(3);
+DB_FAR_MessageShown_Tier(10);
+DB_FAR_MessageShown_Tier(20);
+
+// Unlocking Legendary auto-disables the boss counter
+PROC
+PROC_FAR_EvaluateCampSequence((CHARACTER)_Character)
+AND
+DB_FAR_BossKillCount(_Count)
+AND
+_Count >= 30
+AND
+NOT DB_FAR_MessageShown_Tier(30)
+AND
+GetHostCharacter(_Host)
+THEN
+NOT DB_FAR_UIEnabled(1);
+PROC_FAR_SetUIVisibility(_Host, 0);
+ShowNotification(_Host, "Attunement complete. Boss Counter disabled.");
+OpenMessageBox(_Character, "Ваше посвящение в Древнее Плетение завершено. Легендарные руны усиления открыты для использования и покупки.");
+PROC_FAR_ApplyUnlockToParty("FAR_UNCOMMON_UNLOCKED");
+PROC_FAR_ApplyUnlockToParty("FAR_RARE_UNLOCKED");
+PROC_FAR_ApplyUnlockToParty("FAR_VERYRARE_UNLOCKED");
+PROC_FAR_ApplyUnlockToParty("FAR_LEGENDARY_UNLOCKED");
+DB_FAR_MessageShown_Tier(3);
+DB_FAR_MessageShown_Tier(10);
+DB_FAR_MessageShown_Tier(20);
+DB_FAR_MessageShown_Tier(30);
+
+PROC
+PROC_FAR_ApplyUnlockToParty((STRING)_Status)
+AND
+DB_PartyMembers(_PartyMember)
+THEN
+ApplyStatus(_PartyMember, _Status, -1.0, 1);
+
+IF
+DB_PartyMembers((CHARACTER)_PartyMember)
+AND
+DB_FAR_MessageShown_Tier(3)
+THEN
+ApplyStatus(_PartyMember, "FAR_UNCOMMON_UNLOCKED", -1.0, 1);
+
+IF
+DB_PartyMembers((CHARACTER)_PartyMember)
+AND
+DB_FAR_MessageShown_Tier(10)
+THEN
+ApplyStatus(_PartyMember, "FAR_RARE_UNLOCKED", -1.0, 1);
+
+IF
+DB_PartyMembers((CHARACTER)_PartyMember)
+AND
+DB_FAR_MessageShown_Tier(20)
+THEN
+ApplyStatus(_PartyMember, "FAR_VERYRARE_UNLOCKED", -1.0, 1);
+
+IF
+DB_PartyMembers((CHARACTER)_PartyMember)
+AND
+DB_FAR_MessageShown_Tier(30)
+THEN
+ApplyStatus(_PartyMember, "FAR_LEGENDARY_UNLOCKED", -1.0, 1);
+EXITSECTION
+
+ENDEXITSECTION

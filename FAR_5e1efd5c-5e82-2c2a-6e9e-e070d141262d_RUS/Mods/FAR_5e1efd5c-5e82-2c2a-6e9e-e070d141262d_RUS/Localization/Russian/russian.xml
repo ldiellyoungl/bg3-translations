@@ -1,0 +1,1151 @@
+<?xml version="1.0"?>
+<contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <content contentuid="h6885c1a9gd554g4988g1650g30e3b5787b3d" version="13">Руна усиления</content>
+  <content contentuid="h537eba2bg5846gdcf8g5cf1g31bdcf6442f7" version="13">Усилить</content>
+  <content contentuid="h70a32d0dgf009g42a6g3d23g523221dca3fb" version="13">Заменяет активные эффекты других рун при использовании.</content>
+  <content contentuid="hb3773e49g26c5g30a8g5825g0bbd34ea90f6" version="13">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h91208a86g3054g7e80g78e6g826a199bd6d4" version="3">Влияние Тамплиеров</content>
+  <content contentuid="h5334e525g25a3gab08g07b3gb0f375f6e5d1" version="3">Атаки булавами, моргенштернами и цепами наносят дополнительный +[1] урон.</content>
+  <content contentuid="h17830034g9907ge646g6875g809ccec2bb81" version="2">Летальность Убийцы</content>
+  <content contentuid="h77cc2601gce13g1bdcg85d0ge7a56263ccec" version="2">Атаки кинжалами, короткими мечами и скимитарами наносят дополнительный +[1] урон.</content>
+  <content contentuid="h7ca24ef6gaedagd9b2g8384g24cb0f30279a" version="8">Необычная руна усиления</content>
+  <content contentuid="hb5d8f7d5g5413g8756g5f81ga68b3bcef6f8" version="8">Усилить</content>
+  <content contentuid="h0379ca9agbf86g7d7dg8697gaf7b55c16908" version="7">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_01"&gt;Летальность Убийцы&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="hfb97f7cegfc79g47b7g169cg9d552f88d458" version="7">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="he38b055egbd19g17f9g8e0ag073462461daf" version="9">Необычная руна усиления</content>
+  <content contentuid="h62b1a66age559g485agd431gf930e91e9d10" version="9">Усилить</content>
+  <content contentuid="hd2493fc8g2868gf07dgfe1bg4542a73e3371" version="9">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_02"&gt;Влияние Тамплиеров&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h24a6c40fg1cd3gcdbcg7d57g4cf658fcd9b9" version="9">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7ef7d4e8g6101gcf87g8f83g10ce026314d7" version="1">Наставление рыцаря</content>
+  <content contentuid="h7741b669g1285gd6cdg5614g3fd320b4f7e0" version="1">Атаки длинными мечами, боевыми топорами и боевыми молотами получают бонус +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броску атаки&lt;/LSTag&gt;.</content>
+  <content contentuid="h164be327g3f78g9751g8b98g481b986e9c16" version="1">Точность палача</content>
+  <content contentuid="hf76a3ce5g82ccg7125g7a5eg7ca9e7d2ccf9" version="1">Атаки двуручными мечами, двуручными топорами и молотами получают +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броску атаки&lt;/LSTag&gt;.</content>
+  <content contentuid="hd3a8a29eg76f3g16b0ga24cg4be7e7a16005" version="1">Фокусирование фалангой</content>
+  <content contentuid="h453c3fadg0d2ag6ac4g9b6eg28f0b45f62e6" version="1">Атаки алебардами, глефами и пиками получают +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броску атаки&lt;/LSTag&gt;.</content>
+  <content contentuid="hb00730f0g9904gb0f3g6d99gfbaa83b729ee" version="3">Необычная руна усиления</content>
+  <content contentuid="he6105416gbff6g4c9eg41f3g12c122475628" version="3">Усиливает</content>
+  <content contentuid="h9f990e11gc851g7e24ga2eagdd04158ffbdc" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_03"&gt;Наставление рыцаря&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="hf9d929eeg0742g57e7g47dcg672918625f03" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hb63c17c9gd0cagb122gd230g6ff5ee324080" version="3">Необычная руна усиления</content>
+  <content contentuid="hca3b10d2g6cb6g8305g905bgf815467d4049" version="3">Усиливает</content>
+  <content contentuid="h4fec9649g3f33g63d5ge678g08727660689e" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_04"&gt;Точность палача&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="ha85baaeag6d54g4383g467cgc74fc18776de" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h2db3f53cg2885g2963g426fg49a16e6e2834" version="3">Необычная руна усиления</content>
+  <content contentuid="hcab54f04g8883g9d86g8211g7b585ce206cd" version="3">Усиливает</content>
+  <content contentuid="hc52e4babg827dg1cdfg57b8g0419bd2fda5c" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_05"&gt;Фокусирование фалангой&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="ha1ee0303g6148g4f2fg0d26g62917996c119" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hb8e70e38gece4ga502g1b28g26ef778bf75f" version="1">Точность Боксёра</content>
+  <content contentuid="h1090cc8aga93cgc053g8a59g79a8ae3247f2" version="2">Атаки безоружия получают +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броску атаки&lt;/LSTag&gt;.</content>
+  <content contentuid="haf66dd18g7dddg9a33g99fag81d791560f7f" version="1">Наставление Снайпера</content>
+  <content contentuid="h5dbeee80gde72gc178ga3adgd26f6ade29e6" version="1">Атаки длиными луками и тяжелыми арбалетами получают +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броску атаки&lt;/LSTag&gt;.</content>
+  <content contentuid="h21728340ge5ddg5080g2bd0g2d10f1cfa202" version="1">Воздействие Застрельщика</content>
+  <content contentuid="h0e9340b6g21e0g9d8cg1fedg86613f27c0aa" version="1">Атаки короткими луками, легкими арбалетами и одноручными арбалетами получают +[1] урона.</content>
+  <content contentuid="h61ba8645g5635g0774g7aa9g57941eaa368c" version="1">Вспышка Эвокации</content>
+  <content contentuid="h8e1f0e95g40bcgb42bg9ea6g9e69a31cf42d" version="2">Произнесение заклинания школы эвокации высвобождает слабый кинетический импульс, отталкивая врагов в пределах [2] назад на [1].</content>
+  <content contentuid="h33ce3fdbgdb89g4385g85c2g77bce716a911" version="1">Оберег Преграждения</content>
+  <content contentuid="h8ccaa430gf52dg2b27gf060gfdd348ccafc6" version="2">Произнесение заклинания школы преграждения даёт [1] &lt;LSTag Tooltip="TemporaryHitPoints"&gt;временное количество очков здоровья&lt;/LSTag&gt; до начала следующего хода.</content>
+  <content contentuid="hd1055c5bg4bc0g1c57g4e6cgdc580978c40d" version="1">Некротическое Вытягивание</content>
+  <content contentuid="h73de1fbdgd7fcg6bbbg591bg9a57596fec68" version="2">Произнесение заклинания школы некромании восстанавливает [1].</content>
+  <content contentuid="hc1f6b8c2ge841gb71bge425g6b52a6b13a45" version="1">Призрачная Иллюзия</content>
+  <content contentuid="h53360cd4g6f4cgdf25gc874gf3ee83fb1683" version="2">Произнесение заклинаний школы иллюзий увеличивает скорость передвижения на [1] на [2] хода.</content>
+  <content contentuid="hbe7b8b5cga014g9121g4de5g182a6deb8ce3" version="1">Барьер Трансмутации</content>
+  <content contentuid="h075340efga66bgaefegb3ecgaf353b46d7df" version="3">Произнесение заклинаний школы трансмутации уменьшает входящие[1] и[2] на [3] до начала вашего следующего хода.</content>
+  <content contentuid="h6e95cedbgc92bgc214g7da8g8c3e06b36cc3" version="1">Сдвиг Воплощения</content>
+  <content contentuid="h11a10be0gcd6dgfecdgd31fg593613389462" version="2">Произнесение заклинаний школы воплощения увеличивает дальность прыжка на [1] на [2] хода.</content>
+  <content contentuid="he19855cbg5a07g6919gb592g970f70f3f0ca" version="1">Понимание Прорицания</content>
+  <content contentuid="hd3961f2egf8beg04a5gad0cg0911451d6ed1" version="2">Произнесение заклинаний школы прорицания даёт +[1] к вашему броску атаки до конца вашего следующего хода.</content>
+  <content contentuid="h6216070cgdb0dgb5e2g2a63g4f138732886e" version="1">Обворожительное Очарование</content>
+  <content contentuid="h05a050aagb2cfg9e78g3707gb7b448c85001" version="2">Применение заклинания зачарования уменьшает скорость передвижения цели на [1] на [2] ход.</content>
+  <content contentuid="hf77f5ddcg78e2g9898g139fg1be47f63f6ce" version="1">Быстрый Шаг</content>
+  <content contentuid="h9d9cec48g3b5eg8049g26b0g6f4ab9bec8aa" version="4">Во время боя, если у вас осталось меньше [1] скорости передвижения, вы получаете дополнительно [3] скорости передвижения и бонус +[2] к ловкости &lt;LSTag Tooltip="SavingThrow"&gt;Спасбросок&lt;/LSTag&gt; пока не начнется ваш следующий ход.</content>
+  <content contentuid="h938cb5e0g9fcbg319eg9c4dgb238e4cf8ffd" version="1">Возрождение жизненной энергии</content>
+  <content contentuid="hb4d1c4fegc7e1g6445g240egf3f9d426451b" version="2">Употребление любого зелья лечения дополнительно даёт +[1] очко здоровья.</content>
+  <content contentuid="h2e15a47bged94g1a49g52e0g9e0ddc32523f" version="1">Прочная Стойка</content>
+  <content contentuid="h2726446cg5df1g5c07g88c0g36c8e2999f08" version="2">Входящий физический урон уменьшается на [1].</content>
+  <content contentuid="h6cf0349cg4f85g0bb8g9ddfg360581de4f93" version="2">Дресировщик Животных</content>
+  <content contentuid="h544ded13g5ca2g8684gfc9ag8296f9126292" version="2">Даёт бонус +[1] к проверке навыка обращения с животными и уменьшает урон получаемый от зверей на [2].</content>
+  <content contentuid="hb74ffe9fga84cgbdaeg43ebgbd1e68096dbc" version="1">Акробатическое Восстановление</content>
+  <content contentuid="h6b676505gb3a4g1b3cge4b0gfbeda8573fa8" version="2">Даёт бонус +[1] к проверке на акробатику и увеличивает дистанцию прыжка на [2].</content>
+  <content contentuid="h56939720g1f06gac9dg7ff3g4e90aec95fc4" version="1">Скрытная Походка</content>
+  <content contentuid="h394826ffgbec2gc1f8gba92gc6049d48e23b" version="2">Даёт бонус +[1] к проверке на скрытность.</content>
+  <content contentuid="h6f2db476g0354g58e8ge096g57928f5d19e1" version="1">Адское пламя Жалка</content>
+  <content contentuid="h30dcce8ag4789g811eg097bg5f066d93392c" version="1">Преобразует все ед. урона от оружия в [1].</content>
+  <content contentuid="ha43bdb20g9c2dg1206gd413gaad708b38d2a" version="2">Сокрушительное Падение Медвесыча</content>
+  <content contentuid="h45c0b380g8ed2ge12fg44c2g67dae3ab03ad" version="2">При приземлении наносит [1] целям в радиусе [2].</content>
+  <content contentuid="hd28d642agf209g5e3ag40a6g926a2a3851a0" version="1">Горькое благодеяние тетушки Этель</content>
+  <content contentuid="h1fcf3dc9g1497g2b73g655dgd5edbf29bee1" version="3">Употребление любого зелья лечения дает вам бонус +[1] ко всем спасброскам до начала вашего следующего хода.</content>
+  <content contentuid="hab232d6eg1e18g6756gfa56g4beef536eaba" version="1">Свирепость Дрор Разглина</content>
+  <content contentuid="hb04c5c7bgf235g8bb0g4eacga0e6202ff5af" version="1">Атаки ближнего боя двуручным оружием наносят дополнительные +[1].</content>
+  <content contentuid="h9e03cfe1gbe3eg1cacg3020ge0130cb0c40d" version="1">Адское пламя Жалка</content>
+  <content contentuid="hd217da79gca1eg8d28g587ag4eff3d7b796f" version="1">Преобразует все ед. урона от оружия в [1].</content>
+  <content contentuid="he739e500g39c1g10dfg9478g5121936dfb0c" version="1">Адское пламя Жалка</content>
+  <content contentuid="hb0b3be87g77c5gfbe5g48eeg932a38ec5299" version="1">Преобразует все ед. урона от оружия в [1].</content>
+  <content contentuid="h1289487age31ag24e3gc4afg272fa69dd444" version="5">Рунный фьюзер</content>
+  <content contentuid="ha119f3ccg9290gac3aga4dcga68d6fbec1e5" version="5">Рунный фьюзер</content>
+  <content contentuid="he3823b12g3074gb063g0238g20415bd4d189" version="5">Используется для объединения рун усиления.</content>
+  <content contentuid="h79a0af2cg65b2g46b7gbb26g4bb376d163b7" version="13">Мешочек с рунами</content>
+  <content contentuid="ha99f18a2g23a7g1119gfb18ge1ccb3844fc7" version="13">Содержит случайную руну усиления.</content>
+  <content contentuid="ha2f8996fg6466g3d6bgc8d7g15472c4fede7" version="3">Используется для переплавки 3-х рун одинаковой редкости для получения другой той же редкости.</content>
+  <content contentuid="h22a37221g7333g3468g62ecg31106273d842" version="1">Оберег Преграждения</content>
+  <content contentuid="hed763866g4d57g144eg302cg91a624b413e9" version="1">Даёт [1] &lt;LSTag Tooltip="TemporaryHitPoints"&gt;временное количество очков здоровья&lt;/LSTag&gt;.</content>
+  <content contentuid="h9f5d29beg9daegd14dg9eefge2561a558d3c" version="1">Вспышка Эвокации</content>
+  <content contentuid="hf6fd3cbeg50b4gffefg1a30g93172043c4da" version="1">Вспышка Эвокации</content>
+  <content contentuid="h4b75ec26g1663g00c4gf3c9g52b1391119a3" version="1">Призрачная Иллюзия</content>
+  <content contentuid="h2bfbe6afg7cc0gcf9cgede0gaa83a242e20c" version="1">Скорость передвижения увеличивается на [1].</content>
+  <content contentuid="h30d02732gbbdfg23bdgb0f3g5eeb33128269" version="1">Барьер Трансмутации</content>
+  <content contentuid="h065786ccgdc90gdda4ge88fg915e83b734c6" version="1">Входящие[1] и[2] уменьшаются на [3].</content>
+  <content contentuid="h2939ef43g994dg8240g0545g9d7281162f94" version="1">Сдвиг Воплощения</content>
+  <content contentuid="h7efcc974g1e62g8230gc757ge101c14d7e45" version="1">Дальность прыжка увеличивается на [1].</content>
+  <content contentuid="h924eb0a2gcd71g9ac3g9fefgb53b51b1afe7" version="1">Понимание Прорицания</content>
+  <content contentuid="hfc3329feg1175g6f92gfccag3062adbb3ab9" version="1">Ваш следующий бросок атаки имееет +[1] бонус.</content>
+  <content contentuid="hf719b33ag0edeg7349g09d0g086518243d3d" version="1">Обворожительное Очарование</content>
+  <content contentuid="h6ce1d974gcb9bg903bg7873g55b3b93dbde3" version="1">Скорость передвижения снижается из-за [1].</content>
+  <content contentuid="ha7bc3568g1885g4675g2d2ag862b4efe1e3c" version="2">Ускоренное Исцеление</content>
+  <content contentuid="hf56f0628g43f2g1facg338ag5b246d204a84" version="2">Изменчивый оплот</content>
+  <content contentuid="h83af2390g7136g931cg502dge13416cb67aa" version="3">Необычная руна усиления</content>
+  <content contentuid="h37a4c1fag4f33g418egc706g2418f9d3038c" version="3">Усиливает</content>
+  <content contentuid="hc23a76ceg0531ge6d7g4d09g4791942e801b" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_06"&gt;Точность Боксёра&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="heaef12f1g8f59ga511g23e4g25a5c38343b0" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hc094583cg92a6g661cge71egb6b6034651c7" version="3">Необычная руна усиления</content>
+  <content contentuid="ha4166f3cg49d4g6cd0gb59dg413827c96a26" version="3">Усиливает</content>
+  <content contentuid="h1368a8ceg598cg3ce5g038ag7a390d00ad18" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_07"&gt;Наставление Снайпера&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h2dcc82c5g7e92g750ag4ceag8f1e5a3a9789" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hcdccf0abg3707gef77gbccdg101efa37f370" version="3">Необычная руна усиления</content>
+  <content contentuid="h65e393c5g345ega37fg6f6fgdbe734cc854b" version="3">Усиливает</content>
+  <content contentuid="ha355e250g800fg8c8eg8376g01ac9ab247a9" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_08"&gt;Воздействие Застрельщика&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h53a6713dg93fbg3adcgd106g86a29df0be8f" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hfc591a9fg0f72g5d24g987dgceece7c570b1" version="3">Необычная руна усиления</content>
+  <content contentuid="h2fca5cd5gc478gac0agb9ccgc82c24a9118c" version="3">Усиливает</content>
+  <content contentuid="hf1d3d5eege996gc7a7g372eg5ef8f83bf899" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_09"&gt;Вспышка Эвокации&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="ha806862eg4876g101fgb2ebg8cc0900aaca9" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h0c49a070g8a12ge3ccg3a95gb2bd495de78e" version="3">Необычная руна усиления</content>
+  <content contentuid="hdb0910c8gd62bg8ef4g4330g47c21adb040e" version="3">Усиливает</content>
+  <content contentuid="h1f00f8b9gd8a3gb26cg0f9fgdacd742a9f9c" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_10"&gt;Оберег Преграждения&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h6820496ag0556g7838g9c4dg35704999ef49" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h3b5257f3g368dgebc6g3189g1c16950885db" version="3">Необычная руна усиления</content>
+  <content contentuid="h200ef37egffedgfb92g137cgc41a9eddf28a" version="3">Усиливает</content>
+  <content contentuid="hb4bd216ag0760g84e4g2519gbf6ec8c4e795" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_11"&gt;Некротическое Вытягивание&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h8f98fcdegfa22g482bg0554g71d444cc7288" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h1fc9cf58gc4cbga88bg89bfg0e73c51fe4d6" version="3">Необычная руна усиления</content>
+  <content contentuid="ha02bb597g966bg8eaage9e5g7153e521808d" version="3">Усиливает</content>
+  <content contentuid="h7eeb9748ge150g3159g0b75g12a4bb774c37" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_12"&gt;Призрачная Иллюзия&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h41e4e699g3c02g4709g555bg6ebb93fa80da" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7675db67g1638g0b6dgf61cg1530debc3da8" version="3">Необычная руна усиления</content>
+  <content contentuid="hdee360c8gb4b0g932fg7d8eg7807a4ddcd5f" version="3">Усиливает</content>
+  <content contentuid="hb2d04730gacfdgc9aegd9feg6e9098371137" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_13"&gt;Барьер Трансмутации&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h2729c151gf669gad8egcd2dg54395d122a97" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hdd1650e8gb9c3g3f50gfea5gb51a802c7d1a" version="3">Необычная руна усиления</content>
+  <content contentuid="h518022ceg81a6ge2dbgcc04gf075af6e4288" version="3">Усиливает</content>
+  <content contentuid="hcc360206g843ag6788g3f36g3257b84a4974" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_14"&gt;Сдвиг Воплощения&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h3460736ega319g1f85gb493g8704ed201349" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h75ef0e9ag2abcgf675g6ed1g03d8e889c4b6" version="3">Необычная руна усиления</content>
+  <content contentuid="h60167882g36a0g5484g277cgcf4e8c0d796e" version="3">Усиливает</content>
+  <content contentuid="h6a29fcf1g70feg4a9eg1248gc3bf261687d2" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_15"&gt;Понимание Прорицания&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h27e9de61g40c5g1433gd090g1eaa6bd9510c" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h2d856721g6492g6cddg0554gafbce6866073" version="3">Необычная руна усиления</content>
+  <content contentuid="h999d60c8geb4eg70b9g8c6cg16924ee57e15" version="3">Усиливает</content>
+  <content contentuid="hfc6940e0g6c0bga724g60cbg182ae92b0ac9" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_16"&gt;Обворожительное Очарование&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h3cb248aeg913cgc86dgaec8g9cd9326500e1" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h2aef4189g0b1dgafc3g3517gf4d2bc68d1e8" version="3">Необычная руна усиления</content>
+  <content contentuid="h946291bcg0ae1g40b5g5cb6g4da5ebe5bb18" version="3">Усиливает</content>
+  <content contentuid="hee8d69c4ga94ag5777g4434g58a6974a9d53" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_17"&gt;Быстрый Шаг&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h4ada3eacg3469geed9g60c4g2d379093a811" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h21fa4d8eg6f5eg2ad1gc9ffgf2b0f33e0e22" version="3">Необычная руна усиления</content>
+  <content contentuid="h98273954g197ag6a1dg7d1bga94a38520ff5" version="3">Усиливает</content>
+  <content contentuid="hcf4d3280geeb0g6e4bgd999gb475fc2f55b6" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_18"&gt;Возрождение жизненной энергии&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h6fcd49f9ga22cg4123g5f25g2a514c5aaeaf" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h607a9bfbg7f2bg9c2dg364dgb3001ecaa2d5" version="3">Необычная руна усиления</content>
+  <content contentuid="h32b4e140g20edg10c0g6770gda319b554e6e" version="3">Усиливает</content>
+  <content contentuid="hcfcc20bbgaa0ag8a4ag928dg85d56bbce908" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_19"&gt;Прочная Стойка&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="hbd064f0agf2d8ga946g891bge64af07a2bec" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="he5e13037gea3fg7a76g962dg4fcfe2f44ce9" version="3">Необычная руна усиления</content>
+  <content contentuid="h94ce8443g9ff8g94a8g2368gcae136d1fb2e" version="3">Усиливает</content>
+  <content contentuid="h88f7a299g440dg4d17g3b8eg628e052faf8e" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_20"&gt;Beast Tamer&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h27f1c6bagd1cdg0485g2f82g07fd11e902e3" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h0d814df0g68b9g2898g0bf6ge9dbc70f5cc1" version="3">Необычная руна усиления</content>
+  <content contentuid="h43674ebbg4891gdd55gb567g769e62fd439e" version="3">Усиливает</content>
+  <content contentuid="h9d9a5de8gc97bg792ag1f93g82419ce92c33" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_21"&gt;Акробатическое Восстановление&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h6e833a56gf1d0g4c60gb87ag7fe0a49a8554" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="he855da1bg7e20g3728gbc39ga67df0908c3e" version="3">Необычная руна усиления</content>
+  <content contentuid="hffb64de4ga854g6b07g61b1gf0a439a45bba" version="3">Усиливает</content>
+  <content contentuid="h76cb806dga400g12c9g2cb5g512239dfdc26" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_22"&gt;Скрытная Походка&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="ha10c4f93g8c14ge31ag32b0g8d4e89c7bab8" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h8d08773fgeb17gc69ag00f6g6cc991aa49fa" version="9">Необычная руна усиления</content>
+  <content contentuid="h748acc88ge1b3gec4cg07fbgd736fd91835a" version="9">Усиливает</content>
+  <content contentuid="h08a49aa0g844cg1535gfaf2g982df00dc963" version="9">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_23_SECRET"&gt;Ускоренное Исцеление&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="hab83f4c7g9f70gf768ga023gc44395123447" version="9">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hd7315c0bgcb13gd993gfd16gb4e1221da746" version="9">Необычная руна усиления</content>
+  <content contentuid="h2e079abfg017egd446g8019g9f931d038a3b" version="9">Усиливает</content>
+  <content contentuid="h2ba082b7g9652gd5fdg6f82gf87b2d525984" version="9">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_UNCOMMON_24_SECRET"&gt;Изменчивый оплот&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="hbb20c0d1g87c3g1042gd9bag094b44bd09ac" version="9">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hcb73db2bg70b1g3098g6599gff8660ce0d92" version="4">Мешочек с рунами</content>
+  <content contentuid="hc0db5803g6b33ga55eg920fg181d4027964e" version="4">Содержит случайную руну усиления.</content>
+  <content contentuid="h0a5c3640g7574gd2fcg53f5gdf19d511a26b" version="6">Мешочек с рунами</content>
+  <content contentuid="h1138d456gd7e1geb68g265cga59ee0bfa808" version="6">Содержит случайную руну усиления.</content>
+  <content contentuid="h36e76f76g76a9g8e2bg7515g48424ce18daa" version="4">Мешочек с рунами</content>
+  <content contentuid="hb711077ag6d2cg7b25g72cdga6ba2f257394" version="4">Содержит случайную руну усиления.</content>
+  <content contentuid="h151cb088gc327gf53ag36fbg473425310100" version="4">Редкая руна усиления</content>
+  <content contentuid="h6c3fd2f4g0d99g8c64g3389gb047f551250d" version="4">Усиливает</content>
+  <content contentuid="h9cf55679g73d2gcbb5g4d67ga5d3397663af" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_01"&gt;Острый край&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="he5153a49gf5f2g5193g96c4gcd08b8770b10" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h6545c994g5824g1f9cg01ebg9e0fe1a97b24" version="5">Редкая руна усиления</content>
+  <content contentuid="h91ff1e8bgb3a3g82ffg45acga05cfa7ceafb" version="5">Усиливает</content>
+  <content contentuid="h6748ef26g986cg4c9fg7ec3g07402f68a6b8" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_02"&gt;Точка прокола&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hff41cd9ag92feg6a96g4501g3b5ea779446a" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h651e460agd2ecgbb39g49bbga6a4f148b9b4" version="5">Редкая руна усиления</content>
+  <content contentuid="h6bc8f159g7f60g1681g8817g9bffef865375" version="5">Усиливает</content>
+  <content contentuid="heb669769gab29g3622g7c7agc8666c477f34" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_03"&gt;Ударная сила&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h796dd288gfa59g9680gea38g7301d94b0fe2" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="ha94c89ccg6117g3d4egdbfcg621d87eed0dd" version="5">Редкая руна усиления</content>
+  <content contentuid="h668aa12cg50a0g6afag4e13ge28ebd449380" version="5">Усиливает</content>
+  <content contentuid="h2f035723g8cfdgfe09gde10g3ce763ab1d62" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_04"&gt;Ярость боксёра&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hf1cc7a62g8440g2d96g2172ge62fa104abe3" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h419bdfa3ge24fg83b1g0dbag6f6c049b823c" version="5">Редкая руна усиления</content>
+  <content contentuid="h80e38092g2e33g3ca2gdeefgd83a3ae0fd07" version="5">Усиливает</content>
+  <content contentuid="hacc5b874g777eg6028g45e3g19065a346ef8" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_05"&gt;Токсичное покрытие&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="he729e69dg65c9g14a9g0df6gc9c0e12eca34" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h2aed256bg1c2cg7638ge076g6063fec2a3ac" version="2">Острый край</content>
+  <content contentuid="h6657a57eg8df7gce0cg9f3dg4988204bcc44" version="3">При использовании оружия[1] у вас есть [2]% шанс вызвать &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;кровотечение&lt;/LSTag&gt;.</content>
+  <content contentuid="h098d9da1g5616g8129g3735g0e2c8dab4758" version="2">Точка прокола</content>
+  <content contentuid="h8995c414gb9d2gf358g7bedg32593431f248" version="1">При использовании оружия[1] у вас есть [2]% шанс вызвать кровотечение.</content>
+  <content contentuid="hc8aebc6ag201ag1d0ag7e27ge2394a7fbc92" version="2">Ударная сила</content>
+  <content contentuid="h16e81f2fg2276g87cdg1d9fgc74dab456016" version="2">Ярость боксёра</content>
+  <content contentuid="h86033724ge05dgf4c6g0d61g4bcbc14bb4f8" version="2">Токсичное покрытие</content>
+  <content contentuid="h753435a9g1fd5g51bag9374g7623c001acc7" version="2">При использовании оружия[1] у вас есть [2]% шанс вызвать &lt;LSTag Type="Status" Tooltip="GAPING_WOUND"&gt;Глубокие раны&lt;/LSTag&gt;.</content>
+  <content contentuid="hf726b2fbgee03g81efg86dfg9ee01a5591fb" version="2">При использовании оружия[1] у вас есть [2]% шанс вызвать &lt;LSTag Type="Status" Tooltip="DAZED"&gt;Дезориентацию&lt;/LSTag&gt;.</content>
+  <content contentuid="hefa53424gaf88g861ega8fbg4c0b447fa867" version="1">Безоружные атаки дополнительно наносят [1] урона.</content>
+  <content contentuid="h213cd818g54e7g97b2g493ag1167e5456264" version="1">При совершении атаки оруджием ближнего боя у вас есть [1]% шанс наложить эффект Отравления на [2] хода.</content>
+  <content contentuid="hd03b05f6gf48fgf464g686ege73a5af2b037" version="1">Артиллерийская точность</content>
+  <content contentuid="h1083e746g40a0g921bgbce0g7313f9c3ba52" version="2">Когда вы наносите урон цели с помощью длинного лука или тяжелого арбалета, следующая атака наносит ей дополнительный [1].</content>
+  <content contentuid="h3721b974gf6b8gca65g025dgcb3b5b43700b" version="1">Готовность стрелка</content>
+  <content contentuid="hb20b8ffcg9130gee8bgb538g2393ed6f1341" version="1">При нанесении урона цели из короткого лука, легкого арбалета или одноручного арбалета ваша скорость передвижения увеличивается на [1] на [2] хода.</content>
+  <content contentuid="h8c05b834g1548g81fbg33f6g07e414417eba" version="1">Резонанс Эвокации</content>
+  <content contentuid="hc2506aa4g7034gbd82gb64fg95a71c1e99df" version="2">Ваши заклинания школы эвокации наносят дополнительный [1] урон. Один раз за ход.</content>
+  <content contentuid="h1b6fddfbga13ag2a4dg3a05gacdb9db493e8" version="1">Оплот Отречения</content>
+  <content contentuid="h39a7b7d9g23c2g9610gac00ga6abe7479d67" version="2">Произнесение заклинаний школы отречения даёт +[1] бонус ко всем спасброскам до начала вашего следующего хода.</content>
+  <content contentuid="heb6cd461ga0c9g2dd4g9f6cgf86be8291ea6" version="1">Некротическое Прикосновение</content>
+  <content contentuid="ha92ef017g6089g204dgaaadgfd629c59b22a" version="2">Заклинания некромантии наносят дополнительно [1].</content>
+  <content contentuid="h710441c6g53f4ga55cg6bc5g3daf7ba5cf99" version="1">Шаг Иллюзиониста</content>
+  <content contentuid="h034a1686g8ec1g9a57g79d1gfd43569be228" version="1">Произнесение заклинаний школы иллюзий позволяет вам использовать отступление без затрат действия в этот ход.</content>
+  <content contentuid="h2cf632d5g90c2g79ecg8404g9d026728616e" version="2">Изменённая плоть</content>
+  <content contentuid="hc14153b7geeb7gba11g309ag01d08927be30" version="1">Лавина колдовства</content>
+  <content contentuid="hc909e875gc03cgff37gb78ag0c14baf84fe9" version="2">Произнесение заклинаний школы воплощения создает [1] водную поверхность под целью.</content>
+  <content contentuid="h048893e8g6f80g5121g0ba4g2aa69d5c4ec4" version="1">Прозорливая предусмотрительность</content>
+  <content contentuid="h43fabcd7gc7b0g9f4fgf28age2cde062d762" version="2">Произнесение заклинаний школы прорицания лишает цель возможности совершать ответные действия против вас в течение [1] хода.</content>
+  <content contentuid="h4dd026dag1182gb9bdg4716gcf2dc8a7b7ca" version="1">Подавление Подчинение</content>
+  <content contentuid="h06cbd333gbcf1g8527g289bg498b399691c6" version="2">Произнесение заклинаний школы очарования накладывает штраф -[1] на следующий бросок атаки цели.</content>
+  <content contentuid="h735a18d8g47c1ga4afg698fg10280318b088" version="1">Острые чувства</content>
+  <content contentuid="h8300db68g7de6g35a5g9be7ge2397568049e" version="2">Даёт бонус +[1] к броску инициативы и проверка Внимательности.</content>
+  <content contentuid="hbd228b92g5006gd6f8g8891g8d880e16f215" version="1">Реактивная устойчивость</content>
+  <content contentuid="hbc9c8272g8d09g10f1g57d4g268f63f36f12" version="2">Когда вы получаете урон от стихии, вы получаете -[1] меньше урона от этой конкретной стихии до начала вашего следующего хода.</content>
+  <content contentuid="ha9dd7163g5aedg0c7eg00feg681a5de1109f" version="1">Ответная Стойка</content>
+  <content contentuid="h2b1a8a8aga3efgdb1bgcb5bg49c352ccc8dd" version="2">Каждый раз, когда существо наносит владельцу урон в ближнем бою, это существо получает [1] урона.</content>
+  <content contentuid="he84521afg06a1g5721g0167ge36bdddd3551" version="2">Уверенность</content>
+  <content contentuid="h5fa6a6f1g0eeag0a75g79e0g5270e671be94" version="2">Вы невосприимчивы к состоянию сбит с ног.</content>
+  <content contentuid="h89d3057bg8835gb663gdd93gba76de7f4562" version="2">Рефлексивный </content>
+  <content contentuid="h9ac7b093g935dg7becgc468gce54aefbddc3" version="2">Рывок даёт вам +[1] Класс Брони до начала вашего следующего хода</content>
+  <content contentuid="h94e4c1fbg83f7g09fcge9ebgb89d409afa50" version="1">Бодрящий Глоток</content>
+  <content contentuid="hd2c9fd5cg2060g56fegba22g315b09feffa2" version="2">Употребление лечебного зелья даёт бонус [1] к вашему следующему бросок атаки до конца вашего следующего хода.</content>
+  <content contentuid="hc6793c9fg1696ge2d6gd6e8gcec03ac12f76" version="1">Теневой Плащ</content>
+  <content contentuid="h35397737gff49gba43ga9f1g6c680e05b087" version="3">Пока вы в &lt;LSTag Type="Status" Tooltip="SNEAKING"&gt;Скрытности&lt;/LSTag&gt;, ваши атаки дополнительно наносят [1] урона.</content>
+  <content contentuid="h70f6731eg0fbdga0bdgf493g2448a295c869" version="2">Ледниковый Оплот</content>
+  <content contentuid="hf4cef256g2cbcg5507gd33cg7a53d80b85d8" version="2">Рубеж Авангарда</content>
+  <content contentuid="h00af05afg5dc6gcafegdd14g671cc700873d" version="1">Тест</content>
+  <content contentuid="hfee5fc49g35eegd3c3ge045gc4e8a996ea90" version="2">Произнесение заклинаний школы трансмутации даёт +[1] бонус к вашему Классу брони до конца вашего следующего хода.</content>
+  <content contentuid="hc271b7fdgbda2gc0feg057egde6c59c3779f" version="5">Редкая руна усиления</content>
+  <content contentuid="hea84bb72g959bg1d47g0f3cg3b169d82af7d" version="5">Усиливает</content>
+  <content contentuid="h4bf7d456gf5b2gd51dg6b5dgf267686ad900" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_06"&gt;Артиллерийская точность&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h0522eaf9g2cfbgefb7ga713g307437725733" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h395819c6g5c9ag2536g305cg2bb3056b3789" version="5">Редкая руна усиления</content>
+  <content contentuid="h6d9653d4g0601ge1c4ge48dg05eee54288be" version="5">Усиливает</content>
+  <content contentuid="ha0d31fdeg4c61g9480g0e5bgb77e04996835" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_07"&gt;Готовность стрелка&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h5d46120cgd719ga7c1g920cg41832097faa6" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7891fb0dgcfd1gbe32gb90age20095c1eee3" version="5">Редкая руна усиления</content>
+  <content contentuid="h6b5e2692g2a6bgb548g125bgaf66b4f0d3d7" version="5">Усиливает</content>
+  <content contentuid="h19e41d21gb778ga9cdg2f78gf2b08ffe2e9f" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_08"&gt;Резонанс Эвокации&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h6b094055g2d93g12acg4a34g3b17b619d3f5" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h24b24690gec81g6f4cg1a02gbe2d8bb61dfb" version="5">Редкая руна усиления</content>
+  <content contentuid="h6c788144gf741ge247g11d4g6526ca4fdb6a" version="5">Усиливает</content>
+  <content contentuid="h1ce4a188g6719gc579gf710ga10c502db092" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_09"&gt;Оплот Отречения&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h4dd92aebg0a79g578fg268fg63bbe6c0d0ef" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="haa03a948g2c03g8cf7ge882g18fad4476c55" version="5">Редкая руна усиления</content>
+  <content contentuid="hcabc1b6fgaea8gc97cg0efcg2cdc2eaebbb7" version="5">Усиливает</content>
+  <content contentuid="h7ced8f4egbc45g503cgb3e9g68b7669760c7" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_10"&gt;Некротическое Прикосновение&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h274922d1gb816g50bcg354dg19ea0870098e" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h784aed41gd24cgd006g92cag5507d417c0d1" version="5">Редкая руна усиления</content>
+  <content contentuid="h110240adg446eg249cgc1ceg1d4f1eeb2295" version="5">Усиливает</content>
+  <content contentuid="h0d2db6e0gdcd6g8394g4dbag6fc66c259cc8" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_11"&gt;Шаг Иллюзиониста&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h963bc4acg95cega8d6gef14g7fa379964807" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7c793fd7g5be7ga03cg9266g808cb69b7bad" version="5">Редкая руна усиления</content>
+  <content contentuid="haf3b00e7g8d48g729eg5dbbgb42fb2f9a313" version="5">Усиливает</content>
+  <content contentuid="hf2371f2fg05b1g8077g5ee6gb09bc4827870" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_12"&gt;Изменённая плоть&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hd9c0059dg2863g3a7bge784g994f5fd38a61" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h9afc80aega5ccgc09fg6659g048a4d11dbf5" version="5">Редкая руна усиления</content>
+  <content contentuid="h6131e519gba3egdb47ge459ge57d1b026a61" version="5">Усиливает</content>
+  <content contentuid="h78c10624g78e4gec85gdc8bgd745d26f816a" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_13"&gt;Лавина колдовства&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h1016bd38g1c4eg2de1g50b2g6003dae8b9e0" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hd2cdbc18g710dga5b5ga952gddc5031c0b83" version="5">Редкая руна усиления</content>
+  <content contentuid="h8e3468a0ge2e4g0c14g3453g62985b3a30a7" version="5">Усиливает</content>
+  <content contentuid="h40f48576gd531g7e11gf308g52fe70f31906" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_14"&gt;Прозорливая предусмотрительность&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h200976ebg23dag4941g610eg6e56e86511d1" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hf4a1a3b9g94fbg5031g8dc6ga8344e4c485b" version="5">Редкая руна усиления</content>
+  <content contentuid="h8e5e52a6gf2d7g43e5g3b47gf60af17bdf79" version="5">Усиливает</content>
+  <content contentuid="heab177c5g0427g45b5g4e67g70597dd2a71f" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_15"&gt;Подавление Подчинение&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h418a7dfcgf65fg48e8gc838gc91207dd1e1e" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h63448a90g23f0g0776g7ed1g4abdf64d715f" version="5">Редкая руна усиления</content>
+  <content contentuid="hfc8c7658gc9e3g1ac0g5a6bg94fbae31c81f" version="5">Усиливает</content>
+  <content contentuid="h1083ce5ag0e7fgb2edg950ag42138db0111e" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_16"&gt;Острые чувства&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h77f31f68g837cg4a0fgf09dgcd83d3e8ebf6" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h13dbb192g78eagb731g39a1gd54b9ee1e4fd" version="5">Редкая руна усиления</content>
+  <content contentuid="h7a58c2eag43f1g4a19g0ed0g16a928c198e3" version="5">Усиливает</content>
+  <content contentuid="h163d6a72g7cdegb616ge5cag4dc1a737812b" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_17"&gt;Реактивная устойчивость&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hb3897ef3g15bcg309fgc377g13da648af90e" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h6fc34f65g784dg34a3g1312g4ab5442f55f0" version="5">Редкая руна усиления</content>
+  <content contentuid="h21b729abg60f3g554agc82fg15c0d2d84321" version="5">Усиливает</content>
+  <content contentuid="hdb9f5685gb1aeg72e0ge313g096fb4e3a65a" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_18"&gt;Ответная Стойка&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h7356dc87gc258g1025g72f6g5d7ac8e77f9d" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hfe8723cag884bgf847g1b50g8a65b0acf1e1" version="5">Редкая руна усиления</content>
+  <content contentuid="hbc0d1995gb2f3g38efg430dge866f4673f27" version="5">Усиливает</content>
+  <content contentuid="hcd2a8db6g2142g608fg9caag3b7d09e8a1a2" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_19"&gt;Уверенность&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h2fa3f0c6g0f53gf8a9gb8dfg388fd65f1908" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h342bb042gd51dg727fg1f1ag1c79835438a6" version="5">Редкая руна усиления</content>
+  <content contentuid="h365b1bddg878bg74e2g5fb0g59be8d402854" version="5">Усиливает</content>
+  <content contentuid="h4a04e7a1g7153g02d4gd6dcg9329a0eded0b" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_20"&gt;Рефлексивный &lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h0c1119e3g2adeg0c66g4a90gc4323edf0045" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h6dc19e59gf8a2g58ccg1f7dgbbc2d8f7da8e" version="5">Редкая руна усиления</content>
+  <content contentuid="h069e1d69g0cbcg7433ge0begaa77ca083059" version="5">Усиливает</content>
+  <content contentuid="h836c6394ga260gb07aga04dgf9a8af891870" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_21"&gt;Бодрящий Глоток&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h801e64a7gc9c6g9d80g0fb0g7ce4a2d69215" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="ha07ebb36g7078g2e4fg4447g618a3d155fde" version="5">Редкая руна усиления</content>
+  <content contentuid="h3d845f18g199dg75fag4ad5g6d220d41a376" version="5">Усиливает</content>
+  <content contentuid="h391072d3gbec1ga0e2gc0c1g1f7ae3941e7e" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_22"&gt;Теневой Плащ&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h66b314c8gdfa4g2d37g1367g4bfd2128274f" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hfa9722dbg0b33g4144g0dc5g8ecd7a5a92ad" version="9">Редкая руна усиления</content>
+  <content contentuid="hd46b529cgdad5g2773g552egf27c80361dd5" version="9">Усиливает</content>
+  <content contentuid="he61f0208gb0f7g1440gbad4g54f52cd84fe5" version="9">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_23_SECRET"&gt;Ледниковый Оплот&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="h2aa5ab2fgdde7g9bc9gd08cgb4dc2d5485cf" version="9">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h61bd50a4gb6bdg439cg376dg2224e84caccd" version="9">Редкая руна усиления</content>
+  <content contentuid="h1212f8e8g00feg7861g510ag25fc38bb7aaf" version="9">Усиливает</content>
+  <content contentuid="h86ad0346g980fgf7b4g8202gaed5c0cb98a3" version="9">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_RARE_24_SECRET"&gt;Рубеж Авангарда&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="h41826147g20cdgc54dgbd4eg9629ace44835" version="9">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hb9ba8674g98c5gbd09g1229gefdb53b0148e" version="1">Разблокированы необычные руны усиления</content>
+  <content contentuid="h1d081815g502fg786dg6b15gd0761f5e4e31" version="1">Разблокированы редкие руны усиления</content>
+  <content contentuid="h5229ff01gb334g8824g69aag5cb5fcee3b90" version="1">Разблокированы очень редкие руны усиления</content>
+  <content contentuid="hc588002egd57bg426bg5ea0g884498e849a8" version="1">Разблокированы легендарные руны усиления</content>
+  <content contentuid="hb3567c76ga4f1gd530ged86g09314870da28" version="2">Даёт возможность использовать необычные руны усиления.</content>
+  <content contentuid="h786af40bg7536g36d4g2053ga76ed39db578" version="1">Разблокированы необычные руны усиления</content>
+  <content contentuid="h26207bf6g271fgab8dg8dbfgd2e7ff038b9a" version="1">Разблокированы редкие руны усиления</content>
+  <content contentuid="hdd678ad3g0297gbebagc6ffg2da8c804775a" version="1">Даёт возможность использовать редкие руны усиления.</content>
+  <content contentuid="hfa88d2a4g0dfag90c9gac6bgbd294da55544" version="1">Разблокированы очень редкие руны усиления</content>
+  <content contentuid="h275b2033g55beg1734g525dge309c72ea9bb" version="1">Даёт возможность использовать очень редкие руны усиления.</content>
+  <content contentuid="ha811372dgf25dgc639g589fg505860d91b35" version="1">Разблокированы легендарные руны усиления</content>
+  <content contentuid="hb5ae0850gccb5gbfd6ge1d4ga7ad43a0cf23" version="1">Даёт возможностьб использовать легендарные руны усиления.</content>
+  <content contentuid="h15296bc9g14cfg4177g35a4g479b4548fbd3" version="2">Ваш разум пока не может расшифровать такую руну.</content>
+  <content contentuid="h44b49979g8c83gc550g10b0ga6f4c6241376" version="1">Ваш разум пока не может расшифровать такую руну.</content>
+  <content contentuid="h2c09c5b2g2293g2a64gacf9g4f1b335a6ed0" version="1">Ваш разум пока не может расшифровать такую руну.</content>
+  <content contentuid="hbc0ed704g5cafg8fe6g4575gf6c11d933903" version="1">Ваш разум пока не может расшифровать такую руну.</content>
+  <content contentuid="h562933beg778bgfb2ag5daagb55d55c227a5" version="1">Торговцы пополнили запас рун</content>
+  <content contentuid="hc6a25959g504bgd9ceg30e6gdb573130fc1b" version="1">Оберег Преграждения</content>
+  <content contentuid="hc04fbf0bga07cg9c16g4e45g5900bc1480fe" version="1">Некротическое Вытягивание</content>
+  <content contentuid="h6d57eb81gbec5g0d96ga236ge2cd32644a8f" version="1">Призрачная Иллюзия</content>
+  <content contentuid="h4259fde2g4bffg22a3g6a43geaa1ff08cde2" version="1">Барьер Трансмутации</content>
+  <content contentuid="h83335897g2bebg9f22gbc0bg2ca50e75b32b" version="1">Сдвиг Воплощения</content>
+  <content contentuid="h4090ef27g0376ga3f0g1d8fg7a0f62e81f82" version="1">Понимание Прорицания</content>
+  <content contentuid="hd62511e9g5b96gb1f3gbabcgfa872f543178" version="1">Обворожительное Очарование</content>
+  <content contentuid="h606b0861g3b19gbcebg8ee9gb92d4cf5930e" version="1">Острый край</content>
+  <content contentuid="h385a2b71g7b02g3e19g04e0g66ad59949d95" version="1">Точка прокола</content>
+  <content contentuid="h1cf4e384g5262g9b5fg1301gd0d465c63f29" version="1">Ударная сила</content>
+  <content contentuid="hc6c43438g5d49g7823g35f6g97072564e93c" version="1">Токсичное покрытие</content>
+  <content contentuid="h8813e353gdddbg5f31ga7e2g36a1e5336b4b" version="1">Артиллерийская точность</content>
+  <content contentuid="hf5030925g3d0egca21g6115g07fb138df055" version="1">Артиллерийская точность</content>
+  <content contentuid="h62e7019fg3501g05a3g6805g5721b57930fe" version="2">В следующий раз когда вы получает урон от аттаки, вы получаете дополнительно [1].</content>
+  <content contentuid="hed5f4f07g2a23g7b20g9115g9f084fee9cf7" version="1">Готовность стрелка</content>
+  <content contentuid="h8fe703aag84f5g5445g6e6eg098366912f65" version="1">Ваша скорость передвижения увеличена на [1].</content>
+  <content contentuid="h5d8af0d4g320cg6bdag6c27ge1385c0efcfe" version="1">Готовность стрелка</content>
+  <content contentuid="he26828dagafbagbf27gd193g93d24a51e30e" version="1">Оплот Отречения</content>
+  <content contentuid="h28681409gcda5g2661ged48g41a5c18acca8" version="1">Быстрый Шаг</content>
+  <content contentuid="h9dfd1442g8aecg04d8g5488g2913214757cd" version="2">Ваша скорость передвижения увеличена на [1], и вы получаете +[2] бонус Ловкости к &lt;LSTag Tooltip="SavingThrow"&gt;спасиброскам&lt;/LSTag&gt;.</content>
+  <content contentuid="h6ae2cbefg209bg7a8fg4a07g14076972d705" version="1">Резонанс Эвокации</content>
+  <content contentuid="h56ac74f7gec11g248ag7d87g0a9c804f51d2" version="1">Возрождение жизненной энергии</content>
+  <content contentuid="h7c0eeb56gfcf4g83afg208eg6b7f0a5dd2d5" version="1">Восстанавливает дополнительно [1] очков зддоровья.</content>
+  <content contentuid="h2bf0e076gf832g7720g3502gbb9607d822fc" version="1">Горькое благодеяние тетушки Этель</content>
+  <content contentuid="h9aa3dde2g573fgf1d7g6292g8272318f3e83" version="1">Вы получаете +[1] бонус ко всем спасброскам.</content>
+  <content contentuid="heac9af01g464ag1d7ag6c6eg12b277aeed59" version="1">Свирепость Дрор Разглина</content>
+  <content contentuid="h4681e2c4gbb5ag4effg8f93gaba84ec0c9f2" version="3">Один раз за ход, потратив бонусное действие испелите союзников в радиусе [1] на [2].</content>
+  <content contentuid="hb1476dfeg942cg4bb6gee63gdd1c2be26bd6" version="3">Каждый [1] ход, дает устойчивость к случайному физическому урону на [2] хода.</content>
+  <content contentuid="h0036b83eg4b4ag48d9g946ega18d1eb471fb" version="1">&lt;br&gt;Это усиление можно получить только с помощью рунного фьюзера.</content>
+  <content contentuid="h7be4be72g081cg30b3g3d56g6b24fb684d98" version="1">&lt;br&gt;Это усиление можно получить только с помощью рунного фьюзера.</content>
+  <content contentuid="h9012de46geffbg561cg937dg4e9bc2d9f5b4" version="1">Сокрушительное Падение Медвесыча</content>
+  <content contentuid="h04032b94g1dbbg68cdg8e0ag24ee42200c7b" version="1">Изменчивый оплот: Дробящий</content>
+  <content contentuid="hb00c3d8egf0dfga223g2799gb659a45612e7" version="1">Вы получаете &lt;LSTag Tooltip="Resistance"&gt;сопротивление&lt;/LSTag&gt; к[1].</content>
+  <content contentuid="h241bb879g7f03g0bf7g0915g941a8f815777" version="1">Изменчивый оплот: Колящий</content>
+  <content contentuid="h3ee20435g125eg37cagb8b7g106848736620" version="1">Вы получаете &lt;LSTag Tooltip="Resistance"&gt;сопротивление&lt;/LSTag&gt; к[1].</content>
+  <content contentuid="h7d9f381agf178g5369gda03gb374acd688dd" version="1">Изменчивый оплот: Рубящий</content>
+  <content contentuid="heffc114ag9245gb700g72a4g28a1cb1e2dbd" version="1">Вы получаете &lt;LSTag Tooltip="Resistance"&gt;сопротивление&lt;/LSTag&gt; к[1].</content>
+  <content contentuid="h6f6fecdbg8f9ege45fg4b82g07f5593eb1d9" version="1">Изменчивый оплот таймер</content>
+  <content contentuid="he272db06gcd58gee3eg324cg0cab89b3c3ef" version="1">Помощь при применении состояния.</content>
+  <content contentuid="h039922e5gfe66g41f9gca5fg9f27f5483c28" version="1">Быстрый Шаг</content>
+  <content contentuid="h7664d4d9g9065gce2cg62cdge50132010636" version="1">Сокрушительное Падение Медвесыча</content>
+  <content contentuid="h0d15b545g4e37gb29agf758g7c82519d8153" version="1">Ускоренное Исцеление</content>
+  <content contentuid="h52440263g8466g96dcg7bfbg229953b8c87e" version="1">Ускоренное Исцеление</content>
+  <content contentuid="h8f781351g3155g1f97gd520g502ff49f5303" version="1">Вы получаете +[1] бонус к спасброскам.</content>
+  <content contentuid="hd987af88g6925ga06bgd2c7g0747e8d3abbd" version="1">Шаг Иллюзиониста</content>
+  <content contentuid="h4bf8088eg18d9g1581g2957gbba550cf0883" version="1">Вы можете совершить отступление в качестве свободного действия.</content>
+  <content contentuid="ha9c99141gb54dg272bg92d2gc91f56cef02e" version="1">Изменённая плоть</content>
+  <content contentuid="hda3d8a00g79f4gc0b4gd01eg9fcd54f4ce24" version="1">Вы получаете +[1] бонус к Классу брони.</content>
+  <content contentuid="h46b82bcfg2d0ag57e8gc398g43ecab48c547" version="1">Лавина колдовства</content>
+  <content contentuid="h929dcb53g404cg3668g9dffg1b9712bebb15" version="1">Создает [1] водную поверхность.</content>
+  <content contentuid="h630e371egc61bgccc4g5b17gcfb9d2ad210d" version="1">Прозорливая предусмотрительность</content>
+  <content contentuid="ha0a50b9ag7d60g62a1g4f28g394577c0e958" version="1">Подавление Подчинение</content>
+  <content contentuid="ha0330e63gaeefgbffagdb91gaaac21be34cc" version="1">Бодрящий Глоток</content>
+  <content contentuid="h5a3cf7a7gda60g4092g573egb3d9b71e34ce" version="1">Рефлексивный </content>
+  <content contentuid="h0b8f6c24gecb5gd0beg7da2gef3fc81456e2" version="1">Реактивная устойчивость: Огонь</content>
+  <content contentuid="h2493c2d5g7eebgbb7dg90bagbb67e26a22c6" version="1">Реактивная устойчивость: Мороз</content>
+  <content contentuid="h4bbf14deg7cf2g2cdcg9aadga81b7df15e85" version="1">Реактивная устойчивость: Свет</content>
+  <content contentuid="h5583395dg0cafg08e3g0af0g05ad8e467732" version="1">Реактивная устойчивость: Яд</content>
+  <content contentuid="h53c7bdabg969eg5980g35c0g0268658662fe" version="1">Реактивная устойчивость: Шторм</content>
+  <content contentuid="hbc23e81fg4cafg81eag488eg5a681e546fbd" version="1">Ответная Стойка</content>
+  <content contentuid="h2e1bda3bgf482g106bgc6a6g9e8a58ce9f4f" version="1">Оплот Отречения</content>
+  <content contentuid="h8fe116d9g8e7agdb33g35b9gd362398ef266" version="1">Некротическое Прикосновение</content>
+  <content contentuid="h81f0a987gd437gaafcg90aeg9a8ffda9273f" version="1">Шаг Иллюзиониста</content>
+  <content contentuid="h7fb627d7gc6efg90e2g3153g517cb5615f70" version="1">Изменённая плоть</content>
+  <content contentuid="h271f1a7bg5559gc607g5c65g6b925891ed92" version="1">Лавина колдовства</content>
+  <content contentuid="hdefd2b05g00a7g2a42g9f86gc761d03da796" version="1">Прозорливая предусмотрительность</content>
+  <content contentuid="h667dcac4g9ba0g8eddg7bacgf4fa9351bf4d" version="1">Подавление Подчинение</content>
+  <content contentuid="hbecb6008g8416gd302g8ed2gafacf06dcc55" version="1">Теневой Плащ</content>
+  <content contentuid="h98d45fa4g1e50g5492g3ad5g4bdb54529399" version="2">Сталь закаллёная в кузнице Грима</content>
+  <content contentuid="h0f8fdd43g1fd1g6016g3a45gc9d3874ec615" version="3">Атака оружием дополнительно наносит [1] конструктам и целям в тяжелой броне.</content>
+  <content contentuid="hca5906e0g9ab2g01bagedddgf74820cd150c" version="2">Ядовитая паутина Матриарха</content>
+  <content contentuid="hcef87e73g8c6fg6965g9fa1g560906d61dcf" version="1">Когда вы наносите[1], цель с [2]% вероятность станосится &lt;LSTag Type="Status" Tooltip="WEB"&gt;Опутанной паутиной&lt;/LSTag&gt; на [3] хода.</content>
+  <content contentuid="hcbc87fb3g7049g6886g6e35ge784cf9e7e0b" version="5">Необычная руна усиления</content>
+  <content contentuid="h3e7c256eg67cdgb57dge0d9gab86b9040e67" version="5">Усиливает</content>
+  <content contentuid="h058d1e58g0889g0d19ga9cbgba17938991c4" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_UNCOMMON_01"&gt;Сокрушительное Падение Медвесыча&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h9f445a61g88b6gbc4cg974bgc4bc741d1ca9" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h3a823864gb289g40cbg7806g32d435109c85" version="5">Редкая руна усиления</content>
+  <content contentuid="hccef5967g315cg7401ga9b4g2a302a5c747f" version="5">Усиливает</content>
+  <content contentuid="hb60695e9g59e7g6de2g1264ge8da2bcea011" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_01"&gt;Адское пламя Жалка&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h7268be36g86e2g496cg685dg98b61fa8d8e7" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hd8ce5217gcd88g0a03gc4d6gb1a460ff5daa" version="5">Необычная руна усиления</content>
+  <content contentuid="hd4704268gde9ag7abdgfd09g93d11f0fdaff" version="5">Усиливает</content>
+  <content contentuid="h8ced0cafg886dg9759g16f7g15bf80306617" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_UNCOMMON_02"&gt;Auntie Ethel's Bitter Boon&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h8ae51202gb11bgaf91g87f1g98ed6574d56a" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h6e5e1af2ga1ceg7e66g27acg140b33e2f76d" version="5">Необычная руна усиления</content>
+  <content contentuid="h60fab65bg7280g1c02gbf12gef69a7c0832e" version="5">Усиливает</content>
+  <content contentuid="h4d6c7e7ag9746g8b74gf0b6ge9c6b8681b7b" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_UNCOMMON_03"&gt;Свирепость Дрор Разглина&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h7d94faedg57cfgbe93g0c1fg1e1e3372d800" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h477cfcccgfbb9g2fabgd511g9fbdf26a2c54" version="5">Редкая руна усиления</content>
+  <content contentuid="h398c6669g6194g6e69gd342gca1092f8d41d" version="5">Усиливает</content>
+  <content contentuid="h0314e095gdf58gd230g4a4eg9a286d0964e6" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_02"&gt;Сталь закаллёная в кузнице Грима&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h9018587fg90d1g1c26gd0f7g470783f84e49" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="ha75a09eag03dcg2bfbg446egff05eecbcb8c" version="5">Редкая руна усиления</content>
+  <content contentuid="h33e70791g208bg160cgab2dg26f101cf26a0" version="5">Усиливает</content>
+  <content contentuid="h8e50ab71gb29fg787ag7a9dg5ff2dfd5671d" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_03"&gt;Ядовитая паутина Матриарха&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="he218733egf951gc1c0g232bg20dc135aaf9c" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h75b9f553g4fcfgbd8bgde7eg5491100a1ef4" version="1">Подземный толчок булетты</content>
+  <content contentuid="h50b1352bg7d97g8c79g2ceegebc02113db7c" version="1">Когда вы наносите критический удар оружием ближнего боя, находящиеся поблизости враги должны пройти испытание силы, иначе они упадут плашмя.</content>
+  <content contentuid="he645b7b5g3e42gac0fgf636g5c9940d86c54" version="1">Статический заряд Бернарда</content>
+  <content contentuid="hab1984ffg7579gb729g7b9dg7790c631295b" version="1">Получени урона от молнии даёт +[1] к броскам атаки на [2] хода.</content>
+  <content contentuid="h2fedefb6g8f67gfd4ag3904gbf7c106d7406" version="1">Злоба Гех Уголька</content>
+  <content contentuid="h98ea369fg9306g5d3dgdeb9g078412af3d2a" version="1">Нанесение урона распластанной или обездвиженной цели дополнительно наносит [1].</content>
+  <content contentuid="hee50d93egd371gff25g1436g2a6cac91660e" version="1">Галлюциноген Глута</content>
+  <content contentuid="h47aa16deg40f5g7b20g760cgb2a5467d1c8c" version="1">Когда вы получаете урон от атаки в ближнем бою, с вероятностью [1]% вы накладываете на атакующего состояние «Одурманен» на [2] ход.</content>
+  <content contentuid="hf71bece8g3804gfca5g75ddg8619dc1f0cb2" version="1">Преданность Гат</content>
+  <content contentuid="h0e2eb079g0e48gaf6eg8091g536578ee29d7" version="1">Один раз за бой, когда при получении урона ваши очки здоровья опускаются ниже [1]%, вы исцеляетесь на [2].</content>
+  <content contentuid="h77b219ceg8295gd15age3ecg7d83d01b988c" version="1">Псионическое острие В'варгаза</content>
+  <content contentuid="h409be08bg26f9ga9dcg01a5g78a4c398626e" version="1">Если вы гитьянки, ваши атаки наносят дополнительно [1]. Не-гитьянки получают +[2] к броскам инициативы.</content>
+  <content contentuid="hced3cc6bg83a4g6c9agd43bgd7cd9079fecd" version="1">Принуждение Нере</content>
+  <content contentuid="h6c6345e9g351eg06c1gc370g9ef063931586" version="1">Когда вы наносите психический урон, с вероятностью [1]% вы накладываете на цель состояние очарован на [2] ход</content>
+  <content contentuid="hd2db72e2g67abg3bc7gbff2g06e0109c868b" version="1">Парализующий взгляд наблюдателя</content>
+  <content contentuid="hdddab52fgce7dg6582gbcc3g89ad910b7e94" version="1">Когда вы наносите критический удар заклинанием, с вероятностью [1]% вы накладываете состояние паралич на [2] ход. Это может происходить не чаще одного раза каждые [3] хода.</content>
+  <content contentuid="h541770e7g596cgf9a3gcc9fg6bad67ece0ab" version="1">Монетная кольчуга Герринготы</content>
+  <content contentuid="hfdc0b7c4g545dg1ecdg4969g3d682ced8bfc" version="1">Пока на вас надета тяжелая броня или экипирован щит, вы получаете на [1] меньше урона от [2], [3] и [4].</content>
+  <content contentuid="h1319f45fg42d3gcb52gb5c4ge76ab652f510" version="1">Астральный кулак Лири'ка</content>
+  <content contentuid="h1defa746g336fg3a16gebccg94994d9f25bb" version="1">Атаки без оружия наносят дополнительно [1] и с вероятностью [2]% накладывают на цель состояние немота на [3] ход.</content>
+  <content contentuid="had6ed3d0gcd56g14b0g0e71gf65ca3beb5a8" version="1">Искажённый корень шагающего холма</content>
+  <content contentuid="h9ddff531ge7e1ga8bfga3f2g224db16edebf" version="1">В бою, если вы получаете [1], вы получаете [2] к скорости передвижения и игнорируете сложный ландшафт в свой следующий ход.</content>
+  <content contentuid="h73f95149g4e50g6d73gc09cg42b9422c4d6c" version="1">Жестокая гравитация З'релла</content>
+  <content contentuid="h78ed95f0g988fg8c45g36f9gcc21f1f0711b" version="2">Нанесение психического урона цели заставляет её переместиться на [1] в случайном направлении.</content>
+  <content contentuid="hafb1ad4fg6674gbc29g249agd6f21977c3c4" version="3">Ненасытность Бальтазара</content>
+  <content contentuid="ha0c80f43ga762gfe1bg4e61g463552c97fab" version="1">Когда вы убиваете врага заклинанием школы некромантии, вы восстанавливаете 1d8 очков здоровья.</content>
+  <content contentuid="hae17deb9g71e4g4bfag41aege8f8ff14898f" version="2">Когда вы тратите ячейку заклинания колдуна, ваш следующий потусторонний разряд выпускает дополнительный луч.</content>
+  <content contentuid="h1bc60bd2gbe9cg1601g5097gfe19dd7b14e0" version="1">Потустороний резонанс Цка'ана</content>
+  <content contentuid="h60a84f7dg3f6fg01d2g3adagf7632b97ac4c" version="3">Убежище Кар'нисса</content>
+  <content contentuid="h6a47ca86ge481g4a40g7d39g6fde75232ced" version="2">Когда вы произносите заклинание, требующее концентрации, весь получаемый урон снижается на [1] до начала вашего следующего хода.</content>
+  <content contentuid="hbee591d7g1b6bg0c91gb64fg273d5e86d994" version="3">Ужас Кетерика</content>
+  <content contentuid="h6f377570ge0bage52fgc194g18095b5ddce1" version="1">Когда вы наносите [1] или [2], с вероятностью [3]% вы накладываете на цель состояние испуг на [4] ход.</content>
+  <content contentuid="h8b429003gff0bg13b9gae2fgb07836cf9a4f" version="3">Хирургическая точность Малуса</content>
+  <content contentuid="hb67fbfeeg8321gb3b5gaa0fg4f6191374289" version="3">Атаки в ближнем бою имеют шанс [1]% наложить &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_05_DEBUFF"&gt;Некротическое разложение&lt;/LSTag&gt; на [2] хода.</content>
+  <content contentuid="h2d2ac733g69fbg0460ga026g8f7001849256" version="3">Нестабильное варево Тисобальда</content>
+  <content contentuid="hde47a77ag5a75gf164g72f7gff9d0a8bac68" version="2">Пока на вас действует &lt;LSTag Type="Status" Tooltip="DRUNK"&gt;опьянение&lt;/LSTag&gt;, вы получаете +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; но ваш показатель интелллекта снижается на [1].</content>
+  <content contentuid="h6f594587g276ege73dge908ge5765c35a6f2" version="4">Искра преследователя Юргира</content>
+  <content contentuid="had891f0bg2834g840dga367g2158685983dd" version="4">Серебряный свет Хар'рака</content>
+  <content contentuid="h474be9e1g1be6gc76fg8950g73228b5f52cb" version="2">Нанесение [1] наносит дополнительно [2] и с вероятностью [3]% накладывает на цель состояние ошеломление на [4] ход.</content>
+  <content contentuid="h98f7ce6bg12d5g7388gf28cg0fa107690711" version="3">Высокомерие Лорроакана</content>
+  <content contentuid="h060a9f85ga8c1g3387gf314g8c961cc805f6" version="2">Когда вы произносите заклинание, требующее &lt;LSTag Tooltip="Concentration"&gt;концентрации&lt;/LSTag&gt;, вы получаете бонус +[1] к силе спасброска от ваших заклинаний и на -[2] меньше урона от стихий.</content>
+  <content contentuid="hbe5c6526gd46cgd4e3g3faegc5b982923906" version="3">Нечестивая жизненная сила Мистического трупа</content>
+  <content contentuid="h920776f6g5902g7619g7d64g182b3447903f" version="1">Каждый раз, когда вы получаете исцеление, вы восстанавливаете дополнительно [1] очков здоровья, и ваша следующая атака оружием наносит дополнительно [2].</content>
+  <content contentuid="hb25c3782gfb0cg9695gb14fgead355c59398" version="3">Обман Птариса</content>
+  <content contentuid="haba45654g20cdg1ec1g26f7gc6e462cdf800" version="1">Произнесение заклинаний школы иллюзий даёт вам преимущество при следующем броске атаки.</content>
+  <content contentuid="hd1ea918fga698gce57gbabbg93aaa8e07443" version="1">Нельзя использовать реакции.</content>
+  <content contentuid="hc48e1387g8c13gb13dge516gb7b6e3916d4f" version="1">Ваш следующий бросок атаки уменьшается на -[1].</content>
+  <content contentuid="h3dc77832g7c76gdee4g7689gc04ad4e57172" version="1">Вы получаете на [1] меньше [2].</content>
+  <content contentuid="h2e769674gabfdg6262g90aag015cfbc7474b" version="1">Вы получаете на [1] меньше [2].</content>
+  <content contentuid="hc1643dc6g3401gddcbgfd7bgf5a78d3b6d21" version="1">Вы получаете на [1] меньше [2].</content>
+  <content contentuid="hca451318g83ffg14cfgfb20g582486bf2177" version="1">Вы получаете на [1] меньше [2].</content>
+  <content contentuid="h4bfe1ed8g091fg0732gf80bgdf4f8205bacc" version="1">Вы получаете на [1] меньше [2].</content>
+  <content contentuid="h19314bd0g7d93ga2c0g0ef5g19900c7a638c" version="1">У вас есть +[1] бонус к вашему классу брони.</content>
+  <content contentuid="hfdb929fbg3790g7dadgef39g186a4128fe8a" version="1">У вас есть +[1] бонус к следующему броску атаки.</content>
+  <content contentuid="h391076c8g95b2g4864ga0aag09e4ccd771f4" version="1">Теневой Плащ</content>
+  <content contentuid="h41d84c59gcda9g0505g1b17g23302f4cdc33" version="1">Ваши атаки наносят дополнительно +[1] урона.</content>
+  <content contentuid="hdb35a5f1g057egdf12g6ebfg63f68d5531de" version="1">Пока у вас экипирован щит, каждый раз, когда вы получаете урон от атаки в ближнем бою, атакующий с вероятностью [1]% получает состояние скованный льдом на [2] ход.</content>
+  <content contentuid="h1f49ece7g5005g30c8gae00g3bc479fe3f83" version="1">Ледниковый Оплот</content>
+  <content contentuid="h46977f1fg695bgdc17g427aga1261aa81316" version="1">Реактивная устойчивость</content>
+  <content contentuid="h720ee9c7gdf69g01d7g125fg39388ccc21f2" version="1">Рефлексивный </content>
+  <content contentuid="h09b37a2dge59ag9313g30f7g7fcf825f1f54" version="4">Дальность атак оружием ближнего боя увеличивается на [1]%.</content>
+  <content contentuid="h7da4e366g332ag7f23gb46dge3aea4fa1fa7" version="5">Смертная казнь</content>
+  <content contentuid="h12a04ce8g8574g065dg737dg13027f30e0b3" version="4">Снижает на [1] значение, которое необходимо выбросить при атаке, чтобы нанести критический удар.</content>
+  <content contentuid="he170bc1dga88dg4e52g8f6bg6fa881d3c261" version="2">Шквал двуручных клинков</content>
+  <content contentuid="h2a1a42d6gd1adg701cg54e4g94143e9576e0" version="2">Атаки оружием во второй руке получают бонус +[1] к броскам атаки.</content>
+  <content contentuid="h8913f8cfg5e34gafffg0dd6g6fa0be3e8803" version="4">Авангард фаланги</content>
+  <content contentuid="h39f52288g7c16g6da6g8ff4g58d383e3b7e1" version="2">Когда вы наносите урон атакой в ближнем бою, имея экипированный щит, вы получаете бонус +[1] к классу брони до начала вашего следующего хода.</content>
+  <content contentuid="h9b7c1358gd86agd4d5g1bacg8e33495f0a9b" version="4">Сокрушительные удары</content>
+  <content contentuid="hcea5547fg0ecagbc32gd7f7g791907eaed1d" version="3">Нанесение дробящего урона оружием ближнего боя с вероятностью [1]% накладывает на цель состояние дезориентация на [3] ход.</content>
+  <content contentuid="h6f2cb9ccg9601g617cgff54g03af752f4464" version="1">Сталь закаллёная в кузнице Грима</content>
+  <content contentuid="h7639df89gb8e6gdf09g7b26g69415d5547d8" version="4">Стойкость аутсайдера</content>
+  <content contentuid="hba0cfe56g0ef8g1718gf396g3a1b77998950" version="2">[1]% от любого получаемого урона перенаправляется на атакующего.</content>
+  <content contentuid="hb9bf5507g799eg1265g7ca0g4c8123cfd930" version="4">Призматическая рулетка</content>
+  <content contentuid="h54274e23gfef1g5cf3gdd77ge3d2d65b3a9f" version="1">Описание-заглушка</content>
+  <content contentuid="h9b4097c9g18a4gf83eg39abg257f5416e9c6" version="4">Резонанс боевого мага</content>
+  <content contentuid="h63f9feb1geab7g86a0g16ffg4019c909d13e" version="2">Добавляет [1] временных очков здоровья за ход.</content>
+  <content contentuid="h3b2f4621g1589gdf5dg756eg82fb4bd0b541" version="4">Ответный удар щитоносца</content>
+  <content contentuid="he6082394geef8g53e0g88ccgba0876d85552" version="3">Если вы получаете урон от атаки в ближнем бою, имея экипированный щит, ваш щит заряжается, усиливая вашу следующую атаку в ближнем бою: она наносит дополнительно +3 урона силовым полем и отталкивает цель на 2 метра.</content>
+  <content contentuid="hb47e54b1g2dbdg44f7gb2ceg0e9f21101b41" version="1">Очищение</content>
+  <content contentuid="hc3ef0389g277bgc690g582cg5ea6d8970ffb" version="1">Снимает все активные статусы рун усиления.</content>
+  <content contentuid="h9502aecfg1fbfg4353g7149g8104df0b7383" version="2">Статический заряд</content>
+  <content contentuid="h8b446eb1g3480g670ag2cd1g667ce6acd0e4" version="1">Вы получаете бонус +[1] к броскам атаки.</content>
+  <content contentuid="h09234a44gc04cgdf13g3d6bgaa572f1af1ad" version="1">Статический заряд Бернарда</content>
+  <content contentuid="hf14221d8g493ag1871g6c4agbea2833d719c" version="1">Злоба Гех Уголька</content>
+  <content contentuid="h1a87b588g5c48gfdd1ga802ge2c3652f1ce1" version="1">Галлюциноген Глута</content>
+  <content contentuid="h7907c27bgfe6fg3d5fg76ebg5afe7ebbfc0d" version="1">Преданность Гат</content>
+  <content contentuid="h4f64dc17g44bbga1dag8551gbef61469f611" version="4">Руна нейтрализации усиления</content>
+  <content contentuid="hf3ee8084g1cebgf876gbf7bg84c6b4e28390" version="4">Очищение</content>
+  <content contentuid="ha82b66e9g581agb38cg4d85g94cf878f08df" version="4">Очищает все активные статусы рун усиления при использовании.</content>
+  <content contentuid="h69382b8cg2d85ga84dgce42ge1b15650c939" version="4">Нейтрализует эффекты любой руны усиления.</content>
+  <content contentuid="hca9eadcagaf03g2093g8f6ag448fc54630e9" version="1">Ядовитая паутина Матриарха</content>
+  <content contentuid="h6d51f882g6769g8e3ag72e4g94262dc3393d" version="1">Подземный толчок булетты</content>
+  <content contentuid="h653d21degc646gd62ag658bg8d594b082707" version="2">Псионическое острие В'варгаза: Gith</content>
+  <content contentuid="hf0db31ccg0b6bg9486gacd6gad84b69d7991" version="1">Принуждение Нере</content>
+  <content contentuid="h117d7703gf33eg76c3g7de8gcca3848844e0" version="1">Парализующий взгляд наблюдателя</content>
+  <content contentuid="h33f842d2gb89cg89b6g8e65g7a36837333a0" version="1">Монетная кольчуга Герринготы</content>
+  <content contentuid="h98929d0egc664ge64cga04fg42996b5eda55" version="1">Астральный кулак Лири'ка</content>
+  <content contentuid="h401560a3gcd2dg0856g75afge811210433b9" version="1">Искажённый корень шагающего холма</content>
+  <content contentuid="h8c93c6cfg1a48g0886g408cgfe2bb060ae7f" version="1">Жестокая гравитация З'релла</content>
+  <content contentuid="he79f32e8g6c80g5905gec71g4f94372341d8" version="1">Псионическое острие В'варгаза: Non-Gith</content>
+  <content contentuid="h1d5d20ffg7e59gb940g164fgca66a1334620" version="1">Подземный толчок булетты</content>
+  <content contentuid="hb4d2ada9g1f6dgb375ge812g6819deff3099" version="2">Парализующий взгляд наблюдателя Cooldown</content>
+  <content contentuid="h7e757468g72f6ga5aage3efge17510c392a1" version="1">Вы недавно нанесли критический удар, что запустило время восстановления.</content>
+  <content contentuid="h3c14b4a6g9c21g5e97gd427g137f837ead9f" version="1">Искажённый корень шагающего холма</content>
+  <content contentuid="hd3c57f3bg47dfgd5d0g4662gba308734e5c4" version="1">Ваша скорость передвижения увеличивается на [1], и вы игнорируете сложный ландшафт.</content>
+  <content contentuid="hf0cd95e3g9655gdb49g8991g9e0ba29057fa" version="1">Жестокая гравитация З'релла</content>
+  <content contentuid="hcdc0be12g375fg04f3g0cc4g4c669c056405" version="1">Отталкивает цель в случайном направлении</content>
+  <content contentuid="h63766174gcf1dgb93ag3116gaa7d0867775b" version="1">Жестокая гравитация З'релла</content>
+  <content contentuid="h4a6c2649g0403gf47ag847dg9a5768bff6cb" version="1">Тест</content>
+  <content contentuid="h71707e96g6cbeg02d0g8903gd0a8ad27ba87" version="1">Мастерское владение оружием</content>
+  <content contentuid="h67a27951g774ag2f91gada4gc1077705f1f5" version="1">Применять</content>
+  <content contentuid="h385c18f9g65a6ge33eg9665g343311c75de5" version="1">Мастерское владение оружием</content>
+  <content contentuid="h6795f63fg573fg8fd3gc7bdg628624289565" version="1">Удаление</content>
+  <content contentuid="h73eb398dg897dg7d0fga673g012702f8a60f" version="1">Рикошет</content>
+  <content contentuid="hba283a28gb2deg22bfg3d71g5d5a4b367e78" version="1">Рикошет</content>
+  <content contentuid="hbde32e62g1d38ga3cbg97b4g7f82979fe579" version="1">Готовый рикошет</content>
+  <content contentuid="h3c932087g1081gc64ege213g3bcd892e5ac7" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hc1bfc36cg6764g001age9c1g9b5ca397ef4a" version="4">Усиливает</content>
+  <content contentuid="h53558da3g2192g5f6eg2cb5gdcff796ebea9" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_01"&gt;Смертная казнь&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h77c4fee8g25f1gd69fg5539gc119f37e937f" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h0db0b835g1f09gc959g5aa9gc7b6a08293ef" version="4">Легендарная руна усиления</content>
+  <content contentuid="h27f8524ag2ed5gbf02gaf59g192a07d585ba" version="4">Усиливает</content>
+  <content contentuid="h7658bfa0gc164g0b82g7992g24f0a942aee3" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_01"&gt;Стойкость аутсайдера&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h01fcb82eg4101g1001g5c6cg3113f487b489" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hc2a43c98g93bdg0140gdd03g1bb510512358" version="2">Очень редкая руна усиления</content>
+  <content contentuid="he2652b4dg9842gfe60gcf94g319d424cb76a" version="2">Усиливает</content>
+  <content contentuid="h26f7af3bgd782gddc1g095ag301eb8a9d75c" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_02"&gt;Шквал двуручных клинков&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h907afcdbg546cg3d7fgd5f7gc3610cfc9cca" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h577b7ca2gd08eg372eg77a0ga1ec6cd93407" version="3">Очень редкая руна усиления</content>
+  <content contentuid="h6a9d550ag394cg371dg6807g638818673ed7" version="3">Усиливает</content>
+  <content contentuid="hd14c2c2agfe11g7169g130fg610cf619ecdc" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_03"&gt;Авангард фаланги&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hb83025f1gc458g271eg5842g03ead9604968" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h1662ba91gc7b7g09f5gf11egbf2578a067c7" version="3">Очень редкая руна усиления</content>
+  <content contentuid="h4b969d25gfb80g45ecgee15g483daec5b330" version="3">Усиливает</content>
+  <content contentuid="hf9ffb418g5830gbfa0g911eg87e656a38297" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_04"&gt;Сокрушительные удары&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h70e37dd8gd06fgbe27ge035g404222da9272" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hd5664013g75f9g51b3g10deg0d4b9fec65ca" version="3">Легендарная руна усиления</content>
+  <content contentuid="h398259afgd5bfg85e4g8f67g830257782034" version="3">Усиливает</content>
+  <content contentuid="hb133a704g87f4g077fgb9adgd009c952416d" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_02"&gt;Призматическая рулетка&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h7606ad62g4457g05c7g1677g2b721dc6b4a0" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h08a6d401gd154g51b4g91b2g92a07b43ed77" version="3">Легендарная руна усиления</content>
+  <content contentuid="h2c6368c5gec36gb898g9fbfg66a654303186" version="3">Усиливает</content>
+  <content contentuid="hcb7953dag261ag7e72g6d29g998d0972ffe6" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_03"&gt;Резонанс боевого мага&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h2c3eda8bg6d44g23c7g0a89gc824a2ffc963" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h48207206g26fagf94bg1ca0g4ed70ce8aa88" version="3">Легендарная руна усиления</content>
+  <content contentuid="h7472718dgdb97g51b8gdebag849688998eaa" version="3">Усиливает</content>
+  <content contentuid="h69c8d1e0ge6e6geb48g23e3gbeece8b4cf8c" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_04"&gt;Ответный удар щитоносца&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="hee159782geaf5g18ffg4f63g2aa75f31a95d" version="3">Усиливает персонажа уникальным эффектом.</content>
+<content contentuid="hce0b2ef6ge823gb1d2g9626g50a508c0074e" version="1">Убийства боссов</content>
+<content contentuid="hcd02ad0ag23f8g3461ga100g720a38304f71" version="1">Отслеживает количество убитых вами боссов. Количество ходов равно числу убитых боссов.</content>
+<content contentuid="h9297126ag7246gbba4g8a4bg5e47a5d6fc36" version="2">Счетчик боссов</content>
+<content contentuid="hcadce19ag2a5dg3eb2g35d8g7fe0423715b0" version="2">Внутренний канал для счетчика боссов.</content>
+<content contentuid="h7767220cg79cdg5f12gde7dga180ae96d341" version="1">Ресурс действия «Счетчик боссов»</content>
+<content contentuid="he64e8bcdg1e4dge067gf70ag4b12ae13ceaf" version="1">Число счетчика боссов</content>
+<content contentuid="ha4a0b5e9g653dg7bc2gc88ega5623636d70e" version="1">Количество убитых боссов.</content>
+<content contentuid="h00df3943g7c33g80a0g0ed9g0141e94ff8a0" version="1">Тестовый человек (Босс)</content>
+  <content contentuid="h57a7d7b0ge26eg791bg832bg92c94bbe5f7a" version="2">Необычная руна усиления</content>
+  <content contentuid="he8a195a1g7baeg2e50g19b3g8a5f6c644da2" version="2">Усиливает</content>
+  <content contentuid="ha0d304fcg3d85g4ef6g8a91geb449d0199c7" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_UNCOMMON_04"&gt;Статический заряд Бернарда&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="ha6062663g32b1g2e56gfec5g23c8a88f64ca" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hdf831fc8g480egfc13g4627g4fc21d59b086" version="2">Необычная руна усиления</content>
+  <content contentuid="heec9004dg6efeg51d2gf68cgef08311edefa" version="2">Усиливает</content>
+  <content contentuid="h28e8dc55gedaegaa00gf254g43ac710f06f4" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_UNCOMMON_05"&gt;Злоба Гех Уголька&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h31cd750eg4c50g3a27gca9bgdea48c488ca1" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h81e0586ag4922ga48fg044dgc7deaab05ffa" version="2">Необычная руна усиления</content>
+  <content contentuid="h9734d676g94d1g6a8ag10e9g39077577c6e3" version="2">Усиливает</content>
+  <content contentuid="h2950b336g3b79gd00bgaab6g56fbbde800e3" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_UNCOMMON_06"&gt;Галлюциноген Глута&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="h3c4e487fgac2egc8e3gf5a4ge0b6707a6480" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h1b198db2g5286ge01ag9555g534c3d48be4e" version="3">Необычная руна усиления</content>
+  <content contentuid="h3ccf3cafg6018g0424gd4a6g5bdc627c7379" version="3">Усиливает</content>
+  <content contentuid="ha7475001gbb02ga652ge0f0gb109d4f07b7a" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_UNCOMMON_07"&gt;Преданность Гат&lt;/LSTag&gt;. Заменяет активный эффект необычной руны.</content>
+  <content contentuid="hdbed360cg57f8g09bbg645dg39170e720c3b" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h5fb6cf8cg2a8fg39e8g85d7gba33a6e711d3" version="2">Редкая руна усиления</content>
+  <content contentuid="h034a77b4g0846gd71cg2153g7badeae1bf81" version="2">Усиливает</content>
+  <content contentuid="hb2bc31bfg4fe0ga709g25b3g783761185c6e" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_04"&gt;Подземный толчок булетты&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hb35c9237g186dgc22fg35ceg58629ee6f231" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h695f2ff0gd98fg30a4g15dag1bae2dfbb49b" version="2">Редкая руна усиления</content>
+  <content contentuid="h09837cc6g5748g8214ge428g678135c39d36" version="2">Усиливает</content>
+  <content contentuid="h298e9d59gb371g9949g53feg6b98f0aa77e2" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_05"&gt;Псионическое острие В'варгаза&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h37b187bagd766g63b8gfb65g49dde556eecc" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h6f2b24efg4261ge76fg85fdg6ba4e4d8f9c1" version="2">Редкая руна усиления</content>
+  <content contentuid="hb9ff2911gf15egccd5gaad5g4b7b51c6b0d3" version="2">Усиливает</content>
+  <content contentuid="hef094bc9g1819gedb3gb0f6g98654e62e42b" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_06"&gt;Принуждение Нере&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hcf5507d6g96f2g37e9gd178gef7a9cb49ee4" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="ha38dbcdbg1691g4aacg6630gf1842cfac9b0" version="2">Редкая руна усиления</content>
+  <content contentuid="h8b103e2egcce9g65a4g00acg9a457882b3d8" version="2">Усиливает</content>
+  <content contentuid="hbd91bf93g63e8g8768g5265g2cc8f38438b0" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_07"&gt;Парализующий взгляд наблюдателя&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h410fe8fdg3e2bgde93g98afgc25774e83731" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hfd314579g9be5gd010gfd47g8ac2adb0e89b" version="2">Редкая руна усиления</content>
+  <content contentuid="h50e2b12egc46eg974ag807ege3b8994fc63d" version="2">Усиливает</content>
+  <content contentuid="had6068a6ge21eg2b42g43a9g133863190509" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_08"&gt;Монетная кольчуга Герринготы&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h1650df31g64begfd94g29afg66fb439eb217" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7604f147g38cega512g986fg0e3ce02121c1" version="2">Редкая руна усиления</content>
+  <content contentuid="h65cb41ecgf123g640eg9094g88b992d32d67" version="2">Усиливает</content>
+  <content contentuid="hef8641e0g38d6g6e77g133dg5bc78914a344" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_09"&gt;Астральный кулак Лири'ка&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hc6641030gd53bg22d9gd510gdbc798eb0755" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="had9cf991geec2g8fabgbba7ged8b87805122" version="3">Редкая руна усиления</content>
+  <content contentuid="h70b2c96dgb0dag3bc9g376eg31ca68c952fe" version="3">Усиливает</content>
+  <content contentuid="h60241c6dg8259g9109g5b32g040e5063b0a5" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_10"&gt;Искажённый корень шагающего холма&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="hadebd12agedfdg0842gc88bgef856dcd29fc" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h486557fag9349g01f5g74e2g95e75d64e48f" version="2">Редкая руна усиления</content>
+  <content contentuid="h0a280405g1ee7gea2eg1868gee160b7f8fd9" version="2">Усиливает</content>
+  <content contentuid="h9ac67111gc726gf7a3g100bg8041ed4305fe" version="2">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_RARE_11"&gt;Жестокая гравитация З'релла&lt;/LSTag&gt;. Заменяет активный эффект редкой руны.</content>
+  <content contentuid="h28de694cg41cbg23c3g5851g4018b174ccd9" version="2">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h2b6938c7g7996gd02fg4cc1g6317b21b35ae" version="1">Жестокость лучника</content>
+  <content contentuid="h618e3d97g6b65ga65cgc4a5gb610af26c9b0" version="1">Когда вы наносите критический удар атакой дальнобойным оружием, вы бросаете дополнительно [1] кубик урона оружия.</content>
+  <content contentuid="h6ae4b37eg8bbcg34e4ge098g964404be7fd7" version="1">Великий уравнитель</content>
+  <content contentuid="h2f08f37dgeb34gba40gb8d7g5fc5108b4c0d" version="1">Базовые кубики урона всего экипированного оружия становятся [1].</content>
+  <content contentuid="hedd765c6ge72fg4ec1g5b58ge99cf8808308" version="1">Великий уравнитель применен</content>
+  <content contentuid="ha5389d8bg6554gcd2ag23fdg4e33ffa07367" version="1">Великий уравнитель снят</content>
+  <content contentuid="h4400e265g9e44g85eega960g5fc318d6050f" version="3">Стремительный палач</content>
+  <content contentuid="hbfd638f4g539eg66a5gb439g7a066051941a" version="1">Нанесение критического удара дальнобойным оружием восстанавливает ваши очки бонусного действия.</content>
+  <content contentuid="h8640d42ag76dag9c99g6a57g50ec009ad9ea" version="3">Разрыв Ци</content>
+  <content contentuid="h90ddbb08gdc2fg3bccgb523g2c6ac8256eba" version="2">Нанесение критического удара без оружия нарушает поток энергии цели, накладывая на нее состояние блокировка Ци на [1] ход.</content>
+  <content contentuid="h6ec14486g6638g18bage222g1339b658f993" version="2">Если вы успешно попадаете по цели атакой в ближнем бою, совершая атаку с помехой, вы наносите дополнительно [1].</content>
+  <content contentuid="h6632146dge54fg584eg9a58g3303d263605c" version="2">Ваши атаки оружием с вероятностью [1]% за каждый тип стихийного урона наносят дополнительно +[2] урона.</content>
+  <content contentuid="h84aa0422gf792g7053g488dg3e3aa0089879" version="2">Попадание по врагу атакой оружием ближнего боя снижает сложность спасброска от его заклинаний на [1] на [2] ход.</content>
+  <content contentuid="ha715723fgeb0cgc043gbb31g9ea5d12efb34" version="3">Сила сокрушителя</content>
+  <content contentuid="h8a70069cg9356g42a0g72ffgea1fe4946715" version="2">При критическом ударе оружием ближнего боя на цель накладывается состояние разбитая защита, снижающее её класс брони на [1] на [2] ход.</content>
+  <content contentuid="hae6b2b87g0b88gbe19gf5d7g7d48f3963032" version="3">Артиллерийская точность</content>
+  <content contentuid="h2944e47eg768dgcd3cgce6dg8aebe919d71a" version="1">Атаки дальнобойным оружием, совершаемые из длинного лука или тяжелого арбалета с расстояния более [2], наносят дополнительно [1] урона.</content>
+  <content contentuid="hb1aec7dcga884g6750g498fg92198722ca42" version="3">Пронзающий залп</content>
+  <content contentuid="h34be556fge5adgf800g72ebg2565edaedb9e" version="2">Раз за ход, когда вы наносите урон коротким луком, легким арбалетом или одноручным арбалетом, вы накладываете состояние пробитая броня на [1] ход.</content>
+  <content contentuid="hf8b1bcd4g9cd3g332dg4198g08a1621170fc" version="3">Едкое плетение</content>
+  <content contentuid="h93a25cf7ge0a6g07b0g87feg4054e5bf9d05" version="1">Заклинания, наносящие кислотный урон, также накладывают состояние разъедание, снижая класс брони цели на [1] на [2] ход.</content>
+  <content contentuid="h2da490a5g7fe4g5e7cg90f7gfe8fa27c2d71" version="3">Ледяное плетение</content>
+  <content contentuid="h2121f6fcg097fg87b8g5d58g40206586a011" version="1">Заклинания, наносящие урон холодом, снижают скорость передвижения цели на [1] и запрещают ей использовать реакции на [2] ход.</content>
+  <content contentuid="h6e51d0c7gafc5g1ae9g0956ge5fcf19570a4" version="3">Пылающее плетение</content>
+  <content contentuid="h56e5711dge1efgb63fgd837g93249b414ec8" version="1">Заклинания, наносящие урон огнем, накладывают на цель состояние опалённый, из-за чего она получает [1] урона в начале своего следующего хода.</content>
+  <content contentuid="h494c316agc496g7170g5f74g59adf2e26bbf" version="3">Кинетическое плетение</content>
+  <content contentuid="h3b73b23bgfd5cg575ag8695g664a786f6ef2" version="1">Заклинания, наносящие силовой урон, отталкивают цель на [1] и с вероятностью [2]% сбивают её с ног.</content>
+  <content contentuid="h62aa9712g9635ge6e0g8fa6g9c8c797a5fda" version="3">Грозовое плетение</content>
+  <content contentuid="hee295152gb45dg48a3gbbb7g4bb2246eda70" version="2">Заклинания, наносящие урон молнией, даруют вам эффект улучшенный статический заряд на [1] ход.</content>
+  <content contentuid="h899fb425g3b38g04d0g7fcag1fcb7eea49f6" version="3">Мертвенное плетение</content>
+  <content contentuid="h73a9b176g132bgc916gc3f6g14885eaa35e1" version="2">Заклинания, наносящие некротический урон, накладывают состояние истощение на [1] ход.</content>
+  <content contentuid="hf78a1825gd5b9g6d0ag189bg3c52e25343cf" version="3">Ядовитое плетение</content>
+  <content contentuid="h49e1feacg182egaf75g97b6gd9c0fa00388d" version="1">Заклинания, наносящие урон ядом, также накладывают состояние тошнота, накладывая штраф -[1] на следующий бросок атаки цели.</content>
+  <content contentuid="h442aa9a5g4505gb2e0g90ecg9c4aadea7bc9" version="3">Разрушающее разум плетение</content>
+  <content contentuid="h6763d87cg5d17gbe63g465eg1d5b8fdaf2c0" version="1">Заклинания, наносящие психический урон, с вероятностью [1]% накладывают состояние смятение на [2] ход.</content>
+  <content contentuid="h9de831cfg4ef7g0c34g06eeg0c6802c65fd5" version="3">Лучезарное плетение</content>
+  <content contentuid="hfd417b84g6fe6gefe4g7a30ga3de0a42d059" version="1">Заклинания, наносящие урон излучением, с вероятностью [1]% ослепляют цель на [2] ход.</content>
+  <content contentuid="h8277df00g58a5g152ege08dgc7de06130469" version="3">Резонирующее плетение</content>
+  <content contentuid="hb20df767g9d07g6114g80e4gc2f220a731a8" version="1">Заклинания, наносящие урон громом, оглушают цель на [1] ход, накладывая штраф -[2] к её броскам заклинаний.</content>
+  <content contentuid="hdb957a3agb175ge2fcg5497g1c9a20cceb50" version="3">Алхимическая концентрация</content>
+  <content contentuid="hea8c6430g9fffg0330g932cg157d4de60cdf" version="1">Употребление любого зелья лечения дает бонус +[1] к спасброскам на сохранение концентрации на [2] хода.</content>
+  <content contentuid="h10eec815g5429gbf98g7137gddf0cd3124c8" version="1">Отражение снарядов</content>
+  <content contentuid="habf05eb6g60c7g0518g1b49gccdf6520342b" version="1">Входящие атаки дальнобойным оружием наносят вам на [1] меньше урона.</content>
+  <content contentuid="hfb22476ag1c0ag94b1g1274g0183bcc45952" version="3">Синергия целителя</content>
+  <content contentuid="h563bfe2agada7gf8c3gf0fcg220e71f54185" version="1">Когда вы накладываете лечебное заклинание на союзника, вы и этот союзник получаете бонус +[1] к следующему броску атаки.</content>
+  <content contentuid="h7d100cf5gfb13g8882g7cd9gdce94f1d0e7d" version="3">Кармическое равновесие</content>
+  <content contentuid="h297b5883gcdccg902bga7e0gcfd1b1f8f3ec" version="1">Каждый раз, когда вы промахиваетесь при броске атаки, ваш следующий бросок атаки получает бонус +[1].</content>
+  <content contentuid="hab0c86edg87edg819bg973ag9547404b22dc" version="1">Защита исследователя подземелий</content>
+  <content contentuid="hb7f99800gdd0agcadbga2b4g936ee5682f77" version="1">Вы получаете на [1] меньше урона от ловушек, а урон от падения снижается на [2]%.</content>
+  <content contentuid="hdd112b29g2dfbg255ag2ca0g771e610b5e26" version="1">Рикошет хитрого выстрела</content>
+  <content contentuid="h1262ac1bg5517gb0efgf94dg404938042786" version="2">Раз за ход, когда атака дальнобойным оружием попадает по врагу, снаряд рикошетит во вторичную цель в пределах [1], нанося половину урона вашего дальнобойного оружия.</content>
+  <content contentuid="hdfb247ccg7d75g2843g5462g11b5f654b660" version="1">Несокрушимая защита</content>
+  <content contentuid="h8879b36eg6eceg9a17gf404g101a00648085" version="1">Если у вас есть временные очки здоровья, вы восстанавливаете [1] временных очков здоровья в начале каждого хода.</content>
+  <content contentuid="he86e6763g67c0g4f08ga743g6f7fc1cf5dfd" version="1">Отражающая защита</content>
+  <content contentuid="h0c6e02a1gdf2fg08bag7ab5ge14d8943c593" version="1">Когда вы получаете урон от врага, [1]% этого урона отражается обратно в атакующего.</content>
+  <content contentuid="hb25f3559geeb4g47acgf70bg7dc5fec070f5" version="3">Жестокая брешь</content>
+  <content contentuid="h1897240dg9963gd791g476fg6efc2f6c20ce" version="1">Ваша первая атака в бою гарантированно становится критическим ударом.</content>
+  <content contentuid="hede5995bg71d1g0e53g2a71gf7e3a96dc6b3" version="1">Эффект Жестокая брешь</content>
+  <content contentuid="h0bd9735bgd03eg4dccgeef5gaf4c8c804f67" version="1">Несокрушимая сосредоточенность</content>
+  <content contentuid="h4f1a32bbg0e40g614cg0375g3ef84d6d8f1b" version="1">Получение урона во время поддержания концентрации на любом заклинании школы трансмутации не сбивает вашу концентрацию.</content>
+  <content contentuid="hd028b7e8g72f0gbc19g9914gc29077d5a816" version="3">Разрушительный резонанс</content>
+  <content contentuid="h034cddfdg3a1cge193g6bf9gf87a87b268a7" version="2">Нанесение урона заклинанием врагу с [1]% или менее максимального запаса здоровья имеет вероятность [2]% вызвать магический взрыв, наносящий [3] урона существам в радиусе [4].</content>
+  <content contentuid="ha5eddb33g3a0fg3768g528fg2fde19c78911" version="1">Неотвратимое истязание</content>
+  <content contentuid="hf1534212g38d1gfba5gae4cg8501ec5fc17a" version="1">Враги совершают спасброски против ваших заклинаний школ очарования и иллюзии с помехой.</content>
+  <content contentuid="h5654ee6cga12bg681fg290fg5737f42bd7df" version="3">Резонанс перегрузки</content>
+  <content contentuid="haf2352b7g5ac2g095agb285g0bdf71619adf" version="2">Заклинания школы эвокации наносят дополнительно +[1] урона, но также наносят [2] урона заклинателю.</content>
+  <content contentuid="hb9e78961g615fgb107g0157g28a2d3bfba02" version="3">Солнечный зенит</content>
+  <content contentuid="ha0b13ffbg1c15gbdb6g0ec7g68c99fe0e27a" version="2">Заклинания, наносящие урон излучением или огнем, накладывают на цель состояние солнечный ожог на [1] ход.</content>
+  <content contentuid="h6cfc8f5dg93a0g1418gac6dg7e676fa8f730" version="3">Проклятие могильной связи</content>
+  <content contentuid="h75ff771fg0b5ag3f83g6091g26aba88eb94e" version="2">Когда вы наносите [4], цель становится связанной с могилой на [1] ход. Это снижает её класс брони на [3], кроме того, при перемещении она получает [2] урона.</content>
+  <content contentuid="hcd46bce2g2be1ge0fcgd156g6b7624788d4c" version="3">Связь ограждения</content>
+  <content contentuid="h2a1b7a79g92a1g3ea5gb761g5a3136a30ca9" version="3">Наложение заклинания школы ограждения на союзника создает между вами и целью магическую связь; [1]% урона, который она получает, перенаправляется вам в виде [2] на [3] хода.</content>
+  <content contentuid="hf91b8d52gdd1eg9bbfga4bagd92bce2d6a87" version="3">Пожиратель заклинаний</content>
+  <content contentuid="h85662eb1g750cg861bga401gd4d85f111f8d" version="2">Успешное прохождение спасброска против враждебного заклинания восстанавливает [1] и дает бонус +[2] к вашему следующему броску атаки.</content>
+  <content contentuid="h3754ebb6gf701gdffegc0a3ge32ff0b8b617" version="3">Арканная перегрузка</content>
+  <content contentuid="h1c38af56g226cg2267g7c8fgcf0774659707" version="3">Наложение любого заклинания 1-го уровня или выше усиливает ваш фокус, нанося дополнительно [1] урона.</content>
+  <content contentuid="h119aadfcg4e12gbd20g9617g4c2aabf5a7a0" version="3">Темпоральный шаг</content>
+  <content contentuid="h2f2a13d3g5feegba99g9bd0ge1f1954381b2" version="1">Ваша скорость перемещения увеличивается на 4,5 метра, и вы получаете 1 дополнительное очко реакции.</content>
+  <content contentuid="h57e5442bg7f80ge986g2f8cga230d2fdb323" version="3">Кармический откат</content>
+  <content contentuid="h23b8748fg0652g8057ge9aegab4ca30541aa" version="2">Когда враг наносит вам критический удар, он становится оглушенным.</content>
+  <content contentuid="h9c1a7fddgc03dg87a0gea2ag3ba4b141d080" version="3">Алхимическая перегрузка</content>
+  <content contentuid="hb8ee5221gc143gf2d1g2b17g7a500b91cc71" version="2">Употребление любого зелья лечения дает 1 дополнительное очко действий, но снижает ваш класс брони на [1] до начала вашего следующего хода.</content>
+  <content contentuid="h88c68115g28f9g6f66g8aafgbf4b272faf0e" version="3">Безрассудный гамбит</content>
+  <content contentuid="hb69ff666g8250g119fgbf19g8e4a21af1f58" version="2">Вы совершаете все броски атаки с преимуществом, но враги также совершают все броски атаки по вам с преимуществом.</content>
+  <content contentuid="h5eded405gae17g4b90g3318g1e166bac3b47" version="3">Сила космоса</content>
+  <content contentuid="h039ae84eg0419g7f41g2e8fg440dddb7bdaf" version="1">Весь урон от ваших атак оружием преобразуется в силовой урон.</content>
+  <content contentuid="h72a424c1g59f4gc2fdg7ae0gc02c0063c70e" version="3">Биполярный всплеск</content>
+  <content contentuid="h70d50602g8ad0g5db9g82f2g229e132e6336" version="2">Каждый ход ваша полярность меняется: на одном ходу вы получаете +[1] ко всему наносимому урону, а на следующем — весь получаемый вами урон увеличивается на [2].</content>
+  <content contentuid="h8c362bf2gfc00ga859g63f9ga84358a0caad" version="1">Готовый рикошет</content>
+  <content contentuid="h1ff4bce8gbe82g4939g90aaga74c11119cf0" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h4421a024g6f0eg8f99gb4e8g791fea16592e" version="4">Усиливает</content>
+  <content contentuid="hc89587d7g5afdg7cbagd563g8b9ac221afd2" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_05"&gt;Сила сокрушителя&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hcc772936g1f59gd4c6gaea3g67462b850c0c" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h64364601g22c2g49d1gba61ga60d811cc0ec" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hc15075c1gfc49g8701gc848gfd97c4178b64" version="4">Усиливает</content>
+  <content contentuid="h2090b116gdbbfg4966g7eb8ge2d02bf7b359" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_06"&gt;Артиллерийская точность&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h565db2d3g4b11g4e89g5b34g0ab3b655d880" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7f7f1f37g03ddg3aeag81f7gf9651d8ca720" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h1bbb4602g2118gafb4gdfffg279d421202c6" version="4">Усиливает</content>
+  <content contentuid="h8b69d0a7g7a3egc6c5g25d9gabb5fa6eb25f" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_07"&gt;Пронзающий залп&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h1ae30335g4603g4c23gcb5cg9951f20a1d8d" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h2378cb6fgbddbg0a00g8964gf82bc22be579" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h43f26079g92a7g4a65g5565gb82fdbe204ea" version="4">Усиливает</content>
+  <content contentuid="h660a5d0dg0d6egd5beg9d99g1031a4bb88b4" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_08"&gt;Едкое плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h5324ecb9g30edg6edbg5a69g3326969d1dc3" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h0ea5e808g482eg89a3gb86cg3a8eb1b2b50e" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h6b6073bcg0ccegc2bbgb137g9d246b0872fe" version="4">Усиливает</content>
+  <content contentuid="hd8ff8eedg511bga02bg456cgd0b39779b56f" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_09"&gt;Ледяное плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hd1e1d7aag04cbga19fg2c29g2fd88efacaf5" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hc710a4a3g29a0g0cf1g462eg97fa33b4de39" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h5432001dg0745g42d4gcc24ge8707dfca997" version="4">Усиливает</content>
+  <content contentuid="h8a068487gd345gddd8ge279g15dfeac44276" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_10"&gt;Пылающее плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hc3cf6421g93b9gf49fgaa81g44d2267bd6f3" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h5ea7262cgd542g99d8gc1d2g57a09314f082" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hf0994cfeg753eg0c57g3b8cga9fbaf90cedb" version="4">Усиливает</content>
+  <content contentuid="h74937b64g1941g8670gf3a9g7eb62c939a9e" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_11"&gt;Кинетическое плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hff64da1bgc76dg7421g4926gedb20190a4e5" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h9ccd5cd0g3c98g876ag0ee7g593db344f85b" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h8e836661g82c8gd0b8g5224ga0fb5708291b" version="4">Усиливает</content>
+  <content contentuid="h1cb3b139g662cg86cfg2e2eg67a688dfb370" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_12"&gt;Грозовое плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h74101c38gde5bg9d7bgafcdg536298228855" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h64f0f865gdd73g426bg1ab1gc95de415401f" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hd31d43cbg75b8g1fadg9f78gea49124086ec" version="4">Усиливает</content>
+  <content contentuid="hf328cfbdged8ag0b99g283cgb59da422a5b9" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_13"&gt;Мертвенное плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hb8bac3bfga60bg15cbgbfc4g24ca77482788" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h34e421d9ge86fgda7ag6ad1gfdfcb7ecc863" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hc3077156ge8b1g3788g78f3g5e4dbc9f4df8" version="4">Усиливает</content>
+  <content contentuid="h157e5ce0gd1a8g9f04g2432g695414a588d7" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_14"&gt;Ядовитое плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hf3ae8a28gbebag5aa9gb2b9g33a6a3a97c93" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hab1165f5g41e8g9ddfg7e78gffda422b3bf4" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hc43a0fd1ga98dg8888g6310gb845c376702e" version="4">Усиливает</content>
+  <content contentuid="h644fe39agb6f5g1942gf970gd3e2a5d55c0a" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_15"&gt;Разрушающее разум плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hd9980844g8e0dg56f4gb74agbe3ad6d29f88" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h46f3f695g87ccgea4agc62cg56498aaeb84c" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h75470ffcg59bbg75dfga6ecgbf6b0293907d" version="4">Усиливает</content>
+  <content contentuid="ha7b56d44g7e6cg0645g3eb6g23bf7cc5ebb6" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_16"&gt;Лучезарное плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h43523a6cg839ag1986g253agab78773ae27e" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h9c9bb3f4gff58g627bg2b16g6b2aafeb5244" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h77333723g6f2dg66ffg1f93gde9a68e97ff2" version="4">Усиливает</content>
+  <content contentuid="h4fd68d40gc0f6gf2f4g8061g62eb8909f163" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_17"&gt;Резонирующее плетение&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="ha9fd95c4g3887g2647ge162gae5042e358a3" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h6743b25cgb1ffg0272g5589g65ea04714776" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hbb1b93bbga6aag6757g9422g69fba2fab6f1" version="4">Усиливает</content>
+  <content contentuid="h6f2f6383g41feg9cddgacd2gf964f2858260" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_18"&gt;Алхимическая концентрация&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hf2f7418agfdb8g03e9g162ag1f2ef01dd73c" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hcf7d5ac8gbb96g5ca9g633ag1375db1cbc64" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hd8366fa7g007bgdcaag7290gd8febe14ab33" version="4">Усиливает</content>
+  <content contentuid="h5546250dg5b62g773cgbbfegd31c45548498" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_19"&gt;Отражение снарядов&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h6959a622g7f7agc28fged84g1892b688eca0" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="he14364a7gcca7g8634g646cgd74705aea07c" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h02bf0a96g7bcdgba29g247dgebaed0e452e7" version="4">Усиливает</content>
+  <content contentuid="h1787aee1g3190ge970g8590g2a30e11fbd2d" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_20"&gt;Синергия целителя&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hfb3e3580g4142g1851gcf76gdd31fabfe401" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h5e22811eg2bfdg98c2g36ceg9e7528bd5aec" version="4">Очень редкая руна усиления</content>
+  <content contentuid="h510c15fag8d22g5fe0ga6d3g35c74c4b265d" version="4">Усиливает</content>
+  <content contentuid="h6e8bfe09g5631gfbaag6717gfb254540c056" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_21"&gt;Кармическое равновесие&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h5e63c03cg85d3g43d4g850ag3cbd92e5639e" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hac46194fg2da1gb74dg528dg00f50c4cf802" version="4">Очень редкая руна усиления</content>
+  <content contentuid="hc580af6dgd1e2g3969g926cg6c872848461c" version="4">Усиливает</content>
+  <content contentuid="hfad4cc1ag1e58g4bdfga22dg948be22c63a6" version="4">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_22"&gt;Защита исследователя подземелий&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h0d60d1ecg76d9gea72g83aagcc0013682ee5" version="4">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hd3c69cd6g9dfeg388bga468g4c44a6c508aa" version="5">Очень редкая руна усиления</content>
+  <content contentuid="ha99bd934g89dag368fg66a9g3eebf77ae300" version="5">Усиливает</content>
+  <content contentuid="hbe28d202g5d8ag4968g9647g7d5a5d91ce6c" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_23_SECRET"&gt;Жестокость лучника&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="h3724ac6eg6238g31e9ga0b3gce2cf3c6f05c" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hcfd55d76g14e1g07dfg5173gfdb38a091442" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h931af7adg24b7g2816geb23g0d6c562403fd" version="5">Усиливает</content>
+  <content contentuid="he7d92b16ga465g3464g130eg20a716c77269" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_VERYRARE_24_SECRET"&gt;Великий уравнитель&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="hc9c7c41cg8053g4984g3fb3g45ecd98452fd" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hb4c179f8g1793g0d74g002ag5d4f328c51fd" version="3">Легендарная руна усиления</content>
+  <content contentuid="he6a8c305g4616gb042g0b45g017ccb0bca3a" version="3">Усиливает</content>
+  <content contentuid="h608fa60dg2413gdc74gf98ag240080d631a3" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_05"&gt;Разрыв Ци&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h98f35a1dg7c09gcb24gb353g7ba78c88ffb0" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hf26d03f5geb0cgf3ccg869dg6127ebd891a1" version="3">Легендарная руна усиления</content>
+  <content contentuid="h9fcae3adg9d0dg8b3cg89e7g5c3dec816855" version="3">Усиливает</content>
+  <content contentuid="hbe32e32dg80e7g03ecg5c61geed5f7f9c985" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_06"&gt;Стремительный палач&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h6f1cfad3g427ag01e1g92edg0e1e72fdea06" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hcea27668g8a65gc668g4f9ag1f3c2d2eb6dd" version="3">Легендарная руна усиления</content>
+  <content contentuid="h2bed1624g1302g0546g31a7gc8ba7bf30aaa" version="3">Усиливает</content>
+  <content contentuid="hb1732caege992g56adg8169g7ef68bc85032" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_07"&gt;Рикошет хитрого выстрела&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h1b6c6dacgfbf6ge0ddg0632gbd076ba89158" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h96d3acf4g37c6g23f9g1c47g5dd3bb2e0803" version="3">Легендарная руна усиления</content>
+  <content contentuid="h2e85ad9egedafga583g695fgdf43be0c28a5" version="3">Усиливает</content>
+  <content contentuid="hf4b83638gcedeg4235g2315g5d086441697f" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_08"&gt;Несокрушимая сосредоточенность&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h62199649gb789g7c68g8642g2e15f67bcd74" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h1230fcf2g6872g1268gb11cg19d8d8fd9640" version="3">Легендарная руна усиления</content>
+  <content contentuid="ha3e6e4a6ge88fga385gd397g288721a207f3" version="3">Усиливает</content>
+  <content contentuid="h732c05a2gef7eg229dg0aacg1fd77ba0348a" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_09"&gt;Разрушительный резонанс&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="he535747bg664eg5f68ge972ge88e9af1e856" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hfd952979g986fgb020g7d6dga7d7aa8b17a2" version="3">Легендарная руна усиления</content>
+  <content contentuid="h3880f339g78b2g38f5g0a6ega649f66a6e23" version="3">Усиливает</content>
+  <content contentuid="h4ba9fafcga402g6535g505ag1db95c32122f" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_10"&gt;Неотвратимое истязание&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h7491fe54g04bcgab1agf8dbgefbd1d3f16ca" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h1f26ba07ge04dge1d0g82c1g6b85e53b3426" version="3">Легендарная руна усиления</content>
+  <content contentuid="hee09ba76g29dfgdb87g057fgfd61944f3231" version="3">Усиливает</content>
+  <content contentuid="he4e2b11eg0156g83eagff3bgeef5b0497e36" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_11"&gt;Резонанс перегрузки&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h7b7a539ag2245geed5g6166gba6829347efb" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h9f667e24g8a79gf4ddgc8a8gefccbb1df445" version="3">Легендарная руна усиления</content>
+  <content contentuid="h21dbcd8egd268g291fgd2cdg51414acf7005" version="3">Усиливает</content>
+  <content contentuid="hf89e1ed2gee23g529cg3808g23200c9ba22b" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_12"&gt;Солнечный зенит&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="he0a95a0cgd8f2g8d82g7b84g2c846043467b" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7c293c19g65feg8630g1ee7ge1187e3a7bb4" version="3">Легендарная руна усиления</content>
+  <content contentuid="hf1d5ec5bg2a49g56b8g0686g20a7ac0a5aa7" version="3">Усиливает</content>
+  <content contentuid="h215d5e1eg9f84gfdbcg1fc8gb125ca228cdb" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_13"&gt;Проклятие могильной связи&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h039c7d84g490bgf7d9g0f32ge4a9571f0e9e" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h9cbd47f6g5b80gfc17g19aeg8882848f1173" version="3">Легендарная руна усиления</content>
+  <content contentuid="hd70dae22g8256gbd35gbc54g4a8fd0c9da46" version="3">Усиливает</content>
+  <content contentuid="he9994632g490bg8752g2230g0c164dbe9112" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_14"&gt;Связь ограждения&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h951fcd28gcfa5g3e22g9105g987a74478cdc" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hafb16f4dg3e9bgb60cg67f9gd86dec54dbaf" version="3">Легендарная руна усиления</content>
+  <content contentuid="h4041450fg5611ga1b2g3ebfg933bf63e9c59" version="3">Усиливает</content>
+  <content contentuid="hcd038949gfeceg9f4cg2b61g194698722bbb" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_15"&gt;Пожиратель заклинаний&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="hf694d6d6g4a15ga096gc24cg1c2bcba8375b" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h8134f6c8gaf5egd3c6gcef2gb56b7f6829f6" version="3">Легендарная руна усиления</content>
+  <content contentuid="hcdad865bg6809g9917g440dge27b0bc44093" version="3">Усиливает</content>
+  <content contentuid="ha079af84g0b18g444dg24bcg57734df0f032" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_16"&gt;Арканная перегрузка&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h5592215fgdc6dg9e0dg33aeg61a1da4222b6" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h0dd1b21bgb7b9g60d8g285eg3b9cef24c8f1" version="3">Легендарная руна усиления</content>
+  <content contentuid="hd9d888c0gf9dege396gdc23g3c8cf7b26a34" version="3">Усиливает</content>
+  <content contentuid="h97dcc982g3ecbg0eecgc07fg3fa590038354" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_17"&gt;Темпоральный шаг&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h4b859768g5895gdef4g5042g9e2577f5c489" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h49316a77g5223g0e59g61begcfc4b7c2bdaf" version="3">Легендарная руна усиления</content>
+  <content contentuid="h7a25371fg2713gb566g2111g5d69d79b7e9b" version="3">Усиливает</content>
+  <content contentuid="h3794493dgae56gefa6gf372g0f5524481f8e" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_18"&gt;Несокрушимая защита&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h2f33e0f4g328fg31b1g321bgfa476325cafe" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hcee034c7g5dd3ge1b2ge3e4g61dd851eaefc" version="3">Легендарная руна усиления</content>
+  <content contentuid="h3381b086g5b33g9f4eg429dg7a0a12086719" version="3">Усиливает</content>
+  <content contentuid="he5b618afg467dgca1cg6a43gf4fdaf645a2e" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_19"&gt;Отражающая защита&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h24120fa3ge11cg7d37gbd9agc03c8ce826e1" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="he3e785f8ga768gbf1dgdad2gcdbbd3052a86" version="3">Легендарная руна усиления</content>
+  <content contentuid="h2195b956g6f2dg521fg52f9g096edb33ab3e" version="3">Усиливает</content>
+  <content contentuid="he60b2b8ege61eg30eag3c4dg1c1bb2fa622f" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_20"&gt;Кармический откат&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="hbbef6536g576eg32e1g9fc5gbded3e3416ba" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hc20d3cc0g6f9ag1345g8f66g7015efea1e39" version="3">Легендарная руна усиления</content>
+  <content contentuid="hea7cb3e7gce2dg32ccg453ag2d6a8ee6349b" version="3">Усиливает</content>
+  <content contentuid="hc6a019dfgbc2dgfabdge740g178fd4c24a9e" version="3">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_21"&gt;Алхимическая перегрузка&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h1d63a3a5g1fecgaef5g67e5g3b3464716207" version="3">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hea856c1eg7781gcbf0g03ddgbd92f6c16a68" version="5">Легендарная руна усиления</content>
+  <content contentuid="h8945fe50g809bg4099g45feg3ecd35e4bc7c" version="5">Усиливает</content>
+  <content contentuid="h2d629cd0g1a4cge3c9ge31fgc0f63affb272" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_22_SECRET"&gt;Безрассудный гамбит&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="h011d9357g8125g3a7ag3dc3g241128517e05" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hb33a8966g8e5eg647egc425gf0f90267c116" version="5">Легендарная руна усиления</content>
+  <content contentuid="h19689cbdg624fgb09fg1ffag235e1b6dd265" version="5">Усиливает</content>
+  <content contentuid="h838da3f6g1642g91f3g6f07gf92fa0dd41bc" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_23_SECRET"&gt;Сила космоса&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="h97e45c4dg7ff1g780cg58d7g14502c6a041f" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h8f99646fg7bb6g8077g465cg28a1729b48ee" version="5">Легендарная руна усиления</content>
+  <content contentuid="h0c902ed9gdaceg4b22g81a8g13c5a53006c9" version="5">Усиливает</content>
+  <content contentuid="he7f3f37bg576fgb2b1g3104g51726be1b3d5" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_24_SECRET"&gt;Жестокая брешь&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="hf6b331c3gcac1g303dg9944g76a50f78ae7e" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h8a6cf1c6g403bgefd7g5ac0g164bdf3b96e9" version="5">Легендарная руна усиления</content>
+  <content contentuid="hfacb3591g41d5g3cefg9f7bg576735cf9e64" version="5">Усиливает</content>
+  <content contentuid="hdc7614cagd3a3gb81fgdfd1g2cdd517c5032" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_LEGENDARY_25_SECRET"&gt;Биполярный всплеск&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.&lt;br&gt;&lt;br&gt;Это усиление можно получить только из рунного фьюзера.</content>
+  <content contentuid="h64019802gd407gb08eg4495gdb0a9bb082cf" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h1f9f5099gdc21gb3feg3c38g768de0552019" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h1e25a46dg6a63g0bd8g7b00g2e77078fde58" version="5">Усиливает</content>
+  <content contentuid="h13734039g55adg84b1g858fga5b2f57322f1" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_01"&gt;Ненасытность Бальтазара&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h1c8f436bg4a00g041cgc05cgc18101ce90e8" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h5c4c01c5g32d8g2f8ag03adg7658625e93bf" version="5">Легендарная руна усиления</content>
+  <content contentuid="h93c64d8fg7df7g0137gcdc4g8d40fc5a7612" version="5">Усиливает</content>
+  <content contentuid="hcd7612deg5e7fgbb60g67feg3d7c429213cb" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_01"&gt;Штормовое сердце Ансура&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h3f4b5bfdgead9g984fg3aecgab66fe3b9a47" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h29a67498g4597gc45fgce74gd837f560bed6" version="5">Легендарная руна усиления</content>
+  <content contentuid="h36e89cd9g73a6gf7adgc776g34819a7612d0" version="5">Усиливает</content>
+  <content contentuid="h213a63dfg9e54g2566g2983g3a7e8527b2d2" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_02"&gt;Кровавая трапеза Казадора&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h9878b909g4da5g972fg1b77g99c480019830" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h0bdc4c8ag7a29g437cg3010g4a78548b9aef" version="5">Легендарная руна усиления</content>
+  <content contentuid="h994e5e33g8ee9g5667ge0bageed35d017b3d" version="5">Усиливает</content>
+  <content contentuid="ha7f6cfe2g153cgfb51g467bg13afbe61a709" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_03"&gt;Сдирание плоти Орин&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h5b9df741g767dg1da6gba18g0075b9d62ac5" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="ha267a03cg7e81g952dge120g11b46c893d38" version="5">Легендарная руна усиления</content>
+  <content contentuid="h1e57fceeg9934gb400g8324g6875784f32ba" version="5">Усиливает</content>
+  <content contentuid="hdfb3ceffg7ebcg171ag6e99g70186c68ceeb" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_04"&gt;Порабощение Горташа&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="ha0cc8fc6g9c51g4cd6gd23fgc4c43fe6065e" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h7f264a25gdc72g52ccg21eagefac92bf3b3c" version="7">Легендарная руна усиления</content>
+  <content contentuid="h71c05bacg0472gf816g18dag6237a7c1c02b" version="7">Усиливает</content>
+  <content contentuid="hc86365ccgcf1eg5f82g09e5g922d1647cea9" version="7">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_05"&gt;Титанический бастион&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="hfe14fb91gf77fgdc99g7c4agcacf43bf73cc" version="7">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hdaf6eecagc92dg30b8g8f46g91e2d36fc7ae" version="5">Легендарная руна усиления</content>
+  <content contentuid="haadd63f6g4545g5bdeg335egf94d2c349bf4" version="5">Усиливает</content>
+  <content contentuid="he20f33d1g3439g3e5cg6ebag3cf9117a6932" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_06"&gt;Полумрак Виконии&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="h4c233a64g82beg4cecg8f64ge769766350fd" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hc54af247g8c34g1737g7acbge14940fd5de6" version="5">Легендарная руна усиления</content>
+  <content contentuid="hd3c19fddgcc63g972eg821ag2e3d730cb8ec" version="5">Усиливает</content>
+  <content contentuid="hd0415f3cg0a65g78e5g76feg403fbb8bf1d1" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_07"&gt;Возмездие Рафаила&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="hb6b31b8cg0214gdd70g9d8cg23d129495bd6" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hc42a8e3dg8a11ga3ecgd0c8gf941aeafbef8" version="5">Легендарная руна усиления</content>
+  <content contentuid="h11dea383g520ag449fg5ce8gcc41f6fc92cc" version="5">Усиливает</content>
+  <content contentuid="h9e88f9fegb32bg37ecg62b5g425c505ccd4f" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_LEGENDARY_08"&gt;Ярость Саревoка&lt;/LSTag&gt;. Заменяет активный эффект легендарной рун.</content>
+  <content contentuid="had8ce186g168egc65ag62b9g6820f1219b7a" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h5198784dg3080gfac1g7a7bgfce15e590bb4" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h3a112b3bge4d7gfba5g6763g771e44bc2f08" version="5">Усиливает</content>
+  <content contentuid="h9538014dgfea1g21c7gc1c9g633b5c34ae38" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_02"&gt;Потустороний резонанс Цка'ана&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h18446209ga83agb1fdg15f5g06fc2e35d56d" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hb8083391g5944g33f1g423dgd5f669c95d91" version="5">Очень редкая руна усиления</content>
+  <content contentuid="hd96cf2a2g8062g4a16g9f23g23b2e47a991c" version="5">Усиливает</content>
+  <content contentuid="h57da05a4g277dg8a4cg7250gcef57f2f9ed9" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_03"&gt;Убежище Кар'нисса&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hf822cf5fg2228gd99dg6ce8g9ba29d138d84" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hd30d1139g8e09g0d7bg779egb215eca6e4c4" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h2d3194bbg4c7dge6f2g917fg3edd2e297058" version="5">Усиливает</content>
+  <content contentuid="hb05eff1cgf5d4gb041g57d7g7ff4b002039f" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_04"&gt;Ужас Кетерика&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hbae28abeg0119g2cd6gef58g56ea6831f989" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h9f11cb4ag4a3cg0019gf1d2g529a9497cc0b" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h7228858ag22aegfc64gbdc6geb59c627f2cf" version="5">Усиливает</content>
+  <content contentuid="h70c2d163g3005g414ega5ebg769014529897" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_05"&gt;Хирургическая точность Малуса&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h4a1eac5cg5279g36d8ga791g7d06530d5c47" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h3c3c70b0ga64agede2g6008gdd71ee24e1da" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h3af9b434g2414g334eg8586gf05f3eb79fc6" version="5">Усиливает</content>
+  <content contentuid="h32f48289g7ccfg77d3gc42agc9300eaec5a0" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_06"&gt;Нестабильное варево Тисобальда&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="hb403d30ag643fg320fg6756g58a48ce5b3ca" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hbf48865dg9875g98e3ge2dfg02e173815391" version="6">Очень редкая руна усиления</content>
+  <content contentuid="hbacc08fag2a05gcf6fg5efdgb609f1b72dd2" version="6">Усиливает</content>
+  <content contentuid="h3dbca674g51c4gbb7dg3607g12109f24e307" version="6">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_07"&gt;Искра преследователя Юргира&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h5eccd4e5gc1d4ge1dfg48a8g590cb080887d" version="6">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h69c5ee77g3ddbge54fg8422g4a87cda97443" version="6">Очень редкая руна усиления</content>
+  <content contentuid="h97c7caf3g304ag51d9g5ffeg8d3a4a91248f" version="6">Усиливает</content>
+  <content contentuid="h9d9ec70agd3ddg6a33g71c6g2c04268f8f06" version="6">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_08"&gt;Серебряный свет Хар'рака&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="he3571281gae24g8682g8d21g6adf20c48d78" version="6">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="h52870a54g4d71gd26fgb5a3g9adbff73fee4" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h63e3d9e6g7bb4g2658g048fg5bbd8a1931e9" version="5">Усиливает</content>
+  <content contentuid="h02e3cdf6g66a1g110dg2822g0d3db4e248b5" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_09"&gt;Высокомерие Лорроакана&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h68f753cfgd108g4ee7g18cagba3e1747e4b7" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hf49bca2eg919fg4ffdg088fge621c4fef2a0" version="5">Очень редкая руна усиления</content>
+  <content contentuid="h079e2b6cgffafg1a16gec05gd700ae86d7f0" version="5">Усиливает</content>
+  <content contentuid="hd539e6e4g2731gb279ge1c8geba3c43db46e" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_10"&gt;Нечестивая жизненная сила Мистического трупа&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h8dfcaff0g0e88g1ec2g955fg4a7a35cd063a" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="hc3c78c58g50a3gd389g0912g2420a2dd6669" version="5">Очень редкая руна усиления</content>
+  <content contentuid="ha4011872ga009g1d08g9a03g7c0cf8d6c0a7" version="5">Усиливает</content>
+  <content contentuid="hc651e09dge46egaa95gc02ag0f169e484233" version="5">Даёт статус &lt;LSTag Type="Status" Tooltip="FAR_BOSS_VERYRARE_11"&gt;Обман Птариса&lt;/LSTag&gt;. Заменяет активный эффект очень редкой руны.</content>
+  <content contentuid="h3403df46g005bg2a1fgc764g147ba110f81a" version="5">Усиливает персонажа уникальным эффектом.</content>
+  <content contentuid="he2aba971g68ccg3764gbad1gdbd37f30e9ac" version="5">Штормовое сердце Ансура</content>
+  <content contentuid="h46c72be0gaa2fgd1cbg6afbgcbb9291e0527" version="4">Кровавая трапеза Казадора</content>
+  <content contentuid="h33f448d4gcd01g1ed6g570bg04974e5c6b76" version="4">Сдирание плоти Орин</content>
+  <content contentuid="hef970c9cg37b9g05afg8d9dg5417bf4ac707" version="4">Порабощение Горташа</content>
+  <content contentuid="h851d8461g8816g42d9gabbcge014500efd91" version="4">Титанический бастион</content>
+  <content contentuid="h1757faffg625dg0271g6bd3gb17e552427bc" version="4">Полумрак Виконии</content>
+  <content contentuid="hade0c445gb611g88dbg5912gd7702182f8fd" version="4">Возмездие Рафаила</content>
+  <content contentuid="hf77a75fbgda34g92a7gd1e7gb228e5476615" version="4">Ярость Саревoка</content>
+  <content contentuid="h34d6e3d0g0a73gdb8fgb4b3gd419e4eb3ae5" version="2">Обман Птариса</content>
+  <content contentuid="h2fbee209gd0cag6de8g56a4g09209d791753" version="2">В начале боя на вас накладывается эффект накопление грозы. Кроме того, ваши заклинания, наносящие [1] урон, с вероятностью [2]% накладывают состояние шок на [3] хода.</content>
+  <content contentuid="h6609a809gd571g1b75g04d8g69c891e782bd" version="6" />
+  <content contentuid="h29034db1g91f3g898ag2ee5g944bbdcae319" version="6">Откройте мешочек в инвентаре торговца, чтобы купить руну.</content>
+  <content contentuid="hc8801e02g7cf9g7b10g6c29gb871d70026d5" version="4" />
+  <content contentuid="he52f793ag2085ga786g3c7cg542b9bc9bc48" version="3" />
+  <content contentuid="hf883d560g2c5fgba59ga3a4gfdeee9fec6f4" version="3" />
+  <content contentuid="h531a8fcbgf6e3ga764g47ebg635edc325ed2" version="1">Откройте мешочек в инвентаре торговца, чтобы купить руну.</content>
+  <content contentuid="h1330af61g4bf5ga7ccgea72g04c7f1521dd4" version="1">Откройте мешочек в инвентаре торговца, чтобы купить руну.</content>
+  <content contentuid="hf04ca3dcgd87eg1346g4effgc373ab717d6e" version="1">Откройте мешочек в инвентаре торговца, чтобы купить руну.</content>
+  <content contentuid="hdea370ccgc876g90ddgb4b2g680b00140ff8" version="1">Накопление грозы</content>
+  <content contentuid="h5ca30239g5a03g22bfgcb02ga3ec77917709" version="1">Враги совершают спасброски с помехой против вашего следующего заклинания, наносящего [1] урон.</content>
+  <content contentuid="h6c135890g9b7ag2151g0dd2gd9a85680bfd7" version="2">Атаки совершённые в &lt;LSTag Type="Status" Tooltip="SNEAKING"&gt;скрытности&lt;/LSTag&gt; или &lt;LSTag Type="Status" Tooltip="INVISIBILITY"&gt;невидимости&lt;/LSTag&gt; наносят дополнительно [1] и накладывают статус &lt;LSTag Type="Status" Tooltip="FAR_FIRE_Опалённый"&gt;Опалённый&lt;/LSTag&gt; на [2] хода.</content>
+  <content contentuid="h2a2847c2g6107g1607g0892gfeac76531314" version="1">Критический удар вытягивает жизненную силу жертвы, нанося дополнительный [2] и восстанавливая [1]</content>
+  <content contentuid="h7c77d34dg0411gb214g9123g1decf4dee535" version="2">Нанесение колющего или рубящего урона кровоточащему врагу наносит дополнительные +3 колющего урона и с 15% вероятностью накладывает состояние изувеченный на 2 хода.</content>
+  <content contentuid="h87c67e62g8682gd2a3g36e4g42f2ef97567c" version="1">Ваши атаки наносят дополнительные +3 урона силой по целям, находящимся в состоянии испуганный, недееспособный или очарованный.</content>
+  <content contentuid="hbe160850gda11gfd54ge9aag611e6cce9f2b" version="2">Нанесение колющего или рубящего урона кровоточащему врагу наносит дополнительные +3 колющего урона и с 15% вероятностью накладывает состояние изувеченный на [2].</content>
+  <content contentuid="hff804ed0gd2aag8f03g2262gae5ab5977716" version="2">Пока вы находитесь в слабо или сильно затемнённой местности, вы получаете +[1] ко всем спасброскам. Кроме того, нанесение некротического урона заклинанием имеет [2]% шанс ослепить цель на [3] хода</content>
+  <content contentuid="h4cdcfcd0gb0eag2fe4gf890gf413e6f70e98" version="3">Когда враг наносит вам урон, ваша следующая атака, наносящая огненный или некротический урон, наносит дополнительный [1] урона</content>
+  <content contentuid="h10e94b4cg7e1dgbae7g4fe1g24ab8ef92836" version="2">Атаки оружием ближнего боя с [1]% вероятностью накладывают состояние перерезанные вены на 2 хода.</content>
+  <content contentuid="hcd4675d4g4d94g406ag5b9ag9f7300967061" version="1">Потустороний резонанс Цка'ана</content>
+  <content contentuid="h5dfbb301g20cdg7338g7bd7g4e6d6f8cd730" version="1">Ваш следующий потустороний разряд имеет дополнительный заряд.</content>
+  <content contentuid="h43c0a5e3g26c2g8017gd679g75778e1fa30b" version="1">Ужас Кетерика</content>
+  <content contentuid="h3d95198bg2c8fg614agcf65g396af7e5233c" version="1">Обман Птариса</content>
+  <content contentuid="h40c260cdg0ec8g8c09g0bf5g607785945be2" version="1">Потустороний резонанс Цка'ана</content>
+  <content contentuid="h9a883d08gf299g16fdgd018g2ede6b07074f" version="1">You have Advantage on your next бросок атаки.</content>
+  <content contentuid="h09327e93g7625gbd68gb0c7g9ea02ff8a7aa" version="1">Штормовое сердце Ансура</content>
+  <content contentuid="he8fd5017gde38g3aa9gabe7gea10f6cfc2db" version="1">Штормовое сердце Ансура</content>
+  <content contentuid="hdaec3741g812bg03f0g1c58gd46a505e4217" version="1">Изувеченный</content>
+  <content contentuid="h40b7f3a7g838eg7fe1g4a62ge6a08fb3fb0c" version="1">Класс брони снижен на [1].</content>
+  <content contentuid="h99c3cb86ge3cbge499gdc4cgb2342d6acd1c" version="1">Возмездие Рафаила</content>
+  <content contentuid="h29084458gf243g96abgf103g825f38c2d1bd" version="3">Ваша следующая атака, наносящая урон огнем или некромантией, наносит дополнительно [1] урона.</content>
+  <content contentuid="h0fab715dg5208ga799g0dfdgb67fb1c410e0" version="1">Помощь Авангарда фаланги</content>
+  <content contentuid="h63c32574g29e7g30b0g37f7g5837a6b4124d" version="1">Применяется, когда у игрока экипирован щит.</content>
+  <content contentuid="hbc899e58g0d13gc390gc326g952e4d8c6621" version="1">Авангард фаланги</content>
+  <content contentuid="ha947877ag4073g6d9fgaa2egf1a06c1da9e0" version="1">Класс брони увеличен на [1].</content>
+  <content contentuid="h26c2825egee51g2a6cgd065gcb6768491ee9" version="1">Авангард фаланги</content>
+  <content contentuid="h805bf2f0g514bgef8dg8219g96a6fe69a11b" version="1">Авангард фаланги</content>
+  <content contentuid="h41a13dfdg362eg9199gfdf8gab1532775d50" version="1">Дезориентация</content>
+  <content contentuid="h201996dfgfaf1g82cegde61gabeae5b53d3c" version="1">Вы совершаете броски атаки с штрафом -[1].</content>
+  <content contentuid="hb7cbd666gc9d2g4b2ag1eb9g95e8aaad72ca" version="1">Сокрушительные удары</content>
+  <content contentuid="hc60ff574g25f3g3500gc88dg84c8a50b1f96" version="1">Разбитый</content>
+  <content contentuid="hc9e94d55ge0e7g5533ga2bag2a6adcc95b65" version="1">Класс брони уменьшен на [1].</content>
+  <content contentuid="h971cdb82ga721g4732g764agb1cf05cab7bd" version="1">Сила сокрушителя</content>
+  <content contentuid="h91030752g7f17g1c14g9c3agc847f1a4443e" version="1">Артиллерийская точность</content>
+  <content contentuid="h0c1f8d9dg8a62gd374gfe5fg9ed4a93cc4c4" version="1">Пробитая броня</content>
+  <content contentuid="h00144835g26e6gdfd2g1e9eg4237af68b695" version="1">Вы получаете дополнительно [1] урона от всех атак оружием.</content>
+  <content contentuid="hddc3dd28ge654g561bgace3g434b4b1b0802" version="1">Пронзающий залп</content>
+  <content contentuid="hbf33e09dgf692g7979gd9e9g8a352169f918" version="1">Разъеденный</content>
+  <content contentuid="hb666ee9fg31dfg6816gbaf6g8abee975b169" version="1">Класс брони уменьшен на [1].</content>
+  <content contentuid="h4f4ead76g7f80g3b1fgd424g8fabe3f457fe" version="1">Пронзающий холод</content>
+  <content contentuid="hd1c6e09bg29dcgca54g148bg5165fe4e8db8" version="1">Ваша скорость перемещения снижена на [1], и вы не можете использовать реакции.</content>
+  <content contentuid="h2eb29526g4617g560dg8c3cg23f8a6ab35c9" version="1">Опалённый</content>
+  <content contentuid="ha68942b3ge0efgee28ge998gd9fd9efa9801" version="1">Улучшенный статический заряд</content>
+  <content contentuid="h5b5acd53ge2eeg315bge4d6ge8500b2a0423" version="1">Истощённый</content>
+  <content contentuid="h8462ed9cg69d3g2f1dgc3dcg093670724c90" version="1">Максимум &lt;LSTag Tooltip="HitPoints"&gt;очков здоровья&lt;/LSTag&gt; уменьшено на [1].</content>
+  <content contentuid="h65552e17gddedgff6agbbc5g639a3eb84449" version="1">Тошнота</content>
+  <content contentuid="hc95f36begd98cg37c4g6750g842065a98d63" version="1">Вы совершаете свой следующий бросок атаки с штрафом -[1].</content>
+  <content contentuid="hd5b225f8g8274gf149g0afag31c674c13691" version="1">Оглушенный</content>
+  <content contentuid="he7db4039g87b4gd352gb1b3g4df5a92f9636" version="1">Вы совершаете броски атаки заклинаниями с штрафом -[1].</content>
+  <content contentuid="hf8f2e903g3b40g8107gdc17g82a371566ad3" version="2">Алхимическая концентрация</content>
+  <content contentuid="hcf779ba2gd710g08d6g5cf7g469c2598e6d7" version="2">Синергия целителя</content>
+  <content contentuid="h69ba1efbg9194gf578gd5c1g6a64fa830d8d" version="2">Кармическое равновесие</content>
+  <content contentuid="hfcec6c5cg36e6gffc2g5b46g8363cfaf2310" version="1">Едкое плетение</content>
+  <content contentuid="h63e6b0b4g85a5gf15cg0427gc6f2fab64ce6" version="1">Ледяное плетение</content>
+  <content contentuid="h6fa1b136g44cbgcbe3gebc3g6c910cf1152e" version="1">Пылающее плетение</content>
+  <content contentuid="h2c666e3eg7c40gfeb6gb6ffgdfe3fd2c9fd2" version="1">Кинетическое плетение</content>
+  <content contentuid="hb0e9da0bg3a2egb4bagb61bgbc5c2f2d7aef" version="1">Грозовое плетение</content>
+  <content contentuid="hfb8ca443g9957geee8g3628g5791f64b4456" version="1">Мертвенное плетение</content>
+  <content contentuid="hca2adb8cg3bcagc20bg8911g55579525cafd" version="1">Ядовитое плетение</content>
+  <content contentuid="h4d97c158gcafbgac5dgbe0dg20db1ba0a401" version="1">Разрушающее разум плетение</content>
+  <content contentuid="h5f32e998g9ad5gcf0bgf74dg1f87e46bf8aa" version="1">Лучезарное плетение</content>
+  <content contentuid="h67fc8ce4g2f73gcebega41fgbcbc0a79084b" version="1">Резонирующее плетение</content>
+  <content contentuid="hdbaa1f2ag9137g30ddg78d7g5176e6b9a860" version="1">В начале своего хода вы получаете [1].</content>
+  <content contentuid="hd6d43fdagcb33g367ag1ebcg34c2c516c80c" version="1">Вы совершаете спасброски на сохранение концентрации с бонусом +[1].</content>
+  <content contentuid="hbd5dce3bg85ecgd4cegb4aeg340b665fd08a" version="1">Вы совершаете свой следующий бросок атаки с бонусом +[1].</content>
+  <content contentuid="h2b676e53g51eegd32ag741dgb92331fa04e5" version="1">Синергия целителя</content>
+  <content contentuid="h47029d1ag28a6gcbabg2d44gec774426217e" version="1">Вы совершаете свой следующий бросок атаки с бонусом +[1].</content>
+  <content contentuid="h50d39ad0ga74fg6c18gae58gf5f447cd953d" version="1">Кармическое равновесие</content>
+  <content contentuid="h5519d81bg76e5gfa85gc44bgb3ba4a086d0a" version="1">Кармическое равновесие Check</content>
+  <content contentuid="h2ed9d15dg00b5g3a55g4437g84b2b5ad0d38" version="2">Помогает снять эффект Кармическое равновесие, если ваша атака промахивается, пока этот эффект активен.</content>
+  <content contentuid="h1f464e44g10afgd971g40c6g11e4a89ddcdb" version="1">Ненасытность Бальтазара</content>
+  <content contentuid="ha4fe9800ge5a9g8064g28c5g2bedfa060e6d" version="1">Убежище Кар'нисса</content>
+  <content contentuid="h236a4ad0gdca8g4520g26cdg4be3758613ef" version="1">Убежище Кар'нисса</content>
+  <content contentuid="h3ccc9a73g1580gea05g5f00g4d29fac3cfdc" version="1">Урон от всех источников уменьшается на [1].</content>
+  <content contentuid="hc294d3f8gef84g0106g45e2g4393134aa64c" version="1">Хирургическая точность Малуса</content>
+  <content contentuid="h3a4ed721gcf99g325fg7f80gecc68f244caf" version="1">Некротическое разложение</content>
+  <content contentuid="h86220f2ega994ga7a7g51fbgc3c80b4a2f14" version="1">Наносит [1] урона в начале вашего хода.</content>
+  <content contentuid="he74383f1gb1c9gd5f7g1345g685fdbaf4592" version="1">Нестабильное варево Тисобальда</content>
+  <content contentuid="h635d80d2g723cgeac8g099eg5a8fcfa83520" version="1">Вы получаете +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броску атаки&lt;/LSTag&gt; но ваш интеллект снижается на [1].</content>
+  <content contentuid="h8e8b21fega6bag33a4g49bfg2a46466fe54d" version="1">Нестабильное варево Тисобальда</content>
+  <content contentuid="h7957ce17g3f9dg4a66g45e0g14601a6aa725" version="1">Искра преследователя Юргира</content>
+  <content contentuid="h532fb1f4g3742gb52eg0636g5798f606fb07" version="1">Серебряный свет Хар'рака</content>
+  <content contentuid="hd0ec08eag474dg4c43g54a6g53baecacdf5c" version="1">Высокомерие Лорроакана</content>
+  <content contentuid="h2e552033gaf5cgf32fg8a8bg11f2d903eb69" version="1">Пока вы &lt;LSTag Tooltip="Concentration"&gt;концентрируетесь&lt;/LSTag&gt;, вы получаете +[1] к спасброска от ваших заклинаний и получаете на -[2] меньше урона от стихийного урона любого типа.</content>
+  <content contentuid="hb2b88370g4e1dge66eg31f7g7478e3e19481" version="1">Высокомерие Лорроакана</content>
+  <content contentuid="h7d413a8dgced5gee9bg8726g9650a006d8ce" version="1">Нечестивая жизненная сила Мистического трупа</content>
+  <content contentuid="he73ef466g658fg0cc5g1c5fg1c2f7a25dec7" version="1">Ваша следующая атакая оружием дополнительно наносит [1].</content>
+  <content contentuid="h5f0e3f6cgdaaag6852g4fdcg41053adc6e9c" version="1">Нечестивая жизненная сила Мистического трупа</content>
+  <content contentuid="h46fc5c99g59bdg142ag1488g3000f932c050" version="1">Стойкость аутсайдера</content>
+  <content contentuid="he154ecd7g5f6eg42c6gc9ffg32b9a63a1600" version="1">Призматическая рулетка</content>
+  <content contentuid="headd734eg37f1g70ceg794dg6b61c18ee460" version="1">Резонанс боевого мага</content>
+  <content contentuid="hd936dfe6gf774g6eb8ga9e0g4c11c7df75e1" version="1">Сложность спасброска против ваших заклинаний снижена на [1].</content>
+  <content contentuid="h4dba4f84gda99g09cdg9236g111c64ead5ab" version="1">Резонанс боевого мага</content>
+  <content contentuid="hbd39d038g9bc0g0611g7991g72edfdcf7794" version="1">Ответный удар щитоносца</content>
+  <content contentuid="h5a30d7degcd0fgc75dg6dbfg199961159d4f" version="1">Ваша следующая атака ближнего боя дополнительно наносит [1] и отталкивает цель [2].</content>
+  <content contentuid="h41d699f2g6ae7gec66g4458g792c92e95eca" version="1">Ответный удар щитоносца</content>
+  <content contentuid="h1a59f42cgc07dgaae6gf027g91b1776fcbe3" version="1">Ответный удар щитоносца</content>
+  <content contentuid="hb7c90f82g8a54ga182gd4f0g605db69e16d9" version="1">Нечестивая жизненная сила Мистического трупа</content>
+  <content contentuid="h43c99605g2ff0g2731g7815ga5f31cc64275" version="1">блокировка Ци</content>
+  <content contentuid="h90453182gbab3g9034g36adg115e3096d61a" version="1">Вы не можете произносить заклинания, не можете использовать бонусное действие и получаете дополнительно [1] урона от всех источников.</content>
+  <content contentuid="h765a31f2g295dga9fcg0a51g94d7c7d036de" version="1">Разрыв Ци</content>
+  <content contentuid="h083fa88agb30bgc24fg3f1eg9ffc19636c7f" version="1">Стремительный палач</content>
+  <content contentuid="h63251420g095cg588dg66beg547323801168" version="1">Разрушительный резонанс</content>
+  <content contentuid="ha35128c7g4e5fgf776g247agcd922ce003d5" version="1">Магический взрыв</content>
+  <content contentuid="h0da8d3f9gd9ebgf9d5g2dd1g5a7b75fecb77" version="1">Резонанс перегрузки</content>
+  <content contentuid="h8fa8ee1ag65e8g230bg0d06g502d0fe3725c" version="1">Солнечный зенит</content>
+  <content contentuid="he6c678a8gb7d1g9852g3977g0c475d975964" version="1">Проклятие могильной связи</content>
+  <content contentuid="hb76b93c4gf6e1gb8dcg39b4g613f7bdcaa4c" version="1">Связь ограждения</content>
+  <content contentuid="hce507cbbgb7acgfffbg47c7g45c8f7eff2a3" version="1">Пожиратель заклинаний</content>
+  <content contentuid="h695bf1beg1b50ge8dcg389cg5f26c2bf0137" version="1">Арканная перегрузка</content>
+  <content contentuid="h3f6533c5g7be4g7c69g6744g46673ca52b13" version="1">Темпоральный шаг</content>
+  <content contentuid="h1ba72e86gc1a2g8f56g12aag1e898769acf3" version="1">Кармический откат</content>
+  <content contentuid="hf3bc9fe2g53f0g7f3eg73b1g079271327ac0" version="1">Солнечный ожог</content>
+  <content contentuid="hb409196eg1c70g9c0eg2c8ag7cf4261b1f5b" version="1">Вы получаете дополнительно [1] урона от всех источников.</content>
+  <content contentuid="h8631f033g8d74gdef7gdf89g5dd439cd2da6" version="1">Связанный с могилой</content>
+  <content contentuid="hc75e8f51gbb3ag086eg03b4ge59f9fb41468" version="1">Магическая связь</content>
+  <content contentuid="h483bfaadg2d55g7542g803cgb95befbe97a6" version="1">Магическая связь</content>
+  <content contentuid="h729b524cg8f6eg4d35g164ag3207a54f1363" version="1">При перемещении вы получаете [1]. Этот эффект снимается после того, как вы совершите перемещение.</content>
+  <content contentuid="h43174526gd63bg3181gc5f7g0340263a8459" version="1">Связанный с могилой</content>
+  <content contentuid="hda7d9e9ag107ag93afg097ag54c820476943" version="1">[Скрыто] Класс брони снижен на [1].</content>
+  <content contentuid="h1792b486g726fg4479gffabg9cc8e72d8f38" version="1">Связанный с могилой</content>
+  <content contentuid="h4d65fcfag1a3eg271fg436ag11fe0c04e388" version="1">Проклятие могильной связи</content>
+  <content contentuid="h87b2329bg9b78geab3g862dg3cc739f4a7c3" version="1">Проклятие могильной связи</content>
+  <content contentuid="hb0613638ge238g87b1ga724g7c9a6bb22ad9" version="1">[1]% урона, полученного вашим связанным союзником, перенаправляется на вас в виде [2].</content>
+  <content contentuid="h6e3895d0gf9e3g1079g1da2gb8ac36f6433d" version="1">[1]% полученного урона перенаправляется связанному заклинателю.</content>
+  <content contentuid="h9fb7b1dagd23eg7b38g98acg99da8192de9d" version="1">Пожиратель заклинаний</content>
+  <content contentuid="hd7462e25gd92dg5782gfdc7g5dc889700195" version="1">Следующий бросок атаки будет иметь бонус +1.</content>
+  <content contentuid="hedb2390ag0506gda71ga031g77b42ebc3451" version="1">Арканная перегрузка</content>
+  <content contentuid="h4c4c711ag211bg402cg4411g93793250529a" version="1">Фокусы наносят дополнительно [1] урона.</content>
+  <content contentuid="h034a5352g2f64g231fg440cgd2d9de198847" version="1">Арканная перегрузка</content>
+  <content contentuid="h9a1fa751g4cd5gb92fg1caega3572e823b08" version="1">Алхимическая перегрузка</content>
+  <content contentuid="ha06245f8g9067g0898g6426gda413f76c56c" version="1">Вы получаете дополнительное действие, но ваш класс брони снижается на [1].</content>
+  <content contentuid="hf659bbffgafe8g945cg2bf6g6da436bec26d" version="1">Сила космоса</content>
+  <content contentuid="h4baa5628g9642g4908gac7cg70bc6091d04c" version="1">Преобразует весь урон от оружия в[1].</content>
+  <content contentuid="h81b8e8b2g06d0g1010g1716gc7b366486351" version="1">Сила космоса</content>
+  <content contentuid="h1a5fa28aga287g5231g355dga8ea284f6eb5" version="1">Преобразует весь урон от оружия в[1].</content>
+  <content contentuid="h91f8307ag8ba2ge8edg86a3g5b3a34160dc7" version="1">Жестокая брешь </content>
+  <content contentuid="ha8cfdb9ag2014g0fc9g0ae0ge5b6c0a45689" version="1">Ваша следующая атака, которая попадёт в цель, будет критическим ударом.</content>
+  <content contentuid="h0b935068g0730g29eagfa13g400b55dcf983" version="1">Биполярный всплеск: Positive</content>
+  <content contentuid="h2b89f99eg321fgee77g5697g235f2f90dd2d" version="1">Все атаки наносят дополнительный +[1] урона.</content>
+  <content contentuid="h98a6f384ge040gc164g323cg8dc7d5fe5a55" version="1">Биполярный всплеск: Negative</content>
+  <content contentuid="h5ef15fb9g391eg01fag04c0g3afe9b6bb45a" version="1">Вы получаете дополнительный [1] урон от всех источников.</content>
+  <content contentuid="h8a1e43afga941g7453gef70g0736cdee6f01" version="1">Перерезанные вены</content>
+  <content contentuid="ha2b460a0g4d85g30c0g10f8g5694c0f52879" version="1">В начале своего хода вы получаете [1] и не можете восстановить очки здоровья.</content>
+  <content contentuid="hace257d3ga926g29e6g66f2g4e84ddc2177d" version="1">Сдирание плоти Орин</content>
+  <content contentuid="ha591d68eg0579g1d5cgcdfeg731eff1f89bc" version="1">Сдирание плоти Орин</content>
+  <content contentuid="hf77036c8gf354g43a7g0602gcee5306390e6" version="1">Возмездие Рафаила</content>
+  <content contentuid="h5a0879f2g11a1gd3b8g78d6gc20d68f22b0e" version="1">Порабощение Горташа</content>
+  <content contentuid="h1991b245g8997gdaf7gc8bbge392ae21f714" version="1">Кровавая трапеза Казадора</content>
+  <content contentuid="h1e6177a1gb6abge7d2g7152gd1feb7fc6d71" version="1">Титанический бастион</content>
+  <content contentuid="hd62d1428g64e0g0c2agc82dg35ca05b0bf8d" version="1">Полумрак Виконии</content>
+  <content contentuid="h8aa6aa3ag1e42g8330g73f8g2279742280c0" version="1">Ярость Саревoка</content>
+  <content contentuid="haffba308g500eg5c41gc8d3g380d39035ff2" version="1">Титанический бастион</content>
+  <content contentuid="h4c4b2e5ag5fc9gea9bg1369g328028817699" version="1">Титанический бастион</content>
+  <content contentuid="h0beda97dg664fgcb7dg9f9ag3d33b65ee5a9" version="1">Полумрак Виконии</content>
+</contentList>

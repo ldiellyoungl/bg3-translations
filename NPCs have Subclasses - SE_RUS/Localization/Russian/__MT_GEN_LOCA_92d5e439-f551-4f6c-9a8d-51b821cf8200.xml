@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hac8fa7a7f4b7496c93d5c9fab286c12c448c" version="1">NPC с подклассами</content>
+	<content contentuid="hd4a6061a49d0419abc2a5e0e43018684496c" version="1">Изменения можно внести только перед началом новой игры.</content>
+	<content contentuid="h07d1337d6e224dbe877ab620b0c95aab0c19" version="1">Общее</content>
+	<content contentuid="h83938d53764746429641b0ae8615351ac404" version="1">Общие настройки</content>
+	<content contentuid="h945fc26bd7774389bb001292d2301dfdg57d" version="1">Стреллы</content>
+	<content contentuid="h19f867a7e62845389324c1bb158a5de606f6" version="1">NPC могу спавнится с рандомнымы стреллами.</content>
+	<content contentuid="hdedc4381d9ff493299ff21cf22e2ebf4a9af" version="1">Составы для оружия</content>
+	<content contentuid="h4f8c7b9ca4ff4765a86d7f149c4754d52g90" version="1">NPC могу спавнится с рандомными составами для оружия.</content>
+	<content contentuid="h5ebfd437c5094d7e9db5c69354fca5b15fe4" version="1">Черты</content>
+	<content contentuid="h693f7da8abe54420bbb36010598b1d3e7bfb" version="1">NPC могут обладать чертами, зависящими от их уровня, класса и боевого стиля.</content>
+	<content contentuid="h9b1020b91f474567bebc6ef1468788921f54" version="1">Способности иллитидов</content>
+	<content contentuid="h6a02f820aba747899b5e2c86f9a29c97a9ed" version="1">NPC, зараженные головастиком, могут обладать случайным набором способностей иллитидов.</content>
+	<content contentuid="hd3165bb8e89f4667a1b00c7f167ce4570b2g" version="1">Статусы заклинаний</content>
+	<content contentuid="h272bce6f388e484cbbf3b286f2e35e50088d" version="1">При появлении NPC могут накладывать на себя усиливающие заклинания — например, «Скороход», «Магический доспех» и т. д.</content>
+	<content contentuid="h10ec0dd6395e48f384040e66dc5adf340ecf" version="1">Оружие</content>
+	<content contentuid="h1635d4ce5c9b4fd0822ef294cf2f84a342bc" version="1">Настройки оружия</content>
+	<content contentuid="hf6c445e55d2441efaf898561fd7a3155ccbf" version="1">Случайное оружие у NPC</content>
+	<content contentuid="h0f2f399223924ecc8cd0cadbd97d948274af" version="1">Оружие неуникальных NPC выбирается случайным образом в зависимости от их класса или подкласса.</content>
+	<content contentuid="h3a887639f7b848cb98f8c19e4b2a2f4accf5" version="1">Следопыты могут использовать оружие ближнего боя.</content>
+	<content contentuid="h0108f76fcffa48cf96bb48901cdfac209fb1" version="1">У следопыта есть 33-процентный шанс быть вооруженными оружием ближнего боя.</content>
+	<content contentuid="h6dc1e7946f954da294791f6fe50913a6c3fg" version="1">NPC можно вооружить любым оружием из игры.</content>
+	<content contentuid="h362ac532e1e34603891e32f7502e9cc60faf" version="1">NPC можно вооружить любым оружием из игры, включая уникальное и добавленное с помощью модов.&lt;br&gt;(Эта опция намеренно нарушает атмосферу и лор игры; она рекомендуется только для режима Trials of Tav или других модов в жанре «рогалик».)</content>
+	<content contentuid="ha7f3903694d84d49b9141b0ad23531b5638g" version="1">Дополнительные настройки оружия</content>
+	<content contentuid="h9842229cd5ef4ff6887998e788a20ced4f2e" version="1">Следующие подклассы по-прежнему будут появляться со случайным оружием.&lt;br&gt;Рекомендуется оставить эти опции включенными для обеспечения корректной работы.</content>
+	<content contentuid="h07dc587cd1364e8bb0058933a52ea8733845" version="1">Бард Коллегии Мечей: оружие ближнего боя</content>
+	<content contentuid="h919b1aa3a04845309c65e799b253c23c81b2" version="1">Бард Коллегии Отваги: оружие ближнего боя</content>
+	<content contentuid="h0db420c164a44735992d493fefe085cfb54b" version="1">Arcane Archers Ranged Weapon</content>
+	<content contentuid="ha403bceecf15418e86385d974d3d70ec4d51" version="1">Bladesingers Melee Weapon</content>
+	<content contentuid="h5884550add2643cba2f86a2881e3b714c311" version="1">Разное</content>
+	<content contentuid="hc2f956b2989d43f3bfb0649490bcb3699b14" version="1">Подсказки для подклассов</content>
+	<content contentuid="h2b0b5492183e404f930680177321d6d2f5e9" version="1">Отображать статус подкласса на портретах NPC.</content>
+	<content contentuid="hd143635012a345bebca77feecae9111b0fdf" version="1">Bards Perform</content>
+	<content contentuid="h700fec2ed1624433bdb80715be443f29f659" version="1">Bard NPCs can play songs at the end of their turns.&lt;br&gt;(This is purely a flavor mechanic and does not affect gameplay.)</content>
+	<content contentuid="ha2eef5dce7524058b570f6456127cac42113" version="1">Сбросить подклассы</content>
+	<content contentuid="h6522100ag1c6dg4776gbc8fg71139dfc5b60" version="1">Варвар | Берсерк</content>
+	<content contentuid="h347b9d2aa0aa4cfa8988f845f897dba943af" version="1">&lt;i&gt;“Насилие для вас - и средство, и сама цель. Вы идете путем неукротимой ярости, наслаждаясь хаосом битвы и реками крови - своей и чужой.»&lt;/i&gt;</content>
+	<content contentuid="hb3b416bag01cbg4f86gbf46gf8662a3aee5c" version="1">Варвар | Великан</content>
+	<content contentuid="hd301e96b2d524c9fbf0052f38122407e0f6b" version="1">&lt;i&gt;«Вы идете по пути великанов, призывая их стихийную мощь и размеры, черпая силу из тех же изначальных сил, что и они.»&lt;/i&gt;</content>
+	<content contentuid="hcd5328b5g2f52g4fd4g8677g3fc014b15c06" version="1">Варвар | Дикая магия</content>
+	<content contentuid="h6ec80ac75f754523b64c19008efcfbd75790" version="1">&lt;i&gt;“Необузданное влияние магии изменило вас, наполнив волшебной силой. Она бурлит внутри вас и стремится выплеснуться наружу.»&lt;/i&gt;</content>
+	<content contentuid="h8544f111g241cg4dd0gb27dg9b2a6c907344" version="1">Варвар | Дикое сердце</content>
+	<content contentuid="h79e42f3a169d4c0ea2f586924652a11e1904" version="1">&lt;i&gt;“Звериные духи питают вашу ярость, наполняя вас сверхъестественной мощью.»&lt;/i&gt;</content>
+	<content contentuid="h746d201bgafb5g4811gb266gdf12ee5e64ed" version="1">Бард | Коллегия Наваждений</content>
+	<content contentuid="h47e1d19c93074ed2a656d34543eb6bb9b514" version="1">&lt;i&gt;«Вы отточили свое мастерство под наставничеством фей, и их пленительная магия клубится внутри вас, котовая вырваться наружу.»&lt;/i&gt;</content>
+	<content contentuid="hb76822f0gd2b5g45b8g95ecg75cb8ae679fb" version="1">Бард | Коллегия Знаний</content>
+	<content contentuid="he512cea6cbe3436d8bfda06a75549167adbd" version="1">&lt;i&gt;«Вы ищете красоту и истину, собирая знания из самых различных источников - от ученых книг до крестьянских баек, а ваш дар завораживает и благодарных слушателей, и противников.»&lt;/i&gt;</content>
+	<content contentuid="h5730d7b7g7541g4028gadc4ga3db0b007418" version="1">Бард | Коллегия Мечей</content>
+	<content contentuid="ha777a12128c14a1ca010fc11f28a5904b62c" version="1">&lt;i&gt;«Умелый и опытный воин, вы используете мастерство владения словом и оружием, чтобы сражаться и развлекать в равной степени.»&lt;/i&gt;</content>
+	<content contentuid="hf04c04e7g9443g41dcgb823gb0e66d750a8f" version="1">Бард | Коллегия Отваги</content>
+	<content contentuid="h7dbcf87dbbbb4c72bfd5b565ff322e53c241" version="1">&lt;i&gt;«Вы странствуете по свету, чтобы видеть и воспевать великие события, сохраняя память о героях прошлого и вдохновляя героев будущего.»&lt;/i&gt;</content>
+	<content contentuid="h4c76e7beg2c75g4879g9b32gca70b6f8bb40" version="1">Жрец | Домен смерти</content>
+	<content contentuid="hee52d9312c1b472fa189120a641427af10bc" version="1">&lt;i&gt;«Вы питаете свою веру силой, создающей мертвецов и поднимающей нежить.»&lt;/i&gt;</content>
+	<content contentuid="h68f0da28gb6b5g4a0fg8ec5g02546a42595e" version="1">Жрец | Домен знания</content>
+	<content contentuid="h52ed77b86bda4b9ea2a7966a96369c055b85" version="1">&lt;i&gt;«Ваш разум, гибкий и искушенный в самых разных языках и навыках, - это интеллектуальный кубок, до краев наполненный изысканными знаниями.»&lt;/i&gt;</content>
+	<content contentuid="h99cbf71ag49beg48d2g8e12g5d3b5dbb8327" version="1">Жрец | Домен жизнь</content>
+	<content contentuid="heb448edb83eb45e1b14e74bbab3fc2d00635" version="1">&lt;i&gt;Домен жизни — область магии, которой покровительствуют многие добрые боги; цель этой магии - защита и восстановление разума, тела и души.»&lt;/i&gt;</content>
+	<content contentuid="hd9356b0ag2df3g4c45gbc63gc6cb661df49d" version="1">Жрец | Домен света</content>
+	<content contentuid="h78620c902156451ca27ca396d698bbfdbec2" version="1">&lt;i&gt;Домен света — обитель богов правосудия, величия и первозданного огня. к этому домену относятся заклинания, рассеивающие тьму и наносящие урон нежити.»&lt;/i&gt;</content>
+	<content contentuid="h47abaaf4g883cg4806ga35fg464c72b298b9" version="1">Жрец | Домен природы</content>
+	<content contentuid="h28ce5e2f783241daa370842829ad19827082" version="1">&lt;i&gt;«Вы воплощаете в себе колоссальную силу природы - аватара тонкой божественности падения плодов, миграции птиц, лесной тишины и ревущей ярости оползня.»&lt;/i&gt;</content>
+	<content contentuid="h2c580ef1gd013g4a68gb136gd3c3551de3ba" version="1">Жрец | Домен бури</content>
+	<content contentuid="h7054c32d97884ba98e1a425612be1e2e56ag" version="1">&lt;i&gt;«Вера превратила вас в подобие грома, сотрясающего черную твердь; в полнию, бьщуюся в жилах страшной бури.»&lt;/i&gt;</content>
+	<content contentuid="hfd5f7342g034ag49aag8332g2d398ed5939a" version="1">Жрец | Домен обмана</content>
+	<content contentuid="h10f2497d8c7840949ce2067505509276103b" version="1">&lt;i&gt;«Поклоняясь выбранному божеству, вы получаете в распоряжение необычный набор инструментов обмана и иллюзии.»&lt;/i&gt;</content>
+	<content contentuid="h53a8d351g532fg4335gb590g99a32f314177" version="1">Жрец | Домен войны</content>
+	<content contentuid="h5589a62bb05e42f78df10bb28a81a0c6e9eb" version="1">&lt;i&gt;«Укрепившись святым рвением, вы обрушиваете свой арсенал священной свирепости на тех, кого сочли неправедными.»&lt;/i&gt;</content>
+	<content contentuid="h6bab140dgb7acg4ae5gb2b5ge68b18950ced" version="1">Друид | Круг Земли</content>
+	<content contentuid="he58c32d553ee4aaba0a754fc1a4663bce670" version="1">&lt;i&gt;«Друиды этого круга ощущают связь с могущественной магией, наполняющей землю и связывающей все живое воедино.»&lt;/i&gt;</content>
+	<content contentuid="hb398dabcg0ba9g47a9g8557g4fbfade1850c" version="1">Друид | Круг Луны</content>
+	<content contentuid="hb2ddad8a42d44814930d553ea85e017ed723" version="1">&lt;i&gt;«Друиды, посвятившие себя Луней, черпают силу переменчивого ночного светила, чтобы превращаться в огромных зверей и могущественных элементалей.»&lt;/i&gt;</content>
+	<content contentuid="hb7ca2210gf96bg486fga15cg947bd805636c" version="1">Друид | Круг Спор</content>
+	<content contentuid="hb51fdca082f6476f90f0f81a56a83430edcd" version="1">&lt;i&gt;«Рассматривая смерть, некроз, рост грибницы и споруляцию просто как часть жизни, вы научились манипулировать спорами, чтобы усиливать себя и вредить врагам.»&lt;/i&gt;</content>
+	<content contentuid="h43ddad41g6104g41bag9fa8gbb4d8e5b24d6" version="1">Друид | Круг Звёзд</content>
+	<content contentuid="h64c899a96319461c81004a06db044f7e74d0" version="1">&lt;i&gt;«Вас направляют бесконечные тайны космоса. Благодаря пониманию звезд ваша магия друида набирает силу.»&lt;/i&gt;</content>
+	<content contentuid="h5114353bgf0f9g4fedg9918ga49c7282a386" version="1">Воин | Волшебный лучник</content>
+	<content contentuid="hcb6dacfe986949148d5544189ea1dd0ea6bg" version="1">&lt;i&gt;«Вы умеете вплетать магию в свои атаки: у ваших выстрелов из лука появляются сверхъестественные качества, а у врагов - повод для страха.»&lt;/i&gt;</content>
+	<content contentuid="he3aecaf4g564ag4593gab56g458c2b557b46" version="1">Воин | Мастер битвы</content>
+	<content contentuid="h492499e98db84a93b02a5ffa31417b07cab0" version="1">&lt;i&gt;«Вы - образец тактического превосходства и использете множество боевых приемов, чтобы брать верх в каждой схватке.»&lt;/i&gt;</content>
+	<content contentuid="h52cf62b9gd3b9g4080g8411g950f3f3f1901" version="1">Воин | Чемпион</content>
+	<content contentuid="h8181116db30143fa92df398e350bf414aa8d" version="1">&lt;i&gt;«Ко всем мудреным задачам, которые могут возникнуть в бою, вы подходите с одним эффективным решением: вы колошматите по этим задачам со всей своей силы.»&lt;/i&gt;</content>
+	<content contentuid="hcff345e0g6f7ag48ddg82c4gbb88c0df9eea" version="1">Воин | Потусторонний рыцарь</content>
+	<content contentuid="h5e3685315d8e470eae8ceb56fc72ed2bbc97" version="1">&lt;i&gt;«Потусторонние рыцарь изучают магию как дополнение к оружию. Магия позволяет им сломаить споротивление сильнейших врагов.»&lt;/i&gt;</content>
+	<content contentuid="h655734d3gea3ag4655g94b6g41e613aafe62" version="1">Монах | Путь пьяного Мастера</content>
+	<content contentuid="h0280c59ab8f146ff9cd5a6dcbe8dbaa3b0be" version="1">&lt;i&gt;«Вы с иканием перемещаетесь по полю боя непредсказуемыми рывками, заставая враго врасплох тщательными и точными ударами, скрытыми за фасадом пьяного дурачка.»&lt;/i&gt;</content>
+	<content contentuid="ha8e0e097gfc6dg4ed2g8c87gac3859ec42cd" version="1">Монах | Путь Четырех Стихий</content>
+	<content contentuid="h8d56a2a479c14af3b63239692f64b8817ffe" version="1">&lt;i&gt;«Вы сосредотачиваете энергию ци, чтобы подчинить стихии своей воле и использовать их как продолжение собственного тела.»&lt;/i&gt;</content>
+	<content contentuid="h78130ee2g3019g49a9g9319g4b8eb5a41f68" version="1">Монах | Путь Открытой Ладони</content>
+	<content contentuid="h7ec686b4f82d40d49df4590582fa63441790" version="1">&lt;i&gt;«Вы специализируетесь на бое без оружия, используя руки и контроль над ци как для исцеления, так и для нанесения тяжких повреждений.»&lt;/i&gt;</content>
+	<content contentuid="hdb41d9a3gcfd3g408bga26egf6d2e2186be5" version="1">Монах | Путь Тени</content>
+	<content contentuid="hb514722cc6b74c28b84af2e6792224dff724" version="1">&lt;i&gt;«Вы искушены в мастерстве скрытности и уловок и подчиняете тени своей воле, чтобы нанести неожиданный удар.»&lt;/i&gt;</content>
+	<content contentuid="he7e2ef34gf373g4e6cgb930gae2c03c8f4e7" version="1">Паладин | Клятва верности</content>
+	<content contentuid="hacd0be2571a94462a47040877e9ac551e577" version="1">&lt;i&gt;Следуя идеалам рыцарей в сияющих доспехах, вы действуете с честью и добродетелью во имя высшего блага, защищая слабых.»&lt;/i&gt;</content>
+	<content contentuid="heea3ae6bg0e07g4f4aga575gc3ca5081c107" version="1">Паладин | Клятва древних</content>
+	<content contentuid="h01bd5350cc55483289b50acff4653adc136b" version="1">&lt;i&gt;«Вы выступаете на стороне света в извечной борьбе с тьмой, чтобы хранить ценность жизни и красоту природы.»&lt;/i&gt;</content>
+	<content contentuid="h7e3dc305ge844g4b32ga551gc1afe328a4b4" version="1">Паладин | Клятва короны</content>
+	<content contentuid="hcf3f6ea95e8d46f6b0a16772a4e4dbab56gg" version="1">&lt;i&gt;«Вы посвятили себя идеалам цивилизации, поклялись служить скрепляющим общество законам и сохранять порядок, который они устанавливают.»&lt;/i&gt;</content>
+	<content contentuid="h824f107eg48edg4720g8f75gac5f520d612b" version="1">Паладин | Клятва возмездия</content>
+	<content contentuid="h031a43b915b2431eb3df9b0de95f1ba5c8g7" version="1">&lt;i&gt;«Отбросив даже собственную чистоту, дабы исправлять несправедливость, вы вершите правосудие на теми, кто совершил самые тяжкие грехи.»&lt;/i&gt;</content>
+	<content contentuid="h7fb41a46gd0cfg4473g9af6gf686275080a8" version="1">Паладин | Клятвопреступник</content>
+	<content contentuid="h1e320936ea1f45dcabc648e2a1260cea5752" version="1">&lt;i&gt;В погоне за властью и честолюбием вы нарушили свою священную клятву. Теперь вас питает только тьма.»&lt;/i&gt;</content>
+	<content contentuid="h0036215dg3784g43fdga964ge37b48585a31" version="1">Следопыт | Повелитель зверей</content>
+	<content contentuid="h9f3d32cc62e8417f897dd7dc6114ec5004b0" version="1">&lt;i&gt;«Вы устанавливаете связь с разумом могущественного зверя, который помогает вам в сражениях и не только.»&lt;/i&gt;</content>
+	<content contentuid="h72f46875ge86eg4bf1g83d5ga93d212f55cc" version="1">Следопыт | Сумрачный охотник</content>
+	<content contentuid="ha8b26e3303494f2a873ac04d7b22c08eg585" version="1">&lt;i&gt;«Появляясь, словно кошмарный подарок из обертки тьмы и теней, вы нападаете из засады и истребляете врагов, не двая им даже вскрикнуть.»&lt;/i&gt;</content>
+	<content contentuid="h0e1a5993gbf6eg49f7gbdb3g2573282d1700" version="1">Следопыт | Охотник</content>
+	<content contentuid="h67cfdd71ba154db3a24d2973f9b989e7a1dc" version="1">&lt;i&gt;«Охотники выслеживают самую опасную во всем Фаэруне дичь - от древних драконов до полчищ нежити - и с успехом её уничтожают.»&lt;/i&gt;</content>
+	<content contentuid="hc6f70db7gf2beg48c0gad3bg3acc19ec1358" version="1">Следопыт | Хранитель роя</content>
+	<content contentuid="h3cb7ba4c0a1d4456b1daf79d6a3168191240" version="1">&lt;i&gt;«Вы развили в себе глубокую связь с окружающей природой и создали магические узы с роем духов природы. Этот рой стал для вас верным спутником и могучим помощником в бою.»&lt;/i&gt;</content>
+	<content contentuid="h9d5c5d75g6db7g4e71g9308g7ec3e68a1f8b" version="1">Плут | Мистический трикстер</content>
+	<content contentuid="he8460480a88a49e7a5588f29a271ab5372b3" version="1">&lt;i&gt;«Мистический трикстер - это плут, отлично владеющий магией: иллюзии и чары помогают ему дурачить противников.»&lt;/i&gt;</content>
+	<content contentuid="h8547e4dcgb024g41abg88f3ge9408551c917" version="1">Плут | Ассасин</content>
+	<content contentuid="h2580c90ffe86462eb3f8858df23afae17gf0" version="1">&lt;i&gt;«Вы предпочитаете действовать утонченно и расправляться с одним противником за раз - не на дуэли, конечно, потому что дуэль подразумевает благородство, а когда вы работаете, вам не до чести.»&lt;/i&gt;</content>
+	<content contentuid="h74c9b883g439fg4e46ga432g4381b1d4d56d" version="1">Плут | Рубака</content>
+	<content contentuid="h568e77a6c3784ade9a3fc0349def5658826d" version="1">&lt;i&gt;«Вы живете и дышите искусством клинка, преуспевая в поединках благодаря своему проворству и смекалке.»&lt;/i&gt;</content>
+	<content contentuid="h96c4533cg5793g4b3bgad3dgb175edb07fbd" version="1">Плут | Вор</content>
+	<content contentuid="hb6c6c0c343f74cf6a50df6fe2ad823995d86" version="1">&lt;i&gt;«Вор достигает своих целей с помощью скрытности и хитрости. Он готов забраться хоть в окно третьего этажа, хоть в подземелье заброшенных руин.»&lt;/i&gt;</content>
+	<content contentuid="hdf9ed778g28e1g40e1gbd36gec59d79e3bd6" version="1">Чародей | Потомок драконов</content>
+	<content contentuid="h63a6559f7a6848b68a409325eada081e59da" version="1">&lt;i&gt;«Струящаяся в ваших жилах драконья магия - наследство могучего предка-дракона.»&lt;/i&gt;</content>
+	<content contentuid="hfdaf1e12g2164g444bg8dd5g3de226219b47" version="1">Чародей | Магия теней</content>
+	<content contentuid="h87398b728e4542ce9cc6dd8a4905c66539d1" version="1">&lt;i&gt;«Вы черпаете силы из самого Царства Теней, и свет в вашей душе погас под натиском тревожной тьмы.»&lt;/i&gt;</content>
+	<content contentuid="hae07ef72g2486g4be5gb89dgfa02648bfeff" version="1">Чародей | Чары бури</content>
+	<content contentuid="h72e6da27b91d48f5834e90509198e4fc3d3c" version="1">&lt;i&gt;«Выша родословная - это диковинный гобелен, вытканный бурей. В вас бурлит сила древних потопов, бьется энергия штормов и ураганов.»&lt;/i&gt;</content>
+	<content contentuid="h3c5fa1e3g9057g4a7cg9032gaa56af82944e" version="1">Чародей | Дикая магия</content>
+	<content contentuid="hbb888f03390040a899a16ac92e9765e77cf4" version="1">&lt;i&gt;«Источник вашей силы - древние силы хаоса. Они бурлят внутри, поджидая случая вырваться наружу.»&lt;/i&gt;</content>
+	<content contentuid="hfad91b84g454bg4561g9c21g54e89621d870" version="1">Колдун | Архифейя</content>
+	<content contentuid="h41fdfc3d734b46dbb9627b515460808dcf65" version="1">&lt;i&gt;«Владыки фей одарили вас своей милостью, и теперь в вашем распоряжении все роскошные и странные особенности их невероятного царства.»&lt;/i&gt;</content>
+	<content contentuid="h36f552cbg5055g4c37g83b1g832e10962742" version="1">Колдун | Бестия</content>
+	<content contentuid="h193c3842cd6247a9b934b864f3fb58ce31c5" version="1">&lt;i&gt;«Колдуны на службей у бестий заняты - вольно или невольно - осквернением и разрушением, а взамен получают благословение преисподней.»&lt;/i&gt;</content>
+	<content contentuid="hdc421880ga0ddg4b18gbb3cg83f3e8d58e80" version="1">Колдун | Великий Древний</content>
+	<content contentuid="hec6d6f2583d64d23b02a1927b903401e9c3d" version="1">&lt;i&gt;«Колдуны на службей у жутких существ из Дальнего Предела, чьи цели непостижимы, наделены невероятной властью над энтропией и разумом.»&lt;/i&gt;</content>
+	<content contentuid="h84a5e71fgfa8ag4edfgaccfg54f5c57f79be" version="1">Колдун | Ведьмовской клинок</content>
+	<content contentuid="h7c6d4e19efa4469ba549f244c1e41e378f1g" version="1">&lt;i&gt;«Вы заключили договор с таинственной сущностью из Царства Теней - силой, которая воплощается в разумном магическом оружии, выточенном из самой тени.»&lt;/i&gt;</content>
+	<content contentuid="hcd114c0cg90b6g405fg8485ge01455a98b17" version="1">Волшебник | Школа преграждения</content>
+	<content contentuid="h16bf833b76884bf5858c4716730387653372" version="1">&lt;i&gt;«Заклинания преграждения используются для призыва защитников, изгнания врагов и рассеивания магических чар.»&lt;/i&gt;</content>
+	<content contentuid="h57394764gc1d8g4896gae2fg9d8443334d32" version="1">Волшебник | Школа пения клинка</content>
+	<content contentuid="h2f6263502b9b44e0afb699f830ab05a93g24" version="1">&lt;i&gt;«Достигнув мастерства в чародействе и фехтовании, вы сочетаете элегантные воинские приемы с разрушительной магией.»&lt;/i&gt;</content>
+	<content contentuid="h28734784g2402g462cga26bg873778d697ee" version="1">Волшебник | Школа воплощения</content>
+	<content contentuid="h085e88bd2bcb4ee2bc834ae340ad76b1g79f" version="1">&lt;i&gt;«Вас завораживают формы и движение, и ваш излюбленный стиль волшебства - призывать существ и предметы и перемещать их в пространстве.»&lt;/i&gt;</content>
+	<content contentuid="h4fd06a9b4ef54297a3095ff3b8e11bf28a0f" version="1">Волшебник | Школа прорицания</content>
+	<content contentuid="h018f65d66c2e48ee9eacabeb41e99fc62456" version="1">&lt;i&gt;«Ваш взгляд проникает через само время, и вы способны лепить будущее, как податливую глину, придавая ему более благоприятную форму.»&lt;/i&gt;</content>
+	<content contentuid="h1a96c200gca30g4fe5g826dgfe4cf160d629" version="1">Волшебник | Школа очарования</content>
+	<content contentuid="hd45de94278824ad981230da55a5d0d35aa6c" version="1">&lt;i&gt;«Ваша магия влияет на окружающих, завораживает их, подчиняет их волю и меняет убеждения.»&lt;/i&gt;</content>
+	<content contentuid="h01235aacg80eeg4781gb959gbac245daed83" version="1">Волшебник | Школа эвокации</content>
+	<content contentuid="hbe2193ad0e164a12aabcb6c7b9b9de80b860" version="1">&lt;i&gt;«Заклинания эвокации превращают энергию стихий в мощные атаки и чары.»&lt;/i&gt;</content>
+	<content contentuid="h2303b2c83b774c848f95eb31edc33f5102d1" version="1">Волшебник | Школа иллюзии</content>
+	<content contentuid="ha5b64b12821a4e8bb2ea527dca51f3b89cbc" version="1">&lt;i&gt;«Ваша специальность - расплетать и перешивать ткань реальности, чтобы одурачить невнимательных, легковерных и ужасных.»&lt;/i&gt;</content>
+	<content contentuid="hdcb7e374g6141g48d2gaea8g5d43b423e49c" version="1">Волшебник | Школа некромантии</content>
+	<content contentuid="hb7a90290f6054769ab16a18ee5227fc52cd2" version="1">&lt;i&gt;«Вы идете долиной смертной тени и находите там множество друзей.»&lt;/i&gt;</content>
+	<content contentuid="hc4f609227c894867a1dae08e16961624e45e" version="1">Волшебник | Школа превращения</content>
+	<content contentuid="h2482833ea8b040ca86a1633ecef5ce00106g" version="1">&lt;i&gt;«Выше врожденное увлечение структурной магией дало вам невероятную власть над грубой материей и способность манипулировать ею.»&lt;/i&gt;</content>
+	<content contentuid="h23874086e87644c2a53929e2321e10add78g" version="1">Изобретатель | Алхимик</content>
+	<content contentuid="h75dfa6cabd1047319d6016aa322f19af5f20" version="1">&lt;i&gt;«Алхимик — эксперт по созданию магических эффектов путём комбинирования экзотических реагентов. Алхимики используют свои творения, чтобы дарить и отбирать жизнь. Алхимия — древнейшая из изобретательских традиций, и её многофункциональность издавна ценилась и во время войн, и в годы мира.»&lt;/i&gt;</content>
+	<content contentuid="hcceca4369a3844e299f5ce3fae8d5ecd0768" version="1">Изобретатель | Бронник</content>
+	<content contentuid="h17db19cebee04898a67e6462963e66a1bb9c" version="1">&lt;i&gt;«Изобретатель, выбравший специальность бронника, модифицирует броню, делая её практически второй кожей. Доспех изменяют, чтобы можно было использовать магию изобретателя, обрушивать на врагов мощные атаки и увеличить защиту. Изобретатель связывает себя с этой бронёй, оставаясь с ней единым целым даже во время экспериментов.»&lt;/i&gt;</content>
+	<content contentuid="hddf369addfaf47eba48c2d5f77f2a0544384" version="1">Изобретатель | Артеллерист</content>
+	<content contentuid="h973d45bb96634abc805109ba015f514044aa" version="1">&lt;i&gt;«Артиллерист специализируется на использовании в бою магии для метания огня, снарядов и вспышек энергии. Эта разрушительная сила ценится армиями многих миров. Когда же война заканчивается, некоторые из этих специалистов стремятся обеспечить другим спокойную жизнь, тратя силы на борьбу с ростом напряжённости.»&lt;/i&gt;</content>
+	<content contentuid="hdf5c5e6e59fe48a399ce07ef9099b6117b3b" version="1">Изобретатель | Боевой кузнец</content>
+	<content contentuid="he007f4c7c85248d1aa03fd5a72760a172c16" version="1">&lt;i&gt;«Войска нуждаются в защите, и кто-то должен восстанавливать её, если она разрушена. Сочетающий в себе защитника и медика боевой кузнец является экспертом по защите других и восстановлению как матчасти, так и личного состава. В работе боевому кузнецу, как правило, помогает сопровождающий его стальной защитник — компаньон, которого он создаёт сам. Многие воины рассказывают истории о том, как чуть не погибли, но были спасены боевым кузнецом и его железным защитником.»&lt;/i&gt;</content>
+	<content contentuid="habb46f758ffb47e1953d22025260456ec2d6" version="1">Быстрый клинок</content>
+	<content contentuid="h7a2d99a2a52540488f04cfbdfbbef4ebf13g" version="1">Нанесение смертельного или &lt;LSTag Tooltip="CriticalHit"&gt;критического&lt;/LSTag&gt; удара позволяет вам совершить одну дополнительную атаку в этот ход бесплатно.</content>
+	<content contentuid="h4270d71987694aa28224454fb674da956d96" version="1">Смертельный удар</content>
+	<content contentuid="h433457c63f624aa8a6d34d5efdfdf6402a87" version="1">Первый удар в бою всегда будет &lt;LSTag Tooltip="CriticalHit"&gt;критическим&lt;/LSTag&gt;.</content>
+	<content contentuid="hf1e3974caeea434c9cbc116da4683c10f38e" version="1">Точные атаки</content>
+	<content contentuid="h9ffd82031b9d4034b81182d4ea178f86be24" version="4">При нанесении &lt;LSTag Tooltip="CriticalHit"&gt;Критического удара&lt;/LSTag&gt; бросьте дополнительный кубик урона.</content>
+	<content contentuid="h78ca7b042a1a43bf93db8c0dc7f313c56984" version="1">Карманная кража</content>
+	<content contentuid="hc1b94cb581e44e2cbe9b17633f82a0071b13" version="1">&lt;i&gt;Пусти в ход ловкие пальцы. Кради вещи.&lt;/i&gt;</content>
+	<content contentuid="hada8551471fc4f408e5c445024211709e425" version="1">Ограблен!</content>
+	<content contentuid="hacdffe0bb0fd4928846c07dd5f945297g631" version="2">Загрузка Черт...</content>
+	<content contentuid="hc4440d8a05234b74a829ba039a50a457b71b" version="1">Улучшение способностей</content>
+	<content contentuid="h6ecbd1fdea0a4f128f5b8c2d89d253326e1a" version="1">Повысьте одну характеристику на 2 или две характеристики на 1, максимум до 20.</content>
+	<content contentuid="h619f47b264b64467933f5ecb89f125431908" version="1">Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Shout_TAD_PsionicOverload"&gt;Псионическую Перегрузку&lt;/LSTag&gt;.</content>
+	<content contentuid="h1fc4952e891d4b57ab6a87a2e1ed877d9d8f" version="1">Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Rush_ForceTunnel"&gt;Тоннель Силы&lt;/LSTag&gt;.</content>
+	<content contentuid="h195965e815e04b96becffa7a12ccbcbcaca8" version="1">Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Target_TAD_ConcentratedBlast"&gt;Концентрированный Взрыв&lt;/LSTag&gt;.</content>
+	<content contentuid="h153a1eb1783243edbdfc7923bbc68252eeb1" version="1">Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Target_StageFright"&gt;Мандраж&lt;/LSTag&gt;.</content>
+	<content contentuid="ha218d667d6894906bcd71718d65698fc2724" version="1">Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Shout_Repulsor"&gt;Отталкивание&lt;/LSTag&gt;.</content>
+	<content contentuid="h3658d97c8b7246988b437421ce5fd7af8736" version="1">Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Target_TAD_ShieldOfThralls"&gt;Рабский щит&lt;/LSTag&gt;.</content>
+	<content contentuid="h088dfeb4ab204d92867a2666777ba35d91d6" version="1">Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Target_TAD_PerilousStakes"&gt;Опасная игра&lt;/LSTag&gt;.</content>
+	<content contentuid="h7c789606f40344f2a9f434eec014fc703371" version="2">Топорик +2</content>
+	<content contentuid="h6d89351309da44b2bece9f26d4a50717cf56" version="1">Призвать Тилу</content>
+	<content contentuid="hdce13ab50b5d4c9fb2790b45b6dd56c091f4" version="1">Друид Тени</content>
+	<content contentuid="h8d98a6df37bc4e46beba1a348fc56931d85c" version="1">Это существо может видеть в магической и немагической тьме на расстояние до [1] метров и бесплатно применять заклинание &lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;Тьма&lt;/LSTag&gt;.</content>
+	<content contentuid="h5fcaf88e502e42938a99860e9fc34b89fc0f" version="1">Дикий облик: Гончая дурного знамения</content>
+	<content contentuid="h4ec3db45d70d4fa384241716a925a010cf0c" version="1">Олодан принимает облик Гончей дурного знамения, которая может использовать &lt;LSTag Type="Spell" Tooltip="Target_Shadow_Hound_Blink"&gt;Мерцание&lt;/LSTag&gt; и создавать облака &lt;LSTag Type="Spell" Tooltip="Shout_Shadow_Hound_Darkness"&gt;Тьмы&lt;/LSTag&gt;.</content>
+	<content contentuid="hdcf33c73b8384fdfac0c3f1e1a1127b012e9" version="1">Кинжал Тени</content>
+	<content contentuid="hea1e3c1cd730498581b11ca6b90b7162a92a" version="1">Когда враждебное существо промахивается по вам в ближнем бою, вы можете использовать свою реакцию, чтобы заставить его атаковать другую цель.</content>
+</contentList>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<!--Weapon names and descriptions-->
+	<content contentuid="hbf5f6417gc365g4387gb8d0g777efacec8d5" version="1">Achilles' Bane</content>  
+	<content contentuid="h746916ffgb222g4b79g917ag15b63989e883" version="1">This hand crossbow is exceptionally good at finding your target's weak points.</content> 
+	<content contentuid="h460f5590g3178g4fd4gbc4bg7c1e34a49675" version="1">Stalks In Shadows</content>
+	<content contentuid="h75e37793g1a40g45c0gbbebg717e36508e2b" version="1">Your enemies will never see you coming.</content>
+	<content contentuid="hac175e73gad45g4d51gb3c0ge66af104043a" version="1">Quick Thinker</content>
+	<content contentuid="hc19acfabg60e1g4e3agb9f7gda2515d874ab" version="1">Act fast, be victorious.</content>
+	<content contentuid="hac50a56agfa70g4b69g9095g247d07fedb8a" version="1">The Tactician</content>
+	<content contentuid="h22f988beg0847g4f86g89e4gf036634fba09" version="1">Press home your advantage.</content>
+	<content contentuid="h61b028adgf440g4c1dgb06cg1bef15585090" version="1">Bolt of All Trades</content>
+	<content contentuid="hbc36e4abg5b43g47e5g8ec3gf09c6f922331" version="1">You look at the bolts of this crossbow: They burn orange with fire. No, they gleam with icy frost. No, wait, they sizzle with electricity. Wait, actually-- You stop looking at the crossbow bolts.</content>
+	<content contentuid="h540d59a4g7ffag4609gb866gd5b1dffee285" version="1">Bolt of Some Trades</content>  
+	<content contentuid="h6f911b03gb020g43b9ga895gb52957384835" version="1">Little sibling of Bolt of All Trades.</content>
+	<content contentuid="hd6716261g82f7g40adgb6adg3f70b0f7bdbd" version="1">The Water Gun</content>  
+	<content contentuid="h48deabd5gd7cag4fdcgb361gbf3f29d5a5fa" version="1">You don't even need firearm proficiency!</content>
+	<content contentuid="h34a7bfb4g3ee0g4183g9571g4a8c07114052" version="1">The Taser</content>  
+	<content contentuid="h6a7a62eeg45d1g4479g8507g0b1a86597712" version="1">It's shocking how handy this crossbow is.</content>
+	<content contentuid="h21862491ga516g45fcg9c7dge2afa735a7a9" version="1">The Right Tool for the Job</content>  
+	<content contentuid="h53dc7f25gba5eg4b01g993agf74672a597e0" version="1">Improvise. Adapt. Overcome.</content>
+	<content contentuid="hbbfe74cag6d7eg4dc9g9d8bg8fe757330627" version="1">Ne'er Misser Deluxe</content>  
+	<content contentuid="h2021e836g3bc9g4374gb293g19cda8603dea" version="1">Send your enemies reeling.</content>
+	<content contentuid="ha9e61b9ege501g4366gb457g8830870a73e2" version="1">Charming Hand Crossbow</content>  
+	<content contentuid="h4e6cb6dagf700g4ca6g9285g8f6d73221648" version="1">There is just something... irresistible about this crossbow.</content>
+	<content contentuid="h8ce112afg0fc9g461bgbbb6g212a67d362cd" version="1">Wise Hand Crossbow</content>  
+	<content contentuid="h4f0b2644g6068g42edgbe92gf41d13cd7551" version="1">"I dispense wisdom." "What is your wisdom?" "Scratch is the goodest boy." "That's a good wisdom."</content>
+	<content contentuid="h08dbb4a9g53a3g4891gb8d3g3f2548427ca5" version="1">Intelligent Hand Crossbow</content>  
+	<content contentuid="h338d1605gf655g4632g9e5bg6d5aee8d9597" version="1">Won't let your enemies get any bright ideas.</content>
+	<content contentuid="h471828c1gcbe9g4e05gbceeg5eb07ff00b73" version="1">Tinkertop Bolt Blaster 1000</content>  
+	<content contentuid="hcdf7d095g753bg4276ga86eg25c0982e00d9" version="1">A prototype crossbow invented by Cleff Tinkertop of the city of Hupperdook.</content>
+	<content contentuid="ha69374d6g3b39g42eag9338gdb85c316042d" version="1">Ne'er Misser UltraDeluxe</content>  
+	<content contentuid="h624862ecgd17ag4ba0gaacbg7a7ee56f5f81" version="1">A force to be reckoned with.</content>
+	<content contentuid="h121ecaf4g0b28g4592g93c3g909f4dbaa6d8" version="1">Tribute</content>  
+	<content contentuid="h0184a0c8g8e6fg49deg8b1dg3f59ebdc823e" version="1">A series of names got engraved with loving care on this crossbow: dezitk, dimzki, dmarquez, Grimpreacher, HEIIFIREJINX, ZazyMomba</content>  
+	<content contentuid="ha632f6ffg4925g439eg8f65gbe3f7522a6e0" version="1">Phasestrike</content>  
+	<content contentuid="hf9c204f7gce60g4317ga4e2ga35b2f950ead" version="1">An ethereal hand crossbow, it vibrates between realities, echoing the essence of phase spiders.</content>
+	<content contentuid="h3b4dc6b9gc1ffg47aag877dg1d939ae6c033" version="1">Arcane Blaster</content>
+	<content contentuid="heeea5d1cg546ag4ac9gb454gaba70db632cd" version="1">This hand crossbow is engraved with arcane symbols and emits a faint magical aura.</content>
+	<content contentuid="h1d38bfeeg2ac0g485eg9488gfb1950ff6659" version="1">Stingtail</content>
+	<content contentuid="ha00fe9a6gd91eg4f47g8eadg896ed09d022b" version="1">This hand crossbow features a carved grip resembling a scorpion's tail and has a subtle green glow.</content>
+	<content contentuid="hb97a9312g9018g4cecga78egceda1a15a540" version="1">Twinshot Hand Crossbow</content>
+	<content contentuid="h722202d4g23ceg414cga19eg0dd7579a96a0" version="1">This crossbow features two parallel firing chambers and bolts for dual shots.</content>	
+	<content contentuid="h3397a405gd06eg45e9g8c10g95d3c200ca42" version="1">Soulthief</content>
+	<content contentuid="h977a4fe0g2150g4c6egbdbbga6bf80a510b1" version="1">This eerie hand crossbow is constructed from darkwood and adorned with shadowy engravings.</content>
+
+	<!--Passive names and descriptions-->
+	<content contentuid="hd6eec9b1g4715g4b30ga8afgea956b1f9235" version="1">Crossbow of the Elements</content>  
+	<content contentuid="hc0c9f4e6gaa56g49dcgae36g8f316b8b6a02" version="1">Depending on what kind of damage this weapon does, it may also inflict: &lt;LSTag Type="Status" Tooltip="ACID"&gt;Acid&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="CHILLED"&gt;Chilled&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="SHOCKED"&gt;Shocked&lt;/LSTag&gt;, or &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;Off Balance&lt;/LSTag&gt; unless the target succeeds a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;.</content>
+	<content contentuid="h17f31ca6g5a2dg4c5ag92adg446fafc9b50d" version="1">Charming Weapon</content>  
+	<content contentuid="h8c5c44a2g0f34g49d1g99f1gac1cd59b5b0c" version="1">This weapon deals additional damage equal to your Charisma &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.</content>
+	<content contentuid="hbdddfa88gb092g4792gaeadg990112114fb9" version="1">Wise Weapon</content>  
+	<content contentuid="hf20b88e1ga26cg411egb938ge0f6d1663fbe" version="1">This weapon deals additional damage equal to your Wisdom &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.</content>
+	<content contentuid="h1b8f4ddbgd910g42ebga115gacfee5ff117e" version="1">Intelligent Weapon</content>  
+	<content contentuid="h0715577fgd225g4f1ag9c1cg4dbd13f090a4" version="1">This weapon deals additional damage equal to your Intelligence &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.</content>
+	<content contentuid="hd444a3f4gc18eg42a3g81f0gd9166fc99f39" version="1">Fast Fingers</content> 
+	<content contentuid="hda4c3529gf7f7g425dg9d95g578ed1e175eb" version="1">When you land a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; with this weapon, you gain an additional &lt;LSTag Tooltip="Action"&gt;action&lt;/LSTag&gt;.</content>
+	<content contentuid="h62b7a45dg38e7g4fcegb590gcc50bcd89b4d" version="1">Misfire</content>  
+	<content contentuid="h05987fd2g32e8g4004gb735ga5f43b6b67bb" version="1">The crossbow misfires on a Critical Miss, dealing 1d6 Piercing damage to the wielder.</content>
+	<content contentuid="h52b99f39g85e4g4662g9e9bg166962bd2879" version="1">Forceful</content>
+	<content contentuid="hbf4762ceg827ag4552ga73ega77b7ec52d14" version="1">On a successful Hit, the blow may push the target &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;Off Balance&lt;/LSTag&gt;.</content>
+	<content contentuid="ha83e6b8dg63beg4d23gbff2ga24bf7e78bec" version="1">The Creator's Gratitude</content>
+
+	
+	<!--Spell names and descriptions-->
+	<content contentuid="h955acab7g1c59g42f9ga481g7fae4123ce4f" version="1">Elemental Bolt</content>  
+	<content contentuid="h33239a24gabc9g4303ga4b9g5475871cccb1" version="1">Give your weapon a +1 bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and an additional 1d4 Acid, Poison, Cold, Fire, Lightning or Thunder damage to its strikes depending on the type of bolt chosen.</content>
+	<content contentuid="hb2ab3a0ege6bag4215g8271gadc9181ab84f" version="1">The crossbow can be unequipped and equipped again, but has to stay on the spellcaster's person.</content>  
+	<content contentuid="h28c18268g1787g4acbgbfe4g8ae705703829" version="1">Bolt of Acid</content>
+	<content contentuid="hab0acfbbg657eg4d17ga392g8daa0a589cb6" version="1">Bolt of Poison</content>
+	<content contentuid="hbfba4659g1262g441ag8001g22cbf0890e43" version="1">Bolt of Ice</content>
+	<content contentuid="h278de668gd0ceg4b2eg840bgccf85c2cc639" version="1">Bolt of Fire</content>
+	<content contentuid="hdce0673agfe1cg4851g9e40gbe7f4a4f1f33" version="1">Bolt of Lightning</content>
+	<content contentuid="h8dc376e2g8474g47d6gbdc6g1e355d4363f4" version="1">Bolt of Thunder</content>
+	<content contentuid="hb1a94583g6520g4932gb6a1gd3126f6d9476" version="1">Gain a +1 bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and deal an additional [1]</content>
+	<content contentuid="hd93118a6g8f0ag4a9fgafe1gb3fa1b8c55a2" version="1">Arcane Blast</content>
+	<content contentuid="hac1c00f7g9668g473dg83d3g2a89b8a46a94" version="1">Once per battle, you can use a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt; to make a ranged attack against up to 3 separate targets within range. Each target takes 1d6 Force damage.</content>
+	<content contentuid="hea6df4b0gac60g464eg871ag4505657bee2a" version="1">Venomous Sting</content>
+	<content contentuid="h636b51aag06a2g4690gaba7g84d5e1dd59d5" version="1">Once per battle, you can use a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt; to fire a venomous bolt that deals 1d6 Piercing and 1d6 Poison damage on a hit and an additional 1d4 Poison damage at the start of the target's next 2 turns. 
+	
+If the attack misses, the target still takes half the initial damage, but no damage in the following turns.</content>
+	<content contentuid="hc242fe27g5fedg4721g874bg4d413644aa51" version="3">Stung</content>
+	<content contentuid="h66a1f536gd34bg430fg9422g247241c403e9" version="3">Takes [1] at the start of its turn.</content>
+	<content contentuid="h5bba7a07g3678g45b0g9f49gf6ce5d896d2d" version="1">Dual Bolts</content>  
+	<content contentuid="h51f23f07g5de2g4c6bg89b5g275daea90918" version="1">Once per battle, you can use a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt; to fire two bolts simultaneously at the same target. On a miss, you receive 1d4 penalty to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; for 1 turn.</content>  
+	<content contentuid="h5acc08c9gc54bg4097g8814g12b5ec24dbf7" version="1">Drain Essence</content>
+	<content contentuid="h5da7d8b5ge945g4fc3ga0a5ge597014cdc0a" version="1">Once per battle, you can use a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt; to make a ranged attack that deals an additional 1d6 necrotic damage and heals you for 1d6 &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;.</content>  
+</contentList>
+

@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <content contentuid="hfd131616gacecgb1f5g084cg222175be1fcf" version="2">Возвышение иллитидов</content>
+  <content contentuid="h3e441ce1ge91fgc3acgdc9dg4401ac0c865b" version="3">С каждым поглощённым паразитом присутствие головастика растёт внутри вас, а его способности адаптируются к вашему выбранному классу и отражают его.</content>
+  <content contentuid="hd18d417dg5488gcd31g072cg69fdfba94c31" version="1">Возвышение иллитидов: Варвар</content>
+  <content contentuid="h4f91051dg4a8eg9e06g6882g2bee9a0651ae" version="1">Возвышение иллитидов: Бард</content>
+  <content contentuid="h9aac9411gc758g4e40g4830g2634c38cd7b3" version="1">Возвышение иллитидов: Жрец</content>
+  <content contentuid="h4054ba35g4956gc960gedabg0bbcb5a845aa" version="1">Возвышение иллитидов: Друид</content>
+  <content contentuid="h15d541c9ge93fg3de0gb010gbe994482fd76" version="1">Возвышение иллитидов: Воин</content>
+  <content contentuid="haa1aa35fg975cg6843g8f90gd1ed9c8269b3" version="1">Возвышение иллитидов: Монах</content>
+  <content contentuid="h631f41aag4fa1g746agd2f7g8b6a5fa60d92" version="1">Возвышение иллитидов: Паладин</content>
+  <content contentuid="h7a925937g0cc8g434fg7e84g6117f14f4a96" version="1">Возвышение иллитидов: Следопыт</content>
+  <content contentuid="h129859eegf24dg8f15g9184g5f8e4d8c7c1b" version="1">Возвышение иллитидов: Плут</content>
+  <content contentuid="h04cb5b74g0e59gc2f2ge1cfg2ae7bba015ef" version="1">Возвышение иллитидов: Чародей</content>
+  <content contentuid="h8d71dd56ge7a2g3a2egc3cdg1cfa2fb17ac7" version="1">Возвышение иллитидов: Колдун</content>
+  <content contentuid="hed9e1f14gf516g6d39g5ed1g57f8742c9bc0" version="1">Возвышение иллитидов: Волшебник</content>
+  <content contentuid="hb3c73ef5gf808gadc8g80bcgaeffa62cc04d" version="1">Возвышение иллитидов: Варвар</content>
+  <content contentuid="h00849954g5af1gf48cg94dagb2737c5beebe" version="1">Возвышение иллитидов: Бард</content>
+  <content contentuid="hcc319be3g7245g0597g7e6fgc66823c327a1" version="1">Возвышение иллитидов: Жрец</content>
+  <content contentuid="hf7d51d4fg5f39gcaddg56ddg97dd36c2f04b" version="1">Возвышение иллитидов: Друид</content>
+  <content contentuid="hc9deb891g0890g73f8g03e5g4809d0fac45a" version="1">Возвышение иллитидов: Воин</content>
+  <content contentuid="h1cfed326ged95g60f9g0747g22acc5774e50" version="1">Возвышение иллитидов: Монах</content>
+  <content contentuid="h08c0d855gd764g6e8eg4197g01cb0654c6ad" version="1">Возвышение иллитидов: Паладин</content>
+  <content contentuid="hf56b7bdeg94d9g45fcg940dg7635d96a279c" version="1">Возвышение иллитидов: Следопыт</content>
+  <content contentuid="h48a5a11cg0812gef7dg0cdfgd6ca4849f86a" version="1">Возвышение иллитидов: Плут</content>
+  <content contentuid="heb430c7bg7db5g748cg9a8fg4cebed28bc24" version="1">Возвышение иллитидов: Чародей</content>
+  <content contentuid="hb0522bacg8243g20f0gb458g4878b1d98876" version="1">Возвышение иллитидов: Колдун</content>
+  <content contentuid="h415e4faag49c2gfea0g4fddg6856c4afe538" version="1">Возвышение иллитидов: Волшебник</content>
+  <content contentuid="h8e67d75ag946bg3d54g8168g46be461a4d74" version="2">Возвышение иллитидов Уровень 1: Варвар</content>
+  <content contentuid="h891d30edg1fceg804bg8fd8g0448cf1d52b3" version="2">Возвышение иллитидов Уровень 1: Бард</content>
+  <content contentuid="h8f2e7be8g8416g013fg6768gc3fb40d9b4a8" version="2">Возвышение иллитидов Уровень 1: Жрец</content>
+  <content contentuid="h1a17ce9fg7aa4g465dg8aa1g7951e88d3132" version="2">Возвышение иллитидов Уровень 1: Друид</content>
+  <content contentuid="h5ce9fb2bg3ad5g96ecg39adga1e0fc0d6b4a" version="1">Иллитид Воин открыл Уровень 1</content>
+  <content contentuid="h9638da89g759cg0e44gab52g75aadae9d103" version="2">Возвышение иллитидов Уровень 1: Монах</content>
+  <content contentuid="hd0e15b17gc12cg9218g9eafg9d2d6980021d" version="2">Возвышение иллитидов Уровень 1: Паладин</content>
+  <content contentuid="hee15cf33g427bgb2a8ga555gbfcf38a4785e" version="2">Возвышение иллитидов Уровень 1: Следопыт</content>
+  <content contentuid="hf98e332egf8c8ge102gc131g6272b97a27b6" version="2">Возвышение иллитидов Уровень 1: Плут</content>
+  <content contentuid="ha79d2739g0c3fg6c20g30b1gd99f06d7b064" version="2">Возвышение иллитидов Уровень 1: Чародей</content>
+  <content contentuid="hc730e97egf27agf402g14e1g9ce5d0ba395f" version="2">Возвышение иллитидов Уровень 1: Колдун</content>
+  <content contentuid="h84ac123cgfeb6g1a5cg5f44g86997cafd975" version="2">Возвышение иллитидов Уровень 1: Волшебник</content>
+  <content contentuid="h9f34e6f1g80bdg9002gdb97gc4829dc3e42e" version="2">Возвышение иллитидов Уровень 2: Варвар</content>
+  <content contentuid="hb9979578g5c38g7f0eg878dg6f742b65c84f" version="2">Возвышение иллитидов Уровень 2: Бард</content>
+  <content contentuid="hb8441009ge139g7035gd57dg04fb813dc798" version="2">Возвышение иллитидов Уровень 2: Жрец</content>
+  <content contentuid="h1f0f6d5cg1bf8ge4begf77cg1f2718b77ec6" version="2">Возвышение иллитидов Уровень 2: Друид</content>
+  <content contentuid="h6bf08ae1g477dgf276gb784g4c9f95def289" version="2">Возвышение иллитидов Уровень 2: Воин</content>
+  <content contentuid="h1f3f08ecg0d1ag6cd4g0c42g57d821e39487" version="2">Возвышение иллитидов Уровень 2: Монах</content>
+  <content contentuid="h711ac4f8g6fcdgeae1g6468g7e8fad1f8748" version="2">Возвышение иллитидов Уровень 2: Паладин</content>
+  <content contentuid="hd4db7447g70f3ge50eg4a01g7aec1a646c71" version="2">Возвышение иллитидов Уровень 2: Следопыт</content>
+  <content contentuid="hbafdc202g1955g7bbbg18bcg35964ffb4f7a" version="2">Возвышение иллитидов Уровень 2: Плут</content>
+  <content contentuid="h97dd25f8g8551gd8b1g21cfg08074aad99c2" version="2">Возвышение иллитидов Уровень 2: Чародей</content>
+  <content contentuid="h5502e035g0717gb521g92f8g7f60c1da2b84" version="2">Возвышение иллитидов Уровень 2: Колдун</content>
+  <content contentuid="h93d255a1g1440g59feg861cg5e03335580cd" version="2">Возвышение иллитидов Уровень 2: Волшебник</content>
+  <content contentuid="h43ec9bc1gb41ag300bg0545geebf4c973cb3" version="1">Психическая какофония</content>
+  <content contentuid="h65ecda75g7556g66e5g3312g624b2f168847" version="1">Ваш разум — это шумная и хаотичная буря. Все ваши &lt;LSTag Tooltip="AttackRoll"&gt;броски атаки&lt;/LSTag&gt;, &lt;LSTag Tooltip="SavingThrow"&gt;спасброски&lt;/LSTag&gt; и &lt;LSTag Tooltip="AbilityCheck"&gt;проверки характеристик&lt;/LSTag&gt; получают штраф -[1]. Этот статус заканчивается через 3 хода.</content>
+  <content contentuid="h0801a307g1364g70a9g8e6fge28987a42a6b" version="1">Психическая какофония</content>
+  <content contentuid="hc6a24d94g9194g2ad4g0791gade866268550" version="1">Заполните разум существа в пределах [1] хаотичными мыслями. Цель должна преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Мудрости, иначе получит [2] и понесёт штраф -[3] ко всем броскам кубиков на [4] хода.</content>
+  <content contentuid="h51594537g3f0agfd65gd28eg095078944d43" version="1">Разум безмятежности</content>
+  <content contentuid="hc60d142fga4bfgd32fg8d26ge7b1ab3d91ad" version="1">Ваш псионический фокус позволяет вам ощущать угрозы, даже когда вы не осознаёте их. Вы не можете быть &lt;LSTag Type="Status" Tooltip="SURPRISED"&gt;застигнутым врасплох&lt;/LSTag&gt;, пока находитесь в сознании.</content>
+  <content contentuid="h12ff9e22g01a3g1e28gfa30gcaf15f086da8" version="1">Временной толчок</content>
+  <content contentuid="h0662250eg19a4g5efag44c3g16f3f1607715" version="1">Перегрузите чувство времени существа в пределах [1]. Цель должна совершить &lt;LSTag Tooltip="SavingThrow"&gt;спасбросок&lt;/LSTag&gt; Интеллекта. При провале его &lt;LSTag Tooltip="MovementSpeed"&gt;скорость передвижения&lt;/LSTag&gt; уменьшается вдвое до конца его следующего хода.</content>
+  <content contentuid="h38c8368cgccc8g0196g6eecgd9232fb87cdc" version="1">Хрональная задержка</content>
+  <content contentuid="h65bf08c5g4bcegfc09gc0f7g8b624f3f2b74" version="1">Ваше чувство времени на мгновение нарушено. Ваша &lt;LSTag Tooltip="MovementSpeed"&gt;скорость передвижения&lt;/LSTag&gt; уменьшается вдвое.</content>
+  <content contentuid="h737822d0g9952g8300gbdccg0afc4a930f84" version="1">Псионическая приманка</content>
+  <content contentuid="hfa56886dg847bga18aga601g557f760aef09" version="1">Вы можете телепатически приманить Зверя в пределах [1]. Зверь притягивается к вам на [2].</content>
+  <content contentuid="h18418900g13ecgb2a2g7242g221b8fdca013" version="1">Возвышение иллитидов Уровень 3: Варвар</content>
+  <content contentuid="h0bc9e943g72b5g6143ga04bg22169f59e1fa" version="1">Возвышение иллитидов Уровень 4: Варвар</content>
+  <content contentuid="h2a6c6532g6454g6d39g29c0g65151e793a2a" version="1">Возвышение иллитидов Уровень 5: Варвар</content>
+  <content contentuid="h322a6ff7gf1a1g2e80gf24dg516fba2ce4b1" version="1">Возвышение иллитидов Уровень 6: Варвар</content>
+  <content contentuid="h93152a2agd1d7g09a8g0ac0gaea8d62cb11a" version="1">Возвышение иллитидов Уровень 7: Варвар</content>
+  <content contentuid="hcacb27b9gdc44g1366g80fbg32266573374a" version="1">Возвышение иллитидов Уровень 3: Бард</content>
+  <content contentuid="h45cff026ga16cg382bg042ag7882e06e7ce6" version="1">Возвышение иллитидов Уровень 4: Бард</content>
+  <content contentuid="h62d153e5g3e30g3caeg8ae1g575a899c2213" version="1">Возвышение иллитидов Уровень 5: Бард</content>
+  <content contentuid="hcf29684dga5c8g4598g7c36g39f6ad6df567" version="1">Возвышение иллитидов Уровень 6: Бард</content>
+  <content contentuid="hd6fe62b0gd787gf546g15a4gb31d4007676a" version="1">Возвышение иллитидов Уровень 7: Бард</content>
+  <content contentuid="h8082449aga404g00e1g9a98g19a0f88c4985" version="1">Возвышение иллитидов Уровень 3: Жрец</content>
+  <content contentuid="h1e19efa8g00ecg6323g5dfbgbc73d16783fc" version="1">Возвышение иллитидов Уровень 4: Жрец</content>
+  <content contentuid="h400f35c5g3f3eg6839g9437g950dd4101532" version="1">Возвышение иллитидов Уровень 5: Жрец</content>
+  <content contentuid="h8cdb87eeg3d73g577bg5389g43118efd5d64" version="1">Возвышение иллитидов Уровень 6: Жрец</content>
+  <content contentuid="h6311bdb9gee8cg3ba6g445agcf025295665f" version="1">Возвышение иллитидов Уровень 7: Жрец</content>
+  <content contentuid="he8feda81gf7c0g8192g4696gc33d3fdff5f5" version="1">Возвышение иллитидов Уровень 3: Друид</content>
+  <content contentuid="h411c780bg6094g077fg63cdg6d78c29bf03e" version="1">Возвышение иллитидов Уровень 4: Друид</content>
+  <content contentuid="hc0197f24gcd2cgf378g885dgb3d97dfc5348" version="1">Возвышение иллитидов Уровень 5: Друид</content>
+  <content contentuid="hb7d5d36bg2077ga8b2g1b5fgb47ca5a6da49" version="1">Возвышение иллитидов Уровень 6: Друид</content>
+  <content contentuid="h16847218g2f2bg6e8cgae61g1ad9cb5a7f0f" version="1">Возвышение иллитидов Уровень 7: Друид</content>
+  <content contentuid="h5c4d332dgc65bgfabcg33a3g851e0c3f4fb7" version="1">Возвышение иллитидов Уровень 1: Воин</content>
+  <content contentuid="h48a36417g36f3g2b55g4789g8894e0fd6578" version="1">Возвышение иллитидов Уровень 3: Воин</content>
+  <content contentuid="hdaf281a9g1d2bg3a37g3897g4955ef8d8b21" version="1">Возвышение иллитидов Уровень 4: Воин</content>
+  <content contentuid="h6c900d24g0d18g4b1fg2979g8d0d48445029" version="1">Возвышение иллитидов Уровень 5: Воин</content>
+  <content contentuid="hd494cffag5335g7763g1d60gae13351edc37" version="1">Возвышение иллитидов Уровень 6: Воин</content>
+  <content contentuid="h7169d0f0g741ag33f6g16eeg8384c0169ff6" version="1">Возвышение иллитидов Уровень 7: Воин</content>
+  <content contentuid="hae59dcf2g7416g21dag5a32gfcc409575f70" version="1">Возвышение иллитидов Уровень 3: Монах</content>
+  <content contentuid="hc1ff597dg9185gebf9g7cebg52071278e5c1" version="1">Возвышение иллитидов Уровень 4: Монах</content>
+  <content contentuid="hc2a7b0c3gdbbag31bbgee78ge94cda3ce2de" version="1">Возвышение иллитидов Уровень 5: Монах</content>
+  <content contentuid="ha3471171gc72cg68f8g193fg573bed290356" version="1">Возвышение иллитидов Уровень 6: Монах</content>
+  <content contentuid="hd32a48b5gdc16g5af0g0e2dg4b9592b07b94" version="1">Возвышение иллитидов Уровень 7: Монах</content>
+  <content contentuid="h80d40e5agf38eg23deg9d07gb597dbefb913" version="1">Возвышение иллитидов Уровень 3: Паладин</content>
+  <content contentuid="hae589e1dg9535g7607g6034g8f696f00d5b5" version="1">Возвышение иллитидов Уровень 4: Паладин</content>
+  <content contentuid="h8fdf5fceg84a7g88cdg088eg9654043ef86b" version="1">Возвышение иллитидов Уровень 5: Паладин</content>
+  <content contentuid="h3d2bb33dg59efg6cc8g335bg5175ca77c804" version="1">Возвышение иллитидов Уровень 6: Паладин</content>
+  <content contentuid="h7b82c2d8g58aaga7bbga90eg908cf639bef1" version="1">Возвышение иллитидов Уровень 7: Паладин</content>
+  <content contentuid="hd0c376a4g6718g1143g2a07gd7f4fa5159b6" version="1">Возвышение иллитидов Уровень 3: Следопыт</content>
+  <content contentuid="h0069f023gd223gd483g737cgdd817ffe8150" version="1">Возвышение иллитидов Уровень 4: Следопыт</content>
+  <content contentuid="h9392e7cfg4b6egbfeeg927eg1b173c5d0c1e" version="1">Возвышение иллитидов Уровень 5: Следопыт</content>
+  <content contentuid="h9d5d928dg2b47gd875gc745g59249c36fbe5" version="1">Возвышение иллитидов Уровень 6: Следопыт</content>
+  <content contentuid="ha76d721eg8cd2gafdfg73cbgd73fba90bbbd" version="1">Возвышение иллитидов Уровень 7: Следопыт</content>
+  <content contentuid="h24b90e83gca94g0b49g787cg3f27d0ebabec" version="1">Возвышение иллитидов Уровень 3: Плут</content>
+  <content contentuid="h48407d03gc8begf039g85ddge413f44489ae" version="1">Возвышение иллитидов Уровень 4: Плут</content>
+  <content contentuid="hbaae5af3gde4bg116agf2c1g8959e3c903d8" version="1">Возвышение иллитидов Уровень 5: Плут</content>
+  <content contentuid="h3768838cgb725g910cg7852g53a1c6ca9974" version="1">Возвышение иллитидов Уровень 6: Плут</content>
+  <content contentuid="h6d7ab67ag9354g8a8cg870cg31b67e1d21c9" version="1">Возвышение иллитидов Уровень 7: Плут</content>
+  <content contentuid="h6f5dffdag297dga0a1g45a5gdda70fc5db13" version="1">Возвышение иллитидов Уровень 3: Чародей</content>
+  <content contentuid="hce5cc607g6626g616bg3cdeg6261e08d4d34" version="1">Возвышение иллитидов Уровень 4: Чародей</content>
+  <content contentuid="hf5b3f7e5gfd89g8cbfg6119g7b4535c63740" version="1">Возвышение иллитидов Уровень 5: Чародей</content>
+  <content contentuid="h60771467gad9cga53cgde2dgf523486a3278" version="1">Возвышение иллитидов Уровень 6: Чародей</content>
+  <content contentuid="hd2af59e9gda5bg4ceag5b52g15ee4b367c06" version="1">Возвышение иллитидов Уровень 7: Чародей</content>
+  <content contentuid="h5ae42e99g6665ga2b0gaf6dg8356e0782928" version="1">Возвышение иллитидов Уровень 3: Колдун</content>
+  <content contentuid="he1563986gcea1g91fagbcd2gd1df33d3cd95" version="1">Возвышение иллитидов Уровень 4: Колдун</content>
+  <content contentuid="h0fa160c5g22fdg228dgfb24g1b7fa3e12c80" version="1">Возвышение иллитидов Уровень 5: Колдун</content>
+  <content contentuid="h0d70b837g37bcg26cdgf179g295cd81cab2d" version="1">Возвышение иллитидов Уровень 6: Колдун</content>
+  <content contentuid="h878556a4ga691g9733g4de1g70d310c41287" version="1">Возвышение иллитидов Уровень 7: Колдун</content>
+  <content contentuid="h767b689bgb1cfgd83ega5a3g116b3c82f805" version="1">Возвышение иллитидов Уровень 3: Волшебник</content>
+  <content contentuid="hdb0c873cg1ba8gf8c4gef24gbe3bdcfdf688" version="1">Возвышение иллитидов Уровень 4: Волшебник</content>
+  <content contentuid="hd09e6086g91c1g2e8dgf9e0g388639493123" version="1">Возвышение иллитидов Уровень 5: Волшебник</content>
+  <content contentuid="h4aae0701g6409g308cg9a40g67a9ee7f01fd" version="1">Возвышение иллитидов Уровень 6: Волшебник</content>
+  <content contentuid="h195c0f99ge9f1ge745ged21g94e23154efbe" version="1">Возвышение иллитидов Уровень 7: Волшебник</content>
+  <content contentuid="hecf5b72ag7f69gc0c2g16d6g435d82adbb55" version="1">Псионический прорыв</content>
+  <content contentuid="h8923b275g72e2g6cd2g4234gc01b7b3ca6df" version="1">Псионический прорыв</content>
+  <content contentuid="h478569b4g804bge416g7601g6d25a4f46734" version="2">Ваш разум на мгновение разрушен. Ваша защита ослаблена, что снижает ваш &lt;LSTag Tooltip="ArmourClass"&gt;Класс брони&lt;/LSTag&gt; на -[1]. Кроме того, игнорируется любое имеющееся у вас сопротивление психическому урону.</content>
+  <content contentuid="h32606484g6c5cg235bg98b1g9169c423f515" version="2">Исцеление разума</content>
+  <content contentuid="hcc505ed7gb1dbg3635gbe0dg285e9b4c3919" version="1">Ваш разум наполняется приливом энергии. Вы получаете дополнительное &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt; в этом ходу. Когда этот статус снимается, вы восстанавливаете [1].</content>
+  <content contentuid="hff1352c5ga596gf8abg1748g60ce79e6e982" version="2">Попытайтесь пробить ментальную защиту существа. Цель должна преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Интеллекта. При провале спасброска её &lt;LSTag Tooltip="ArmourClass"&gt;Класс брони&lt;/LSTag&gt; снижается на -[1], а также атаки, наносящие [2], игнорируют сопротивление цели психическому урону.</content>
+  <content contentuid="h1aeba75agfef9g5f04gaee6g131d11e30d11" version="2">Передышка разума</content>
+  <content contentuid="h29f4475dg927dgb2f0g181cgc1bf09bb1179" version="3">Вы можете выбрать союзника в пределах [1] и даровать ему мгновенный всплеск псионической энергии. Цель получает &lt;LSTag Type="Status" Tooltip="EA_IP_MEND_MIND"&gt;Исцеление разума&lt;/LSTag&gt; до конца своего хода.</content>
+  <content contentuid="h258ac889g2045g10ceg8bc2gcb0bd213175d" version="1">Ци-телепорт</content>
+  <content contentuid="hafd76862ga0d8g29d3gd26dgb487d64d5b2c" version="2">Вы можете использовать &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, чтобы телепортироваться в точку в пределах [1].</content>
+  <content contentuid="h5fec1f20g1fa1gf56eg7b2fgb4584600e98f" version="1">Первобытное эхо</content>
+  <content contentuid="hcef029fdgd20dg98eagb5e7gee6b4720a557" version="1">Эхо вашего гнева, которое может заставить &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;испугаться&lt;/LSTag&gt; ваших врагов.</content>
+  <content contentuid="hd658510dg4cd1g08b7gfbf0gebd9dbd155ae" version="1">Первобытное эхо</content>
+  <content contentuid="h81263bcdg9464ga55ag4159gc5abf2032b9b" version="1">Когда вы используете &lt;LSTag Type="Spell" Tooltip="Shout_Rage"&gt;Ярость&lt;/LSTag&gt;, вы проецируете псионическое эхо вашей ярости. Все существа в пределах [1] должны преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Мудрости, иначе они будут &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;напуганы&lt;/LSTag&gt; до конца своего хода.</content>
+  <content contentuid="hc30fbee5gfda7g319dg97e8ga33682ca7acc" version="1">Дикий разум»</content>
+  <content contentuid="h6c380bb9g2046g4923g7db2gbc76f818cb9d" version="2">Затратив &lt;LSTag Type="ActionResource" Tooltip="WildShape"&gt;Заряд Дикого облика&lt;/LSTag&gt;, вы можете испустить волну хаотичных мыслей. Все враги в радиусе [1] должны преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Мудрости, иначе будут в &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;замешательстве&lt;/LSTag&gt; на [2] хода.</content>
+  <content contentuid="hc0d691edgfedfg8e47g9202g67404291401b" version="1">Тревожная мелодия</content>
+  <content contentuid="h50ac2ee3gcfc7gb6b0ga6b2g81659f7d13bd" version="2">Выберите существо в пределах [1]. Цель должна преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Мудрости, иначе получает &lt;LSTag Tooltip="Vulnerable"&gt;Уязвимость&lt;/LSTag&gt; к [2] на 2 хода.</content>
+  <content contentuid="h12d58c27g0587g407ega61dg7adc0fcc0c14" version="1">Псионический прорыв: Аура</content>
+  <content contentuid="h27ccee17gb64dgb46dg36f6g95ff90a12d98" version="1">Ваши атаки, наносящие [1], игнорируют сопротивление цели психическому урону, если на цель действует Псионический прорыв.</content>
+  <content contentuid="h9907a12ag4b6dgee5dg1bb9gc84a45f5f5df" version="1">Псионический прорыв: Союзник</content>
+  <content contentuid="h0b3d0897gf036gcf21gb9d6g7721401c48a6" version="1">Ваши атаки, наносящие [1], игнорируют сопротивление цели психическому урону, если на цель действует Псионический прорыв.</content>
+  <content contentuid="hc2b47f72g0679g981ag96a1g727b3691ec2c" version="1">Потрясённый разум</content>
+  <content contentuid="h719cfa98g6e25g19a8g08a8g70f806dacf1b" version="2">Ваш разум временно надломлен Тревожной мелодией. Вы не можете защищаться от ментальных атак и получаете &lt;LSTag Tooltip="Vulnerable"&gt;Уязвимость&lt;/LSTag&gt; к [1].</content>
+  <content contentuid="h86fc8885g76b7g7529g7f36gf4877678211a" version="1">Псионический оберег</content>
+  <content contentuid="h8c8e0b34g22f2ge447g9be6g85a78eb5d8c5" version="2">Ваш разум защищён невидимым, гудящим барьером. Вы получаете &lt;LSTag Tooltip="Resistance"&gt;Сопротивление&lt;/LSTag&gt; к [1], и каждый раз, когда существо наносит вам урон в ближнем бою, это существо получает [2].</content>
+  <content contentuid="h6c826edage187g2777g9714gb880f3c10ec1" version="1">%%% ПУСТО</content>
+  <content contentuid="h18f539e2gf935g7002ga2ebg9120b78128a5" version="1">Сокрушитель разума</content>
+  <content contentuid="h9f261a0ag6227g84f9g4b6fg1ae4a5ceb80f" version="1">Псионический оберег</content>
+  <content contentuid="he2800da7g9e8eg16e1gc089gceeee07ee5ce" version="2">Создайте щит из чистой мысли вокруг союзника в пределах [1], создавая барьер, который дарует &lt;LSTag Tooltip="Resistance"&gt;Сопротивление&lt;/LSTag&gt; к [2] и наносит [3] атакующим в ближнем бою в течение 3 ходов.</content>
+  <content contentuid="h0617e5ceg76e8g1499g1740g1339cdb5366e" version="1">Потратьте бонусное действие, чтобы нанести больше урона.</content>
+  <content contentuid="h4490a8a7g10e5g70b0gcae8g0762bc65b70a" version="2">Синаптический удар</content>
+  <content contentuid="haaa9e316g7deag0e12ga2e2geaa65982bcb9" version="3">Когда вы попадаете по существу &lt;LSTag Tooltip="MeleeWeaponAttack"&gt;атакой ближнего боя&lt;/LSTag&gt;, вы можете потратить &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, чтобы нанести дополнительный [1] в виде сфокусированной волны психической энергии.</content>
+  <content contentuid="hc876aab1g57f1gded7ga4f4g10e2c13966aa" version="1">Псионический выстрел</content>
+  <content contentuid="h931a62e3g853dga8a0g10ffg834ca7c3c9ea" version="1">Когда вы попадаете по существу &lt;LSTag Tooltip="RangedWeaponAttack"&gt;атакой дальнего боя&lt;/LSTag&gt;, вы можете потратить &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, чтобы наполнить снаряд психической энергией, нанося дополнительный [1].</content>
+  <content contentuid="h1f6dfa0dge7cbg78b4ge983g0813ee0bb313" version="1">Психический клинок</content>
+  <content contentuid="hcc2e3ccfgb81dgfae0g0290g19e948b62bfb" version="2">Когда вы попадаете по существу, используя способность &lt;LSTag Type="Spell" Tooltip="Target_SneakAttack"&gt;Скрытая атака (ближний бой)&lt;/LSTag&gt;, вы наполняете удар психической энергией, нанося цели дополнительный [1]. Это может происходить только один раз за ход.</content>
+  <content contentuid="h4a8763edgeeccg45bdgbd05gc9a889adc285" version="2">Детонация разума</content>
+  <content contentuid="h3f3db620g7dbeg6395g9634g108c1a7f896c" version="3">Сфокусированная мысль вызывает внезапный взрыв энергии в указанной точке в пределах [1]. Все существа в пределах [2] должны преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Мудрости, иначе получают [3].</content>
+  <content contentuid="h6ec5b158gb72dg4a47gb059g2a0d98549c38" version="1">Псионическая месть</content>
+  <content contentuid="h3f4f0fbfg14b4g99ceg8bc8gd14701957e2c" version="2">Когда по вам попадают атакой ближнего боя, вы можете использовать свою реакцию, чтобы нанести [1].</content>
+  <content contentuid="h9b45584bg5194g3e22gbeb5g5bbc6742a224" version="1">Псионическая месть</content>
+  <content contentuid="hfe578522g3c25g82abg77f5gbd533a48c5c1" version="2">Когда по вам попадают атакой ближнего боя, вы можете потратить &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;очко реакции&lt;/LSTag&gt;, чтобы нанести [1] атакующему.</content>
+  <content contentuid="h93116239g5e20g44bdg940dgb83117f50b42" version="1">Псионическое проклятие</content>
+  <content contentuid="h047f4af5g13c1g9af6g7aebgaf8960568d15" version="1">Когда вы атакуете цель, находящуюся под действием Псионического проклятия: вы наносите дополнительный [1]. Это может происходить только один раз за ход.</content>
+  <content contentuid="h1253a420g05cag8537gf97dg0503aad1914a" version="1">Псионический взрыв</content>
+  <content contentuid="h96b77207g55e5ge6a4g9cdbg34adeb021aa4" version="2">Высвободите волну псионической энергии из своего тела. Существа в радиусе [1] должны преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Интеллекта, иначе получают [2] и отбрасываются на [3].</content>
+  <content contentuid="hd74196afgf0f6gce62g374fgcf4445dc9ee2" version="1">Аберрантный облик</content>
+  <content contentuid="hdb7d07b6gee2bg80ccg3c0agc7ce02af2ea9" version="1">Псионический оберег</content>
+  <content contentuid="hfd23a2edg59c6g4c3eg333ag8094e4f3f4bc" version="1">Синаптический разряд</content>
+  <content contentuid="ha1e9bdf0geeb0g4291g153egdfb41d382308" version="3">Извергните волну телепатической энергии, наносящую [1].</content>
+  <content contentuid="hb3dd9a42g0bafg1497g0985gbfe5591e567c" version="1">Неудержимый рывок</content>
+  <content contentuid="h9db1c735g870agec11g3ad6g7c1c729100e3" version="1">Вы совершаете рывок на [1] по прямой линии, ваше тело наполнено псионической силой, которая отбрасывает всех существ на вашем пути на [2] назад. Этот неотвратимый психический удар наносит [3] неизбежного урона.</content>
+  <content contentuid="h2b50d848g01f4g8d7ag71ccg6e4af6f7955e" version="1">Сокрушающая нота</content>
+  <content contentuid="h2c3debf0g301fg8573g5555g6e66f90f77d9" version="1">Вы выпускаете пронзительную психическую ноту в существо в пределах [1]. Звук безмолвен для ушей, но оглушителен для разума. Целевое существо и все остальные в пределах [2] должны совершить &lt;LSTag Tooltip="SavingThrow"&gt;спасбросок&lt;/LSTag&gt; Силы, иначе получают [3] и отбрасываются назад на [4].</content>
+  <content contentuid="h41d9d6fag09ffg9823g725cg98d1d9beba9f" version="1">Психическая преданность</content>
+  <content contentuid="h0cc01a82ge9f4g72d7g5684g82186030a099" version="2">Когда вы тратите &lt;LSTag Type="ActionResource" Tooltip="ChannelDivinity"&gt;заряд проведения энергии&lt;/LSTag&gt;, ваша преданность проявляется в виде псионического импульса. Этот импульс лечит союзников в пределах [2] от вас на [1] и наносит [3] врагам в том же радиусе.</content>
+  <content contentuid="hdb8377e8g4733g5caaga799gac10970f0787" version="1">Психическая преданность</content>
+  <content contentuid="heca2aa47gd0fag4605gd636g4f403e5ba0c1" version="1">Урон</content>
+  <content contentuid="ha0c18580ga6e9g0f78g6366g2eed86c2c9d1" version="1">Симбиотическая связь</content>
+  <content contentuid="hd40dd9c4gb914ge87egc70dg88b870e9bc20" version="1">С вашим союзником установлена Симбиотическая связь. Ваши атаки заклинаниями усилены, нанося дополнительный [1].</content>
+  <content contentuid="ha58ec070g9ec3g1b05ge205g41bd519b582d" version="1">Симбиотическая связь</content>
+  <content contentuid="h33434a49gfc24g450bg7cc0g1bbcf7183875" version="1">Ваш разум на мгновение переплетается с другим, создавая мощную псионическую связь. Ваши атаки заклинаниями наносят дополнительный [1].</content>
+  <content contentuid="h4f05bf38g0f98g1280g6598g3638acbbc14d" version="1">Симбиотическая связь</content>
+  <content contentuid="hfb5ac343gbb24gb277gab1bg22834eb1c816" version="3">Вы простираете свою волю, соединяя свой разум с мыслями другого существа, заражённого головастиком, словно корень, переплетённый с другим. В течение следующих [1] ходов вы и это существо разделяете краткую симбиотическую связь. Ваши атаки заклинаниями и атаки заклинаниями связанного существа наносят дополнительный [2].</content>
+  <content contentuid="h688ed126gd0b1g40d3g49fag69b30d43d22d" version="1">Иллитидская дисциплина</content>
+  <content contentuid="h4f70b200gce28gb8bfg6273ge64d0d37a7ec" version="1">Иллитидская дисциплина</content>
+  <content contentuid="h8192773agd3f9g5e88gd918g2faf3a2b116e" version="2">Действием вы на мгновение подчиняете себе грубую псионическую энергию внутри себя. Эта ментальная сосредоточенность дарует вам бонус +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и &lt;LSTag Tooltip="SavingThrow"&gt;спасброскам&lt;/LSTag&gt; на следующие [2] хода.</content>
+  <content contentuid="h328a0883g264ag74f5gf777gf83020e47808" version="1">Ментальный охват</content>
+  <content contentuid="h9401a3d3g8fabg18bcg778eg9988cc77e608" version="1">Ментальный охват</content>
+  <content contentuid="hb3f90bc4g67c7g9ed1g43afgea106b869600" version="2">Теперь ваши удары могут поражать цели на расстояние до [1]% дальше, поскольку вы проецируете свою волю с каждым ударом.</content>
+  <content contentuid="h1ee9e84fg4d84g54d3g3eb4g21e6fdacf0d1" version="2">Потратьте &lt;LSTag Type="ActionResource" Tooltip="KiPoint"&gt;очко Ци&lt;/LSTag&gt;, чтобы углубить связь между телом и разумом. На следующие [1] ходов дальность ваших безоружных ударов увеличивается на [2]%.</content>
+  <content contentuid="hdd9b7ab8ga281g12aag081dg770d405d1cab" version="1">Ваш разум ясен, а сосредоточенность абсолютна. Вы получаете бонус +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и &lt;LSTag Tooltip="SavingThrow"&gt;спасброскам&lt;/LSTag&gt;.</content>
+  <content contentuid="h249d75cfgc16bgc406gc660gdda81fb3fd6f" version="1">Псионические узы</content>
+  <content contentuid="hc5bb27e4gf927gfcdcgb5d4gcf81ae4f60a3" version="1">Псионические узы</content>
+  <content contentuid="h7a86ec72g87bfg0a1dgba00ga8df02eb7f85" version="3">Потратьте &lt;LSTag Type="ActionResource" Tooltip="LayOnHandsCharge"&gt;Заряд Возложения рук&lt;/LSTag&gt;, чтобы сплести временные Псионические узы между вами и существом, заражённым головастиком. Урон следующей атаки по нему уменьшается на [1], и это существо одновременно исцеляется на [2].</content>
+  <content contentuid="h9ab552aeg30abg1679gfd33g9ca1ac7ea214" version="3">Вы защищены Псионическими узами. Урон следующей атаки по вам уменьшается на половину уровня паладина вашего союзника, и вы исцеляетесь на [1].</content>
+  <content contentuid="h72028bbage648g413bgc2c2gadc76e0f5495" version="1">Сфокусированная добыча</content>
+  <content contentuid="h0775ac43ge688gd238g5e57g01ae08f55806" version="2">Направьте свою псионическую энергию, оттачивая свои чувства и движения до неестественной степени. Эта ментальная ясность дарует вам бонус +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и урону, и вы получаете &lt;LSTag Type="Status" Tooltip="HASTE"&gt;ускорение&lt;/LSTag&gt; до конца вашего следующего хода.</content>
+  <content contentuid="h2546a7eegae75g1f63gc081g20a6cdca7540" version="1">Сфокусированная добыча</content>
+  <content contentuid="h6bbc4b25g28a5gd58eg96d3gbb4442d623d4" version="2">Ваши чувства и движения отточены, даруя вам бонус +[1] к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и урону.</content>
+  <content contentuid="h05811677g0edageb8fg6fefg098ed08599be" version="1">Клинок разума</content>
+  <content contentuid="h72bfd18dge005g0d6cgb12fge41db471edf2" version="2">Получите [1] от недавней психической атаки.</content>
+  <content contentuid="h866f7aa0gb045g2880ge881g9f432f09dd59" version="1">Клинок разума</content>
+  <content contentuid="h676354d0g0851g61f2gb11dgf11be4796241" version="4">Ваши атаки наполнены скрытой психической энергией. Когда вы попадаете по существу, которое &lt;LSTag Tooltip="Concentration"&gt;концентрируется&lt;/LSTag&gt;, этот ментальный отклик прокатывается по его разуму. Цель должна преуспеть в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; Интеллекта, иначе получит [1] и на [2] ход получит &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Немоту&lt;/LSTag&gt;.</content>
+  <content contentuid="h0d15cc10gf960gebdag38f3g4916f97f5227" version="1">Псионический щит</content>
+  <content contentuid="h72199ad4g3680gda28gca46gc9bd0b22565e" version="2">Ваш разум укрепляет вашу физическую и магическую защиту. Вы получаете бонус +[1] к &lt;LSTag Tooltip="ArmourClass"&gt;Классу брони&lt;/LSTag&gt; и бонус +[2] к &lt;LSTag Tooltip="SpellDifficultyClass"&gt;классу сложности заклинаний&lt;/LSTag&gt;.</content>
+  <content contentuid="hc9377b55g56bbg51e4gec43gfdf9d1809304" version="1">Псионический щит</content>
+  <content contentuid="h198ace41g8defgbdd9g9612g54634016c162" version="2">Направьте свои мысли, чтобы укрепить своё тело и свою магию. На следующие [1] ходов вы получаете бонус +[2] к &lt;LSTag Tooltip="ArmourClass"&gt;Классу брони&lt;/LSTag&gt; и бонус +[3] к &lt;LSTag Tooltip="SpellDifficultyClass"&gt;классу сложности заклинаний&lt;/LSTag&gt;.</content>
+  <content contentuid="h2bd17466g9346geee3g55aeg670ae9a744ab" version="1">Псионический договор</content>
+  <content contentuid="h4df06ee3g1d2dgdceeg20e4g83a7c14d3674" version="2">Пиявка разума</content>
+  <content contentuid="h1e9e944dg7a40g3316g064dg9ba1b9f9f8d4" version="1">Эфирное смещение</content>
+  <content contentuid="hf0fe8243gbad1ga073gfdf2g686e601611e1" version="2">Псионический договор: Заблокированное очко действия</content>
+  <content contentuid="h9510b1a1g0727g500agda13gd8c38af9eb70" version="1">Характеристики персонажа</content>
+  <content contentuid="h0ffbbe80gc907g8102g73a5g1bf27543d4ff" version="2">Псионический договор: Дополнительное очко действия</content>
+  <content contentuid="hb528a8c1gca3ag7f1bg505ag5b6c0f3347f5" version="2">У вас есть Псионический договор с союзником. Вы получаете дополнительное &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;действие&lt;/LSTag&gt;, но ваш союзник лишится &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;действия&lt;/LSTag&gt;.</content>
+  <content contentuid="h86c4ceb6ge99dgb791g9146g1b674095bcc8" version="1">Пожиратель мыслей</content>
+  <content contentuid="hff2d2575g1ca7g2a43g0ed7gcad7496e722b" version="2">Ваш разум находится под воздействием психического паразита, высасывающего ваши мысли. Вы получаете [1] в конце каждого хода.</content>
+  <content contentuid="h58f42a89gdd6bgfbe8ge059ga69199d49fcf" version="2">Проникните в разум дружественного существа, заражённого головастиком, сплетая Псионический договор между вами. В течение следующих [1] ходов вы можете выбрать: получить дополнительное &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;очко действия&lt;/LSTag&gt; или &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, ценой лишения того же ресурса вашего союзника, связанного договором.</content>
+  <content contentuid="hecb8144fg3138g8781g8c8cgb94f9b41e063" version="3">Простираете свою псионическую волю и прикрепляетесь к разуму существа в пределах [1]. Если цель проваливает &lt;LSTag Tooltip="SavingThrow"&gt;спасбросок&lt;/LSTag&gt; Интеллекта, психический паразит овладевает ею, нанося [2] ей в конце каждого её хода в течение следующих [3] ходов. Вы исцеляетесь на количество, равное нанесённому урону.</content>
+  <content contentuid="h47db3f33g1486g8985g13c0g07861fb2c948" version="2">Вспышкой мысли вы искривляете пространство вокруг себя. Вы телепортируетесь в видимое вами место в пределах [1]. Прибывая, ваша форма становится полупрозрачной и незримой, даруя вам &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;невидимость&lt;/LSTag&gt; до начала вашего следующего хода.</content>
+  <content contentuid="hb780e317g8622g6f40g0ab5g865307fed7c4" version="1">Псионический договор: Заблокированное бонусное действие</content>
+  <content contentuid="hebe223f6gc223gf20bgd8fcg3d76b33d23d6" version="1">Псионический договор: Дополнительное бонусное действие</content>
+  <content contentuid="h769a7fa3g3173ge95cgf9e2g3e956621295b" version="1">Псионический договор: Бонусное действие</content>
+  <content contentuid="h48b6e681g2759g79a4gef1cg03d72e8ded89" version="1">Псионический договор: Действие</content>
+  <content contentuid="h28a09839ga6f3g6e41g9795gff5230318cac" version="1">Вы связаны со своим союзником через Псионический договор. Вы не можете использовать &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;действия&lt;/LSTag&gt;.</content>
+  <content contentuid="h77eff5b9g62f3g6917gaf77g223be428a105" version="1">Вы связаны со своим союзником через Псионический договор. Вы не можете использовать &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;.</content>
+  <content contentuid="h22888f9fg5adfg3603gf64dg264bccfa7ae8" version="1">У вас есть Псионический договор с союзником. Вы получаете дополнительное &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, но ваш союзник лишается &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусного действия&lt;/LSTag&gt;.</content>
+  <content contentuid="h52f4cb69gc2e5g54e9g8f06gc593b58224f5" version="1">Проникните в разум дружественного существа, заражённого головастиком, сплетая Псионический договор между вами. В течение следующих [1] ходов вы получаете дополнительное &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;бонусное действие&lt;/LSTag&gt;, лишая бонусного действия своего союзника, связанного договором.</content>
+  <content contentuid="h1c0d1abag1981gc396g84e4g5d964fc95947" version="1">Проникните в разум дружественного существа, заражённого головастиком, сплетая Псионический договор между вами. В течение следующих [1] ходов вы получаете дополнительное &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;действие&lt;/LSTag&gt;, лишая действия своего союзника, связанного договором.</content>
+  <content contentuid="h5b564919gf470g32d2g7d4cg001d8d664fa4" version="1">Псионическое притяжение</content>
+  <content contentuid="hcea31b4ag1555ge768g0aa3gd888cf44488f" version="1">Притяните существо или предмет к себе.</content>
+</contentList>

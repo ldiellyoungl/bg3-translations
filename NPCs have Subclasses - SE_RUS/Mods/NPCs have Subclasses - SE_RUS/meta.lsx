@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+ <version major="4" minor="8" revision="0" build="500"/>
+  <region id="Config">
+    <node id="root">
+      <children>
+        <node id="Conflicts"/>
+        <node id="Dependencies">
+          <children>
+            <node id="ModuleShortDesc">
+              <attribute id="Folder" type="LSString" value="NPCs have Subclasses"/>
+              <attribute id="MD5" type="LSString" value=""/>
+              <attribute id="Name" type="LSString" value="NPCs have Subclasses - SE"/>
+              <attribute id="PublishHandle" type="uint64" value="0"/>
+              <attribute id="UUID" type="guid" value="8fc43c5d-fe37-4d51-9cc3-a3840adc21b2"/>
+              <attribute id="Version64" type="int64" value="108086391056891910"/>
+            </node>
+          </children>
+        </node>
+        <node id="ModuleInfo">
+          <attribute id="Author" type="LSWString" value="LeoBlock" />
+          <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
+          <attribute id="Description" type="LSWString" value="Перевод мода NPCs have Subclasses - SE" />
+          <attribute id="Folder" type="LSWString" value="NPCs have Subclasses_RUS" />
+          <attribute id="GMTemplate" type="FixedString" value="" />
+          <attribute id="LobbyLevelName" type="FixedString" value="" />
+          <attribute id="MD5" type="LSString" value="" />
+          <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
+          <attribute id="MenuLevelName" type="FixedString" value="" />
+          <attribute id="Name" type="FixedString" value="NPCs have Subclasses - SE (Russian Translate)" />
+          <attribute id="NumPlayers" type="uint8" value="4" />
+          <attribute id="PhotoBooth" type="FixedString" value="" />
+          <attribute id="StartupLevelName" type="FixedString" value="" />
+          <attribute id="Tags" type="LSWString" value="" />
+          <attribute id="PublishHandle" type="uint64" value="0"/>
+          <attribute id="Type" type="FixedString" value="Add-on" />
+          <attribute id="UUID" type="FixedString" value="f2ce8580-f86f-4882-8781-5e4cabc2146e" />
+          <attribute id="Version64" type="int64" value="108086391056891910" />
+          <children>
+            <node id="PublishVersion">
+              <attribute id="Version64" type="int64" value="108086391056891910" />
+            </node>
+            <node id="Scripts" />
+            <node id="TargetModes">
+              <children>
+                <node id="Target">
+                  <attribute id="Object" type="FixedString" value="Story" />
+                </node>
+              </children>
+            </node>
+          </children>
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

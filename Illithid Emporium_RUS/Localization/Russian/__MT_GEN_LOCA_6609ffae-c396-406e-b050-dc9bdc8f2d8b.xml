@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="ha41217b2e3a6409ebbca584c2e58a913agac" version="1">Когда враг проваливает &lt;LSTag Tooltip="SavingThrow"&gt;спасбросок&lt;/LSTag&gt; &lt;LSTag Tooltip="Charisma"&gt;харизмы&lt;/LSTag&gt;, &lt;LSTag Tooltip="Intelligence"&gt;интеллекта&lt;/LSTag&gt; или &lt;LSTag Tooltip="Wisdom"&gt;мудрости&lt;/LSTag&gt; против вас, вы наносите ему [1] и восстанавливаете [2] в том же количестве.</content>
+	<content contentuid="hec7cd039f73d46ca84ec4c762c6eb06166f6" version="1">Вытягивание силы</content>
+	<content contentuid="hb7c155941dec4a22919ecba4ad1d41db0b8e" version="1">Когда враг проваливает &lt;LSTag Tooltip="SavingThrow"&gt;спасбросок&lt;/LSTag&gt; &lt;LSTag Tooltip="Strength"&gt;силы&lt;/LSTag&gt;, &lt;LSTag Tooltip="Dexterity"&gt;ловкости&lt;/LSTag&gt; или &lt;LSTag Tooltip="Constitution"&gt;телосложения&lt;/LSTag&gt; против вас, вы наносите ему [1] и восстанавливаете [2] в том же количестве.</content>
+	<content contentuid="h4eac8c255a5a4f3f9cb2b5cdcde872e7a610" version="1">Набор «Параноика» 1/2</content>
+	<content contentuid="hddccf8abda8b4b79814696b47b6223319g71" version="1">Паранойя</content>
+	<content contentuid="hf3f221d9d8e84cd2815cb2d87fe285700747" version="1">Ваша &lt;LSTag Tooltip="DifficultyClass"&gt;проверка сложности заклинаний&lt;/LSTag&gt; увеличивается на [1] для целей в пределах [2] от вас, на [3] — на расстоянии от [2] до [4] и на [5] — от [4] до [6].&lt;br&gt;&lt;br&gt;Даруется набором параноика.</content>
+	<content contentuid="h2c82c02fa70b405a809c183044a1625442ca" version="1">Кольцо астрального завоевания</content>
+	<content contentuid="h37c0fda845f54a30912832f0704ae38d59c3" version="1">Реликвия давно забытой войны, это кольцо слабо гудит от псионической энергии, а его гравировки намекают на астральное происхождение.</content>
+	<content contentuid="h36462b1f8a154944b5ff6be231cc633dde0c" version="1">Планарный поджигатель войны</content>
+	<content contentuid="hfc87900103e24d26a69174fd70682ecfeae3" version="1">Вы игнорируете &lt;LSTag Tooltip="Resistant"&gt;сопротивление&lt;/LSTag&gt; к [1] и [2].</content>
+	<content contentuid="h06bb7bfeab1548faa352165633f0964e84c5" version="1">Амулет звёздного отродья</content>
+	<content contentuid="hef5a69c8fd7c4780b76217d019c6a141d9d8" version="1">Щупальца блестящего ихора извиваются в сердце амулета, пульсируя в жуткой псионической гармонии. Далёкие видения истоков за пределами звёзд отзываются эхом в вашем разуме.</content>
+	<content contentuid="h435f709a2c514cc198458a8a082abc51a48g" version="1">Ментальный хлыст</content>
+	<content contentuid="ha7c82ba140b6488cb9a93d64134fe270182d" version="1">Когда вы преуспеваете в &lt;LSTag Tooltip="SavingThrow"&gt;спасброске&lt;/LSTag&gt; &lt;LSTag Tooltip="Charisma"&gt;харизмы&lt;/LSTag&gt;, &lt;LSTag Tooltip="Intelligence"&gt;интеллекта&lt;/LSTag&gt; или &lt;LSTag Tooltip="Wisdom"&gt;мудрости&lt;/LSTag&gt; против врага, то наносите ему [1].</content>
+	<content contentuid="h549a133418014059892339f4dd79f8d875d1" version="1">Набор «Чуждое наследие» 1/2</content>
+	<content contentuid="h7dcd6313c67f44a5be965216ad932f74497a" version="1">Неудержимый разум</content>
+	<content contentuid="hc73bc9f8e20b4907a56f2326c68771647621" version="1">Когда вы пытаетесь нанести [2] цели с &lt;LSTag Tooltip="Immune"&gt;иммунитетом&lt;/LSTag&gt;, она получает [1].&lt;br&gt;&lt;br&gt;Даруется набором «Чуждое наследие».</content>
+	<content contentuid="hc6a7bcf6931f42a6b12a58eb1f3c80dfg3g0" version="1">Если носитель заражён головастиком пожирателя разума, он получает +&lt;b&gt;&lt;LSTag&gt;[1]&lt;/LSTag&gt;&lt;/b&gt; к &lt;LSTag Tooltip="Intelligence"&gt;интеллекту&lt;/LSTag&gt;, &lt;LSTag Tooltip="Wisdom"&gt;мудрости&lt;/LSTag&gt; и &lt;LSTag Tooltip="Charisma"&gt;харизме&lt;/LSTag&gt;.&lt;br&gt;Он также получает &lt;b&gt;&lt;LSTag&gt;1&lt;/LSTag&gt;&lt;/b&gt; &lt;LSTag Tooltip="ArmourClass"&gt;класс брони&lt;/LSTag&gt; за каждые &lt;b&gt;&lt;LSTag&gt;5 полученных иллитидских сил&lt;/LSTag&gt;&lt;/b&gt;.</content>
+	<content contentuid="h89890e2d031742f2afc7d642fcbb91933dc7" version="1">Гений</content>
+	<content contentuid="h2999ba5978d045a088cd5905f258fdf1dee8" version="1">Если носитель заражён головастиком пожирателя разума, он не может выбросить меньше &lt;b&gt;&lt;LSTag&gt;[1]&lt;/LSTag&gt;&lt;/b&gt; при проверках на &lt;LSTag Tooltip="Deception"&gt;обман&lt;/LSTag&gt;, &lt;LSTag Tooltip="Insight"&gt;проницательность&lt;/LSTag&gt;, &lt;LSTag Tooltip="Investigation"&gt;расследование&lt;/LSTag&gt; и &lt;LSTag Tooltip="Persuasion"&gt;убеждение&lt;/LSTag&gt;.</content>
+	<content contentuid="h68bae16f130847e898b83701338e76f6cf90" version="1">Когда вы воздействуете на разум существа, вы получаете бонус &lt;b&gt;&lt;LSTag&gt;[1]&lt;/LSTag&gt;&lt;/b&gt; к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и &lt;LSTag Tooltip="SavingThrow"&gt;спасброскам&lt;/LSTag&gt; на &lt;b&gt;&lt;LSTag&gt;3&lt;/LSTag&gt;&lt;/b&gt; хода.</content>
+	<content contentuid="h5898f4e1a7d143cb9050cff05b4e6f2874dd" version="1">&lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Очарование&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Испуг&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Замешательство&lt;/LSTag&gt;, &lt;LSTag Type="Status" Tooltip="MADNESS"&gt;Безумие&lt;/LSTag&gt; и подобные формы контроля разума подходят.</content>
+	<content contentuid="h08d6d05d37a44a41ab9240dba657163f5e3b" version="1">На затронутое существо действует штраф -&lt;b&gt;&lt;LSTag&gt;[1]&lt;/LSTag&gt;&lt;/b&gt; к &lt;LSTag Tooltip="SavingThrow"&gt;спасброскам&lt;/LSTag&gt; на &lt;LSTag Tooltip="Wisdom"&gt;мудрость&lt;/LSTag&gt;, &lt;LSTag Tooltip="Intelligence"&gt;интеллект&lt;/LSTag&gt; и &lt;LSTag Tooltip="Charisma"&gt;харизма&lt;/LSTag&gt; за каждый оставшийся ход.</content>
+	<content contentuid="h39879f57baf244e2844ff5a3f756ac24a79e" version="1">Когда вы наносите [1] урона, вы также накладываете &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Психическая усталость&lt;/LSTag&gt; на 2 хода.</content>
+	<content contentuid="h7bcae339a0b64357b987e7bdf22e42b6f4fb" version="1">Возмущение силы</content>
+	<content contentuid="h20d0d55470e1455293461b46bd981443bac2" version="1">Когда вы наносите [1], вы также накладываете &lt;LSTag Type="Status" Tooltip="SIAEL_FORCE_DISTURBANCE"&gt;Потрясённый&lt;/LSTag&gt; на 2 хода.</content>
+	<content contentuid="hb87a30e095bb4e8786f757798e5820e7bd9c" version="1">Потрясённый</content>
+	<content contentuid="hdbddd1500d13468687c9c6ecd8a7b87dg104" version="1">На затронутое существо действует штраф -&lt;b&gt;&lt;LSTag&gt;[1]&lt;/LSTag&gt;&lt;/b&gt; к &lt;LSTag Tooltip="SavingThrow"&gt;спасброскам&lt;/LSTag&gt; на &lt;LSTag Tooltip="Strength"&gt;силу&lt;/LSTag&gt;, &lt;LSTag Tooltip="Dexterity"&gt;ловкость&lt;/LSTag&gt; и &lt;LSTag Tooltip="Constitution"&gt;телосложение&lt;/LSTag&gt; за каждый оставшийся ход.</content>
+	<content contentuid="h17e5c00cc5ea43e5960d4f7c8578e6ce29a9" version="1">Мощь Чужого</content>
+	<content contentuid="h759ba4e2d4164732a1804bf68827b816g052" version="1">Сапоги «Церебральная Цитадель»</content>
+	<content contentuid="ha1872314e8274292a9acc6093854f26688da" version="1">Металлическая кожа едва заметно изгибается и извивается, подстраиваясь под носителя.</content>
+	<content contentuid="h9b737efdd6d447089f76dd984cd79ddf1b78" version="1">Изоляция</content>
+	<content contentuid="h36b839555ff340d19f6c6449b0d273045da8" version="1">Вы получаете &lt;LSTag Tooltip="Resistant"&gt;сопротивление&lt;/LSTag&gt; к [1].</content>
+	<content contentuid="h7106afb1a15043639aabf293ecdc0e5995bg" version="1">Обитатель Наутилоида</content>
+	<content contentuid="h6fcdcd32309c4a9db077914fde349f1639db" version="1">Стоя в крови пожирателя разума, таинственной жидкости или едком рассоле, носитель исцеляется на [1].</content>
+	<content contentuid="h8f59dce66ee4405fab030e4e1ee8f1ac83c8" version="1">Плащ «Церебральная Цитадель»</content>
+	<content contentuid="he209f41ccb9f49b9a9eb268ae6282a3de9be" version="1">Ткань странно переливается на свету, а на её глянцевой поверхности видны слабые вмятины — словно что-то когда-то прицепилось к ней и так до конца и не отпустило.</content>
+	<content contentuid="h1bb4288f39d345bfbfeb085fc392e02a879c" version="1">Гидрофобный</content>
+	<content contentuid="h8c5adb9068424745a586a585dc18bba8fa88" version="1">Носитель не может стать &lt;LSTag Type="Status" Tooltip="WET"&gt;мокрым&lt;/LSTag&gt;.</content>
+	<content contentuid="h136eda43653643d3848b7b8f54504e29294g" version="1">Неуловимый</content>
+	<content contentuid="hca232174c3c04a0f86814000dec1b937995d" version="1">Пока на вас не действуют негативные состояния, вы можете перемещаться, не провоцируя &lt;LSTag Tooltip="OpportunityAttack"&gt;атаки по возможности&lt;/LSTag&gt;.</content>
+	<content contentuid="h6ddadbca2baa4d6ea313841cc52e2db897d4" version="1">Набор «Церебральная цитадель» 1/3</content>
+	<content contentuid="he8ef5fa3737d417694fcc6627f1d95eec1c1" version="1">Иллитидское мастерство</content>
+	<content contentuid="h954ac51a3e1f467081c51a26f8c68bf59494" version="1">Добавьте свой &lt;LSTag Tooltip="SpellcastingAbilityModifier"&gt;модификатор характеристики заклинаний&lt;/LSTag&gt; к основным активным атакующим иллитидским силам.&lt;br&gt;&lt;br&gt;Даруется набором «Церебральная цитадель».</content>
+	<content contentuid="h1aedc94606514aac8d8e6debe9a8c32a5d8e" version="1">Клинок Чужака</content>
+	<content contentuid="h2a6508061c2e4cf083f74aa587a94db1g2gd" version="1">Наносит дополнительный [1].</content>
+	<content contentuid="h5ed76bae685b40f18b7790838293c722e873" version="1">Клинок отступника</content>
+	<content contentuid="h36e63679817d493abcfa1abffcf5450b1f27" version="1">&lt;LSTag Tooltip="AttackRoll"&gt;Броски атаки &lt;/LSTag&gt; и броски урона против пожирателей разума, заражённых головастиком, перевёртышей и превращённых существ увеличиваются на &lt;b&gt;&lt;LSTag&gt;[1]&lt;/LSTag&gt;&lt;/b&gt;.</content>
+	<content contentuid="ha66fa57fc66445498eeeb0c26ccb27bffga8" version="1">Псионический натиск</content>
+	<content contentuid="hd29ee387c45b47dfb17a73802ebc66f3910a" version="1">Атаки этим оружием заставляют цели совершать &lt;LSTag Tooltip="SavingThrow"&gt;спасбросок&lt;/LSTag&gt; на &lt;LSTag Tooltip="Intelligence"&gt;интеллект&lt;/LSTag&gt;, чтобы сохранить &lt;LSTag Tooltip="Concentration"&gt;концентрацию&lt;/LSTag&gt;.</content>
+	<content contentuid="h760d934dab064409aac864bb41b231d1b0g1" version="1">Посох Чужого</content>
+	<content contentuid="hb5b523d4f1094309a91766270faf7af4dc62" version="1">Вооружение «Церебральная Цитадель» 1/2</content>
+	<content contentuid="hd524d9183f9245b89675e60a98354a598155" version="1">Псикинетическое усиление</content>
+	<content contentuid="h0fab8d11847647279b92e1e43b463e9409cd" version="1">[2] и [3] вы наносите на [1] больше &lt;LSTag&gt;(&lt;LSTag Tooltip="ProficiencyBonus"&gt;Бонус мастерства&lt;/LSTag&gt;)&lt;/LSTag&gt;. Кроме того, вы &lt;LSTag Tooltip="Proficiency"&gt;владеете&lt;/LSTag&gt; длинными мечами и посохами.&lt;br&gt;&lt;br&gt;Даруется набором «Церебральная Цитадель».</content>
+	<content contentuid="hd01b70429798404e88480ab617520b1bf19f" version="1">Сундук иллитидского эмпория</content>
+</contentList>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="400"/>
+    <region id="Config">
+        <node id="root">
+            <children>
+                <node id="Conflicts"/>
+                <node id="Dependencies">
+                    <children>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" type="LSString" value="Aza_NPCre_VampireSpawns_5bfc90ea-d4ef-ee45-38fd-df5583ca0d97"/>
+                            <attribute id="MD5" type="LSString" value=""/>
+                            <attribute id="Name" type="LSString" value="[Aza] NPC Redesign: Vampire Spawns (WIP)"/>
+                            <attribute id="PublishHandle" type="uint64" value="0"/>
+                            <attribute id="UUID" type="guid" value="5bfc90ea-d4ef-ee45-38fd-df5583ca0d97"/>
+                            <attribute id="Version64" type="int64" value="36028797018963974"/>
+                        </node>
+                    </children>
+                <node>
+                <node id="ModuleInfo">
+                    <attribute id="Author" type="LSString" value="LeoBlock"/>
+                    <attribute id="CharacterCreationLevelName" type="FixedString" value=""/>
+                    <attribute id="Description" type="LSString" value="Перевод мода [Aza] NPC Redesign: Vampire Spawns (WIP)"/>
+                    <attribute id="FileSize" type="uint64" value="0"/>
+                    <attribute id="Folder" type="LSString" value="Aza_NPCre_VampireSpawns_5bfc90ea-d4ef-ee45-38fd-df5583ca0d97_RUS"/>
+                    <attribute id="LobbyLevelName" type="FixedString" value=""/>
+                    <attribute id="MD5" type="LSString" value=""/>
+                    <attribute id="MenuLevelName" type="FixedString" value=""/>
+                    <attribute id="Name" type="LSString" value="[Aza] NPC Redesign: Vampire Spawns (WIP) (Russian Translate)"/>
+                    <attribute id="NumPlayers" type="uint8" value="4"/>
+                    <attribute id="PhotoBooth" type="FixedString" value=""/>
+                    <attribute id="PublishHandle" type="uint64" value=""/>
+                    <attribute id="StartupLevelName" type="FixedString" value=""/>
+                    <attribute id="UUID" type="FixedString" value="9f8fdced-51ad-4f46-a9c7-196b9680174c"/>
+                    <attribute id="Version64" type="int64" value="36028797018963974"/>
+                    <children>
+                        <node id="PublishVersion">
+                            <attribute id="Version64" type="int64" value="144255927718532197"/>
+                        </node>
+                        <node id="Scripts">
+                            <children>
+                                <node id="Script">
+                                    <attribute id="UUID" type="FixedString" value="1953f77d-a201-45d7-a194-9b84c34b8461"/>
+                                    <children>
+                                        <node id="Parameters">
+                                            <children>
+                                                <node id="Parameter">
+                                                    <attribute id="MapKey" type="FixedString" value="HardcoreOnly"/>
+                                                    <attribute id="Type" type="int32" value="1"/>
+                                                    <attribute id="Value" type="LSString" value="0"/>
+                                                </node>
+                                            </children>
+                                        </node>
+                                    </children>
+                                </node>
+                                <node id="Script">
+                                    <attribute id="UUID" type="FixedString" value="0d6510f5-50a3-4ecd-83d8-134c9a640324"/>
+                                    <children>
+                                        <node id="Parameters">
+                                            <children>
+                                                <node id="Parameter">
+                                                    <attribute id="MapKey" type="FixedString" value="HardcoreOnly"/>
+                                                    <attribute id="Type" type="int32" value="1"/>
+                                                    <attribute id="Value" type="LSString" value="0"/>
+                                                </node>
+                                            </children>
+                                        </node>
+                                    </children>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

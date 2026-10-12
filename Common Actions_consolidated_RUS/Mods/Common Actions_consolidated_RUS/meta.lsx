@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="8" revision="0" build="500"/>
+  <region id="Config">
+    <node id="root">
+      <children>
+        <node id="Dependencies">
+          <children>
+            <node id="ModuleShortDesc">
+              <attribute id="Folder" type="LSString" value="Common Actions_consolidated"/>
+              <attribute id="MD5" type="LSString" value=""/>
+              <attribute id="Name" type="LSString" value="Common Actions Consolidated"/>
+              <attribute id="PublishHandle" type="uint64" value="0"/>
+              <attribute id="UUID" type="guid" value="6269aa39-f171-47c0-9e6b-b4ad63e08c61"/>
+              <attribute id="Version64" type="int64" value="36028809903865856"/>
+            </node>
+          </children>
+        </node>
+        <node id="ModuleInfo">
+          <attribute id="Author" type="LSWString" value="LeoBlock" />
+          <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
+          <attribute id="Description" type="LSWString" value="Перевод мода Common Actions Consolidated" />
+          <attribute id="Folder" type="LSWString" value="Common Actions_consolidated_RUS" />
+          <attribute id="GMTemplate" type="FixedString" value="" />
+          <attribute id="LobbyLevelName" type="FixedString" value="" />
+          <attribute id="MD5" type="LSString" value="" />
+          <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
+          <attribute id="MenuLevelName" type="FixedString" value="" />
+          <attribute id="Name" type="FixedString" value="Common Actions Consolidated (Russian Translate)" />
+          <attribute id="NumPlayers" type="uint8" value="4" />
+          <attribute id="PhotoBooth" type="FixedString" value="" />
+          <attribute id="StartupLevelName" type="FixedString" value="" />
+          <attribute id="Tags" type="LSWString" value="" />
+          <attribute id="Type" type="FixedString" value="Add-on" />
+          <attribute id="UUID" type="FixedString" value="0d78375a-9f4c-4b4d-8cd5-6202b0b29ced" />
+          <attribute id="Version64" type="int64" value="36028809903865856" />
+          <children>
+            <node id="PublishVersion">
+              <attribute id="Version64" type="int64" value="36028809903865856" />
+            </node>
+            <node id="TargetModes">
+              <children>
+                <node id="Target">
+                  <attribute id="Object" type="FixedString" value="Story" />
+                </node>
+              </children>
+            </node>
+          </children>
+        </node>
+      </children>
+    </node>
+  </region>
+</save>
