@@ -13,7 +13,7 @@
                             <attribute id="Name" type="LSString" value="Bhaal&apos;s Forgotten Son"/>
                             <attribute id="PublishHandle" type="uint64" value="0"/>
                             <attribute id="UUID" type="guid" value="2ec64c1b-f0e2-d572-c5da-78e09a4ebc08"/>
-                            <attribute id="Version64" type="int64" value="36169551687188487"/>
+                            <attribute id="Version64" type="int64" value="36169553834672135"/>
                         </node>
                     </children>
                 </node>
@@ -32,7 +32,7 @@
                     <attribute id="PublishHandle" type="uint64" value="0"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="2683419b-aa7a-405a-991d-0e1889639f38"/>
-                    <attribute id="Version64" type="int64" value="36169551687188487"/>
+                    <attribute id="Version64" type="int64" value="36169553834672135"/>
                     <children>
                         <node id="PublishVersion">
                             <attribute id="Version64" type="int64" value="144255927718626661"/>
