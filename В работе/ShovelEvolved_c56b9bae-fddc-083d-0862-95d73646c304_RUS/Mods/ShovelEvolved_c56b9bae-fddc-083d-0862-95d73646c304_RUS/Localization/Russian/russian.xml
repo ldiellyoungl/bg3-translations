@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <content contentuid="h3a0e03ebg988dg95d6ge896gebb4c5f4c139" version="1">&lt;LSTag Tooltip="Immune"&gt;&lt;/LSTag&gt;</content>
-  <content contentuid="h781e9d27g1f81ga34dgdf80g202f42245d8c" version="1">Inert Anchor</content>
+  <content contentuid="h781e9d27g1f81ga34dgdf80g202f42245d8c" version="1">TODO Инертный Якорь Inert Anchor</content>
   <content contentuid="h1073629bgffe4g4264g8258gd3ceaabfb248" version="1">Эту сущность больше нельзя призвать.</content>
   <content contentuid="h4933c728g6dfdg40f8ga5abg451dea3914a7" version="1">Эта сущность ещё не завербована.</content>
   <content contentuid="h725e237dg636eg4bf6g980aga682e89ec25f" version="1">Invalid summoner!</content>
@@ -13,17 +13,18 @@
   <content contentuid="h848099a0ge757gb620gad41g67b44b1c3673" version="1">You can now &lt;LSTag Type="Spell" Tooltip="Shout_Dash"&gt;Dash&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Shout_Disengage"&gt;Disengage&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Shout_Hide"&gt;Hide&lt;/LSTag&gt;, and &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Help&lt;/LSTag&gt; with a bonus action if all action points have been spent and vice-versa. </content>
   <content contentuid="ha4dc4739g71dfg3eeega970g5d1714c804aa" version="1">Находчивый Квазит</content>
   <content contentuid="h549cc0a1gf3f5g2cf0g637bg6168e03ed1ea" version="1">Уровнь Наглого Квазита увеличивается вместе с уровнем призывателя. Она получает бонус к &lt;LSTag Tooltip="ArmourClass"&gt;Классу Брони&lt;/LSTag&gt; равный её &lt;LSTag Tooltip="ProficiencyBonus"&gt;Бонусу Умения&lt;/LSTag&gt;. </content>
-  <content contentuid="habbd0a3agf849g4683gae06g28374ebe38ec" version="1">Beefy Thighs</content>
-  <content contentuid="h1eb5733cg5e3cg3e2eg3842ge4029992e7e0" version="1">Thick Thighs</content>
+  <content contentuid="habbd0a3agf849g4683gae06g28374ebe38ec" version="1">TODO Мясистые бёдра Beefy Thighs</content>
+  <content contentuid="h1eb5733cg5e3cg3e2eg3842ge4029992e7e0" version="1">TODO Плотные бёдра Thick Thighs</content>
   <content contentuid="h9f4783a3g008ag81f4g4b81gb483e5c1c26c" version="1">Фантомные когти</content>
   <content contentuid="hac505257g590cg3d81g3fd3g48487de64175" version="1">Создайте и метните иллюзорные когти ([1] шт.), повторяющие ваши собственные.</content>
-  <content contentuid="hb7b14c9fgc60bg8e84g79b3g2211f178ea32" version="1">Infectious Dread</content>
-  <content contentuid="he6f5eaa0ge234g1ef2g3127g64449258a940" version="1">When you successfully &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Scare"&gt;Scare&lt;/LSTag&gt; a target, hostile creatures in a [1] radius will also become &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt; and take [2] unless a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; is succeeded. </content>
+  <content contentuid="hb7b14c9fgc60bg8e84g79b3g2211f178ea32" version="1">TODO Infectious Dread Заразительный ужас</content>
+  <content contentuid="he6f5eaa0ge234g1ef2g3127g64449258a940" version="1">Когда вы успешно &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Scare"&gt;пугаете&lt;/LSTag&gt; цель, враждебные существа в радиусе [1] также &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;испугаются&lt;/LSTag&gt; и получат [2], если не преуспеют в &lt;LSTag Tooltip="SavingThrow"&gt;испытании&lt;/LSTag&gt; Мудрости.</content>
+  <!-- <content contentuid="he6f5eaa0ge234g1ef2g3127g64449258a940" version="1">When you successfully &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Scare"&gt;Scare&lt;/LSTag&gt; a target, hostile creatures in a [1] radius will also become &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt; and take [2] unless a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; is succeeded. </content> -->
   <content contentuid="h77f332feg9b77g1314g139ag27f3cf165855" version="1">Illusion Quickening: Magical</content>
   <content contentuid="h36c03b51g9b04g5595g6d15gf82b5754a712" version="1">After hitting a creature with a weapon or unarmed attack, you can cast Illusion or Enchantment spells as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt;. </content>
   <content contentuid="h8db504d2g7afcgde41gf841g753fff6ae45e" version="1">Illusion Quickening: Physical</content>
   <content contentuid="h6a5b3a41gce5fg645eg21abg7421c395b918" version="1">After casting an Illusion or Enchantment spell, you can make a weapon or unarmed attack using a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt;. </content>
-  <content contentuid="he8571025gf0aag4362g4af3gef2cec8f2bf4" version="1">Abyssal Step</content>
+  <content contentuid="he8571025gf0aag4362g4af3gef2cec8f2bf4" version="1">Шаг Бездны</content>
   <content contentuid="h066b5f88g22e8gaf2cgeb50g14c57d5e7356" version="1">Disappear to the Abyss and reappear at the target location. &lt;i&gt;BAMF!&lt;/i&gt; </content>
   <content contentuid="h7be0b908g4fa9gefbeg55feg613d4cdf7539" version="1">Оглушающий Визг</content>
   <content contentuid="hf8bd6bb4gf024gb30bg905eg9086ffb67835" version="1">Усильте свою эхолокацию, чтобы нанести [1] существам в радиусе [2] и по возможности на несклько ходов ([3]) наложить &lt;LSTag Type="Status" Tooltip="MAG_THUNDER_REVERBERATION"&gt;Реверберацию&lt;/LSTag&gt;.</content>
@@ -112,7 +113,7 @@
   <content contentuid="h3288ffc5ge87eg5333gca52gde84d3953b49" version="1">Перевертыш: Продвинутый</content>
   <content contentuid="h72f05218geba1g0c72ga616g61117789b3b4" version="1">All the benefits of &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_Shapechanger"&gt;Перевертыш&lt;/LSTag&gt; and &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_Shapechanger_2"&gt;Перевертыш: Средний&lt;/LSTag&gt; plus:&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Status" Tooltip="XEN_SHOVEL_FROG"&gt;Пещерная Лягушка Shape&lt;/LSTag&gt; unlocks &lt;LSTag Type="Spell" Tooltip="Zone_XEN_Shovel_Hypnosis_Frog"&gt;Enthralled Hypnosis&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Command_Container"&gt;Command&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;In &lt;LSTag Type="Status" Tooltip="XEN_SHOVEL_BAT"&gt;Deep Bat Shape&lt;/LSTag&gt; and while invisible, your Эхолокация is always active. You unlock the spell &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_ParalyzingRay"&gt;Paralyzing Ray&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Status" Tooltip="XEN_SHOVEL_PHASE_SPIDERLING"&gt;Phase Spiderling Shape&lt;/LSTag&gt; gains &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_Displacement_PhaseSpiderling"&gt;Displacement&lt;/LSTag&gt; and unlocks &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Entomb_PhaseSpiderling"&gt;Cocoon&lt;/LSTag&gt;&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Status" Tooltip="XEN_SHOVEL_CAT"&gt;Shadow Cat Shape&lt;/LSTag&gt; unlocks &lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_EnrageCat"&gt;Enrage&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_Pounce_Cat"&gt;Frenzied Pounce&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Multiattack_Gremishka"&gt;Multiattack&lt;/LSTag&gt;. </content>
   <content contentuid="he9ff418eg4495gfe0ag6a95gadb2ba941ff8" version="1">Аспект Летучей мыши</content>
-  <content contentuid="hc86cba83gb12bgaaa6g87d2gcb45c3256fc9" version="1">Your claw attacks deal an additional 1d4 + your Charisma Modifier as[1]. Only applies while not &lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_Shapechanger"&gt;Shapechanged&lt;/LSTag&gt;. &lt;br&gt;&lt;br&gt;You can &lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_Aspect"&gt;Сменить Аспект&lt;/LSTag&gt; at any time outside of combat. </content>
+  <content contentuid="hc86cba83gb12bgaaa6g87d2gcb45c3256fc9" version="1">TODO Ваши когти дополнительно наносят Your claw attacks deal an additional 1d4 + your Charisma Modifier as[1]. Only applies while not &lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_Shapechanger"&gt;Shapechanged&lt;/LSTag&gt;. &lt;br&gt;&lt;br&gt;You can &lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_Aspect"&gt;Сменить Аспект&lt;/LSTag&gt; в любое время вне боя. </content>
   <content contentuid="hb4e8e385gef88g28ebgf196g8bfb5bf62077" version="1">Сменить Аспект</content>
   <content contentuid="heb93be94gf2b8g12b8g7afbg075fd385b7f3" version="1">Наделите свои &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Claws"&gt;Когти&lt;/LSTag&gt; аспектом одного из своих &lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_Shapechanger"&gt;Обликов&lt;/LSTag&gt;, нанося дополнительный урон в зависимости от типа, возможно, накладывая соответствующее состояние при атаке и открывая соответствующий фокус. </content>
   <content contentuid="h99a60f60gfa64g50a7g6a7cg6e2621e945ef" version="1">Аспект</content>
@@ -127,24 +128,24 @@
   <content contentuid="hb7f57341gd0f6g2459g76cdg38fb4a43c088" version="1">Ваши &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Claws"&gt;Когти&lt;/LSTag&gt; are &lt;LSTag Type="Passive" Tooltip="ImprovedCritical"&gt;Улучшаются&lt;/LSTag&gt;, дополнительно нанося [1] и, возможно, вызывая &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Кровотечение&lt;/LSTag&gt;. Your &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; threshold is reduced by 1. &lt;br&gt;&lt;br&gt;You unlock the &lt;LSTag Type="Spell" Tooltip="Target_MinorIllusion"&gt;Minor Illusion&lt;/LSTag&gt; &lt;LSTag Tooltip="Cantrip"&gt;Фокус&lt;/LSTag&gt;. </content>
   <content contentuid="h0320c02bgc4e1gaac1gb34agf8146fd9e9f2" version="1">Выпустите из глаз луч ранения.</content>
   <content contentuid="h33da78b4g4af8gfe0bg022bg5a621ce41583" version="1">Mind Strike</content>
-  <content contentuid="h553f7083gddc3gb270gcaacgdf09fe795de5" version="1">Can be used only once per battle.</content>
+  <content contentuid="h553f7083gddc3gb270gcaacgdf09fe795de5" version="1">Можно использовать только один раз за бой.</content>
   <content contentuid="h08be07bcg43dagb46dg93cag75f208cd21df" version="1">&lt;LSTag Type="Image" Info="TutorialYellowWarning"/&gt; Useable Один раз за бой. Critical hits reset the cooldown. </content>
   <content contentuid="hb2eddeb8g27b8g99cdg7781ge8c2949eb4ae" version="1">You are more powerful when shrouded in darkness. While &lt;LSTag Type="Status" Tooltip="SNEAKING_LIGHTLY_OBSCURED"&gt;Lightly&lt;/LSTag&gt; or &lt;LSTag Type="Status" Tooltip="SNEAKING_HEAVILY_OBSCURED"&gt;Heavily&lt;/LSTag&gt; obscured, you gain &lt;LSTag Type="Status" Tooltip="XEN_SHOVEL_SHADOW_AMBUSH"&gt;Shadow Ambush&lt;/LSTag&gt;. </content>
-  <content contentuid="ha33a184ag4667g819dg9da2g1d9a050ddd6d" version="1">When using &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_AbyssalStep"&gt;Abyssal Step&lt;/LSTag&gt; while threatened, or when &lt;LSTag Type="Spell" Tooltip="Shout_Disengage"&gt;Disengaging&lt;/LSTag&gt;, you can use a reaction to create a cloud of &lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;Darkness&lt;/LSTag&gt; with a [1] radius that last for [2] turns. </content>
+  <content contentuid="ha33a184ag4667g819dg9da2g1d9a050ddd6d" version="1">When using &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_AbyssalStep"&gt;Шаг Бездны&lt;/LSTag&gt; while threatened, or when &lt;LSTag Type="Spell" Tooltip="Shout_Disengage"&gt;Disengaging&lt;/LSTag&gt;, you can use a reaction to create a cloud of &lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;Darkness&lt;/LSTag&gt; with a [1] radius that last for [2] turns. </content>
   <content contentuid="h9e697c05g6936gccb8g32f8g1693ca9afff8" version="1">Umbral Escape</content>
-  <content contentuid="hbb598790g00f0g4199gee49gb483d1b0b1ef" version="1">Create a cloud of &lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;Darkness&lt;/LSTag&gt; with [1] radius that lasts for [2] turn(s). </content>
-  <content contentuid="h5514fa96g0c68ga759g5890g20ce66323732" version="1">When using &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_AbyssalStep"&gt;Abyssal Step&lt;/LSTag&gt; while threatened, or when using &lt;LSTag Type="Spell" Tooltip="Shout_Disengage"&gt;Disengage&lt;/LSTag&gt; at any time, use a reaction to create a cloud of &lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;Darkness&lt;/LSTag&gt; with a [1] radius that lasts for [2] turns. </content>
+  <content contentuid="hbb598790g00f0g4199gee49gb483d1b0b1ef" version="1">Создаёт облако &lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;Тьмы&lt;/LSTag&gt; радиусом [1], которое длится несколько ходов ([2]). </content>
+  <content contentuid="h5514fa96g0c68ga759g5890g20ce66323732" version="1">When using &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_AbyssalStep"&gt;Шаг Бездны&lt;/LSTag&gt; while threatened, or when using &lt;LSTag Type="Spell" Tooltip="Shout_Disengage"&gt;Disengage&lt;/LSTag&gt; at any time, use a reaction to create a cloud of &lt;LSTag Type="Spell" Tooltip="Target_Darkness"&gt;Darkness&lt;/LSTag&gt; with a [1] radius that lasts for [2] turns. </content>
   <content contentuid="h32702014g5faagee3ag284bg01d7cc880a83" version="1">Скользкий</content>
   <content contentuid="h5b22a07bg4b37gd04ag5a19ga9ddc364c2ad" version="1">Вы не провоцируете &lt;LSTag Tooltip="OpportunityAttack"&gt;Внеочередную Атаку&lt;/LSTag&gt; и игнорируете влияние скользких поверхностей.</content>
   <content contentuid="h943ce274g14d8g91adg0807g2f6c5987e2fc" version="1">TODO Цель должна быть Парализована Target must be Paralyzed.</content>
-  <content contentuid="h03561992g1e9egbda5g4f15gb973a91fcadc" version="1">Знание: Bellyglummer</content>
-  <content contentuid="he0f1cf18gbb38g0b05g06e0g0e66376e2e07" version="1">Bellyglummer</content>
+  <content contentuid="h03561992g1e9egbda5g4f15gb973a91fcadc" version="1">Знание: TODO Яд-чревоточец Bellyglummer</content>
+  <content contentuid="he0f1cf18gbb38g0b05g06e0g0e66376e2e07" version="1">Яд-чревоточец</content>
   <content contentuid="h2cce8f40gbdbdg0a87gbb5dg0430409fe2da" version="1">A strong substance attempted to poison you. The poison entered your bloodstream, and you've adapted its effects.&lt;br&gt;&lt;br&gt;While in your Phase Spiderling shape, creatures you &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poison&lt;/LSTag&gt; are also inflicted with &lt;LSTag Type="Status" Tooltip="UNI_POISON_BREWER_CONDITION"&gt;Bellyglummer&lt;/LSTag&gt;. </content>
   <content contentuid="h84bccf30gc83ag6682g5e2ag15813f4d753c" version="1">On failing a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;save&lt;/LSTag&gt;, targets become &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt;. While poisoned, they take [1] at the end of their turn.</content>
   <content contentuid="hc952b29dgaedbg4fddgd9c9g78bc2d7f7140" version="1">TODO Яд Фазового Паучка Phase Spiderling Venom</content>
   <content contentuid="h1a2c255dgb4e8gfef7g1d18g997f84417ce0" version="1">TODO Глубокие раны Deep Wounds</content>
   <content contentuid="h0083cfecg21dag1fbag9ab0gbdd6e07130b6" version="1">Affected entity has been severely wounded and will &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;bleed&lt;/LSTag&gt; every turn. If this condition isn't remedied before it expires, the wound becomes &lt;LSTag Type="Status" Tooltip="XEN_SHOVEL_INFECTED_WOUNDS"&gt;infected&lt;/LSTag&gt;. &lt;br&gt;&lt;br&gt;Removed by healing. </content>
-  <content contentuid="h646fee14g4347ga276gb87agf1142a2068b2" version="1">Знание: Noxious</content>
+  <content contentuid="h646fee14g4347ga276gb87agf1142a2068b2" version="1">Знание: Noxious TODO Жуткие Испарения</content>
   <content contentuid="h40efc0c4g4aa2g150eg926cg57292ce8cd96" version="1">You descended into a pit fuming with noxious gases and substances. &lt;br&gt;&lt;br&gt;While in Frog Shape, your acid attacks will also apply &lt;LSTag Type="Status" Tooltip="MAG_ACID_NOXIOUS_FUMES"&gt;Noxious Fumes&lt;/LSTag&gt; on the target, and creatures that attack you will receive [1]. </content>
   <content contentuid="h1b9543bcg0038g07a6g24bage27da693027d" version="1">When dealing[1], also inflict &lt;LSTag Type="Status" Tooltip="MAG_ACID_NOXIOUS_FUMES"&gt;Noxious Fumes&lt;/LSTag&gt; upon the target(s). </content>
   <content contentuid="h35a11603g25c4g76beg6bbega79b09f40cff" version="1">Noxious Reprisal</content>
@@ -155,28 +156,28 @@
   <content contentuid="h10abf564gd976g780dg14b0g11b00a18cd51" version="1">Naturally Caustic</content>
   <content contentuid="h6fc96bf9ge5f6geac1g67dfg012856cab064" version="1">Already in this shape.</content>
   <content contentuid="h2f14597bg110cg6df8g2b2cg9768b1e742d2" version="1">Должен быть в облике.</content>
-  <content contentuid="hdf0ea6e3gf6bag4825ga64ag0c9068b53cd5" version="1">If The Наглый Квазит picks up this item, she learns &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_CloudOfPooScrapers"&gt;Облако Дерьмочистов&lt;/LSTag&gt;. </content>
+  <content contentuid="hdf0ea6e3gf6bag4825ga64ag0c9068b53cd5" version="1">Если Наглый Квазит подберёт этот предмет, она выучит &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_CloudOfPooScrapers"&gt;Облако Дерьмочистов&lt;/LSTag&gt;. </content>
   <content contentuid="h8b98623dg13d0gfcd2g387egeddbbc1e6456" version="1">&lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_Aspect"&gt;Аспект&lt;/LSTag&gt;</content>
-  <content contentuid="hf40009dbga822g763cg0c02gd5e07aeb0a3a" version="1">Summon Наглый Квазит</content>
+  <content contentuid="hf40009dbga822g763cg0c02gd5e07aeb0a3a" version="1">Призвать Наглого Квазита</content>
   <content contentuid="hfc046d8dg3c4cgb910gdc74g99f534cca19a" version="1">You can &lt;LSTag Type="Spell" Tooltip="Shout_Dash"&gt;Dash&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Shout_Disengage"&gt;Disengage&lt;/LSTag&gt;, and &lt;LSTag Type="Spell" Tooltip="Shout_Hide"&gt;Hide&lt;/LSTag&gt; with a bonus action if all action points have been spent and vice-versa. </content>
   <content contentuid="h0871b140gf49bgb5c7gdf51g5470bd8e5c89" version="1">Once per short rest, when you successfully &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Scare"&gt;Scare&lt;/LSTag&gt; a target, you can use a reaction to spread the fear and deal [1] to hostile creatures within [2] of the target. </content>
   <content contentuid="hb4738de7gaa6dg4ba3g4c6eg95f70d8eae2b" version="1">&lt;LSTag Type="Image" Info="SoftWarning"/&gt; No cooldown on save or miss. </content>
-  <content contentuid="h206fd3d6g7028g2d3dg2463g74b16b5076d1" version="1">- Shovel Evolved -&lt;br&gt;&lt;br&gt;Uninstall Shovel Evolved?&lt;br&gt;&lt;br&gt;The character that currently has Shovel summoned will keep the spell.</content>
-  <content contentuid="h7e71bb76gbddcga8bfg09a4g5c109df35640" version="1">- Shovel Evolved -&lt;br&gt;&lt;br&gt;Uninstallation complete!&lt;br&gt;&lt;br&gt;You may now safely remove Shovel Evolved.</content>
+  <content contentuid="h206fd3d6g7028g2d3dg2463g74b16b5076d1" version="1">- Shovel Evolved -&lt;br&gt;&lt;br&gt;Удалить Shovel Evolved?&lt;br&gt;&lt;br&gt;Персонаж, у которого в данный момент призван Квазит, сохранит это заклинание.</content>
+  <content contentuid="h7e71bb76gbddcga8bfg09a4g5c109df35640" version="1">- Shovel Evolved -&lt;br&gt;&lt;br&gt;Удаление завершенно!&lt;br&gt;&lt;br&gt;Теперь вы можете безопасно удалить Shovel Evolved.</content>
   <content contentuid="h6f1a30dfg1ab5g6ef9gd421g94e17db1adf3" version="1">- Shovel Evolved -&lt;br&gt;&lt;br&gt;Remove Tactician restrictions?&lt;br&gt;&lt;br&gt;THIS CANNOT BE UNDONE!</content>
   <content contentuid="hb0adcf09g6aa7g1575g5572gb7edaed4e243" version="1">- Shovel Evolved -&lt;br&gt;&lt;br&gt;Tactician restrictions removed!</content>
   <content contentuid="hd5455491gcfb1g4f0bg8fcdg535481e89442" version="1">Наглый Квазит</content>
-  <content contentuid="ha4a427a6gb388g3c80g0e99gb0c3158f595d" version="1">Алхимическая «Яйцеломка»</content>
+  <content contentuid="ha4a427a6gb388g3c80g0e99gb0c3158f595d" version="1">Алхимическая Яйцеломка</content>
   <content contentuid="hce5720d9g0d13g7ef5g6acbg0019bf2799fc" version="1">Метните «Яйцеломку», пропитанную огнём алхимика.</content>
   <content contentuid="h8ac59666g7749gff9ega3afg7a706d443608" version="1">The[1] is only applied to the main target. This action can be enhanced by inspecting other interesting or unique grenades in the world. </content>
-  <content contentuid="hf4865868g51a3g3ea0g16b4g97873c8bc998" version="1">Hurl a «Яйцеломка» that applies the effects of the TODO Блестящий Аргумент and Alchemist's Fire. </content>
-  <content contentuid="h26460d26g0e17gf0e8g3a2cg1a8261a6483a" version="1">Hurl a «Яйцеломка» that applies the effects of an TODO Бомба Ортона, the TODO Блестящий Аргумент and Alchemist's Fire. </content>
+  <content contentuid="hf4865868g51a3g3ea0g16b4g97873c8bc998" version="1">Hurl a Яйцеломка that applies the effects of the TODO Блестящий Аргумент and Alchemist's Fire. </content>
+  <content contentuid="h26460d26g0e17gf0e8g3a2cg1a8261a6483a" version="1">Hurl a Яйцеломка that applies the effects of an TODO Бомба Ортона, the TODO Блестящий Аргумент and Alchemist's Fire. </content>
   <content contentuid="h5a5dd0ccg67fag9f25g5c47g6f5e2844c98d" version="1">Знание: TODO Блестящий Аргумент</content>
   <content contentuid="h7b8a0fd7g89a7g8c0fg8936g094f49731768" version="1">Вы немного обучился ахимии, пока был с Илли. You've deconstructed the TODO Блестящий Аргумент and can now create a &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_MakeshiftHandbomb_2"&gt;Makeshift&lt;/LSTag&gt; version of it every Long Rest. </content>
-  <content contentuid="h8aff4ef2g9a0egf68fg421dge5770f8f1964" version="1">Знание: Orthonic</content>
+  <content contentuid="h8aff4ef2g9a0egf68fg421dge5770f8f1964" version="1">TODO Знание: Ортонническая взрывчатка</content>
   <content contentuid="hc875af50gd50bg88ecgdab8g8be109cf3531" version="1">Вы немного обучился ахимии, пока был с Илли. You've deconstructed the TODO Бомба Ортона and can now create a &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_MakeshiftHandbomb"&gt;Makeshift&lt;/LSTag&gt; version of it every Long Rest. </content>
-  <content contentuid="h18ac0ac5g722dge3d4geb63gaee3b229ea14" version="1">You've inspected the TODO Бомба Ортона and its effects will be added to your &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_NutBusterExplosive"&gt;«Яйцеломка»&lt;/LSTag&gt;. </content>
-  <content contentuid="he6ca12c9g6bc1g1a6cgffcag311a2cea65f9" version="1">You've inspected the TODO Блестящий Аргумент and its effects will be added to your &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_NutBusterExplosive"&gt;«Яйцеломка»&lt;/LSTag&gt;. </content>
+  <content contentuid="h18ac0ac5g722dge3d4geb63gaee3b229ea14" version="1">You've inspected the TODO Бомба Ортона and its effects will be added to your &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_NutBusterExplosive"&gt;Яйцеломка&lt;/LSTag&gt;. </content>
+  <content contentuid="he6ca12c9g6bc1g1a6cgffcag311a2cea65f9" version="1">You've inspected the TODO Блестящий Аргумент and its effects will be added to your &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_NutBusterExplosive"&gt;Яйцеломка&lt;/LSTag&gt;. </content>
   <content contentuid="h236eb0f8g4fddgdb62g83b6gbbcef08521c3" version="1">Уроки хитрости</content>
   <content contentuid="he2fd3db8g388dg10fbg08a9g9c2b381da744" version="1">Помогите Наглому Квазиту освоить новую способность, атаковав её.</content>
   <content contentuid="h2b4e0b1cg62c6gb224gc2a1g6e006ec670f6" version="1">Мелкое исчадие в беде</content>
@@ -184,27 +185,27 @@
   <content contentuid="h200f3c31gdc5bg8992g6242g55aa25b39bbf" version="1">Лучший друг дроу</content>
   <content contentuid="h1aeb41cfgaa31g071agb100g077df23ace82" version="1">Погладьте Наглого Квазита пока она в облике фазового паучка в лагере.</content>
   <content contentuid="h2f84eda8ge1c1g4e52g3ee9ga0367bc55518" version="1">I know, but I lost your summoning scroll. Can you conjure it?</content>
-  <content contentuid="h4c5bd8c8g1f61g9de5gf0c6gc86dc390e508" version="1">Brilliant «Яйцеломка»</content>
-  <content contentuid="he23f8327g80b8ga839g6631ga5c423dbf6d4" version="1">Ultimate «Яйцеломка»</content>
-  <content contentuid="h88403bfcgbfd2g140cg145ag163e0089659e" version="1">Orthonic «Яйцеломка»</content>
-  <content contentuid="h767e0ba5ge076g99b4gcbd3g6a639531d42b" version="1">Hurl a «Яйцеломка» that applies the effects of an TODO Бомба Ортона and Alchemist's Fire. </content>
-  <content contentuid="h208049c5g935cgb043g3801g7cb3b08fee38" version="1">Знание: «Яйцеломка»</content>
-  <content contentuid="hf7fd025fge5feg6e7dg8f7dgbd9409f473ab" version="1">Вы немного обучился ахимии, пока был с Илли. Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster_Alchemic"&gt;«Яйцеломка»&lt;/LSTag&gt; once per Long Rest. &lt;br&gt;&lt;br&gt;This action can be enhanced by inspecting other interesting or unique grenades in the world. </content>
-  <content contentuid="h91ebb8a3g6f7cg9e43g3ab7gb3c07a7993ea" version="1">Brilliant «Яйцеломка» (Retort)</content>
-  <content contentuid="h43254f0fgdbe5gb718gebeage511a3d42bd3" version="1">Вы немного обучился ахимии, пока был с Илли. Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster_Alchemic"&gt;«Яйцеломка»&lt;/LSTag&gt; once per Long Rest. &lt;br&gt;&lt;br&gt;This action can be enhanced by inspecting other interesting or unique grenades. </content>
+  <content contentuid="h4c5bd8c8g1f61g9de5gf0c6gc86dc390e508" version="1">Блестящая Яйцеломка</content>
+  <content contentuid="he23f8327g80b8ga839g6631ga5c423dbf6d4" version="1">Ультимативная Яйцеломка</content>
+  <content contentuid="h88403bfcgbfd2g140cg145ag163e0089659e" version="1">Ортоническая Яйцеломка</content>
+  <content contentuid="h767e0ba5ge076g99b4gcbd3g6a639531d42b" version="1">Hurl a Яйцеломка that applies the effects of an TODO Бомба Ортона and Alchemist's Fire. </content>
+  <content contentuid="h208049c5g935cgb043g3801g7cb3b08fee38" version="1">Знание: Яйцеломка</content>
+  <content contentuid="hf7fd025fge5feg6e7dg8f7dgbd9409f473ab" version="1">Вы немного обучился ахимии, пока был с Илли. Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster_Alchemic"&gt;Яйцеломка&lt;/LSTag&gt; once per Long Rest. &lt;br&gt;&lt;br&gt;This action can be enhanced by inspecting other interesting or unique grenades in the world. </content>
+  <content contentuid="h91ebb8a3g6f7cg9e43g3ab7gb3c07a7993ea" version="1">Блестящая Яйцеломка (Retort)</content>
+  <content contentuid="h43254f0fgdbe5gb718gebeage511a3d42bd3" version="1">Вы немного обучился ахимии, пока был с Илли. Вы можете использовать &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster_Alchemic"&gt;Яйцеломка&lt;/LSTag&gt; once per Long Rest. &lt;br&gt;&lt;br&gt;This action can be enhanced by inspecting other interesting or unique grenades. </content>
   <content contentuid="h7068a5e0ga0dcg3520g56f3gbeae1f5c3b6a" version="1">Родственные убийцы.</content>
   <content contentuid="hddda6c88g64b1g4ecbg0d6cg37e3918fad56" version="1">Разделите восторг от убийств с Наглым Квазитом.</content>
   <content contentuid="h1398dfb8g6a58ga0ceg1897g66e540a21d82" version="1">Мастерство Бездны</content>
   <content contentuid="h478e71c2g8dcag7fb8gc1f6gec94004ed7e3" version="1">Добейтесь, чтобы Наглый Квазит улучшил свою Яйцеломку до максимума.</content>
-  <content contentuid="h741f4ffcgd4adg4630g81eeg486217358353" version="1">Если дать этот предмет Наглому Квазиту то она выучит  &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster_Alchemic"&gt;Алхимическая «Яйцеломка»&lt;/LSTag&gt;. </content>
+  <content contentuid="h741f4ffcgd4adg4630g81eeg486217358353" version="1">Если дать этот предмет Наглому Квазиту то она выучит  &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster_Alchemic"&gt;Алхимическая Яйцеломка&lt;/LSTag&gt;. </content>
   <content contentuid="hceb6d457g823ag4548gaf6bg51cc51dab337" version="1">Surrounded by alchemical ingredients and potions, The Наглый Квазит has become somewhat adept in creating explosives. </content>
   <content contentuid="hbec1ad1cga7b3g7fe7g5909g815eb4ab1d94" version="1">Солидные знания</content>
   <content contentuid="h06695951gc5d2gfd40gf6b3g94f159762227" version="1">Откройте все тайные способности и бонусы для Наглого Квазита.</content>
   <content contentuid="h63ba40a0g2e08g9f0eg8dc8ge07cd93d0018" version="1">The[1] is only applied to the main target. </content>
-  <content contentuid="h2cc4b4d2gdc8dg2897g95f6ga7425139f402" version="1">Absorb Knowledge</content>
+  <content contentuid="h2cc4b4d2gdc8dg2897g95f6ga7425139f402" version="1">Впитать знания</content>
   <content contentuid="h0fda1086g3334g8235g29bbgdd56f6ff51c5" version="1">Drain the power of a fallen creature that is &lt;LSTag Type="Status" Tooltip="XEN_SHOVEL_ABSORB_KNOWLEDGE_AURA"&gt;Radiating Knowledge&lt;/LSTag&gt; and claim it as your own. </content>
-  <content contentuid="h9f006c52g364ag48f6gbae7g4d70142fce22" version="1">Knowledge Drained</content>
-  <content contentuid="h50edbd3bg611agcfceg8cc1g471fccbe92be" version="1">This creature's knowledge has been absorbed. </content>
+  <content contentuid="h9f006c52g364ag48f6gbae7g4d70142fce22" version="1">Истощение знаний</content>
+  <content contentuid="h50edbd3bg611agcfceg8cc1g471fccbe92be" version="1">Знания этого существа были поглощены.</content>
   <content contentuid="hd4f8be7fgf2c0g691dg890dg016580d48b6c" version="1">Radiating Knowledge</content>
   <content contentuid="hdcc29f53g13c1g6819g2514g4b9aef6d2f33" version="1">Even in its dead state, this creature is radiating knowledge. The Наглый Квазит can absorb this knowledge by using &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_AbsorbKnowledge"&gt;Absorb Knowledge&lt;/LSTag&gt;. The action becomes available on her while near the corpse. </content>
   <content contentuid="hab6534fcgf5b3g63ddg795dgc7a53b0fcaf8" version="1">Знание: Phasm</content>
@@ -221,8 +222,8 @@
   <content contentuid="h537100abg729bgec25gacb5g691339ce6f03" version="1">Assume the form of a Shadow Panther. </content>
   <content contentuid="hd97d7889g8bcegd31eg58e1g86330df6858c" version="1">Мусор одного перевёртыша</content>
   <content contentuid="hd89cc907gaabfg9cacg5599g41e0f118dbba" version="1">Поглотите знания Странного вола об изменении формы.</content>
-  <content contentuid="he04278cdg51d8g35dega4bagb60422439e35" version="1">Detecting Knowledge</content>
-  <content contentuid="h58377b20g32aagdd8agad82g36bce038b82e" version="1">You are near an entity whose knowledge you can absorb. </content>
+  <content contentuid="he04278cdg51d8g35dega4bagb60422439e35" version="1">Обнаружение знаний</content>
+  <content contentuid="h58377b20g32aagdd8agad82g36bce038b82e" version="1">Рядом с вами находится сущность, чьи знания вы можете поглотить.</content>
   <content contentuid="h465923abge44eg82aag1de7g0fe43f6cb7db" version="1">Recast Cloudkill</content>
   <content contentuid="h6744db3egecfdgc2d0g6866ga91cdc599efd" version="1">You can recast &lt;LSTag Type="Spell" Tooltip="Target_XEN_Shovel_Cloudkill_Spider_Phase"&gt;Cloudkill&lt;/LSTag&gt; for 10 turns after casting it. </content>
   <content contentuid="hd64f6bb3g42eagfecfg68fegc5523d3a56c2" version="1">Ethereal Haunt</content>
@@ -242,7 +243,7 @@
   <content contentuid="h32a04e75gb0e0g6817ga304g94b4588a3132" version="1">Creatures starting their turn in the area take [1]. Creatures ending their turn in the area possibly take [2].&lt;br&gt;&lt;br&gt;The area is &lt;LSTag Type="Status" Tooltip="DIFFICULT_TERRAIN"&gt;Difficult Terrain&lt;/LSTag&gt;. </content>
   <content contentuid="h7f21cd3ag0624gbe70gd5d1g600e0a46b725" version="1">Land Dragon Breath</content>
   <content contentuid="he8585d6agb4feg8a3dgdf0cgd088126f577a" version="1">Spew different draconic elements from your mouth. </content>
-  <content contentuid="hf94cfb59gc97ag9bf0g8660g47ce557a67cd" version="1">Unlock &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster"&gt;Алхимическая «Яйцеломка»&lt;/LSTag&gt;. </content>
+  <content contentuid="hf94cfb59gc97ag9bf0g8660g47ce557a67cd" version="1">Unlock &lt;LSTag Type="Spell" Tooltip="Projectile_XEN_Shovel_NutBuster"&gt;Алхимическая Яйцеломка&lt;/LSTag&gt;. </content>
   <content contentuid="h0ef84497g16f4g5a46g1a88g845c30ce6010" version="1">Teleport into the shadows. </content>
   <content contentuid="he2b7b2d8g83eag060egcd97g84feec8322e5" version="1">This &lt;LSTag Type="Spell" Tooltip="Shout_XEN_Shovel_Aspect"&gt;Аспект&lt;/LSTag&gt; is currently active. </content>
   <content contentuid="hdb24eec1g2968g209bg35bdg81c16dd9e1df" version="1">Must have &lt;LSTag Type="Status" Tooltip="FROG_REFLECTIVEMUCUS"&gt;Отражающая Слизь&lt;/LSTag&gt; active. </content>
@@ -291,9 +292,9 @@
   <content contentuid="hb49c971bg9f86gf7e6g23a3gdc7de47e58a8" version="1">After getting bit by Astarion, the наглый квазит gained new vampiric abilities while in her летучая мышь облик. The experience kind of sucked, but it was worth it.</content>
   <content contentuid="h2170357cg40a0g8345ga72fgf29a1b3c6192" version="1">A strong substance attempted to poison the наглый квазит. She absorbed and adapted it to the poison inflicted while in her phase spiderling облик.</content>
   <content contentuid="h335ef20cgafafge41cg7febg19bdea19120e" version="1">The наглый квазит descended into a pit fuming with noxious gases and substances, empowering her acid attacks while in her пещерная лягушка облик.</content>
-  <content contentuid="h4a2aeb0cgf549ga0b5g2b5eg68430d83d662" version="1">With a bit of alchemic experience gained from the time spent in the apothecary cellar, the наглый квазит turned her «яйцеломка» and 'friend' into a throwable explosive. We should probably not ask how she gets a new 'friend' to build one each day. She may be able to improve her makeshift grenade by inspecting other interesting or unique ones in the world.</content>
-  <content contentuid="hc712ec7eg68a2gd1b8gf0e3gfa4948afc1d5" version="1">The наглый квазит improved her «яйцеломка» explosive by examining a hellish explosive that Dammon made for us. She can hardly resist to use it.</content>
-  <content contentuid="h1a9edd40gd62cg9f85gacedg5faf8c6fa637" version="1">The наглый квазит improved her «яйцеломка» explosive by examining the TODO Блестящий Аргумент that Barcus made for us. Who knows what will now happen when that «яйцеломка» explodes, explodes.</content>
+  <content contentuid="h4a2aeb0cgf549ga0b5g2b5eg68430d83d662" version="1">With a bit of alchemic experience gained from the time spent in the apothecary cellar, the наглый квазит turned her Яйцеломка and 'friend' into a throwable explosive. We should probably not ask how she gets a new 'friend' to build one each day. She may be able to improve her makeshift grenade by inspecting other interesting or unique ones in the world.</content>
+  <content contentuid="hc712ec7eg68a2gd1b8gf0e3gfa4948afc1d5" version="1">The наглый квазит improved her Яйцеломка explosive by examining a hellish explosive that Dammon made for us. She can hardly resist to use it.</content>
+  <content contentuid="h1a9edd40gd62cg9f85gacedg5faf8c6fa637" version="1">The наглый квазит improved her Яйцеломка explosive by examining the TODO Блестящий Аргумент that Barcus made for us. Who knows what will now happen when that Яйцеломка explodes, explodes.</content>
   <content contentuid="h0f582cf7g7491g8fb0g1113g83bd93a1f544" version="1">Our tiny fiend learned much along the way and is ready to lend us her evolved power in the battle ahead. Let's go, beefy!</content>
   <content contentuid="hb6428024g82f2g73b1g9d39g7d3e7a3856bd" version="1">The наглый квазит has travelled with us to the end. One final foe to murderise.</content>
   <content contentuid="hf441b89ag8e0fg2835g3530g95072c764fea" version="1">Знание: TODO Другокопатель</content>
@@ -303,7 +304,7 @@
   <content contentuid="he2d1623dg9357ge673g77f5g73200791c4c6" version="1">Needs TODO Другокопатель to dig.</content>
   <content contentuid="h63bd0b96g068dg7fa2gef86g3b55cafccaf3" version="1">Constructing the final result.</content>
   <content contentuid="h3b23ef5cg81cag0e10gbae2g299ff4d04052" version="1">Carefully studying an explosive artifact's alchemical composition and structural design.</content>
-  <content contentuid="hdabcd93eg4d48gb9cdgec66g32641421d91d" version="1">Considering «Яйцеломка» implementations and improvement options.</content>
+  <content contentuid="hdabcd93eg4d48gb9cdgec66g32641421d91d" version="1">Considering Яйцеломка implementations and improvement options.</content>
   <content contentuid="h84b0fdd1gbbf4g0291gc618g23925d7a24e6" version="1">Глаза Квазита</content>
   <content contentuid="hfddc86d6gdc00g4058g5f69gad381fa38031" version="1">While summoned and within [1] of your summoner, you telepathically share your &lt;LSTag Type="Passive" Tooltip="XEN_Shovel_EyesOfTheQuasit"&gt;heightened senses&lt;/LSTag&gt; with them. The range they can see in the dark increases by [1], and they receive a bonus equal to your &lt;LSTag Tooltip="SpellcastingAbility"&gt;Spellcasting Ability&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt; to any &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; roll.</content>
   <content contentuid="h39745c56gc904gba06g3608g2b267b01b479" version="1">While within [1] of your summoned наглый квазит, the range you can see in the dark increases by [2] and you gain a bonus equal to the quasit's &lt;LSTag Tooltip="SpellcastingAbility"&gt;Spellcasting Ability&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt; to any &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; or &lt;LSTag Tooltip="Investigation"&gt;Investigation&lt;/LSTag&gt; roll. </content>
@@ -314,13 +315,13 @@
   <content contentuid="h2096c59bgfa5fg2da6g65degb87e6f6a594e" version="1">Количество ходов, в течение которых эта функция активна, определяется вашим уровнем (до 10).</content>
   <content contentuid="h56197967gf531g541bg7e40g00dc4cfb9585" version="1">Миниатюрный верстак</content>
   <content contentuid="hfc565b01gb073g17f1g744fg8ff9aa4ef6e5" version="1">Миниатюрный верстак сделанный для миниатюрного фамильяра.</content>
-  <content contentuid="hbad4b26eg33e0g3c23gdaf6g8e2c2e68554d" version="1">Must not be shapechanged.</content>
-  <content contentuid="hb64624b3g2e70ge04dg7577gdf328b0fcc72" version="1">Must be shapechanged.</content>
-  <content contentuid="h5080dacdg9f75g89d6g5f38ga35fc697e53a" version="1">Shovel's TODO Другокопатель</content>
+  <content contentuid="hbad4b26eg33e0g3c23gdaf6g8e2c2e68554d" version="1"> TODO Не должен менять облик.</content>
+  <content contentuid="hb64624b3g2e70ge04dg7577gdf328b0fcc72" version="1">TODO Должен менять облик.</content>
+  <content contentuid="h5080dacdg9f75g89d6g5f38ga35fc697e53a" version="1">Shovel's TODO Другокопатель Лопаты</content>
   <content contentuid="h1c18ce6cg5a06gb5deg6bd3gc5cf227535ce" version="1">- Shovel Evolved -&lt;br&gt;&lt;br&gt;! DEPRECATED !&lt;br&gt;&lt;br&gt;Use a dedicated mod uninstaller instead (PC only).</content>
   <content contentuid="h826543d3g06cagbb9ega552gdf68928629d3" version="1">У вас +[1] бонус &lt;LSTag Tooltip="SavingThrow"&gt;Испытаниям&lt;/LSTag&gt; и &lt;LSTag Type="Resistant"&gt;Сопротивление&lt;/LSTag&gt; к урону от заклинаний.</content>
   <content contentuid="h37f5d20cgd396g975eg3fc0g82e0fc3d1f35" version="1">Летучая Мышь</content>
   <content contentuid="h144d2288gec4fg7c2cg20c0gbc2cb4c2ae81" version="1">Пещерная Лягушка</content>
-  <content contentuid="hc5ef9823gbe33g1e35g0f1fgd842efaa8203" version="1">Find Shovel's TODO Другокопатель</content>
+  <content contentuid="hc5ef9823gbe33g1e35g0f1fgd842efaa8203" version="1"> TODO Найдите Другокопатель Лопаты</content>
   <content contentuid="h17e9a904g8c1fg29c2g19ffgdb8d60db6908" version="1">This will try to get the original TODO Другокопатель if you lost or deleted it and if Shovel hasn't learned to dig yet. If it can't be found, you'll receive a clone of it that will also teach Shovel to dig. </content>
 </contentList>
