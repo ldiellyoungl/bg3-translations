@@ -1,1 +1,4 @@
 unpack/
+*.pak
+*.zip
+*.7z
