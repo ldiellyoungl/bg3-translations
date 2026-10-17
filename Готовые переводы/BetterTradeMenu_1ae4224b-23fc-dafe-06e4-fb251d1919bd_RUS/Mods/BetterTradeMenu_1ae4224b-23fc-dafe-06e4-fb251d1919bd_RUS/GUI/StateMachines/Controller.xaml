@@ -1,0 +1,65 @@
+<ls:StateMachine xmlns:ls="clr-namespace:ls;assembly=Code"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+					
+    <ls:StateMachine.States>
+
+		<!--STATE: Trade-->
+        <ls:State Name = "Trade" HideStatesBelow = "True" DisableStatesBelow="True" Layout = "Player" Owner = "Player">
+            <ls:State.Widgets>
+                <ls:StateWidget Filename="Trade_c.xaml" Layer="Panels"/>
+                <ls:StateWidget Filename="AlwaysOnTopOverlay.xaml" Layer="MessageBox"/>
+            </ls:State.Widgets>
+
+            <ls:State.Events>
+                <ls:StateEvent Name = "OpenContainerInventory">
+                    <ls:StateEvent.Actions>
+                        <ls:AddSubstate Name="ContainerInventory"/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "SplitItemToggle">
+                    <ls:StateEvent.Actions>
+                        <ls:AddSubstate Name="SplitItem"/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "OpenExamine">
+                    <ls:StateEvent.Actions>
+                        <ls:PushState Name="Examine"/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "OpenMessageBox">
+                    <ls:StateEvent.Actions>
+                        <ls:AddSubstate Name="MessageBox"/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "OpenSortInventory">
+                    <ls:StateEvent.Actions>
+                        <ls:SetSubstate Name="SortInventory"/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "CloseWidget">
+                    <ls:StateEvent.Actions>
+                        <ls:RemoveState/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "CloseAllFullscreen">
+                    <ls:StateEvent.Actions>
+                        <ls:RemoveState/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "OpenPinnedTooltips">
+                    <ls:StateEvent.Actions>
+                        <ls:AddSubstate Name="PinnedTooltips"/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+                <ls:StateEvent Name = "IE.ToggleInGameMenu">
+                    <ls:StateEvent.Actions>
+                        <ls:PushState Name="Paused"/>
+                    </ls:StateEvent.Actions>
+                </ls:StateEvent>
+            </ls:State.Events>
+        </ls:State>
+
+    </ls:StateMachine.States>
+    
+</ls:StateMachine>
