@@ -1,8 +1,0 @@
-imports:
-  - "../glossary/resources/common.glossary.yml"
-  - "../glossary/resources/spellSlots.glossary.yml"
-  - "../glossary/resources/classFeature.glossary.yml"
-  - "../glossary/abilities/common.glossary.yml"
-  - "../glossary/diceRolls/common.glossary.yml"
-contexts:
-  - name: Baldurs Gate 3
