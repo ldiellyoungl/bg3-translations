@@ -6,14 +6,16 @@
             <children>
                 <node id="Conflicts"/>
                 <node id="Dependencies">
-                    <node id="ModuleShortDesc">
-                        <attribute id="Folder" type="LSString" value="SharedActions"/>
-                        <attribute id="MD5" type="LSString" value=""/>
-                        <attribute id="Name" type="LSString" value="Shared Actions"/>
-                        <attribute id="PublishHandle" type="uint64" value="0"/>
-                        <attribute id="UUID" type="guid" value="1782fda1-e53f-4002-a69b-6b6d4f4dbd23"/>
-                        <attribute id="Version64" type="int64" value="36732484460740608"/>
-                    </node>
+                    <children>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" type="LSString" value="SharedActions"/>
+                            <attribute id="MD5" type="LSString" value=""/>
+                            <attribute id="Name" type="LSString" value="Shared Actions"/>
+                            <attribute id="PublishHandle" type="uint64" value="0"/>
+                            <attribute id="UUID" type="guid" value="1782fda1-e53f-4002-a69b-6b6d4f4dbd23"/>
+                            <attribute id="Version64" type="int64" value="36873224096579584"/>
+                        </node>
+                    </children>
                 </node>
                 <node id="ModuleInfo">
                     <attribute id="Author" type="LSString" value="LeoBlock"/>
@@ -29,10 +31,10 @@
                     <attribute id="PublishHandle" type="uint64" value="0"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="c0a197d6-c247-4467-b9df-db05af22a63d"/>
-                    <attribute id="Version64" type="int64" value="36732484460740608"/>
+                    <attribute id="Version64" type="int64" value="36873224096579584"/>
                     <children>
                         <node id="PublishVersion">
-                            <attribute id="Version64" type="int64" value="36732484460740608"/>
+                            <attribute id="Version64" type="int64" value="36873224096579584"/>
                         </node>
                         <node id="Scripts"/>
                     </children>

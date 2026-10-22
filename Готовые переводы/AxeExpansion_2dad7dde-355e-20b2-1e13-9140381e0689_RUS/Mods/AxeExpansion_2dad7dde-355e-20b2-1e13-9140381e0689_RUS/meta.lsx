@@ -8,13 +8,13 @@
                 <node id="Dependencies">
                     <children>
                         <node id="ModuleShortDesc">
-                            <attribute id="Folder" type="LSString" value="AxeExpansion_2dad7dde-355e-20b2-1e13-9140381e0689"/>
-                            <attribute id="MD5" type="LSString" value=""/>
-                            <attribute id="Name" type="LSString" value="The Slaughterer - Upgradable Handaxe"/>
-                            <attribute id="PublishHandle" type="uint64" value="0"/>
-                            <attribute id="UUID" type="guid" value="2dad7dde-355e-20b2-1e13-9140381e0689"/>
-                            <attribute id="Version64" type="int64" value="36028797018964050"/>
-                        </node>
+  <attribute id="Folder" type="LSString" value="AxeExpansion_2dad7dde-355e-20b2-1e13-9140381e0689"/>
+  <attribute id="MD5" type="LSString" value=""/>
+  <attribute id="Name" type="LSString" value="The Slaughterer - Upgradable Handaxe"/>
+  <attribute id="PublishHandle" type="uint64" value="0"/>
+  <attribute id="UUID" type="guid" value="2dad7dde-355e-20b2-1e13-9140381e0689"/>
+  <attribute id="Version64" type="int64" value="36028797018964050"/>
+</node>
                     </children>
                 </node>
                 <node id="ModuleInfo">

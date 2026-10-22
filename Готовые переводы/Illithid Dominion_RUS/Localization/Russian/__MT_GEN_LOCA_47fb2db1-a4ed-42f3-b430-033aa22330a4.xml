@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hbb25838bddef4852aa353598be2428a3b02f" version="1">Опытный головастик</content>
+	<content contentuid="h1a8dcd6740bb45d6930c4f95c3ba1bc897a0" version="1">Головастик жрицы Верная Кишка</content>
+	<content contentuid="h43ebb1cd53b44d2ab2d34b74b4821440a7ab" version="1">Верная Кишка была известена как опытный Буяг, способной залечивать серьезные травмы.</content>
+	<content contentuid="ha23104aa0d3b4c7cb9effc8486f221c92a8g" version="1">Навыки опытного Буяга</content>
+	<content contentuid="h0d058f3189e6415fa899d1bfb0381d1cb49b" version="1">Передача вашего здоровья Силой Иллитида требует вдвое меньше &lt;LSTag Tooltip="HitPoints"&gt;очков здоровья&lt;/LSTag&gt;. Количество восстанавливаемого здоровья остаётся неизменным.</content>
+	<content contentuid="h3fc7367d3aa4455bbfe624a870bd94d7c458" version="1">Головастик Дрора Рагзлина</content>
+	<content contentuid="hf8ac8966b6c748c88191ee7023f201e37083" version="1">Чтобы стать вождем, нужно бить сильным и иметь достаточно толстую кожу, чтобы выдержать больше ударов, чем соперники.</content>
+	<content contentuid="hb95b8d89146e496baa6b6f57e4a71c31570a" version="1">Стойкость вождя</content>
+	<content contentuid="h39c0a45c82734143bd5ab25261670e628ead" version="1">Вы получаете на 1 единицу меньше физического урона из всех источников за каждые 5 полученных Сил Иллитидов.</content>
+	<content contentuid="hf1d0328068cf408fbf1b0c218b2172cebd56" version="1">Головастик Верного Нере</content>
+	<content contentuid="hb598b23c3a624fba9fbcaf9d6645153e1731" version="1">Несмотря на то, что его бесчисленное количество раз презирали, Нере выработал в себе гордое эго.</content>
+	<content contentuid="h82564d873e9744d2999d79a8c7c082ef0a2g" version="1">Презренная гордость</content>
+	<content contentuid="hb4cc5c606d8c4fc78648a592d53477627c50" version="1">Вы можете использовать &lt;LSTag Type="Shout" Tooltip="Shout_TAD_PsionicOverload"&gt;псионическую перегрузку&lt;/LSTag&gt; без нанесения себе урона.</content>
+	<content contentuid="h7a97d914b6df43f0befea9238c74483c8g61" version="1">Головастик Адепт З'Релл</content>
+	<content contentuid="hc3bdec752f5c44198c05ab00cfa8f1716844" version="1">Властная и остроумная, З'Релл всегда умела заставить других замолчать.</content>
+	<content contentuid="hf836655251c64324985403c2b0bd769651b4" version="1">Неумолимый упрек</content>
+	<content contentuid="h6dc453d757d84da1bb1c744795b5c80243bb" version="1">Ваши Иллитидские способности, которые зависят от реакции, можно использовать без затрат &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;очков реакции&lt;/LSTag&gt;.</content>
+	<content contentuid="hf7892f386de44751880df781d4e0068ca6b6" version="1">Головастик Эйвери Соншала</content>
+	<content contentuid="h449b653b732d4644a9bf0a4985c87d182f75" version="1">Эйвери всегда был увлечен своим делом, работал не покладая рук, был сосредоточен и невозмутим.</content>
+	<content contentuid="h1e5c3c9aafd244749aff64a7e4630e4cb72e" version="1">Гиперфокус</content>
+	<content contentuid="hd79b2fe9efa04e38bb060fa02672cd64egeg" version="1">&lt;LSTag Type="Target" Tooltip="Target_TAD_ConcentratedBlast"&gt;Концентрированный взрыв&lt;/LSTag&gt; можно использовать, не нарушая &lt;LSTag Type="ActionResource" Tooltip="Concentration"&gt;концентрацию&lt;/LSTag&gt; на других заклинаниях.</content>
+	<content contentuid="h689cb3ae492b43eea0292b19566fdbf7df95" version="1">Интересный потенциал</content>
+	<content contentuid="h68037119960a47719263d8097503ecc3dgd1" version="1">У этой сущности есть некий интересный потенциал, ваш головастик дрожит в ожидании, стремясь усвоить его.</content>
+	<content contentuid="h632efe73ddda4de8881dc167378f3db6225b" version="1">У этой сущности был интересный потенциал, но уже слишком поздно пытаться сделать его своим.</content>
+	<content contentuid="h603f7999bf2743b1adf613b11004bc074g36" version="1">Подсадить головастика</content>
+	<content contentuid="h48609c7d869b48449caea68943dc8d5fbc25" version="1">Подсадите &lt;LSTag Type="Status" Tooltip="SIAEL_TADPOLE"&gt;ассимиляционного головастика&lt;/LSTag&gt; в цель. Подсадка наносит [1], а так же Головастик будет наносить [2] каждый ход, но не убьёт носителя. Если носитель погибнет, вы сможете &lt;LSTag Type="Spell" Tooltip="Siael_RetrieveTadpole"&gt;извлечь головастика&lt;/LSTag&gt;.</content>
+	<content contentuid="h3b54031bd3bc48409128a9feb710b553fb79" version="1">Для подсадки головастика цель должна быть каким-то образом обездвижена.</content>
+	<content contentuid="h3653335bdf3645efb29a15d3748ec144c697" version="1">Инвазированный</content>
+	<content contentuid="hdce6065f1811481d84ae58e4eebd0c21e746" version="1">Это существо заражено ассимилирующим головастиком. Он получает [1] каждый ход, но это не может его убить. Если носитель умирает, головастика можно &lt;LSTag Type="Spell" Tooltip="Siael_RetrieveTadpole"&gt;извлечь&lt;/LSTag&gt;.</content>
+	<content contentuid="hbe374381b52a43719c08edf2bfa802e8bgc4" version="1">Извлечь головастика</content>
+	<content contentuid="h2418dc6277bc4e769d8178fec80cd1c781dg" version="1">Достаньте ранее подсаженного &lt;LSTag Type="Status" Tooltip="SIAEL_TADPOLE"&gt;ассимиляционного головастика&lt;/LSTag&gt; и извлеките знания, которые он получил от своего носителя.</content>
+	<content contentuid="h189dbf28a117425dbf233ba5f8a74e81af4e" version="1">Псионический облик — Визуальные эффекты</content>
+	<content contentuid="h4e6bb6422ca0497b8c462e67ea3f892c1968" version="1">Включить или отключить визуальные эффекты от «Псионического облика».</content>
+	<content contentuid="h00a703be5f0248769e45c657229b75df30a2" version="1">Анимации работают только для типа телосложения 2.</content>
+	<content contentuid="" version="1"></content>
+	<content contentuid="h64851f051c1b4c75a4e8fa5ea3c9182d1355" version="1">Ментально истощенная цель &lt;br&gt;&lt;br&gt;получает штраф -[1] к своему &lt;LSTag Tooltip="ArmourClass"&gt;классу брони&lt;/LSTag&gt; и становится&lt;LSTag Tooltip="Vulnerable"&gt;уязвимой&lt;/LSTag&gt; к [2].&lt;br&gt;&lt;br&gt;. Состояние закончится, когда затронутая цель нанесет урон источнику.</content>
+	<content contentuid="hbc32b87da96a4c77b84a648587f58cc556a6" version="1">Высасывает психическую энергию окружающих. Получает бонус к классу брони (&lt;b&gt;&lt;LSTag&gt;+[1]&lt;/LSTag&gt;&lt;/b&gt;) и наносит дополнительно [2] за каждое существо, находящееся под воздействием &lt;LSTag Type="Status" Tooltip="CRE_MINDSTEAL_LINK_TARGET"&gt;похищения разума&lt;/LSTag&gt;.</content>
+	<content contentuid="h947a08c57a6542a5a9b65290a7ed9b1fe1dg" version="1">Связь похитителя разума: Безжалостный командир</content>
+	<content contentuid="h178f7ec56db14b57b242c64f5e30d1e2a795" version="1">Выберите, будет ли &lt;LSTag Type="Spell" Tooltip="Siael_MindstealTempest"&gt;буря похищения разума&lt;/LSTag&gt; действовать на всех или игнорировать союзников. &lt;br&gt;&lt;br&gt;Если активно, союзники будут игнорироваться, иначе будет действовать на всех.</content>
+	<content contentuid="h09b30f41f8e745abaddc8fdde8914d6b03dg" version="1">Защитите цель от нападающих. Если цель атакует или причиняет вред другому существу, святилище разрушается, нанося урон [1] ближайшим существам. </content>
+	<content contentuid="h983775fec4e147bfbe1ab4ce94961e61a782" version="1">Призвать Ускользающего зверя</content>
+	<content contentuid="h5f94b8a27983438f978001576aaa9717615e" version="1">Призывает Ускользающего зверя, который может &lt;LSTag Type="Spell" Tooltip="Teleportation_Displacement_DisplacerBeast"&gt;смещать&lt;/LSTag&gt; себя и врагов, имея [1].</content>
+	<content contentuid="h4a35a8cc9d6b4d448d42905b1b6eb61da1e9" version="1">Ваше мастерство владения магией эвокации возросло. Теперь Вы можете добавлять к броскам урона любыми заклинаниями этой школы свой &lt;LSTag Tooltip="SpellcastingAbilityModifier"&gt;модификатор&lt;/LSTag&gt; заклинательной способности. </content>
+	<content contentuid="h3c35df06b37242428bed1848de455f13553d" version="1">Обольстительное подчинение</content>
+	<content contentuid="h20d932b3ed3f4183a0bd993e680b43b014ee" version="1">Цель проходит проверки с &lt;LSTag Tooltip="Disadvantage"&gt;помехой&lt;/LSTag&gt;.</content>
+	<content contentuid="hca0673bde03e4c6ca4c51cf67db86391943a" version="1">Картография Сердцеформы</content>
+	<content contentuid="h0dd9ef59e0e34ff286da1590cb0fc76b4cbg" version="1">Вы составляете карту сердца существа, исследуя его страхи, чтобы &lt;LSTag Type="Spell" Tooltip="Siael_HeartWrench"&gt;покарать&lt;/LSTag&gt; его.</content>
+	<content contentuid="h787ba3c849504aa2b8c972d0f6b191287egf" version="1">Карта сердца цели создана и готово к &lt;LSTag Type="Spell" Tooltip="Siael_HeartWrench"&gt;наказанию&lt;/LSTag&gt;.</content>
+	<content contentuid="h2cc6b50fd3e74984be3529c05c00b904f166" version="1">Вы разрываете ментальный барьер жертвы, на которую у вас есть &lt;LSTag Type="Status" Tooltip="SIAEL_HEARTFORM"&gt;Сердцеформа&lt;/LSTag&gt;.</content>
+	<content contentuid="h2341620b8d5e489e94b7e4c63bf55ac4384b" version="1">Симбиотический головастик</content>
+	<content contentuid="h10cf5781ae714cfca84b8a1d62fb721491c7" version="1">Головастик Потенциала</content>
+	<content contentuid="hc24fd681b7b946be9a5f6259da2dd022077b" version="1">TODO</content>
+	<content contentuid="h727f3d7ba30d414291f200702adfac12g10e" version="1">Проницательность Иллитида</content>
+	<content contentuid="h6716126b60eb47b18bfbbf6cb1e68a1c3884" version="1">Каждый раз, когда вы применяете силу Иллитида, Вы получаете &lt;LSTag Type="Status" Tooltip="SIAEL_ILLITHID_ACUITY"&gt;Проницательность Иллитида&lt;/LSTag&gt; на 1 ход.</content>
+	<content contentuid="h9ba7d240b7d14ad58b4c9a3f7a2edcb0247g" version="1">Данная цель получает бонус &lt;b&gt;&lt;LSTag&gt;+[1]&lt;/LSTag&gt;&lt;/b&gt; к магическим&lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt; и &lt;LSTag Tooltip="DifficultyClass"&gt;классу сложности&lt;/LSTag&gt; заклинаний за каждый оставшийся ход.</content>
+	<content contentuid="hcb62b1cf9d104c349c05fb5fa8a7ad427757" version="1">Симбиот</content>
+	<content contentuid="h4287e084cb774b38b8189bcdf28c8074f4ae" version="1">При провале &lt;LSTag Tooltip="SavingThrow"&gt;испытаний&lt;/LSTag&gt; &lt;LSTag Tooltip="Charisma"&gt;харизмы&lt;/LSTag&gt;, &lt;LSTag Tooltip="Intelligence"&gt;интеллекта&lt;/LSTag&gt; или &lt;LSTag Tooltip="Wisdom"&gt;мудрости&lt;/LSTag&gt; Вы можете использовать заряд &lt;LSTag Type="ActionResource" Tooltip="SiaelIPORes"&gt;Сил Иллитидов&lt;/LSTag&gt; для переброса кубиков.</content>
+	<content contentuid="h20bda2cf22504835ba5093da0a3751a487ag" version="1">Головастик астрального потенциала</content>
+	<content contentuid="h5423471e43bd43c9ba6c645de5c56f5ad1f9" version="1">TODO</content>
+	<content contentuid="hdd7bcb18cda1486d883cb8b50c836ce91446" version="1">Астральное происхождение</content>
+	<content contentuid="hd904b8ff21954526943755876a843dd63a10" version="1">Если носитель заражен головастиком свежевателя разума, он получает свой [1] (&lt;LSTag Tooltip="ProficiencyBonus"&gt;Бонус мастерства&lt;/LSTag&gt;) в виде максимального количества &lt;LSTag Tooltip="HitPoints"&gt;очков здоровья&lt;/LSTag&gt; за каждые 5 единиц силы иллитидов.</content>
+	<content contentuid="ha32882df59f5465dbb48dc08ecf00d4d0fdg" version="1">Талант Иллитида</content>
+	<content contentuid="h0abacdd7abe54a9b95fa5f344bb843c0gad2" version="1">Если носитель является гибридом Полу-Иллитида, он не может выбросить ниже [1] при проверке характеристик &lt;LSTag Tooltip="AbilityCheck"&gt; с навыком &lt;LSTag Tooltip="Skill"&gt;, в которым он владеет &lt;LSTag Tooltip="Proficiency"&gt;.</content>
+	<content contentuid="h7fb08be8fcf94ee68b195d76abf13209cf95" version="1">Головастик Высшего Потенциала</content>
+	<content contentuid="hcb0afbda141e49348780e56474fef6798f93" version="1">TODO</content>
+	<content contentuid="h9df07ed9dac54394814ff1605b8e44758bgc" version="1">Коллективный разум</content>
+	<content contentuid="h55816196f60a48439f9c3663958d8cba52ad" version="1">Ближайшие союзники, которые реализовали свой потенциал иллитида, получают &lt;b&gt;&lt;LSTag&gt;+[1]&lt;/LSTag&gt;&lt;/b&gt; к &lt;LSTag Tooltip="AttackRoll"&gt;броскам атаки&lt;/LSTag&gt;, &lt;LSTag Tooltip="SavingThrow"&gt; испытаниям&lt;/LSTag&gt;, &lt;LSTag Tooltip="AbilityCheck"&gt; проверкам навыков&lt;/LSTag&gt; и &lt;LSTag Tooltip="SkillCheck"&gt;характеристик&lt;/LSTag&gt; за каждого союзника в области действия.</content>
+	<content contentuid="h99fc87cbde714376b73f09fd2d0bea6c492e" version="1">Трансцендентное Совершенство</content>
+	<content contentuid="hd30ea457f7cc4bf89012b474739381948096" version="1">Если носитель подвергся &lt;LSTag Type="Spell" Tooltip="Siael_Ceremorphosis"&gt;Цереморфозу&lt;/LSTag&gt;, он сохраняет &lt;LSTag Type="Passive" Tooltip="Siael_MindFlayer_Bonus"&gt;преимущество&lt;/LSTag&gt; при использовании своего прежнего внешнего вида &lt;LSTag Type="Spell" Tooltip="Siael_Remove_Mindflayer_Form"&gt;.</content>
+</contentList>

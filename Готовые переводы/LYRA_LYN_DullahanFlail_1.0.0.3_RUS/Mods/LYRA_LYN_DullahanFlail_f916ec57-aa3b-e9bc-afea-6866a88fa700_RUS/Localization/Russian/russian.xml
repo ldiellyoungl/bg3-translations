@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<contentList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <content contentuid="hc5a7922bge508g997fg889agd97d0b164e8b" version="4">Магический боевой топор</content>
+  <content contentuid="hf40f7b9fg1bb7g3dadg17d4g30989803308b" version="9">Цеп скорби</content>
+  <content contentuid="h33636125gfc7fg04b5g9733g5df023852565" version="9">Главу обрели, главу сохранили.К цепу приковали — дуллахан возрыдал.</content>
+  <content contentuid="h2de56a93gf0bdgcc43gcdc9gc484da195230" version="2">Призыв плененного дуллахана</content>
+  <content contentuid="h47db129cg8db8g7529gff28g3aede9e9bff3" version="2">Призвать тело нежити, заточённой в цепе.</content>
+  <content contentuid="hafcfcc64g8e9egbb77g6cb3g998d6b3510e2" version="9">Плененный дуллахан</content>
+  <content contentuid="h6700f77bg7eadgbe08g360cg97901f494ed1" version="1">Дуллахан</content>
+  <content contentuid="h013eac25gd3fcg67beg5bf6g1ad0f2683407" version="2">Магическое зрение</content>
+  <content contentuid="h515c6449g277dg5111gd55ag690cc445a8b3" version="2">Дуллахан должен начать ход в пределах [1] от своей головы иначе будет &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;ослеплён&lt;/LSTag&gt;, пока не приблизится. </content>
+  <content contentuid="h5e21cdd7g4139g7266g15bfg937d34df7579" version="2">Держатель головы</content>
+  <content contentuid="h5395f204gbba8gb647ge51cg38903805d92c" version="2">Излечивает слепоту дуллахана.</content>
+  <content contentuid="h326e02bfgc261g7621g9837g943d1ab473d6" version="1">Слепота</content>
+  <content contentuid="h890fd505gff31gdd1bgb231g14a06a395f99" version="1">Имеет &lt;LSTag Tooltip="Disadvantage"&gt;помеху&lt;/LSTag&gt; на &lt;LSTag Tooltip="AttackRoll"&gt;броски атаки&lt;/LSTag&gt;. Дальность атак и заклинаний снижена до [1]. &lt;br&gt;&lt;br&gt;Броски атаки по ослеплённым существам совершаются с &lt;LSTag Tooltip="Advantage"&gt;преимуществом&lt;/LSTag&gt;.</content>
+  <content contentuid="h1062dcf7gc1c6gad09g1398g540dc0639ccb" version="2">Ужасающее присутствие</content>
+  <content contentuid="h721a83e4gf1c0g84eegdda8gb8bcf83e5f2a" version="3">Ужасающий облик дуллахана &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;пугает&lt;/LSTag&gt; существ поблизости.</content>
+  <content contentuid="he1ceeda2g6937g4d82ga7b0ga07168e770cc" version="4">Кресса Костерожденная</content>
+  <content contentuid="hd48f0fc6g24adg4710g9692g985218e07dc9" version="2">Повелительница душ</content>
+</contentList>
