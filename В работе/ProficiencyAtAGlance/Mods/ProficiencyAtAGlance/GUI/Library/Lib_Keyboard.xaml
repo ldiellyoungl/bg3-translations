@@ -1,0 +1,2113 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:ls="clr-namespace:ls;assembly=Code"
+                    xmlns:noesis="clr-namespace:NoesisGUIExtensions;assembly=Noesis.GUI.Extensions"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib"
+                    mc:Ignorable="d">
+
+    <!-- Proficiency at a Glance (PaG): inventory, container and trade cells show whether a character can
+         use the item without penalty. Every cell, bag and equipment slot is judged for one character:
+         the one picked in the trade window while it is shown, else the selected character.
+         The game's slot (Presenter) sits in PaG's cell grid unchanged; over it are the
+         marks (shade, glow, badge, dot), and a template trigger can gray it.
+
+         Nothing of PaG's here calls Lua. Lua finds each cell by name (PaGRoot) from inside an
+         Ext.UI.Defer callback (Script Extender v33), reads the item's id from the cell's data
+         (DataContext.Object.EntityUUID), labels the cell in PaGId on its first write, remembers what
+         each cell shows by that label and writes only what changes. Lua is the only writer of a mark.
+         On v32 PaG makes no UI calls, so every mark stays hidden and the cell is the game's.
+
+         PaG adds no b:Interaction trigger. A trigger on each cell that passes its owner as the command
+         parameter goes with crashes in Interactivity's detach.
+
+         Gray is a template trigger on PaGGray's Opacity, which Lua writes; the template gives the
+         Presenter its effect, so Lua never touches the game's markup. Dim is PaGShade, a #66222222
+         rectangle (PaG.Brush.Shade) over the art and under the other marks. Lua shows and hides every
+         mark through Opacity (1 or 0), never Visibility, so no mark write changes layout. The corner
+         switch (PaGSwap, a slot's PaGSlotSwap) is a trigger like gray's: it turns the badge and dot
+         half a turn with a RenderTransform, which changes no layout either.
+
+         PaGParts holds every element Lua reads or writes, holds no binding and none of the game's
+         markup, and Lua reads only down from it, never up.
+
+         Colors. A brush the XAML created cannot be recolored from Lua: the engine refuses the write,
+         without a word for a cell's own brush and with a Noesis "read-only state" error for a shared
+         resource. It can be handed around, though: the six palette brushes below are
+         shared resources, each cell exposes them through PaGColors (a slot through PaGSlotColors), and
+         Lua assigns the brush of the tier's configured color to the badge and the dot. The glow's
+         fades are shared the same way, a pair per color (PaG.Glow.*, exposed through PaGGlowColors).
+         The glow, badge and dot start with no brush, so they draw nothing until Lua hands them one;
+         the shade's brush is fixed.
+
+         Equipment slots (Q13). The helmet, body, gloves, boots and four weapon slots get an overlay
+         found the same way (PaGSlotRoot). PaGSlotParts holds the badge and what Lua reads, and Lua
+         reads the item's id from the slot's data (DataContext.Item.EntityUUID). Lua judges the item
+         for the same one character as the cells and shows the tier's badge icon in the tier color
+         for Bad and Not Ideal only; Good gets no mark there.
+
+         The game's keys declared again. A page reaches its panel template, and the template its item
+         style and the slot, through StaticResource, resolved inside the game's own files, so a panel
+         template keeps the game's slot unless it is declared again too. Below the slot come the item
+         styles (the game's two and PaG's), then CharacterInventoryTemplate, PopOutInventoryTemplate,
+         ContainerInventoryTemplate, PartyCharacterInventoryTemplate and PartyHolderStyle, copied
+         from the game's CharacterSheetTemplates_k.xaml. The first four point their ItemContainerStyle
+         at PaG's item styles; PartyHolderStyle is unchanged and is declared again only to reach PaG's
+         PartyCharacterInventoryTemplate. At the end, PaG adds its own equipment slot style
+         (PaG.EquipmentSlotStyle) and declares the Helmet and CharacterEquipment templates again for
+         the same reason. The copies are Larian's, not GPLv3 (NOTICE).
+         Better Inventory UI declares all of these keys and BCPP the CharacterSheetTemplates_k ones,
+         with the game's content but for BCPP's CharacterEquipmentTemplate (an unused margin and no
+         instrument Tag): load this mod after both. -->
+
+    <!-- badge icons: game art used as alpha masks, so a badge takes its tier's color. One per E.Icon
+         member, in its order: Good's four, Not Ideal's three, Bad's three (Settings.ICONS), then the
+         AC shield, which no tier offers: it stands in for the tier's icon on a mark that only Armor
+         vs AC bonuses causes gave (ac_shield_badge) -->
+    <ImageBrush x:Key="PaG.Mask.Check" ImageSource="pack://application:,,,/Core;component/Assets/CC/tab_icoCheck_d.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.CheckThin" ImageSource="pack://application:,,,/Core;component/Assets/Reactions_c/c_ico_reactionOn_active.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.CheckGlow" ImageSource="pack://application:,,,/Core;component/Assets/Shared_c/c_tick_h.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.Star" ImageSource="pack://application:,,,/Core;component/Assets/CharacterCreation/ico_proficiency.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.Warning" ImageSource="pack://application:,,,/Core;component/Assets/Tooltips_c/c_ico_warningSoft.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.Exclamation" ImageSource="pack://application:,,,/Core;component/Assets/CharacterCreation_c/ico_errorExclamation.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.Minus" ImageSource="pack://application:,,,/Core;component/Assets/CC/ico_min_d.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.Cross" ImageSource="pack://application:,,,/Core;component/Assets/CharacterCreation/remover_spellslot.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.CrossThin" ImageSource="pack://application:,,,/Core;component/Assets/Buttons/ico_btn_cross_d.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.Skull" ImageSource="pack://application:,,,/Core;component/Assets/Overhead/PassiveRoll/ico_died.png" Stretch="Uniform"/>
+    <ImageBrush x:Key="PaG.Mask.Shield" ImageSource="pack://application:,,,/Core;component/Assets/Tooltips/ico_AC.png" Stretch="Uniform"/>
+    <!-- the palette: the six colors a tier can take (E.Color), one shared brush each, handed to a
+         cell's marks by Lua. Lua cannot recolor them, so these are the colors shown -->
+    <SolidColorBrush x:Key="PaG.Brush.Red" Color="#FFE62626"/>
+    <SolidColorBrush x:Key="PaG.Brush.Orange" Color="#FFFF991A"/>
+    <SolidColorBrush x:Key="PaG.Brush.Yellow" Color="#FFFFD92E"/>
+    <SolidColorBrush x:Key="PaG.Brush.Green" Color="#FF33CC4D"/>
+    <SolidColorBrush x:Key="PaG.Brush.Blue" Color="#FF3399FF"/>
+    <SolidColorBrush x:Key="PaG.Brush.Purple" Color="#FFB35CFF"/>
+    <!-- the dim shade (user rule 2): PaGShade's fill, never handed to a mark -->
+    <SolidColorBrush x:Key="PaG.Brush.Shade" Color="#66222222"/>
+    <!-- the glow's fades (D29), two per palette color in E.Color order: Sides runs across the cell,
+         Ends down it. Each is 0.75 alpha (BF) at both edges and clear 12% of the art (9.6 of the
+         glow's 76 units: 0.1263) in, then clear to the far 12%. The clear stops keep the color, so the
+         fade only loses alpha and never darkens. Offsets are relative, so the fade scales with the
+         cell. Lua hands a pair to the glow's two rectangles; it never builds a brush -->
+    <LinearGradientBrush x:Key="PaG.Glow.Red.Sides" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#BFE62626" Offset="0"/>
+        <GradientStop Color="#00E62626" Offset="0.1263"/>
+        <GradientStop Color="#00E62626" Offset="0.8737"/>
+        <GradientStop Color="#BFE62626" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Red.Ends" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#BFE62626" Offset="0"/>
+        <GradientStop Color="#00E62626" Offset="0.1263"/>
+        <GradientStop Color="#00E62626" Offset="0.8737"/>
+        <GradientStop Color="#BFE62626" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Orange.Sides" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#BFFF991A" Offset="0"/>
+        <GradientStop Color="#00FF991A" Offset="0.1263"/>
+        <GradientStop Color="#00FF991A" Offset="0.8737"/>
+        <GradientStop Color="#BFFF991A" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Orange.Ends" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#BFFF991A" Offset="0"/>
+        <GradientStop Color="#00FF991A" Offset="0.1263"/>
+        <GradientStop Color="#00FF991A" Offset="0.8737"/>
+        <GradientStop Color="#BFFF991A" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Yellow.Sides" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#BFFFD92E" Offset="0"/>
+        <GradientStop Color="#00FFD92E" Offset="0.1263"/>
+        <GradientStop Color="#00FFD92E" Offset="0.8737"/>
+        <GradientStop Color="#BFFFD92E" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Yellow.Ends" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#BFFFD92E" Offset="0"/>
+        <GradientStop Color="#00FFD92E" Offset="0.1263"/>
+        <GradientStop Color="#00FFD92E" Offset="0.8737"/>
+        <GradientStop Color="#BFFFD92E" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Green.Sides" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#BF33CC4D" Offset="0"/>
+        <GradientStop Color="#0033CC4D" Offset="0.1263"/>
+        <GradientStop Color="#0033CC4D" Offset="0.8737"/>
+        <GradientStop Color="#BF33CC4D" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Green.Ends" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#BF33CC4D" Offset="0"/>
+        <GradientStop Color="#0033CC4D" Offset="0.1263"/>
+        <GradientStop Color="#0033CC4D" Offset="0.8737"/>
+        <GradientStop Color="#BF33CC4D" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Blue.Sides" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#BF3399FF" Offset="0"/>
+        <GradientStop Color="#003399FF" Offset="0.1263"/>
+        <GradientStop Color="#003399FF" Offset="0.8737"/>
+        <GradientStop Color="#BF3399FF" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Blue.Ends" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#BF3399FF" Offset="0"/>
+        <GradientStop Color="#003399FF" Offset="0.1263"/>
+        <GradientStop Color="#003399FF" Offset="0.8737"/>
+        <GradientStop Color="#BF3399FF" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Purple.Sides" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#BFB35CFF" Offset="0"/>
+        <GradientStop Color="#00B35CFF" Offset="0.1263"/>
+        <GradientStop Color="#00B35CFF" Offset="0.8737"/>
+        <GradientStop Color="#BFB35CFF" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PaG.Glow.Purple.Ends" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#BFB35CFF" Offset="0"/>
+        <GradientStop Color="#00B35CFF" Offset="0.1263"/>
+        <GradientStop Color="#00B35CFF" Offset="0.8737"/>
+        <GradientStop Color="#BFB35CFF" Offset="1"/>
+    </LinearGradientBrush>
+
+    <!-- the game's slot (Presenter, its style and its three triggers) inside PaG's cell grid. The item
+         templates and the slot style are StaticResource, as in vanilla: resolved once at load, not per
+         cell -->
+    <DataTemplate x:Key="Template.InventorySlot" DataType="ls:VMInventorySlot">
+        <Grid x:Name="PaGRoot" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- [1] the art: the game's slot. Style.GameObject sizes the Presenter and the root grid takes
+                 that size, so the marks need no size of their own. Lua never reaches it; the gray
+                 trigger below gives it its effect. It takes no mouse input: PaG's item styles below
+                 drop the game's IsHitTestVisible="False" around the cell so [3] can, and this keeps
+                 the art out of hit testing as before -->
+            <ContentPresenter x:Name="Presenter" Content="{Binding Object}" Style="{StaticResource Style.GameObject}" IsHitTestVisible="False"/>
+
+            <!-- [2] PaGParts: everything Lua reads or writes. It holds no binding and none of the game's
+                 markup, and Lua reads only down from it. Lua reaches each part by child index from
+                 here, so the order below is part of the contract (HubConstants.lua C.PART) -->
+            <Grid x:Name="PaGParts" IsHitTestVisible="False">
+                <!-- [1] dim: a dark shade over the art, under the other marks -->
+                <Rectangle x:Name="PaGShade" Fill="{StaticResource PaG.Brush.Shade}" Opacity="0"/>
+
+                <!-- [2] the marks. Nothing here is bound and no brush is set: Lua hands a mark the
+                     tier's shared brush, then shows it -->
+                <Grid x:Name="PaGMarks">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="80*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="80*"/>
+                        <RowDefinition Height="6*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- [2.1] inward glow (D29): the tier color fading in from inside the rarity frame. The
+                         frame's line is the art's outer 2 of 80 units, so the glow starts 2 in and the
+                         line keeps its color. [2.1.1] fades in from the left and right edges, [2.1.2]
+                         from the top and bottom, each to nothing 12% of the art deep; the corners get
+                         both. Star sizes and relative brushes: it scales with the cell -->
+                    <Grid x:Name="PaGGlow" Grid.Column="1" Grid.Row="1" Opacity="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="76*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="76*"/>
+                            <RowDefinition Height="2*"/>
+                        </Grid.RowDefinitions>
+                        <Rectangle x:Name="PaGGlowSides" Grid.Column="1" Grid.Row="1"/>
+                        <Rectangle x:Name="PaGGlowEnds" Grid.Column="1" Grid.Row="1"/>
+                    </Grid>
+
+                    <!-- [2.2] badge: a dark disc in the top-left corner with the tier's icon in the tier color.
+                         [2.2.1.2] to [2.2.1.12] are the icons in E.Icon order, the AC shield last; Lua
+                         shows the one the settings name (or the shield) and keeps the others hidden. The corner switch below turns the
+                         badge half a turn to the bottom-right and its disc back upright -->
+                    <Grid x:Name="PaGBadge" Grid.Column="1" Grid.Row="1" Opacity="0" RenderTransformOrigin="0.5,0.5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35*" MinWidth="22"/>
+                            <ColumnDefinition Width="65*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35*" MinHeight="22"/>
+                            <RowDefinition Height="65*"/>
+                        </Grid.RowDefinitions>
+                        <Grid x:Name="PaGBadgeDisc" RenderTransformOrigin="0.5,0.5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15*"/>
+                                <ColumnDefinition Width="70*"/>
+                                <ColumnDefinition Width="15*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="70*"/>
+                                <RowDefinition Height="15*"/>
+                            </Grid.RowDefinitions>
+                            <Ellipse Grid.ColumnSpan="3" Grid.RowSpan="3" Fill="#B0000000"/>
+                            <Rectangle x:Name="PaGBadgeCheck" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Check}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeCheckThin" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.CheckThin}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeCheckGlow" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.CheckGlow}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeStar" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Star}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeWarning" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Warning}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeExclamation" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Exclamation}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeMinus" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Minus}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeCross" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Cross}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeCrossThin" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.CrossThin}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeSkull" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Skull}" Opacity="0"/>
+                            <Rectangle x:Name="PaGBadgeShield" Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Shield}" Opacity="0"/>
+                        </Grid>
+                    </Grid>
+
+                    <!-- [2.3] dot: a small disc of the tier color in the bottom-right corner (top-left
+                         when the corner switch turns it half a turn) -->
+                    <Grid x:Name="PaGDot" Grid.Column="1" Grid.Row="1" Opacity="0" RenderTransformOrigin="0.5,0.5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75*"/>
+                            <ColumnDefinition Width="25*" MinWidth="12"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="75*"/>
+                            <RowDefinition Height="25*" MinHeight="12"/>
+                        </Grid.RowDefinitions>
+                        <Ellipse x:Name="PaGDotShape" Grid.Column="1" Grid.Row="1" Stroke="#E0000000" StrokeThickness="1.5"/>
+                    </Grid>
+                </Grid>
+
+                <!-- [3] what Lua reads, never shown -->
+                <Grid x:Name="PaGIO" Visibility="Collapsed">
+                    <!-- [3.1] the label Lua gives the cell on its first write: the key of what Lua knows it shows -->
+                    <TextBlock x:Name="PaGId" Text="-"/>
+                    <!-- [3.2] the gray switch: Lua writes its Opacity (1 on, 0 off), the template trigger below reads it -->
+                    <Grid x:Name="PaGGray" Opacity="0"/>
+                    <!-- [3.3] the palette, one holder per color in E.Color order, where Lua can read a
+                         brush and hand it to the marks -->
+                    <Grid x:Name="PaGColors">
+                        <Rectangle x:Name="PaGColorRed" Fill="{StaticResource PaG.Brush.Red}"/>
+                        <Rectangle x:Name="PaGColorOrange" Fill="{StaticResource PaG.Brush.Orange}"/>
+                        <Rectangle x:Name="PaGColorYellow" Fill="{StaticResource PaG.Brush.Yellow}"/>
+                        <Rectangle x:Name="PaGColorGreen" Fill="{StaticResource PaG.Brush.Green}"/>
+                        <Rectangle x:Name="PaGColorBlue" Fill="{StaticResource PaG.Brush.Blue}"/>
+                        <Rectangle x:Name="PaGColorPurple" Fill="{StaticResource PaG.Brush.Purple}"/>
+                    </Grid>
+                    <!-- [3.4] the corner switch: Lua writes its Opacity (1 swapped, 0 not), the template
+                         trigger below reads it -->
+                    <Grid x:Name="PaGSwap" Opacity="0"/>
+                    <!-- [3.5] the glow's fades, a Sides and an Ends holder per color in E.Color order,
+                         where Lua can read the pair and hand it to the glow -->
+                    <Grid x:Name="PaGGlowColors">
+                        <Rectangle x:Name="PaGGlowSidesRed" Fill="{StaticResource PaG.Glow.Red.Sides}"/>
+                        <Rectangle x:Name="PaGGlowEndsRed" Fill="{StaticResource PaG.Glow.Red.Ends}"/>
+                        <Rectangle x:Name="PaGGlowSidesOrange" Fill="{StaticResource PaG.Glow.Orange.Sides}"/>
+                        <Rectangle x:Name="PaGGlowEndsOrange" Fill="{StaticResource PaG.Glow.Orange.Ends}"/>
+                        <Rectangle x:Name="PaGGlowSidesYellow" Fill="{StaticResource PaG.Glow.Yellow.Sides}"/>
+                        <Rectangle x:Name="PaGGlowEndsYellow" Fill="{StaticResource PaG.Glow.Yellow.Ends}"/>
+                        <Rectangle x:Name="PaGGlowSidesGreen" Fill="{StaticResource PaG.Glow.Green.Sides}"/>
+                        <Rectangle x:Name="PaGGlowEndsGreen" Fill="{StaticResource PaG.Glow.Green.Ends}"/>
+                        <Rectangle x:Name="PaGGlowSidesBlue" Fill="{StaticResource PaG.Glow.Blue.Sides}"/>
+                        <Rectangle x:Name="PaGGlowEndsBlue" Fill="{StaticResource PaG.Glow.Blue.Ends}"/>
+                        <Rectangle x:Name="PaGGlowSidesPurple" Fill="{StaticResource PaG.Glow.Purple.Sides}"/>
+                        <Rectangle x:Name="PaGGlowEndsPurple" Fill="{StaticResource PaG.Glow.Purple.Ends}"/>
+                    </Grid>
+                    <!-- [3.6] Lua writes the badge's and dot's tooltip text (Why.lua), one cause per line;
+                         empty: no tooltip (a Good item gets none) -->
+                    <TextBlock x:Name="PaGWhy" Text=""/>
+                    <!-- [3.7] to [3.14] the same text split for the tooltip's layout (PaGHit): [3.7] its
+                         first line, the title, and [3.8] to [3.14] one cause each, "" past the last. Lua
+                         writes them before PaGWhy, so a tooltip never shows another item's lines -->
+                    <TextBlock x:Name="PaGWhyTitle" Text=""/>
+                    <TextBlock x:Name="PaGWhy1" Text=""/>
+                    <TextBlock x:Name="PaGWhy2" Text=""/>
+                    <TextBlock x:Name="PaGWhy3" Text=""/>
+                    <TextBlock x:Name="PaGWhy4" Text=""/>
+                    <TextBlock x:Name="PaGWhy5" Text=""/>
+                    <TextBlock x:Name="PaGWhy6" Text=""/>
+                    <TextBlock x:Name="PaGWhy7" Text=""/>
+                </Grid>
+            </Grid>
+
+            <!-- [3] PaGHit: the badge's and dot's tooltip. PaGParts takes no mouse input, so a clear target
+                 over each mark takes the mouse for it, and PaGHit, their parent, carries the one tooltip
+                 both show (a tooltip is found from the element under the mouse up). Lua never reaches it.
+                 No background, no mouse of its own; a target takes the mouse only while its mark shows and
+                 PaGWhy is not empty (the triggers below), so the rest of the cell keeps the item's
+                 tooltip, clicks and drags. Each target is an empty, clear ls:LSEntityObject for the item, bound
+                 as the cell root is (DataContext, EntityRef, the root's Context; no context menu of its own)
+                 and clipped to a disc that a Viewbox stretches over the mark's corner cell, so a press on a
+                 mark lands on the item's element, as elsewhere on the cell (G24). The tooltip shows
+                 the mark, the title and one bulleted row per cause (PaGWhyTitle, PaGWhy1 to PaGWhy7). The
+                 mark is the badge, or the dot while only the dot shows: PaGBadgeHit takes the mouse
+                 exactly while the badge shows with a text. Same geometry as PaGMarks; the corner switch
+                 turns it with the marks. -->
+            <Grid x:Name="PaGHit" ToolTipService.ShowOnDisabled="True">
+                <Grid.ToolTip>
+                    <ls:LSTooltip>
+                        <StackPanel>
+                            <!-- the mark, then the title ("Not Ideal for Shadowheart") -->
+                            <DockPanel Margin="0,0,0,12">
+                                <Grid DockPanel.Dock="Left" Width="48" Height="48" Margin="0,0,16,0" VerticalAlignment="Center">
+                                    <!-- the badge, or the dot while only the dot shows: the badge's target takes the mouse
+                                         exactly while the badge shows with a text -->
+                                    <Grid Visibility="{Binding IsHitTestVisible, ElementName=PaGBadgeHit, Converter={StaticResource BoolToVisibleConverter}}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="15*"/>
+                                            <ColumnDefinition Width="70*"/>
+                                            <ColumnDefinition Width="15*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="15*"/>
+                                            <RowDefinition Height="70*"/>
+                                            <RowDefinition Height="15*"/>
+                                        </Grid.RowDefinitions>
+                                        <Ellipse Grid.ColumnSpan="3" Grid.RowSpan="3" Fill="#B0000000"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Check}" Fill="{Binding Fill, ElementName=PaGBadgeCheck}" Opacity="{Binding Opacity, ElementName=PaGBadgeCheck}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.CheckThin}" Fill="{Binding Fill, ElementName=PaGBadgeCheckThin}" Opacity="{Binding Opacity, ElementName=PaGBadgeCheckThin}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.CheckGlow}" Fill="{Binding Fill, ElementName=PaGBadgeCheckGlow}" Opacity="{Binding Opacity, ElementName=PaGBadgeCheckGlow}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Star}" Fill="{Binding Fill, ElementName=PaGBadgeStar}" Opacity="{Binding Opacity, ElementName=PaGBadgeStar}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Warning}" Fill="{Binding Fill, ElementName=PaGBadgeWarning}" Opacity="{Binding Opacity, ElementName=PaGBadgeWarning}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Exclamation}" Fill="{Binding Fill, ElementName=PaGBadgeExclamation}" Opacity="{Binding Opacity, ElementName=PaGBadgeExclamation}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Minus}" Fill="{Binding Fill, ElementName=PaGBadgeMinus}" Opacity="{Binding Opacity, ElementName=PaGBadgeMinus}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Cross}" Fill="{Binding Fill, ElementName=PaGBadgeCross}" Opacity="{Binding Opacity, ElementName=PaGBadgeCross}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.CrossThin}" Fill="{Binding Fill, ElementName=PaGBadgeCrossThin}" Opacity="{Binding Opacity, ElementName=PaGBadgeCrossThin}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Skull}" Fill="{Binding Fill, ElementName=PaGBadgeSkull}" Opacity="{Binding Opacity, ElementName=PaGBadgeSkull}"/>
+                                        <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Shield}" Fill="{Binding Fill, ElementName=PaGBadgeShield}" Opacity="{Binding Opacity, ElementName=PaGBadgeShield}"/>
+                                    </Grid>
+                                    <Ellipse Width="24" Height="24" Stroke="#E0000000" StrokeThickness="2" Fill="{Binding Fill, ElementName=PaGDotShape}" Visibility="{Binding IsHitTestVisible, ElementName=PaGBadgeHit, Converter={StaticResource BoolToCollapsedConverter}}"/>
+                                </Grid>
+                                <TextBlock Style="{StaticResource TooltipTitleStyle}" Margin="0" VerticalAlignment="Center" Text="{Binding Text, ElementName=PaGWhyTitle}"/>
+                            </DockPanel>
+                            <!-- one bulleted row per cause; a row with no text is collapsed -->
+                            <Grid Visibility="{Binding Text, ElementName=PaGWhy1, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGWhy1}"/>
+                            </Grid>
+                            <Grid Visibility="{Binding Text, ElementName=PaGWhy2, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGWhy2}"/>
+                            </Grid>
+                            <Grid Visibility="{Binding Text, ElementName=PaGWhy3, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGWhy3}"/>
+                            </Grid>
+                            <Grid Visibility="{Binding Text, ElementName=PaGWhy4, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGWhy4}"/>
+                            </Grid>
+                            <Grid Visibility="{Binding Text, ElementName=PaGWhy5, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGWhy5}"/>
+                            </Grid>
+                            <Grid Visibility="{Binding Text, ElementName=PaGWhy6, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGWhy6}"/>
+                            </Grid>
+                            <Grid Visibility="{Binding Text, ElementName=PaGWhy7, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGWhy7}"/>
+                            </Grid>
+                        </StackPanel>
+                    </ls:LSTooltip>
+                </Grid.ToolTip>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="80*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="80*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+
+                <!-- over the badge: PaGBadge's grid; the target's disc fills its corner cell -->
+                <Grid x:Name="PaGHitBadge" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*" MinWidth="22"/>
+                        <ColumnDefinition Width="65*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35*" MinHeight="22"/>
+                        <RowDefinition Height="65*"/>
+                    </Grid.RowDefinitions>
+                    <Viewbox Stretch="Fill">
+                        <ls:LSEntityObject x:Name="PaGBadgeHit" Width="100" Height="100" DataContext="{Binding Object}" EntityRef="{Binding EntityHandle}" Context="{Binding Context, RelativeSource={RelativeSource AncestorType={x:Type ls:LSEntityObject}}}" ls:ContextMenuService.GenerateEnabled="False" Background="Transparent" IsHitTestVisible="False">
+                            <ls:LSEntityObject.Clip>
+                                <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                            </ls:LSEntityObject.Clip>
+                        </ls:LSEntityObject>
+                    </Viewbox>
+                </Grid>
+
+                <!-- over the dot: PaGDot's grid -->
+                <Grid x:Name="PaGHitDot" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75*"/>
+                        <ColumnDefinition Width="25*" MinWidth="12"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75*"/>
+                        <RowDefinition Height="25*" MinHeight="12"/>
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Column="1" Grid.Row="1" Stretch="Fill">
+                        <ls:LSEntityObject x:Name="PaGDotHit" Width="100" Height="100" DataContext="{Binding Object}" EntityRef="{Binding EntityHandle}" Context="{Binding Context, RelativeSource={RelativeSource AncestorType={x:Type ls:LSEntityObject}}}" ls:ContextMenuService.GenerateEnabled="False" Background="Transparent" IsHitTestVisible="False">
+                            <ls:LSEntityObject.Clip>
+                                <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                            </ls:LSEntityObject.Clip>
+                        </ls:LSEntityObject>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+        </Grid>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Object.Type}" Value="Item">
+                <Setter TargetName="Presenter" Property="ContentTemplate" Value="{StaticResource Template.Item}"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Object.IsEquipment}" Value="True">
+                <Setter TargetName="Presenter" Property="ContentTemplate" Value="{StaticResource Template.ItemEquipment}"/>
+            </DataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding Object.Type}" Value="Item"/>
+                    <Condition Binding="{Binding Object.IsContainer}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <Setter TargetName="Presenter" Property="ContentTemplate" Value="{StaticResource Template.ItemContainer}"/>
+            </MultiDataTrigger>
+            <!-- PaG gray: while Lua shows PaGGray, the art loses most of its color, rarity frame included -->
+            <Trigger SourceName="PaGGray" Property="Opacity" Value="1">
+                <Setter TargetName="Presenter" Property="Effect">
+                    <Setter.Value>
+                        <ls:SaturationEffect Saturation="0.1"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <!-- PaG (mark tooltips): each hover target takes the mouse only while its mark shows -->
+            <Trigger SourceName="PaGBadge" Property="Opacity" Value="1">
+                <Setter TargetName="PaGBadgeHit" Property="IsHitTestVisible" Value="True"/>
+            </Trigger>
+            <Trigger SourceName="PaGDot" Property="Opacity" Value="1">
+                <Setter TargetName="PaGDotHit" Property="IsHitTestVisible" Value="True"/>
+            </Trigger>
+            <!-- PaG (mark tooltips): no text, no tooltip (a Good item, tooltips off, or the text could not
+                 be worded). These come after the marks' triggers, so they win; null as well as empty,
+                 as the game's own filter boxes test -->
+            <Trigger SourceName="PaGWhy" Property="Text" Value="">
+                <Setter TargetName="PaGBadgeHit" Property="IsHitTestVisible" Value="False"/>
+                <Setter TargetName="PaGDotHit" Property="IsHitTestVisible" Value="False"/>
+            </Trigger>
+            <Trigger SourceName="PaGWhy" Property="Text" Value="{x:Null}">
+                <Setter TargetName="PaGBadgeHit" Property="IsHitTestVisible" Value="False"/>
+                <Setter TargetName="PaGDotHit" Property="IsHitTestVisible" Value="False"/>
+            </Trigger>
+            <!-- PaG corners: while Lua shows PaGSwap, the badge and the dot turn half a turn about the
+                 cell's center, so the badge sits bottom-right and the dot top-left. The disc turns back
+                 about its own center, so the icon stays upright. Their hover targets turn with them.
+                 Render-only: no layout changes -->
+            <Trigger SourceName="PaGSwap" Property="Opacity" Value="1">
+                <Setter TargetName="PaGBadge" Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="180"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter TargetName="PaGBadgeDisc" Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="180"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter TargetName="PaGDot" Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="180"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter TargetName="PaGHitBadge" Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="180"/>
+                    </Setter.Value>
+                </Setter>
+                <Setter TargetName="PaGHitDot" Property="RenderTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="180"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+    <!-- PaG (mark tooltips): the game's item styles wrap each cell's content in a ContentPresenter
+         with IsHitTestVisible="False", so nothing in Template.InventorySlot could take the mouse. The
+         styles below are the game's, copied as they are but for the one change each names, mostly that
+         attribute removed (the cell's own Presenter and PaGParts still take no mouse input; only
+         PaGHit's targets can). They sit above their users: a StaticResource must be declared above its
+         first use. One list is not reached: the alchemy pop-out's ingredient grid
+         (CharacterSheetTemplates_k.xaml:5106-5158) keeps its wall. Its item style is inline in
+         PopOutAlchemyTemplate (:5068), a local resource of AlchemyPanelTemplate (:4503-6002), so
+         only a 1500-line copy of that template could reach it; marks there get no tooltip -->
+
+    <!-- PaG: Trade.xaml:276-305, the template of the page's ListItemStyle (its Template setter, :274);
+         one change: its ContentPresenter (:292) no longer sets IsHitTestVisible="False" -->
+    <ControlTemplate x:Key="PaG.TradeItemTemplate" TargetType="ListBoxItem">
+        <ls:LSEntityObject x:Name="CellRoot" Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" ls:ContextMenuService.GenerateEnabled="False" DataContext="{Binding Object}" EntityRef="{Binding EntityHandle}" Background="Transparent" ToolTipService.Placement="Right">
+            <ls:LSEntityObject.ToolTip>
+                <ls:LSTooltip Content="{Binding DataContext.Object,RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+            </ls:LSEntityObject.ToolTip>
+
+            <ls:AttachedProperties.AutomationId>
+                <MultiBinding StringFormat="{}InventoryItem_{0}">
+                    <Binding Path="EntityUUID"/>
+                </MultiBinding>
+            </ls:AttachedProperties.AutomationId>
+
+            <b:Interaction.Behaviors>
+                <ls:ContextMenuFillBehavior Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" Player="{Binding DataContext.CurrentPlayer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" TargetObject="{Binding .}" Source="{Binding SelectedItems,RelativeSource={RelativeSource AncestorType=ListBox}}" FillCommand="{Binding DataContext.ContextActionMenuFill, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+            </b:Interaction.Behaviors>
+
+            <ContentPresenter ls:ElementCacheHelper.GroupId="{TemplateBinding ls:ElementCacheHelper.GroupId}"/>
+            <Image x:Name="SelectedImg" Source="{StaticResource InvSlot_Selector}" IsHitTestVisible="False" Visibility="Hidden" Opacity="1.0" />
+        </ls:LSEntityObject>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible" />
+                <Setter TargetName="SelectedImg" Property="Opacity" Value="0.8"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible" />
+                <Setter TargetName="SelectedImg" Property="Opacity" Value="1.0"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- PaG: DataTemplates.xaml:521-586 verbatim (it keeps its own IsHitTestVisible="False", :566); one
+         change: a style trigger gives a cell whose context is Trade PaG.TradeItemTemplate. Trade.xaml's
+         page-local ListItemStyle (:271, BasedOn this key, context Trade) sets its own Template, which a
+         style trigger outranks, so the barter and trader grids (Trade.xaml:717, 781, 891) get it.
+         Context Trade also reaches InvContainerListBoxItemStyle (a bag opened from trade); that
+         style undoes this trigger with its own, below -->
+    <Style x:Key="BaseInvContainerItemStyle" TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="noesis:StyleInteraction.Behaviors">
+            <Setter.Value>
+                <noesis:StyleBehaviorCollection>
+                    <ls:MouseModifyBehavior SuppressMouseEvents="{Binding Path=(ls:MultiSelect.IsEnabled) ,RelativeSource={RelativeSource AncestorType=ListBoxItem}}"/>
+                </noesis:StyleBehaviorCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="noesis:StyleInteraction.Triggers">
+	        <Setter.Value>
+		        <noesis:StyleTriggerCollection>
+			        <b:EventTrigger EventName="MouseEnter">
+				        <ls:LSPlaySound Sound="UI_Shared_Hover"/>
+			        </b:EventTrigger>
+
+			        <b:EventTrigger EventName="MouseDoubleClick" >
+				        <b:InvokeCommandAction Command="{Binding DataContext.UseGameObject, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" />
+			        </b:EventTrigger>
+		        </noesis:StyleTriggerCollection>
+	        </Setter.Value>
+        </Setter>
+        <Setter Property="ls:ContextMenuService.Context" Value="Inventory"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <ls:LSEntityObject x:Name="CellRoot" Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" ls:ContextMenuService.GenerateEnabled="False" DataContext="{Binding Object}" EntityRef="{Binding EntityHandle}" Background="Transparent" ToolTipService.Placement="Right">
+                        <ls:LSEntityObject.ToolTip>
+                            <ls:LSTooltip Content="{Binding DataContext.Object,RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                        </ls:LSEntityObject.ToolTip>
+	                    <b:Interaction.Behaviors>
+                            <ls:ContextMenuFillBehavior Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" Player="{Binding DataContext.CurrentPlayer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" TargetObject="{Binding .}" Source="{Binding SelectedItems,RelativeSource={RelativeSource AncestorType=ListBox}}" FillCommand="{Binding DataContext.ContextActionMenuFill, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+	                    </b:Interaction.Behaviors>
+                        <b:Interaction.Triggers>
+                            <b:EventTrigger EventName="MouseEnter">
+                                <ls:LSPlaySound Sound="UI_Shared_Hover"/>
+                            </b:EventTrigger>
+                            <b:EventTrigger EventName="DragEnter">
+                                <b:InvokeCommandAction Command="{Binding DataContext.UpdateDragErrorCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Path=DataContext.Object, RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            </b:EventTrigger>
+                            <b:EventTrigger EventName="DragLeave">
+                                <b:InvokeCommandAction Command="{Binding DataContext.UpdateDragErrorCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{x:Null}"/>
+                            </b:EventTrigger>
+                        </b:Interaction.Triggers>
+                        <ContentPresenter  IsHitTestVisible="False"/>
+                        <Image x:Name="SelectedImg" Source="{StaticResource InvSlot_Selector}" IsHitTestVisible="False" Visibility="Hidden" Opacity="1.0" />
+                        <Rectangle x:Name="LockForeground" Fill="{StaticResource LS_DisabledPanelColor}" Visibility="Collapsed"/>
+                    </ls:LSEntityObject>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="SelectedImg" Property="Opacity" Value="0.8"/>
+                        </Trigger>
+	                    <Trigger Property="IsMouseOver" Value="True">
+		                    <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible" />
+		                    <Setter TargetName="SelectedImg" Property="Opacity" Value="1.0"/>
+	                    </Trigger>
+                        <DataTrigger Binding="{Binding Object.IsGroupingBlocked}" Value="True">
+                            <Setter TargetName="LockForeground" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="ls:ContextMenuService.Context" Value="Trade">
+                <Setter Property="Template" Value="{StaticResource PaG.TradeItemTemplate}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- PaG: Trade.xaml:271-353 (the page's ListItemStyle, for the party side of trade); one change: its
+         Template is PaG.TradeItemTemplate. PartyCharacterInventoryTemplate below uses it -->
+    <Style x:Key="PaG.TradeItemStyle" TargetType="ListBoxItem" BasedOn="{StaticResource BaseInvContainerItemStyle}">
+        <Setter Property="ls:ContextMenuService.Context" Value="Trade"/>
+        <Setter Property="ls:ElementCacheHelper.GroupId" Value="{Binding (ls:ElementCacheHelper.GroupId), RelativeSource={RelativeSource TemplatedParent}}"/>
+        <Setter Property="Template" Value="{StaticResource PaG.TradeItemTemplate}"/>
+        <Setter Property="noesis:StyleInteraction.Triggers">
+            <Setter.Value>
+                <noesis:StyleTriggerCollection>
+                    <b:EventTrigger EventName="MouseEnter">
+                        <b:InvokeCommandAction IsEnabled="{Binding Object.IsNew}" Command="{Binding DataContext.ClearItemNewFlag, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}"/>
+                        <ls:LSPlaySound Sound="UI_Shared_Hover"/>
+                    </b:EventTrigger>
+
+                    <b:EventTrigger EventName="MouseDoubleClick">
+                        <b:Interaction.Behaviors>
+                            <b:ConditionBehavior>
+                                <b:ConditionalExpression>
+                                    <b:ComparisonCondition LeftOperand="{Binding Object.Inventories.Count}" Operator="Equal" RightOperand="0"/>
+                                    <b:ComparisonCondition LeftOperand="{Binding DataContext.Mode, ElementName=Trade}" Operator="Equal" RightOperand="Trade"/>
+                                </b:ConditionalExpression>
+                            </b:ConditionBehavior>
+                        </b:Interaction.Behaviors>
+                        <b:InvokeCommandAction Command="{Binding DataContext.TradeItemCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" />
+                    </b:EventTrigger>
+
+                    <b:EventTrigger EventName="MouseDoubleClick">
+                        <b:Interaction.Behaviors>
+                            <b:ConditionBehavior>
+                                <b:ConditionalExpression>
+                                    <b:ComparisonCondition LeftOperand="{Binding Object.Inventories.Count}" Operator="Equal" RightOperand="0"/>
+                                    <b:ComparisonCondition LeftOperand="{Binding DataContext.Mode, ElementName=Trade}" Operator="Equal" RightOperand="Barter"/>
+                                </b:ConditionalExpression>
+                            </b:ConditionBehavior>
+                        </b:Interaction.Behaviors>
+                        <b:InvokeCommandAction Command="{Binding DataContext.MoveTradeItem, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" />
+                    </b:EventTrigger>
+
+                    <b:EventTrigger EventName="MouseDoubleClick">
+                        <b:Interaction.Behaviors>
+                            <b:ConditionBehavior>
+                                <b:ConditionalExpression>
+                                    <b:ComparisonCondition LeftOperand="{Binding Object.Inventories.Count}" Operator="NotEqual" RightOperand="0"/>
+                                </b:ConditionalExpression>
+                            </b:ConditionBehavior>
+                        </b:Interaction.Behaviors>
+                        <b:InvokeCommandAction Command="{Binding DataContext.UseGameObject, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" />
+                    </b:EventTrigger>
+                </noesis:StyleTriggerCollection>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- PaG: DataTemplates.xaml:547-583, BaseInvContainerItemStyle's Template (its setter, :545), which
+         InvContainerListBoxItemStyle inherits, keyed so the style below can name it twice; one change:
+         its ContentPresenter (:566) no longer sets IsHitTestVisible="False" -->
+    <ControlTemplate x:Key="PaG.InvContainerItemTemplate" TargetType="ListBoxItem">
+        <ls:LSEntityObject x:Name="CellRoot" Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" ls:ContextMenuService.GenerateEnabled="False" DataContext="{Binding Object}" EntityRef="{Binding EntityHandle}" Background="Transparent" ToolTipService.Placement="Right">
+            <ls:LSEntityObject.ToolTip>
+                <ls:LSTooltip Content="{Binding DataContext.Object,RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+            </ls:LSEntityObject.ToolTip>
+	        <b:Interaction.Behaviors>
+                <ls:ContextMenuFillBehavior Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" Player="{Binding DataContext.CurrentPlayer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" TargetObject="{Binding .}" Source="{Binding SelectedItems,RelativeSource={RelativeSource AncestorType=ListBox}}" FillCommand="{Binding DataContext.ContextActionMenuFill, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+	        </b:Interaction.Behaviors>
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="MouseEnter">
+                    <ls:LSPlaySound Sound="UI_Shared_Hover"/>
+                </b:EventTrigger>
+                <b:EventTrigger EventName="DragEnter">
+                    <b:InvokeCommandAction Command="{Binding DataContext.UpdateDragErrorCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Path=DataContext.Object, RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                </b:EventTrigger>
+                <b:EventTrigger EventName="DragLeave">
+                    <b:InvokeCommandAction Command="{Binding DataContext.UpdateDragErrorCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{x:Null}"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+            <ContentPresenter/>
+            <Image x:Name="SelectedImg" Source="{StaticResource InvSlot_Selector}" IsHitTestVisible="False" Visibility="Hidden" Opacity="1.0" />
+            <Rectangle x:Name="LockForeground" Fill="{StaticResource LS_DisabledPanelColor}" Visibility="Collapsed"/>
+        </ls:LSEntityObject>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible" />
+                <Setter TargetName="SelectedImg" Property="Opacity" Value="0.8"/>
+            </Trigger>
+	        <Trigger Property="IsMouseOver" Value="True">
+		        <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible" />
+		        <Setter TargetName="SelectedImg" Property="Opacity" Value="1.0"/>
+	        </Trigger>
+            <DataTrigger Binding="{Binding Object.IsGroupingBlocked}" Value="True">
+                <Setter TargetName="LockForeground" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- PaG: DataTemplates.xaml:588-630 (a shared key: Container.xaml:426 and Better Containers use it);
+         two changes: its Template (inherited, DT:545-585) is PaG.InvContainerItemTemplate, and a style
+         trigger sets that Template again when its context is Trade. A bag opened from trade binds
+         ContainerContext Trade (Container.xaml:143, 526), which would fire BaseInvContainerItemStyle's
+         Context=Trade trigger; a derived style's triggers follow its base's in the merged list, so
+         this one wins and these cells keep their own template -->
+    <Style x:Key="InvContainerListBoxItemStyle" TargetType="ListBoxItem"  BasedOn="{StaticResource BaseInvContainerItemStyle}">
+        <Setter Property="ls:ContextMenuService.Context" Value="{Binding DataContext.ContainerContext,RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+        <Setter Property="noesis:StyleInteraction.Triggers">
+	        <Setter.Value>
+                <noesis:StyleTriggerCollection>
+	                <b:EventTrigger EventName="MouseDoubleClick" >
+		                <b:Interaction.Behaviors>
+			                <b:ConditionBehavior>
+				                <b:ConditionalExpression>
+					                <b:ComparisonCondition LeftOperand="{Binding DataContext.IsSubContainer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Operator="Equal" RightOperand="False"/>
+                                    <b:ComparisonCondition LeftOperand="{Binding DataContext.ContainerContext,RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Operator="NotEqual" RightOperand="Trade"/>
+				                </b:ConditionalExpression>
+			                </b:ConditionBehavior>
+		                </b:Interaction.Behaviors>
+		                <b:InvokeCommandAction Command="{Binding DataContext.TakeItemCommand.ActionCommand,RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" />
+	                </b:EventTrigger>
+
+                    <b:EventTrigger EventName="MouseDoubleClick" >
+                        <b:Interaction.Behaviors>
+                            <b:ConditionBehavior>
+                                <b:ConditionalExpression>
+                                    <b:ComparisonCondition LeftOperand="{Binding DataContext.IsSubContainer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Operator="Equal" RightOperand="False"/>
+                                    <b:ComparisonCondition LeftOperand="{Binding DataContext.ContainerContext,RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Operator="Equal" RightOperand="Trade"/>
+                                </b:ConditionalExpression>
+                            </b:ConditionBehavior>
+                        </b:Interaction.Behaviors>
+                        <b:InvokeCommandAction Command="{Binding DataContext.UseGameObject, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" />
+                    </b:EventTrigger>
+
+	                <b:EventTrigger EventName="MouseDoubleClick" >
+		                <b:Interaction.Behaviors>
+			                <b:ConditionBehavior>
+				                <b:ConditionalExpression>
+					                <b:ComparisonCondition LeftOperand="{Binding DataContext.IsSubContainer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Operator="Equal" RightOperand="True"/>
+				                </b:ConditionalExpression>
+			                </b:ConditionBehavior>
+		                </b:Interaction.Behaviors>
+		                <b:InvokeCommandAction Command="{Binding DataContext.UseGameObject, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" />
+	                </b:EventTrigger>
+                </noesis:StyleTriggerCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template" Value="{StaticResource PaG.InvContainerItemTemplate}"/>
+        <Style.Triggers>
+            <Trigger Property="ls:ContextMenuService.Context" Value="Trade">
+                <Setter Property="Template" Value="{StaticResource PaG.InvContainerItemTemplate}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- PaG: CharacterSheetTemplates_k.xaml:6837-6904 (InvContainerItemStyle); one change: its
+         ContentPresenter (:6878) no longer sets IsHitTestVisible="False" -->
+    <Style x:Key="PaG.InvContainerItemStyle"  TargetType="ListBoxItem"   BasedOn="{StaticResource BaseInvContainerItemStyle}">
+        <Setter Property="Template" >
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <ls:LSEntityObject x:Name="invCellBase" Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" DataContext="{Binding Object}" EntityRef="{Binding EntityHandle}" Background="{TemplateBinding Background}"
+                                                               ToolTipService.Placement="Right" Tag="{Binding (ls:WidgetData.DataContext), RelativeSource={RelativeSource TemplatedParent}}"
+                                                               ls:ContextMenuService.GenerateEnabled="False" ls:MoveFocus.Focusable="True" Focusable="True">
+                        <b:Interaction.Behaviors>
+                            <ls:ContextMenuFillBehavior Context="{Binding (ls:ContextMenuService.Context) , RelativeSource={RelativeSource Mode=TemplatedParent} }" Player="{Binding (ls:WidgetData.DataContext).CurrentPlayer, RelativeSource={RelativeSource TemplatedParent}}" TargetObject="{Binding .}" Source="{Binding SelectedItems,ElementName=InventoryHolder}" FillCommand="{Binding DataContext.ContextActionMenuFill, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                        </b:Interaction.Behaviors>
+                        <b:Interaction.Triggers>
+                            <b:EventTrigger EventName="MouseEnter">
+                                <b:InvokeCommandAction IsEnabled="{Binding IsNew}" Command="{Binding (ls:WidgetData.DataContext).ClearItemNewFlag, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="{Binding .}"/>
+                            </b:EventTrigger>
+                            <b:EventTrigger EventName="MouseLeftButtonDown">
+                                <b:Interaction.Behaviors>
+                                    <b:ConditionBehavior>
+                                        <b:ConditionalExpression>
+                                            <b:ComparisonCondition LeftOperand="{Binding Path=DataContext.Object, Converter={StaticResource TypeConverter}, RelativeSource={RelativeSource Mode=TemplatedParent}}" Operator="Equal" RightOperand="ls.Character"/>
+                                        </b:ConditionalExpression>
+                                    </b:ConditionBehavior>
+                                </b:Interaction.Behaviors>
+                                <ls:LSPlaySound Sound="UI_HUD_Inventory_PickupCharacter"/>
+                            </b:EventTrigger>
+                            <b:EventTrigger EventName="DragEnter">
+                                <b:InvokeCommandAction Command="{Binding (ls:WidgetData.DataContext).UpdateDragErrorCommand, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="{Binding Path=DataContext.Object, RelativeSource={RelativeSource Mode=TemplatedParent}}"/>
+                            </b:EventTrigger>
+                            <b:EventTrigger EventName="DragLeave">
+                                <b:InvokeCommandAction Command="{Binding (ls:WidgetData.DataContext).UpdateDragErrorCommand, RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="{x:Null}"/>
+                            </b:EventTrigger>
+                        </b:Interaction.Triggers>
+
+                        <ls:AttachedProperties.AutomationId>
+                            <MultiBinding StringFormat="{}InventoryItem_{0}">
+                                <Binding Path="EntityUUID"/>
+                            </MultiBinding>
+                        </ls:AttachedProperties.AutomationId>
+
+                        <ls:LSEntityObject.ToolTip>
+                            <ls:LSTooltip Content="{Binding Path=DataContext.Object, RelativeSource={RelativeSource Mode=TemplatedParent}}" ls:TooltipExtender.Owner="{Binding Tag.CurrentPlayer.SelectedCharacter, ElementName=invCellBase}"/>
+                        </ls:LSEntityObject.ToolTip>
+                        <ContentPresenter/>
+                        <Control x:Name="EquipmentIcon" Template="{StaticResource EquippedItemIconIndicator}" Height="28" Width="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,4"/>
+                        <Control Style="{StaticResource NewInventoryCellItemStyle}" />
+                        <Image x:Name="SelectedImg" Source="{StaticResource InvSlot_Selector}" Visibility="Hidden" Stretch="Fill" IsHitTestVisible="False"/>
+                        <Rectangle x:Name="LockForeground" Fill="{StaticResource LS_DisabledPanelColor}" Visibility="Collapsed"/>
+                    </ls:LSEntityObject>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="SelectedImg" Property="Opacity" Value="0.8"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="SelectedImg" Property="Opacity" Value="1"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Object, Converter={StaticResource TypeConverter}}" Value="ls.Character">
+                            <Setter TargetName="EquipmentIcon" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Object.IsGroupingBlocked}" Value="True">
+                            <Setter TargetName="LockForeground" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- PaG: CharacterSheetTemplates_k.xaml:6906-6908 (InvWorldContainerItemStyle); one change: BasedOn
+         PaG.InvContainerItemStyle -->
+    <Style x:Key="PaG.InvWorldContainerItemStyle" TargetType="ListBoxItem" BasedOn="{StaticResource PaG.InvContainerItemStyle}">
+        <Setter Property="ls:ContextMenuService.Context" Value="WorldContainer"/>
+    </Style>
+
+    <!-- PaG: CharacterSheetTemplates_k.xaml:6005-6059 (SingleClickBaseInvContainerItemStyle, the pop-out
+         inventory); one change: its ContentPresenter (:6034) no longer sets IsHitTestVisible="False" -->
+    <Style x:Key="PaG.SingleClickItemStyle" TargetType="ListBoxItem" BasedOn="{StaticResource {x:Type ListBoxItem}}">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="noesis:StyleInteraction.Behaviors">
+            <Setter.Value>
+                <noesis:StyleBehaviorCollection>
+                    <ls:MouseModifyBehavior SuppressMouseEvents="{Binding Path=(ls:MultiSelect.IsEnabled) ,RelativeSource={RelativeSource AncestorType=ListBoxItem}}"/>
+                </noesis:StyleBehaviorCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ls:ContextMenuService.Context" Value="Inventory"/>
+        <Setter Property="Template" >
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <ls:LSButton Command="{Binding DataContext.UseGameObject, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Object}" Padding="0">
+
+                        <ls:LSEntityObject Context="Inventory" DataContext="{Binding Object}" EntityRef="{Binding EntityHandle}" x:Name="invCellBase" Background="{TemplateBinding Background}" ToolTipService.Placement="Right" Tag="{Binding DataContext,RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" ls:ContextMenuService.GenerateEnabled="False" ls:MoveFocus.Focusable="True" Focusable="True" AllowDrop="False">
+
+                            <b:Interaction.Behaviors>
+                                <ls:ContextMenuFillBehavior Context="Inventory" Player="{Binding DataContext.CurrentPlayer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" TargetObject="{Binding .}" Source="{Binding SelectedItems,ElementName=InventoryHolder}" FillCommand="{Binding DataContext.ContextActionMenuFill, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                            </b:Interaction.Behaviors>
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="MouseEnter">
+                                    <b:InvokeCommandAction IsEnabled="{Binding IsNew}" Command="{Binding DataContext.ClearItemNewFlag, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding .}"/>
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                            <ls:LSEntityObject.ToolTip>
+                                <ls:LSTooltip Content="{Binding Path=DataContext.Object, RelativeSource={RelativeSource Mode=TemplatedParent}}" ls:TooltipExtender.Owner="{Binding Tag.CurrentPlayer.SelectedCharacter, ElementName=invCellBase}"/>
+                            </ls:LSEntityObject.ToolTip>
+                            <ContentPresenter/>
+                            <Control x:Name="EquipmentIcon" Template="{StaticResource EquippedItemIconIndicator}" Height="28" Width="36" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,4"/>
+                            <Control Style="{StaticResource NewInventoryCellItemStyle}" />
+                            <Image x:Name="SelectedImg" Source="{StaticResource InvSlot_Selector}" Visibility="Hidden" Stretch="Fill" IsHitTestVisible="False"/>
+                            <Rectangle Fill="{StaticResource LS_DisabledPanelColor}" Visibility="{Binding Tag, ElementName=CharacterPanelHolder, Converter={StaticResource BoolToCollapsedConverter}}"/>
+                        </ls:LSEntityObject>
+                    </ls:LSButton>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="SelectedImg" Property="Opacity" Value="0.8"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="SelectedImg" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="SelectedImg" Property="Opacity" Value="1"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Object, Converter={StaticResource TypeConverter}}" Value="ls.Character">
+                            <Setter TargetName="EquipmentIcon" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="CharacterInventoryTemplate" TargetType="Control">
+        <Grid x:Name="CharacterPanelHolder" Tag="{Binding PlayerCharacterProperties.IsContentEditable}"
+              d:DataContext="{d:DesignInstance {x:Type ls:Character}, IsDesignTimeCreatable=True}">
+            <b:Interaction.Triggers>
+                <b:DataTrigger Binding="{Binding IsVisible, ElementName=CharacterPanelHolder}" Value="True">
+                    <!-- Tutorial UI Event - Inventory Opened-->
+                    <b:InvokeCommandAction Command="{Binding DataContext.TutorialEvent, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="e2d0dd0a-5958-454f-9ec3-0bfba58c7153"/>
+                </b:DataTrigger>
+                <b:DataTrigger Binding="{Binding IsVisible, ElementName=CharacterPanelHolder}" Value="False">
+                    <!-- Tutorial UI Event - Inventory Closed-->
+                    <b:InvokeCommandAction Command="{Binding DataContext.TutorialEvent, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="3b433da9-3bd4-4273-8e7f-f85e03ee1601"/>
+                </b:DataTrigger>
+
+            </b:Interaction.Triggers>
+
+
+            <Grid x:Name="InventoryColumnHolder" Tag="JustCreated" HorizontalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <b:Interaction.Triggers>
+                    <b:DataTrigger Binding="{Binding IsKeyboardFocusWithin, ElementName=InventoryHolder}" Value="False">
+                        <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                    </b:DataTrigger>
+                    <b:EventTrigger EventName="MouseRightButtonUp" SourceObject="{Binding RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                        <b:Interaction.Behaviors>
+                            <b:ConditionBehavior>
+                                <b:ConditionalExpression>
+                                    <b:ComparisonCondition LeftOperand="{Binding Path=IsMouseOver, ElementName=InventoryHolder}" Operator="Equal" RightOperand="False"/>
+                                </b:ConditionalExpression>
+                            </b:ConditionBehavior>
+                        </b:Interaction.Behaviors>
+                        <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+
+                <ls:LSInputBinding BoundEvent="ActionCancel" EatInput="False" IsEnabled="True" PlayerId="{Binding PlayerId, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="LSInputBindingPressed">
+                            <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ls:LSInputBinding>
+
+                <!-- Inventory -->
+                <ListBox Grid.Row="1" x:Name="InventoryHolder" ItemsSource="{Binding GeneratedItemsList, ElementName=FilteringContainerHolder}" ItemsPanel="{StaticResource InventoryGridTemplate}" SelectionMode="Extended" ls:MultiSelect.IsEnabled="False" ItemTemplate="{StaticResource Template.InventorySlot}" ls:AttachedProperties.InheritedNumber="{Binding ActualWidth, ElementName=InventoryColumnHolder}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Right" ItemContainerStyle="{StaticResource PaG.InvContainerItemStyle}">
+
+                    <b:Interaction.Behaviors>
+                        <ls:DragGenericBehavior StartDragCommand="{Binding DataContext.DragInventoryCommand , RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                        <ls:WidgetDataConnectionBehavior/>
+                    </b:Interaction.Behaviors>
+
+                    <ListBox.Template>
+                        <ControlTemplate TargetType="ListBox">
+                            <Grid x:Name="TemplateRoot" >
+                                <Border x:Name="InventoryTint" Background="{StaticResource InventoryBGShade}" Margin="-6,-4,20,-6" BorderBrush="Transparent" BorderThickness="2"/>
+                                <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Right" Style="{StaticResource NoForcedScrollViewerStyle}" HorizontalScrollBarVisibility="Disabled" Padding="0,0,0,0" >
+                                    <b:Interaction.Behaviors>
+                                        <ls:DragScrollingBehavior/>
+                                    </b:Interaction.Behaviors>
+                                    <ItemsPresenter x:Name="itemsContainer"/>
+                                </ScrollViewer>
+                                <Grid x:Name="NoItemsFoundOverlay" Visibility="Collapsed">
+                                    <Rectangle Fill="{StaticResource LS_DisabledPanelColor}"/>
+                                    <Control Template="{StaticResource NoResultsFoundTemplate}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0"/>
+                                </Grid>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding CurrentFilter, ElementName=FilteringContainerHolder, Converter={StaticResource NullToBoolTrueConverter}}" Value="False"/>
+                                        <Condition Binding="{Binding ItemsSource.Count, RelativeSource={RelativeSource Self}}" Value="0"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter TargetName="NoItemsFoundOverlay" Property="Visibility" Value="Visible"/>
+                                </MultiDataTrigger>
+
+                                <!--Hide the no items found overlay if we're attempting to drag-->
+
+                                <DataTrigger Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects.Count,Converter={StaticResource GreaterThanConverter}, ConverterParameter='0', RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="True">
+                                    <Setter TargetName="NoItemsFoundOverlay" Property="Visibility" Value="Collapsed"/>
+                                </DataTrigger>
+
+                                <DataTrigger Binding="{Binding CurrentFilter, ElementName=FilteringContainerHolder, Converter={StaticResource NullToBoolTrueConverter}}" Value="False">
+                                    <Setter TargetName="InventoryTint" Property="Background" Value="{StaticResource InventoryBGShadeFilter}"/>
+                                    <Setter TargetName="InventoryTint" Property="BorderBrush" Value="{StaticResource InventoryBGShadeFilterBorder}"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </ListBox.Template>
+                </ListBox>
+
+                <!-- Filter -->
+                <Grid x:Name="FiltersControl" Grid.Row="0" VerticalAlignment="Top" Height="88">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <b:Interaction.Behaviors>
+                        <ls:InventoriesMergerBehavior x:Name="InventoriesMerger" Inventories="{Binding Inventories}"/>
+                        <ls:InventoriesMergerBehavior x:Name="PartyInventoriesMerger" Inventories="{Binding DataContext.CurrentPlayer.PartyInventory, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                    </b:Interaction.Behaviors>
+
+                    <ls:LSComboBox x:Name="InventorySortListHolder"
+                                   Template="{StaticResource SortListTemplate}"
+                                   ItemsSource="{Binding DataContext.CurrentPlayer.UIData.InventorySortOptions, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"       
+                                   VerticalAlignment="Center"
+                                   Margin="0,-6,0,0"
+                                   Grid.Column="0">
+                        <b:Interaction.Triggers>
+                            <b:EventTrigger EventName="SelectionChanged">
+                                <b:InvokeCommandAction Command="{Binding DataContext.SelectSortCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                                    <b:InvokeCommandAction.CommandParameter>
+                                        <MultiBinding Converter="{StaticResource PassThroughConverter}">
+                                            <Binding Path="SelectedItem" ElementName="InventorySortListHolder"/>
+                                            <Binding Path="DataContext" ElementName="InventorySortListHolder"/>
+                                        </MultiBinding>
+                                    </b:InvokeCommandAction.CommandParameter>
+                                </b:InvokeCommandAction>
+                                <!-- Clear selecting to allow re-selecting -->
+                                <b:ChangePropertyAction PropertyName="SelectedIndex" Value="-1"/>
+                            </b:EventTrigger>
+                        </b:Interaction.Triggers>
+                    </ls:LSComboBox>
+
+                    <ls:FilteringContainer Grid.Column="1" x:Name="FilteringContainerHolder" Margin="4,0,4,0" FilterPredicate="{Binding PlayerCharacterProperties.InventoryPredicate}" Template="{StaticResource FilterHolderTemplate}"
+                                           CurrentFilter="{Binding DataContext.CurrentPlayer.UIData.GlobalSelectedFilter, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Mode=OneWay}"
+                                           ItemsList="{Binding InventoriesSlots, ElementName=InventoriesMerger}" DefaultViewItemsList="{Binding Inventory.Slots}" MaxDisplayedFilters="12"
+                                           SortComparer="{Binding DataContext.Data.InventoryIndexSortComparer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"
+                                           HoldFiltering="{Binding IsMerging, ElementName=InventoriesMerger}">
+                        <ls:FilteringContainer.EnumFiltersList>
+                            <ls:EnumFilterItem EnumId="ls.EPopularFilters" Label="h977af483ga6d9g4334g9ee0g3b85b94c67db" AlwaysVisible="True" />
+                            <ls:EnumFilterItem EnumId="eoc::EProficiencyGroup" Label="ha4c5f0cfg93ebg47ecg8eecg6524ad70aee0" />
+                        </ls:FilteringContainer.EnumFiltersList>
+
+                        <b:Interaction.Triggers>
+                            <b:DataTrigger Binding="{Binding IsKeyboardFocusWithin, ElementName=FilteringContainerHolder}" Value="True">
+                                <b:InvokeCommandAction Command="{Binding DataContext.HideAvailableEquipmentCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding DataContext.CurrentPlayer.SelectedCharacter.Equipment, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                            </b:DataTrigger>
+
+                            <b:EventTrigger EventName="FilterCleared">
+                                <b:InvokeCommandAction Command="{Binding DataContext.ClearFilterCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                                <b:ChangePropertyAction TargetName="ChangePartyContextButton" PropertyName="IsChecked" Value="False"/>
+                            </b:EventTrigger>
+                        </b:Interaction.Triggers>
+                    </ls:FilteringContainer>
+
+                    <!--Infotip-->
+                    <Control Grid.Column="2" Template="{StaticResource CharacterSheetInfotipTemplate}" VerticalAlignment="Center" Margin="-8,-8,8,0"  HorizontalAlignment="Right" ToolTipService.Placement="Right"/>
+                </Grid>
+
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding SelectedItems.Count,ElementName=InventoryHolder,Converter={StaticResource GreaterThanConverter},ConverterParameter=1}" Value="True">
+                <Setter TargetName="InventoryHolder" Property="ls:MultiSelect.IsEnabled" Value="True"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Name, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="PartyPanel" >
+                <Setter TargetName="FiltersControl" Property="Visibility" Value="Collapsed"/>
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="PopOutInventoryTemplate" TargetType="Control">
+        <ls:LSNineSliceImage Name="EquipmentInvHolder" Style="{StaticResource Generic9SliceBG}" AllowDrop="False"  Visibility="{Binding Equipment.ShowAvailableEquipment, Converter={StaticResource BoolToVisibleConverter}}" RenderTransformOrigin="0.5,0.2" >
+            <ls:LSNineSliceImage.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ls:LSNineSliceImage.RenderTransform>
+
+            <b:Interaction.Behaviors>
+                <ls:LSMouseDragElementBehavior x:Name="DragBehavior" PositionBounds="{Binding WorldBounds}"/>
+            </b:Interaction.Behaviors>
+
+
+            <Grid x:Name="CharacterPanelHolder" Tag="{Binding PlayerCharacterProperties.IsContentEditable}" MaxWidth="450">
+                <b:Interaction.Triggers>
+
+                    <!-- Selecting the slot while it's not active = enabling all the filters -->
+                    <b:DataTrigger Binding="{Binding PlayerCharacterProperties.ActiveEquipmentSlot}" Comparison="NotEqual" Value="{x:Null}">
+                        <b:ChangePropertyAction TargetName="FilteringContainerHolder" PropertyName="CurrentFilter" Value="{Binding PlayerCharacterProperties.ActiveEquipmentSlot.FilterType}"/>
+                        <b:ChangePropertyAction TargetName="ChangePartyContextButton" PropertyName="IsChecked" Value="True"/>
+                    </b:DataTrigger>
+
+                    <!-- Selecting the slot while it's active = no more filtering -->
+                    <b:DataTrigger Binding="{Binding PlayerCharacterProperties.ActiveEquipmentSlot}" Value="{x:Null}">
+                        <b:ChangePropertyAction TargetName="FilteringContainerHolder" PropertyName="CurrentFilter" Value="{x:Null}"/>
+                        <b:ChangePropertyAction TargetName="ChangePartyContextButton" PropertyName="IsChecked" Value="False"/>
+                    </b:DataTrigger>
+
+                </b:Interaction.Triggers>
+
+
+                <Grid x:Name="FilterHolder" MinWidth="388" HorizontalAlignment="Stretch" Tag="JustCreated">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition MaxHeight="488"/>
+                    </Grid.RowDefinitions>
+                    <b:Interaction.Triggers>
+                        <b:DataTrigger Binding="{Binding IsKeyboardFocusWithin, ElementName=InventoryHolder}" Value="False">
+                            <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                        </b:DataTrigger>
+                        <b:EventTrigger EventName="MouseRightButtonUp" SourceObject="{Binding RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                            <b:Interaction.Behaviors>
+                                <b:ConditionBehavior>
+                                    <b:ConditionalExpression>
+                                        <b:ComparisonCondition LeftOperand="{Binding Path=IsMouseOver, ElementName=InventoryHolder}" Operator="Equal" RightOperand="False"/>
+                                    </b:ConditionalExpression>
+                                </b:ConditionBehavior>
+                            </b:Interaction.Behaviors>
+                            <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+
+                    <DockPanel>
+                        <ls:LSButton DockPanel.Dock="Right" Style="{StaticResource SmallCloseButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding DataContext.HideAvailableEquipmentCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding Equipment}" />
+                        <Border DockPanel.Dock="Left" x:Name="Dragbox" Grid.Row="0" Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <TextBlock x:Name="EquipmentFilterHeader" Text="{Binding CurrentFilter.Name, ElementName=FilteringContainerHolder}" Margin="12,0,0,0" Style="{StaticResource DetailedListText}" VerticalAlignment="Center" HorizontalAlignment="Left" TextTrimming="CharacterEllipsis"/>
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="MouseEnter">
+                                    <b:InvokeCommandAction Command="{Binding DataContext.SetCursorCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="Resize"/>
+                                </b:EventTrigger>
+                                <b:EventTrigger EventName="MouseLeave">
+                                    <b:InvokeCommandAction Command="{Binding DataContext.SetCursorCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter=""/>
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </Border>
+                        
+                    </DockPanel>
+
+
+                    <!--  POPOUT INVENTORY TEMPLATE  -->
+
+                    <ListBox x:Name="PopOutInventoryHolder" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch"  ItemsSource="{Binding GeneratedItemsList, ElementName=FilteringContainerHolder}" ItemsPanel="{StaticResource FilterInventoryGridTemplate}"  SelectionMode="Extended" ls:MultiSelect.IsEnabled="False" ItemTemplate="{StaticResource Template.InventorySlot}" ItemContainerStyle="{StaticResource PaG.SingleClickItemStyle}" AllowDrop="False" ls:AttachedProperties.InheritedNumber="{Binding ActualWidth, ElementName=CharacterPanelHolder}" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  Margin="0,0,0,10">
+                        <b:Interaction.Behaviors>
+                            <ls:DragGenericBehavior StartDragCommand="{Binding DataContext.DragInventoryCommand , RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                        </b:Interaction.Behaviors>
+                        <ListBox.Template>
+                            <ControlTemplate TargetType="ListBox">
+                                <ScrollViewer VerticalScrollBarVisibility="Visible" Style="{StaticResource NoForcedScrollViewerStyle}" HorizontalScrollBarVisibility="Disabled" Padding="0" AllowDrop="False">
+                                        <b:Interaction.Behaviors>
+                                            <ls:DragScrollingBehavior/>
+                                        </b:Interaction.Behaviors>
+                                    <ItemsPresenter x:Name="itemsContainer"/>
+                                    </ScrollViewer>
+                            </ControlTemplate>
+                        </ListBox.Template>
+                    </ListBox>
+                    <Grid x:Name="NoItemsFoundOverlay" Visibility="Collapsed" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                                        <Rectangle Fill="{StaticResource LS_DisabledPanelColor}"/>
+                                        <Control Template="{StaticResource NoResultsFoundTemplate}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Grid>
+
+                    <!-- Filter -->
+                    <StackPanel x:Name="FiltersControl" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.RowSpan="3">
+                        <b:Interaction.Behaviors>
+                            <ls:InventoriesMergerBehavior x:Name="InventoriesMerger" Inventories="{Binding Inventories}"/>
+                            <ls:InventoriesMergerBehavior x:Name="PartyInventoriesMerger" Inventories="{Binding DataContext.CurrentPlayer.PartyInventory, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                        </b:Interaction.Behaviors>
+
+                        <ls:LSToggleButton x:Name="SortToggleButton" Template="{StaticResource SortToggleButtonTemplate}" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="Collapsed"/>
+                        <ls:LSToggleButton x:Name="ChangePartyContextButton" Visibility="Collapsed"/>
+
+                        <ls:FilteringContainer x:Name="FilteringContainerHolder" Margin="8,0,0,0" FilterPredicate="{Binding PlayerCharacterProperties.InventoryPredicate}" Template="{StaticResource FilterHolderTemplate}"
+                                           CurrentFilter="{Binding DataContext.CurrentPlayer.UIData.GlobalSelectedFilter, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Mode=OneWay}"
+                                           ItemsList="{Binding InventoriesSlots, ElementName=InventoriesMerger}" DefaultViewItemsList="{Binding Inventory.Slots}" MaxDisplayedFilters="7"
+                                           SortComparer="{Binding DataContext.Data.InventoryIndexSortComparer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Visibility="Collapsed"
+                                           HoldFiltering="{Binding IsMerging, ElementName=InventoriesMerger}">
+                            <ls:FilteringContainer.EnumFiltersList>
+                                <ls:EnumFilterItem EnumId="ls.EPopularFilters" Label="h977af483ga6d9g4334g9ee0g3b85b94c67db" AlwaysVisible="True" />
+                                <ls:EnumFilterItem EnumId="eoc::EProficiencyGroup" Label="ha4c5f0cfg93ebg47ecg8eecg6524ad70aee0" />
+                            </ls:FilteringContainer.EnumFiltersList>
+
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="FilterCleared">
+                                    <b:InvokeCommandAction Command="{Binding DataContext.ClearFilterCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                                    <b:ChangePropertyAction TargetName="ChangePartyContextButton" PropertyName="IsChecked" Value="False"/>
+                                </b:EventTrigger>
+
+                                <b:PropertyChangedTrigger Binding="{Binding DataContext.CurrentPlayer.UIData.GlobalSelectedFilter, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                                    <b:ChangePropertyAction TargetName="FilteringContainerHolder" PropertyName="CurrentFilter" Value="{Binding DataContext.CurrentPlayer.UIData.GlobalSelectedFilter, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Mode=OneWay}"/>
+                                </b:PropertyChangedTrigger>
+                            </b:Interaction.Triggers>
+                        </ls:FilteringContainer>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </ls:LSNineSliceImage>
+        <ControlTemplate.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding CurrentFilter, ElementName=FilteringContainerHolder, Converter={StaticResource NullToBoolTrueConverter}}" Value="False"/>
+                    <Condition Binding="{Binding ItemsSource.Count, ElementName=PopOutInventoryHolder}" Value="0"/>
+                </MultiDataTrigger.Conditions>
+                <Setter TargetName="NoItemsFoundOverlay" Property="Visibility" Value="Visible"/>
+            </MultiDataTrigger>
+            <!-- Hide the no items found overlay if we're attempting to drag-->
+            <DataTrigger Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects.Count,Converter={StaticResource GreaterThanConverter}, ConverterParameter='0', RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="True">
+                <Setter TargetName="NoItemsFoundOverlay" Property="Visibility" Value="Collapsed"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding CurrentFilter.Enum, ElementName=FilteringContainerHolder}" Value="MAX">
+                <Setter TargetName="EquipmentFilterHeader" Property="Text" Value="{Binding Source='haedaccc7gffa0g4a2fg99bcg6703ffbb8ad7', Converter={StaticResource TranslatedStringConverter}}"/>
+            </DataTrigger>
+            
+            <DataTrigger Binding="{Binding IsChecked, ElementName=ChangePartyContextButton}" Value="True">
+                <Setter TargetName="FilteringContainerHolder" Property="ItemsList" Value="{Binding InventoriesSlots, ElementName=PartyInventoriesMerger}"/>
+                <Setter TargetName="FilteringContainerHolder" Property="HoldFiltering" Value="{Binding IsMerging, ElementName=PartyInventoriesMerger}"/>
+                <Setter TargetName="FilteringContainerHolder" Property="DefaultViewItemsList" Value="{Binding DataContext.CurrentPlayer.PartyInventory.Slots, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+            </DataTrigger>
+
+            <Trigger SourceName="EquipmentInvHolder"  Property="IsVisible" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard x:Name="OpenPopupAnim">
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard FillBehavior="Stop">
+                                <DoubleAnimation
+                                            Storyboard.TargetName="EquipmentInvHolder"
+                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"                                        
+                                            From="0"
+                                            To="1"
+                                            Duration="0:0:0.26">
+                                    <DoubleAnimation.EasingFunction>
+                                        <CubicEase EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation
+                                            Storyboard.TargetName="EquipmentInvHolder"
+                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"                                        
+                                            From="0"
+                                            To="1"
+                                            Duration="0:0:0.26">
+                                    <DoubleAnimation.EasingFunction>
+                                        <CubicEase EasingMode="EaseOut"/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <StopStoryboard BeginStoryboardName="OpenPopupAnim"/>
+                </Trigger.ExitActions>
+            </Trigger>
+            <EventTrigger RoutedEvent="Unloaded">
+                <StopStoryboard BeginStoryboardName="OpenPopupAnim"/>
+            </EventTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ContainerInventoryTemplate" TargetType="Control">
+        <Grid x:Name="InventoryPanelHolder">
+            
+            <Grid x:Name="InventoryColumnHolder">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <b:Interaction.Triggers>
+                    <b:DataTrigger Binding="{Binding IsKeyboardFocusWithin, ElementName=InventoryHolder}" Value="False">
+                        <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                    </b:DataTrigger>
+                    <b:EventTrigger EventName="MouseRightButtonUp" SourceObject="{Binding RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                        <b:Interaction.Behaviors>
+                            <b:ConditionBehavior>
+                                <b:ConditionalExpression>
+                                    <b:ComparisonCondition LeftOperand="{Binding Path=IsMouseOver, ElementName=InventoryHolder}" Operator="Equal" RightOperand="False"/>
+                                </b:ConditionalExpression>
+                            </b:ConditionBehavior>
+                        </b:Interaction.Behaviors>
+                        <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+
+                <ls:LSInputBinding BoundEvent="ActionCancel" EatInput="False" IsEnabled="True" PlayerId="{Binding PlayerId, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                    <b:Interaction.Triggers>
+                        <b:EventTrigger EventName="LSInputBindingPressed">
+                            <b:ChangePropertyAction TargetName="InventoryHolder" PropertyName="SelectedIndex" Value="-1" />
+                        </b:EventTrigger>
+                    </b:Interaction.Triggers>
+                </ls:LSInputBinding>
+
+                <!-- Inventory -->
+
+                <ListBox Grid.Row="1" x:Name="InventoryHolder" ItemsSource="{Binding Inventories[0].Slots}" ItemsPanel="{StaticResource InventoryGridTemplate}" SelectionMode="Extended" ls:MultiSelect.IsEnabled="False" ItemTemplate="{StaticResource Template.InventorySlot}" ls:AttachedProperties.InheritedNumber="{Binding ActualWidth, ElementName=InventoryColumnHolder}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Stretch" ItemContainerStyle="{StaticResource PaG.InvContainerItemStyle}">
+
+                    <b:Interaction.Behaviors>
+                        <ls:DragGenericBehavior StartDragCommand="{Binding DataContext.DragInventoryCommand , RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                        <ls:WidgetDataConnectionBehavior/>
+                    </b:Interaction.Behaviors>
+
+                    <ListBox.Template>
+                        <ControlTemplate TargetType="ListBox">
+                            <Grid x:Name="TemplateRoot" >
+                                <Border x:Name="InventoryTint" Background="{StaticResource InventoryBGShade}" Margin="-6,-4,20,-6" BorderBrush="Transparent" IsHitTestVisible="False"/>
+                                <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Right" Style="{StaticResource NoForcedScrollViewerStyle}" HorizontalScrollBarVisibility="Disabled" Padding="0,0,0,0" >
+                                    <b:Interaction.Behaviors>
+                                        <ls:DragScrollingBehavior/>
+                                    </b:Interaction.Behaviors>
+                                    <ItemsPresenter x:Name="itemsContainer"/>
+                                </ScrollViewer>
+                            </Grid>
+                        </ControlTemplate>
+                    </ListBox.Template>
+                </ListBox>
+
+                <!-- Filter -->
+                <Grid x:Name="FiltersControl" Grid.Row="0" VerticalAlignment="Top" Height="88">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--SORT BY-->
+                    <Border HorizontalAlignment="Left">
+                        <ls:LSComboBox x:Name="ContainerSortList" SoundID="UI_HUD_Inventory_Sort"
+                                        Template="{StaticResource SortListTemplate}"
+                                        ItemsSource="{Binding DataContext.CurrentPlayer.UIData.InventorySortOptions, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                            <b:Interaction.Triggers>
+                                <b:EventTrigger EventName="SelectionChanged">
+                                    <b:InvokeCommandAction Command="{Binding DataContext.SortContainerInventoryCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                                        <b:InvokeCommandAction.CommandParameter>
+                                            <MultiBinding Converter="{StaticResource PassThroughConverter}">
+                                                <Binding Path="SelectedItem" ElementName="ContainerSortList"/>
+                                                <Binding Path="LootInventory"/>
+                                            </MultiBinding>
+                                        </b:InvokeCommandAction.CommandParameter>
+                                    </b:InvokeCommandAction>
+                                    <!-- Clear selecting to allow re-selecting -->
+                                    <b:ChangePropertyAction PropertyName="SelectedIndex" Value="-1"/>
+                                </b:EventTrigger>
+                            </b:Interaction.Triggers>
+                        </ls:LSComboBox>
+                    </Border>
+
+
+                    <TextBlock Text="{Binding name}" Grid.Column="1" VerticalAlignment="Center" TextAlignment="Center" FontSize="{StaticResource ScaledIntermediateFontSize}" Foreground="{StaticResource LS_accent100TxtColor}" noesis:Text.StrokeThickness="4" noesis:Text.Stroke="{StaticResource LS_PrimaryColorOutlineColor}" TextWrapping="Wrap"/>                        
+
+                    <!--Infotip-->
+                    <Control Grid.Column="2" Template="{StaticResource CharacterSheetInfotipTemplate}" VerticalAlignment="Center" Margin="-8,-8,8,0"  HorizontalAlignment="Right" ToolTipService.Placement="Right"/>
+                </Grid>
+
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding SelectedItems.Count,ElementName=InventoryHolder,Converter={StaticResource GreaterThanConverter},ConverterParameter=1}" Value="True">
+                <Setter TargetName="InventoryHolder" Property="ls:MultiSelect.IsEnabled" Value="True"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Inventory.IsCampChestInventory}" Value="True">
+                <Setter TargetName="InventoryHolder" Property="ItemContainerStyle" Value="{StaticResource PaG.InvWorldContainerItemStyle}"/>
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="PartyCharacterInventoryTemplate" TargetType="ContentControl">
+        <Grid>
+            <b:Interaction.Triggers>
+                <b:DataTrigger Binding="{Binding IsKeyboardFocusWithin, ElementName=Items}" Value="False">
+                    <b:ChangePropertyAction TargetName="Items" PropertyName="SelectedIndex" Value="-1" />
+                </b:DataTrigger>
+                <b:EventTrigger EventName="MouseRightButtonUp" SourceObject="{Binding RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                    <b:Interaction.Behaviors>
+                        <b:ConditionBehavior>
+                            <b:ConditionalExpression>
+                                <b:ComparisonCondition LeftOperand="{Binding Path=IsMouseOver, ElementName=Items}" Operator="Equal" RightOperand="False"/>
+                            </b:ConditionalExpression>
+                        </b:ConditionBehavior>
+                    </b:Interaction.Behaviors>
+                    <b:ChangePropertyAction TargetName="Items" PropertyName="SelectedIndex" Value="-1" />
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+            <ls:LSInputBinding BoundEvent="ActionCancel" EatInput="False" IsEnabled="True" PlayerId="{Binding PlayerId, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="LSInputBindingPressed">
+                        <b:ChangePropertyAction TargetName="Items" PropertyName="SelectedIndex" Value="-1" />
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </ls:LSInputBinding>
+
+            <ListBox x:Name="Items"
+                     ItemsSource="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"
+                     ItemTemplate="{StaticResource Template.InventorySlot}"
+                     ItemContainerStyle="{StaticResource PaG.TradeItemStyle}"
+                     Template="{StaticResource MinimalItemsControlTemplate}"
+                     ItemsPanel="{DynamicResource CharacterInventoryPanelTemplate}"
+                     SelectionMode="Extended"
+                     ls:MultiSelect.IsEnabled="{Binding SelectedItems.Count, RelativeSource={RelativeSource Self}, Converter={StaticResource GreaterThanConverter},ConverterParameter=1}">
+                <b:Interaction.Triggers>
+                    <b:EventTrigger EventName="SelectionChanged">
+                        <b:InvokeCommandAction Command="{Binding DataContext.UpdateSelectionCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding SelectedItems, ElementName=Items}"/>
+                    </b:EventTrigger>
+                </b:Interaction.Triggers>
+            </ListBox>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="PartyHolderStyle" TargetType="ListBox" BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="VirtualizingPanel.ScrollUnit" Value="Pixel"/>
+        <Setter Property="VirtualizingPanel.VirtualizationMode" Value="Recycling"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Resources>
+            <Style TargetType="ScrollViewer" BasedOn="{StaticResource {x:Type ContentControl}}">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="PanningMode" Value="VerticalFirst"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ScrollViewer">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{DynamicResource Corner.Border0}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Decorator x:Name="ShowBarsRef" IsEnabled="False"/>
+                                    <ScrollContentPresenter Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" CanContentScroll="{TemplateBinding CanContentScroll}" Margin="{TemplateBinding Padding}"/>
+                                    <Rectangle x:Name="Corner" Grid.Row="1" Grid.Column="2" Fill="{DynamicResource Brush.Track.Normal}" IsEnabled="False" Opacity="0"/>
+                                    <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Column="1" Grid.Row="1" Orientation="Horizontal" MaxHeight="{TemplateBinding MinHeight}" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportWidth}" Minimum="0" Maximum="{TemplateBinding ScrollableWidth}" Opacity="0"/>
+                                    <ScrollBar x:Name="PART_VerticalScrollBar" Grid.Column="0" Grid.Row="0" Orientation="Vertical" MaxWidth="{TemplateBinding MinWidth}" Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                               Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" ViewportSize="{TemplateBinding ViewportHeight}" Minimum="0"
+                                               Maximum="{TemplateBinding ScrollableHeight}" Opacity="0"/>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Resources>
+                                <Storyboard x:Key="Anim.ShowBars" BeginTime="0:0:0.1">
+                                    <DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.1" AccelerationRatio="0.5" DecelerationRatio="0.5"/>
+                                    <DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.1" AccelerationRatio="0.5" DecelerationRatio="0.5"/>
+                                </Storyboard>
+                                <Storyboard x:Key="Anim.HideBars" BeginTime="0:0:2">
+                                    <DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15" AccelerationRatio="0.75" DecelerationRatio="0.25"/>
+                                    <DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15" AccelerationRatio="0.75" DecelerationRatio="0.25"/>
+                                </Storyboard>
+                                <Storyboard x:Key="Anim.ShowCorner" BeginTime="0:0:0.1">
+                                    <DoubleAnimation Storyboard.TargetName="Corner" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.1" AccelerationRatio="0.75" DecelerationRatio="0.25"/>
+                                </Storyboard>
+                                <Storyboard x:Key="Anim.HideCorner" BeginTime="0:0:2">
+                                    <DoubleAnimation Storyboard.TargetName="Corner" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.15" AccelerationRatio="0.75" DecelerationRatio="0.25"/>
+                                </Storyboard>
+                            </ControlTemplate.Resources>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                    <Setter Property="IsEnabled" Value="True" TargetName="ShowBarsRef"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="IsEnabled" Value="True" TargetName="ShowBarsRef"/>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="True" SourceName="ShowBarsRef">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard Storyboard="{StaticResource Anim.ShowBars}"/>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard Storyboard="{StaticResource Anim.HideBars}"/>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True" SourceName="PART_HorizontalScrollBar">
+                                    <Setter Property="IsEnabled" Value="True" TargetName="Corner"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True" SourceName="PART_VerticalScrollBar">
+                                    <Setter Property="IsEnabled" Value="True" TargetName="Corner"/>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="True" SourceName="Corner">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard Storyboard="{StaticResource Anim.ShowCorner}"/>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard Storyboard="{StaticResource Anim.HideCorner}"/>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <DataTemplate DataType="ls:Character">
+                <Expander x:Name="SingleInventoryRoot" Style="{StaticResource PartyCharacterExpanderStyle}">
+                    <b:Interaction.Behaviors>
+                        <ls:InventoriesMergerBehavior x:Name="PlayerInventoriesMerged" Inventories="{Binding Inventories}" MergeSubInventories="False"/>
+                        <ls:CollectionFilterBehavior x:Name="PlayerInventoryFiltered" ItemsSource="{Binding InventoriesSlots, ElementName=PlayerInventoriesMerged}" Predicate="{Binding TradeInventories[0].TabFiltersPredicate}"/>
+                        <ls:CollectionSortBehavior x:Name="PlayerInventoryFilteredSorted" ItemsSource="{Binding FilteredItems, ElementName=PlayerInventoryFiltered}"
+                                                   Comparer="{Binding DataContext.CurrentPlayer.SelectedCharacter.PlayerCharacterProperties.TradeSortComparer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                    </b:Interaction.Behaviors>
+
+                    <Expander.Header>
+                        <Control Template="{StaticResource PartyCharacterExpanderHeaderTemplate}"/>
+                    </Expander.Header>
+                    <ls:AttachedProperties.AutomationId>
+                        <MultiBinding StringFormat="{}SingleInventory_{0}">
+                            <Binding Path="EntityUUID"/>
+                        </MultiBinding>
+                    </ls:AttachedProperties.AutomationId>
+
+                    <ContentControl x:Name="PlayerBarterInventory" Template="{StaticResource PartyCharacterInventoryTemplate}" Content="{Binding Path=(b:Interaction.Behaviors)[2].SortedItems, ElementName=SingleInventoryRoot}"/>
+                </Expander>
+            </DataTemplate>
+
+            <DataTemplate DataType="ls:VMTradeInventory">
+                <Expander x:Name="SingleInventoryRoot" Style="{StaticResource PartyCharacterExpanderStyle}">
+                    <b:Interaction.Behaviors>
+                        <ls:InventoriesMergerBehavior x:Name="PlayerInventoriesMerged" Inventories="{Binding TradeInventories}" MergeSubInventories="False"/>
+                        <ls:CollectionFilterBehavior x:Name="PlayerInventoryFiltered" ItemsSource="{Binding InventoriesSlots, ElementName=PlayerInventoriesMerged}" Predicate="{Binding TradeInventories[0].TabFiltersPredicate}"/>
+                        <ls:CollectionSortBehavior x:Name="PlayerInventoryFilteredSorted" ItemsSource="{Binding FilteredItems, ElementName=PlayerInventoryFiltered}"
+                                                   Comparer="{Binding DataContext.CurrentPlayer.SelectedCharacter.PlayerCharacterProperties.TradeSortComparer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                    </b:Interaction.Behaviors>
+
+                    <Expander.Header>
+                        <Control Template="{StaticResource PartyCharacterExpanderHeaderTemplate}" DataContext="{Binding OwnerObject}"/>
+                    </Expander.Header>
+                    <ls:AttachedProperties.AutomationId>
+                        <MultiBinding StringFormat="{}SingleInventory_{0}">
+                            <Binding Path="OwnerObject.EntityUUID"/>
+                        </MultiBinding>
+                    </ls:AttachedProperties.AutomationId>
+
+                    <ContentControl x:Name="PlayerBarterInventory" Template="{StaticResource PartyCharacterInventoryTemplate}" Content="{Binding Path=(b:Interaction.Behaviors)[2].SortedItems, ElementName=SingleInventoryRoot}"/>
+                </Expander>
+            </DataTemplate>
+        </Style.Resources>
+    </Style>
+
+    <!-- equipment slots (Q13): the game's slot style with PaG's overlay, and the two templates that
+         reach it, declared again so they pick it up. Copied from the game's
+         CharacterSheetTemplates_k.xaml; only the overlay and the eight in-scope slots' Style differ
+         (the helmet here, the other seven in CharacterEquipmentTemplate).
+         Rings, amulet, cloak, vanity, light source and instrument slots keep the game's style -->
+    <Style x:Key="PaG.EquipmentSlotStyle" TargetType="ls:LSButton" BasedOn="{StaticResource EquipmentSlotStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ls:LSButton">
+                    <ControlTemplate.Resources>
+                        <System:Double x:Key="EquipmentSlotSize">88</System:Double>
+                        <System:Double x:Key="EquipmentIconSlotSize">80</System:Double>
+                        <BitmapImage  x:Key="SelArrowUri" UriSource="pack://application:,,,/Core;component/Assets/CharacterPanel/EQSlots_overlaySelected_arrow.png" />
+                        <BitmapImage  x:Key="SelOverlayUri" UriSource="pack://application:,,,/Core;component/Assets/CharacterPanel/EQSlots_overlaySelected.png" />
+                    </ControlTemplate.Resources>
+
+                    <Grid x:Name="root" Tag="{TemplateBinding Tag}" Width="{StaticResource EquipmentSlotSize}" Height="{StaticResource EquipmentSlotSize}" ToolTipService.IsEnabled="{Binding Item,Converter={StaticResource NullToBoolFalseConverter}}" Background="Transparent" ToolTipService.ShowOnDisabled="True" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTipService.Placement="{TemplateBinding ToolTipService.Placement}">
+                        <b:Interaction.Behaviors>
+                            <ls:ContextMenuFillBehavior Context="Equipment" Player="{Binding DataContext.CurrentPlayer, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" TargetObject="{Binding Item}" FillCommand="{Binding DataContext.ContextActionMenuFill, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                        </b:Interaction.Behaviors>
+                        <Grid.ToolTip>
+                            <ls:LSTooltip x:Name="tooltip" IsHitTestVisible="False" Content="{Binding Path=DataContext.Item, ElementName=root}" ls:TooltipExtender.Owner="{Binding Tag, ElementName=root}"/>
+                        </Grid.ToolTip>
+                        <Image x:Name="SlotBg" Style="{StaticResource EquipmentSlogBgImageStyle}"/>
+                        <Grid x:Name="IconControl" Background="{StaticResource EquipmentSlotBg}" Opacity="1.0" DataContext="{Binding Item}" IsHitTestVisible="False">
+                            <Image x:Name="RarityBackground" Style="{StaticResource RarityFrameBackgroundImageStyle}"/>
+                            <Rectangle Fill="{Binding Icon}" />
+                            <Image x:Name="RarityForeground" Style="{StaticResource RarityFrameForegroundImageStyle}"/>
+                            <Image x:Name="StatusIcon" Source="{StaticResource IconConditionMark}" Stretch="None" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="{Binding NonPermanentStatusEffects.Count, Converter={StaticResource CountToVisibilityConverter}, FallbackValue=Collapsed}" Margin="0,8,10,0"/>
+                        </Grid>
+                        <Rectangle x:Name="greyscaleImg"  Opacity="0.5" Fill="#17000a" Visibility="Collapsed"/>
+                        <!-- Highlight slot when hovered -->
+                        <Image x:Name="hoverImg" IsHitTestVisible="False" Visibility="Collapsed" Stretch="Uniform" Source="{StaticResource ActiveSlot_h_img}"/>
+                        <Rectangle x:Name="DisableLayer" Opacity="0" Fill="Black" IsHitTestVisible="False"/>
+                        <!-- PaG (Q13): the tier's badge icon for an equipped Bad or Not Ideal item. Lua reads
+                             the item's id from this slot's data (Item.EntityUUID); nothing here is bound -->
+                        <Grid x:Name="PaGSlotRoot" IsHitTestVisible="False">
+                            <!-- [1] PaGSlotParts: everything Lua reads or writes; it holds no binding. Lua
+                                 reaches each part by child index from here (HubConstants.lua
+                                 C.SLOT_PART) -->
+                            <Grid x:Name="PaGSlotParts" RenderTransformOrigin="0.5,0.5">
+                                <!-- [1] the badge: [1.1] the plate, [1.2] to [1.7] the Not Ideal and Bad icons in
+                                     E.Icon order, [1.8] the AC shield. Lua hands the shown icon the tier brush, then shows it. The
+                                     corner switch turns PaGSlotParts half a turn, so the badge sits bottom-right,
+                                     and the badge back upright -->
+                                <Grid x:Name="PaGSlotBadge" Opacity="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="26" Height="26" Margin="8,8,0,0" RenderTransformOrigin="0.5,0.5">
+                                    <Ellipse Fill="#B0000000"/>
+                                    <Rectangle x:Name="PaGSlotWarning" Margin="4" OpacityMask="{StaticResource PaG.Mask.Warning}" Opacity="0"/>
+                                    <Rectangle x:Name="PaGSlotExclamation" Margin="4" OpacityMask="{StaticResource PaG.Mask.Exclamation}" Opacity="0"/>
+                                    <Rectangle x:Name="PaGSlotMinus" Margin="4" OpacityMask="{StaticResource PaG.Mask.Minus}" Opacity="0"/>
+                                    <Rectangle x:Name="PaGSlotCross" Margin="4" OpacityMask="{StaticResource PaG.Mask.Cross}" Opacity="0"/>
+                                    <Rectangle x:Name="PaGSlotCrossThin" Margin="4" OpacityMask="{StaticResource PaG.Mask.CrossThin}" Opacity="0"/>
+                                    <Rectangle x:Name="PaGSlotSkull" Margin="4" OpacityMask="{StaticResource PaG.Mask.Skull}" Opacity="0"/>
+                                    <Rectangle x:Name="PaGSlotShield" Margin="4" OpacityMask="{StaticResource PaG.Mask.Shield}" Opacity="0"/>
+                                </Grid>
+                                <!-- [2] what Lua reads: [2.1] the label, [2.2] the palette and [2.3] the corner
+                                     switch, as in a cell; [2.4] the badge's tooltip text and [2.5] to [2.12] the
+                                     same split for its layout, as a cell's PaGWhy and PaGWhyTitle to PaGWhy7 -->
+                                <Grid x:Name="PaGSlotIO" Visibility="Collapsed">
+                                    <TextBlock x:Name="PaGSlotId" Text="-"/>
+                                    <Grid x:Name="PaGSlotColors">
+                                        <Rectangle x:Name="PaGSlotColorRed" Fill="{StaticResource PaG.Brush.Red}"/>
+                                        <Rectangle x:Name="PaGSlotColorOrange" Fill="{StaticResource PaG.Brush.Orange}"/>
+                                        <Rectangle x:Name="PaGSlotColorYellow" Fill="{StaticResource PaG.Brush.Yellow}"/>
+                                        <Rectangle x:Name="PaGSlotColorGreen" Fill="{StaticResource PaG.Brush.Green}"/>
+                                        <Rectangle x:Name="PaGSlotColorBlue" Fill="{StaticResource PaG.Brush.Blue}"/>
+                                        <Rectangle x:Name="PaGSlotColorPurple" Fill="{StaticResource PaG.Brush.Purple}"/>
+                                    </Grid>
+                                    <Grid x:Name="PaGSlotSwap" Opacity="0"/>
+                                    <!-- Lua writes the badge's tooltip text (Why.lua), one cause per line; empty: no tooltip -->
+                                    <TextBlock x:Name="PaGSlotWhy" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhyTitle" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhy1" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhy2" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhy3" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhy4" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhy5" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhy6" Text=""/>
+                                    <TextBlock x:Name="PaGSlotWhy7" Text=""/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <!-- PaG (badge tooltip): PaGSlotRoot takes no mouse input, so this clear disc over the
+                             badge carries the badge's tooltip: the badge, the title and one bulleted row per
+                             cause, the text Lua writes into PaGSlotWhyTitle to PaGSlotWhy7. It takes the mouse
+                             only while the badge shows and PaGSlotWhy is not empty (the triggers below); the
+                             rest of the slot keeps the item's tooltip, and clicks and drags on it reach the slot as
+                             before. A leaf: the walk reads it once and never enters it -->
+                        <Ellipse x:Name="PaGSlotHit" Width="26" Height="26" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,8,0,0" Fill="Transparent" IsHitTestVisible="False" ToolTipService.ShowOnDisabled="True">
+                            <Ellipse.ToolTip>
+                                <ls:LSTooltip>
+                                    <StackPanel>
+                                        <!-- the mark, then the title ("Not Ideal for Shadowheart") -->
+                                        <DockPanel Margin="0,0,0,12">
+                                            <Grid DockPanel.Dock="Left" Width="48" Height="48" Margin="0,0,16,0" VerticalAlignment="Center">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="15*"/>
+                                                        <ColumnDefinition Width="70*"/>
+                                                        <ColumnDefinition Width="15*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="15*"/>
+                                                        <RowDefinition Height="70*"/>
+                                                        <RowDefinition Height="15*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Ellipse Grid.ColumnSpan="3" Grid.RowSpan="3" Fill="#B0000000"/>
+                                                    <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Warning}" Fill="{Binding Fill, ElementName=PaGSlotWarning}" Opacity="{Binding Opacity, ElementName=PaGSlotWarning}"/>
+                                                    <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Exclamation}" Fill="{Binding Fill, ElementName=PaGSlotExclamation}" Opacity="{Binding Opacity, ElementName=PaGSlotExclamation}"/>
+                                                    <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Minus}" Fill="{Binding Fill, ElementName=PaGSlotMinus}" Opacity="{Binding Opacity, ElementName=PaGSlotMinus}"/>
+                                                    <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Cross}" Fill="{Binding Fill, ElementName=PaGSlotCross}" Opacity="{Binding Opacity, ElementName=PaGSlotCross}"/>
+                                                    <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.CrossThin}" Fill="{Binding Fill, ElementName=PaGSlotCrossThin}" Opacity="{Binding Opacity, ElementName=PaGSlotCrossThin}"/>
+                                                    <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Skull}" Fill="{Binding Fill, ElementName=PaGSlotSkull}" Opacity="{Binding Opacity, ElementName=PaGSlotSkull}"/>
+                                                    <Rectangle Grid.Column="1" Grid.Row="1" OpacityMask="{StaticResource PaG.Mask.Shield}" Fill="{Binding Fill, ElementName=PaGSlotShield}" Opacity="{Binding Opacity, ElementName=PaGSlotShield}"/>
+                                                </Grid>
+                                            </Grid>
+                                            <TextBlock Style="{StaticResource TooltipTitleStyle}" Margin="0" VerticalAlignment="Center" Text="{Binding Text, ElementName=PaGSlotWhyTitle}"/>
+                                        </DockPanel>
+                                        <!-- one bulleted row per cause; a row with no text is collapsed -->
+                                        <Grid Visibility="{Binding Text, ElementName=PaGSlotWhy1, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                            <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGSlotWhy1}"/>
+                                        </Grid>
+                                        <Grid Visibility="{Binding Text, ElementName=PaGSlotWhy2, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                            <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGSlotWhy2}"/>
+                                        </Grid>
+                                        <Grid Visibility="{Binding Text, ElementName=PaGSlotWhy3, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                            <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGSlotWhy3}"/>
+                                        </Grid>
+                                        <Grid Visibility="{Binding Text, ElementName=PaGSlotWhy4, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                            <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGSlotWhy4}"/>
+                                        </Grid>
+                                        <Grid Visibility="{Binding Text, ElementName=PaGSlotWhy5, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                            <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGSlotWhy5}"/>
+                                        </Grid>
+                                        <Grid Visibility="{Binding Text, ElementName=PaGSlotWhy6, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                            <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGSlotWhy6}"/>
+                                        </Grid>
+                                        <Grid Visibility="{Binding Text, ElementName=PaGSlotWhy7, Converter={StaticResource NullToCollapsedConverter}, ConverterParameter='EmptyString'}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Stretch="None" Source="/Core;component/Assets/CharacterPanel/ico_bullet_d.png" VerticalAlignment="Top" Margin="4,10,16,0"/>
+                                            <TextBlock Grid.Column="1" Style="{StaticResource TooltipBaseTextStyle}" Text="{Binding Text, ElementName=PaGSlotWhy7}"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </ls:LSTooltip>
+                            </Ellipse.ToolTip>
+                        </Ellipse>
+                        <!-- Selected slot indicator -->
+                        <Image x:Name="SelOverlay" Source="{StaticResource SelOverlayUri}" Visibility="Collapsed" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False"/>
+                        <Image x:Name="SelArrow" Source="{StaticResource SelArrowUri}" Visibility="Collapsed" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Top" IsHitTestVisible="False" Margin="0,-12,0,0"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="hoverImg" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <!-- PaG (badge tooltip): the hover target takes the mouse only while the badge shows -->
+                        <Trigger SourceName="PaGSlotBadge" Property="Opacity" Value="1">
+                            <Setter TargetName="PaGSlotHit" Property="IsHitTestVisible" Value="True"/>
+                        </Trigger>
+                        <!-- PaG (badge tooltip): no text, no tooltip (Equipped tooltips off, or the text could not
+                             be worded). These come after the badge's trigger, so they win; null as well as empty,
+                             as the game's own filter boxes test -->
+                        <Trigger SourceName="PaGSlotWhy" Property="Text" Value="">
+                            <Setter TargetName="PaGSlotHit" Property="IsHitTestVisible" Value="False"/>
+                        </Trigger>
+                        <Trigger SourceName="PaGSlotWhy" Property="Text" Value="{x:Null}">
+                            <Setter TargetName="PaGSlotHit" Property="IsHitTestVisible" Value="False"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding EquippedType}" Value="FromTwoHanded">
+                            <Setter TargetName="RarityBackground" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="RarityForeground" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="greyscaleImg" Property="Visibility" Value="Visible"/>
+                            <!-- PaG: this slot shows a gray copy of the two-handed weapon in the main hand,
+                                 whose own slot already carries its badge and its tooltip. This trigger comes after
+                                 the hover target's, so it wins -->
+                            <Setter TargetName="PaGSlotRoot" Property="Opacity" Value="0"/>
+                            <Setter TargetName="PaGSlotHit" Property="IsHitTestVisible" Value="False"/>
+                        </DataTrigger>
+                        <!-- PaG corners: while Lua shows PaGSlotSwap, the badge sits bottom-right, upright, and
+                             its hover target moves with it (88 - 8 - 26 = 54 = 8 + 46). Render-only, as in a cell -->
+                        <Trigger SourceName="PaGSlotSwap" Property="Opacity" Value="1">
+                            <Setter TargetName="PaGSlotParts" Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="180"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="PaGSlotBadge" Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="180"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="PaGSlotHit" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform X="46" Y="46"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                        <DataTrigger Binding="{Binding IsSelecting}" Value="True">
+                            <Setter TargetName="DisableLayer" Property="Visibility" Value="Hidden"/>
+                            <Setter TargetName="SelOverlay" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="SelArrow" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+
+
+                        <DataTrigger Binding="{Binding DataContext.PlayerCharacterProperties.ActiveEquipmentSlot, ElementName=EquipmentSlots, Converter={StaticResource NullToBoolFalseConverter}}" Value="False">
+                            <Setter TargetName="DisableLayer" Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Tag,ElementName=equipmentPanel}" Value="False">
+                            <Setter TargetName="IconControl" Property="Opacity" Value="{StaticResource OtherPlayersItemOpacity}"/>
+                        </DataTrigger>
+
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0], Converter={StaticResource TypeConverter}, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="ls.VMItem"/>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].IsEquipment, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="True"/>
+                                <Condition Value="True">
+                                    <Condition.Binding>
+                                        <MultiBinding Converter="{StaticResource EqualConverter}">
+                                            <Binding Path="DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].EquipmentSlotType" RelativeSource="{RelativeSource AncestorType={x:Type ls:UIWidget}}"/>
+                                            <Binding Path="SlotType"/>
+                                        </MultiBinding>
+                                    </Condition.Binding>
+                                </Condition>
+                                <Condition Value="True">
+                                    <Condition.Binding>
+                                        <MultiBinding Converter="{StaticResource EqualConverter}">
+                                            <Binding RelativeSource="{RelativeSource AncestorType={x:Type ls:UIWidget}}" Path="DataContext.CurrentPlayer.UserId"/>
+                                            <Binding Path="DataContext.PlayerCharacterProperties.OwnerUserID" ElementName="EquipmentSlots"/>
+                                        </MultiBinding>
+                                    </Condition.Binding>
+                                </Condition>
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="hoverImg" Property="Visibility" Value="Visible"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0], Converter={StaticResource TypeConverter}, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="ls.VMItem"/>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].IsEquipment, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="True"/>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].EquipmentSlotType, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="Ring"/>
+                                <Condition Binding="{Binding SlotType}" Value="Ring2"/>
+                                <Condition Value="True">
+                                    <Condition.Binding>
+                                        <MultiBinding Converter="{StaticResource EqualConverter}">
+                                            <Binding RelativeSource="{RelativeSource AncestorType={x:Type ls:UIWidget}}" Path="DataContext.CurrentPlayer.UserId"/>
+                                            <Binding Path="DataContext.PlayerCharacterProperties.OwnerUserID" ElementName="EquipmentSlots"/>
+                                        </MultiBinding>
+                                    </Condition.Binding>
+                                </Condition>
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="hoverImg" Property="Visibility" Value="Visible"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0], Converter={StaticResource TypeConverter}, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="ls.VMItem"/>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].IsEquipment, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="True"/>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].EquipmentSlotType, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="MeleeMainHand"/>
+                                <Condition Binding="{Binding SlotType}" Value="MeleeOffHand"/>
+                                <Condition Value="True">
+                                    <Condition.Binding>
+                                        <MultiBinding Converter="{StaticResource EqualConverter}">
+                                            <Binding RelativeSource="{RelativeSource AncestorType={x:Type ls:UIWidget}}" Path="DataContext.CurrentPlayer.UserId"/>
+                                            <Binding Path="DataContext.PlayerCharacterProperties.OwnerUserID" ElementName="EquipmentSlots"/>
+                                        </MultiBinding>
+                                    </Condition.Binding>
+                                </Condition>
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="hoverImg" Property="Visibility" Value="Visible"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0], Converter={StaticResource TypeConverter}, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="ls.VMItem"/>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].IsEquipment, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="True"/>
+                                <Condition Binding="{Binding DataContext.CurrentPlayer.UIData.DragData.DraggingGameObjects[0].EquipmentSlotType, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="RangedMainHand"/>
+                                <Condition Binding="{Binding SlotType}" Value="RangedOffHand"/>
+                                <Condition Value="True">
+                                    <Condition.Binding>
+                                        <MultiBinding Converter="{StaticResource EqualConverter}">
+                                            <Binding RelativeSource="{RelativeSource AncestorType={x:Type ls:UIWidget}}" Path="DataContext.CurrentPlayer.UserId"/>
+                                            <Binding Path="DataContext.PlayerCharacterProperties.OwnerUserID" ElementName="EquipmentSlots"/>
+                                        </MultiBinding>
+                                    </Condition.Binding>
+                                </Condition>
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="hoverImg" Property="Visibility" Value="Visible"/>
+                        </MultiDataTrigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="tooltip" Property="Content" Value="{Binding Source='hcc92420fgadcfg4a13g90feg6996722734b6',Converter={StaticResource TranslatedStringConverter}}"/>
+                            <Setter TargetName="root" Property="ToolTipService.IsEnabled" Value="True"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Tag, ElementName=CharacterPanelHolder}" Value="False">
+                            <Setter TargetName="DisableLayer" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="DisableLayer" Property="Opacity" Value="0"/>
+                            <Setter TargetName="DisableLayer" Property="Fill" Value="{StaticResource LS_DisabledPanelColor}"/>
+                        </DataTrigger>
+
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="HelmetEQTemplate" TargetType="Control">
+        <Grid HorizontalAlignment="Left">
+            <ls:LSButton x:Name="EquipmentHelmetSlot" Style="{StaticResource PaG.EquipmentSlotStyle}" Tag="{TemplateBinding Tag}"/>
+            <ls:LSButton x:Name="VisibilityButton" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-4,-40,0,0" Command="{Binding DataContext.ChangeEquipmentVisibilityCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding}" Template="{StaticResource VisibilityButtonTemplate}" Opacity="0"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="1" TargetName="VisibilityButton"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="CharacterEquipmentTemplate" TargetType="Control">
+        <Grid x:Name="CharacterPanelHolder" Tag="{Binding PlayerCharacterProperties.IsContentEditable}">
+            <b:Interaction.Triggers>
+
+                <!--Selecting the slot while it's not active = enabling all the filters-->
+                <b:PropertyChangedTrigger Binding="{Binding PlayerCharacterProperties.ActiveEquipmentSlot}" >
+                    <b:Interaction.Behaviors>
+                        <b:ConditionBehavior>
+                            <b:ConditionalExpression>
+                                <b:ComparisonCondition LeftOperand="{Binding PlayerCharacterProperties.ActiveEquipmentSlot}" Operator="NotEqual" RightOperand="{x:Null}"/>
+                            </b:ConditionalExpression>
+                        </b:ConditionBehavior>
+                    </b:Interaction.Behaviors>
+                    <b:ChangePropertyAction TargetName="FilteringContainerHolder" PropertyName="CurrentFilter" Value="{Binding PlayerCharacterProperties.ActiveEquipmentSlot.FilterType}"/>
+                    <b:ChangePropertyAction TargetName="ChangePartyContextButton" PropertyName="IsChecked" Value="True"/>
+                    <b:InvokeCommandAction Command="{Binding DataContext.SelectCharacter, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding}"/>
+                </b:PropertyChangedTrigger>
+
+                <!--Selecting the slot while it's active = no more filtering-->
+                <b:DataTrigger Binding="{Binding PlayerCharacterProperties.ActiveEquipmentSlot}" Value="{x:Null}">
+                    <b:ChangePropertyAction TargetName="FilteringContainerHolder" PropertyName="CurrentFilter" Value="{x:Null}"/>
+                    <b:ChangePropertyAction TargetName="ChangePartyContextButton" PropertyName="IsChecked" Value="False"/>
+                </b:DataTrigger>
+
+                <b:DataTrigger Binding="{Binding IsVisible, ElementName=CharacterPanelHolder}" Value="True">
+                    <!--Tutorial UI Event - Equipment Opened-->
+                    <b:InvokeCommandAction Command="{Binding DataContext.TutorialEvent, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="56affdac-faef-448a-94fb-55182779b482"/>
+                </b:DataTrigger>
+
+            </b:Interaction.Triggers>
+            <Grid x:Name="EquipmentHolder" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <!-- EQUIPMENT SLOTS -->
+                <Grid x:Name="EquipmentSlots" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.Resources>
+                        <Thickness x:Key="EquipMargin">0,72,0,0</Thickness>
+                    </Grid.Resources>
+
+                    <DockPanel Name="EquipmentRight" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" Margin="{StaticResource EquipMargin}">
+
+                        <Control DockPanel.Dock="Bottom" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Template="{StaticResource MuscialEQTemplate}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.MusicalInstrument}"/>
+                        <StackPanel DockPanel.Dock="Top">
+                            <!--VANITY-->
+                            <Grid HorizontalAlignment="Left">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Border x:Name="VanityToggleHighlight" Grid.RowSpan="2" BorderBrush="{StaticResource LS_tempHPColor}" BorderThickness="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="-3" Background="{StaticResource InventoryBGShade}" Visibility="Collapsed">
+                                    <Border.Effect>
+                                        <DropShadowEffect BlurRadius="20" ShadowDepth="0" Color="{StaticResource tempHPColor}" />
+                                    </Border.Effect>
+                                </Border>
+
+                                <!-- Setting the Tag on the equipmentslots, because in Trade trying to set the ls:TooltipExtender.Owner to the correct 'CurrentTradingCharacter', doesn't trigger inheritance of the property on the first opening of the tooltips.
+                                        and if the property changes it's also not reacting as long as this inheritance is broken.-->
+                                <ls:LSButton x:Name="VanityBodySlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Grid.Row="0" Style="{StaticResource EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.VanityBody}"/>
+                                <ls:LSButton x:Name="VanityBootsSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Grid.Row="1" Style="{StaticResource EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.VanityBoots}"/>
+                                <ls:LSButton x:Name="ArmorVisibilityToggle" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Grid.RowSpan="2" VerticalAlignment="Top" Command="{Binding DataContext.ToggleArmorSetVisibility, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" CommandParameter="{Binding .}" Template="{StaticResource VanityButtonTemplate}" HorizontalAlignment="Right" Margin="0,-40,-6,0">
+                                    <ls:LSButton.ToolTip>
+                                        <ls:LSTooltip Content="{Binding Source='had94b224g2d0eg43a9g96a7g27311c05ef99',Converter={StaticResource TranslatedStringConverter}}" x:Name="TooltipContent"/>
+                                    </ls:LSButton.ToolTip>
+                                </ls:LSButton>
+                            </Grid>
+                            <ls:LSButton x:Name="VanityUnderwearSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Margin="0,24" Style="{StaticResource EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Underwear}"/>
+                            <ls:LSButton x:Name="EquipmentAmuletSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Amulet}"/>
+                            <ls:LSButton x:Name="EquipmentRing1Slot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Ring}"/>
+                            <ls:LSButton x:Name="EquipmentRing2Slot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Ring2}"/>
+                        </StackPanel>
+                    </DockPanel>
+
+                    <DockPanel Name="EquipmentLeft" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="{StaticResource EquipMargin}">
+                        <!--LIGHTSOURCE-->
+                        <ls:LSButton x:Name="LightSource" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource EquipmentSlotBaseStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.LightSource}" ToolTipService.Placement="Left">
+                            <b:Interaction.Behaviors>
+                                <ls:DropOnGenericBehavior DropCommand="{Binding DataContext.DropLightSourceCommand, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}"/>
+                            </b:Interaction.Behaviors>
+                        </ls:LSButton>
+
+                        <StackPanel DockPanel.Dock="Top">
+
+                            <Control Template="{StaticResource HelmetEQTemplate}" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Helmet}" ToolTipService.Placement="Left"/>
+                            <ls:LSButton x:Name="EquipmentCloakSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Cloak}" ToolTipService.Placement="Left"/>
+                            <ls:LSButton x:Name="EquipmentBreastSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource PaG.EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Breast}" ToolTipService.Placement="Left"/>
+                            <ls:LSButton x:Name="EquipmentGlovesSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource PaG.EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Gloves}" ToolTipService.Placement="Left"/>
+                            <ls:LSButton x:Name="EquipmentBootsSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource PaG.EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.Boots}" ToolTipService.Placement="Left"/>
+                        </StackPanel>
+
+                    </DockPanel>
+
+                    <!--Melee Weapons-->
+                    <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
+                        <TextBlock Style="{StaticResource DetailedListText}" Text="{Binding Source='hde2dafecgf6f5g489ag9baeg23d0610570f5',Converter={StaticResource TranslatedStringConverter}}" TextAlignment="Center" IsHitTestVisible="False" TextWrapping="Wrap" noesis:Text.StrokeThickness="4" noesis:Text.Stroke="{StaticResource LS_PrimaryColorOutlineColor}">
+                            <TextBlock.Effect>
+                                <DropShadowEffect Direction="270" Color="{StaticResource LS_PrimaryColorDropShadowColor}" ShadowDepth="3.0" BlurRadius="8.0"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <ls:LSButton x:Name="EquipmentMeleeMainSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource PaG.EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.MeleeMainHand}" ToolTipService.Placement="Left"/>
+                            <ls:LSButton x:Name="EquipmentMeleeOffSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource PaG.EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.MeleeOffHand}" ToolTipService.Placement="Left"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <!--Ranged Weapons-->
+                    <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom">
+                        <TextBlock Style="{StaticResource DetailedListText}" Text="{Binding Source='h52df2583g5fc1g4182g9511g36238e4e0c19',Converter={StaticResource TranslatedStringConverter}}" TextAlignment="Center" IsHitTestVisible="False" TextWrapping="Wrap" noesis:Text.StrokeThickness="4" noesis:Text.Stroke="{StaticResource LS_PrimaryColorOutlineColor}">
+                            <TextBlock.Effect>
+                                <DropShadowEffect Direction="270" Color="{StaticResource LS_PrimaryColorDropShadowColor}" ShadowDepth="3.0" BlurRadius="8.0"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <ls:LSButton x:Name="EquipmentRangedMainSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource PaG.EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.RangedMainHand}"/>
+                            <ls:LSButton x:Name="EquipmentRangedOffSlot" Tag="{Binding DataContext, ElementName=EquipmentSlots}" Style="{StaticResource PaG.EquipmentSlotStyle}" Panel.ZIndex="{Binding IsSelecting, Converter={StaticResource BoolToIntConverter}, ConverterParameter=20}" DataContext="{Binding Equipment.RangedOffHand}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!--ArmorClass-->
+                    <Control Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Template="{StaticResource ACHolder}" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                </Grid>
+
+                <Control Grid.Row="2" Template="{StaticResource WeaponAttackBonusTemplate}" VerticalAlignment="Bottom" Margin="0,8,0,20"/>
+
+            </Grid>
+        </Grid>
+
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding PlayerCharacterProperties.ArmorSetVisibility}" Value="Vanity">
+                <Setter TargetName="VanityToggleHighlight" Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>

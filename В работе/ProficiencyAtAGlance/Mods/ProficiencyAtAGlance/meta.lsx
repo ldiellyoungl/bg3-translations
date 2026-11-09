@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="0" revision="0" build="49" />
+  <region id="Config">
+    <node id="root">
+      <children>
+        <!-- The Dependencies node is left empty on purpose. Mod Configuration Menu is optional: it
+             finds MCM_blueprint.json in this mod by walking the load order, and Proficiency at a
+             Glance falls back to the defaults in Settings.lua when MCM is absent; the blueprint's
+             "Optional": true stops the missing-dependency warning in MCM. Script Extender is the
+             one hard requirement and is not a pak. Better Inventory UI is not a dependency either,
+             but when it is installed this mod must load after it (see GUI/Library/Lib_Keyboard.xaml). -->
+        <node id="Dependencies" />
+        <node id="ModuleInfo">
+          <attribute id="Author" type="LSString" value="InfiniteGeek" />
+          <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
+          <attribute id="Description" type="LSString" value="Marks weapons and armor in inventory, container, party and trade grids by whether the selected character can use them without penalty: dimmed when not proficient, by default. Load after Better Inventory UI and BCPP. Settings in Mod Configuration Menu, if you have it. Requires Script Extender." />
+          <attribute id="Folder" type="LSString" value="ProficiencyAtAGlance" />
+          <attribute id="LobbyLevelName" type="FixedString" value="" />
+          <attribute id="MD5" type="LSString" value="" />
+          <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
+          <attribute id="MenuLevelName" type="FixedString" value="" />
+          <attribute id="Name" type="FixedString" value="Proficiency at a Glance" />
+          <attribute id="NumPlayers" type="uint8" value="4" />
+          <attribute id="PhotoBooth" type="FixedString" value="" />
+          <attribute id="StartupLevelName" type="FixedString" value="" />
+          <attribute id="Tags" type="LSString" value="" />
+          <attribute id="Type" type="FixedString" value="Add-on" />
+          <attribute id="UUID" type="FixedString" value="da7b10a1-0ccd-4e8a-96ec-a9ab8d8d841a" />
+          <attribute id="Version64" type="int64" value="36169536654802944" />
+          <children>
+            <node id="PublishVersion">
+              <attribute id="Version64" type="int64" value="36169536654802944" />
+            </node>
+            <node id="Scripts" />
+            <node id="TargetModes">
+              <children>
+                <node id="Target">
+                  <attribute id="Object" type="FixedString" value="Story" />
+                </node>
+              </children>
+            </node>
+          </children>
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

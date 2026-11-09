@@ -1,0 +1,1302 @@
+{
+  "SchemaVersion": 1,
+  "ModName": "Proficiency at a Glance",
+  "Handles": {
+    "NameHandle": "hfbf163c9ge2b2g577agabffg8ae0c7ff1df4"
+  },
+  "Optional": true,
+  "Tabs": [
+    {
+      "TabId": "general",
+      "TabName": "General",
+      "Handles": {
+        "NameHandle": "hc4b28b5dg3215g55c8gbe7ag536b4b69f09e"
+      },
+      "Sections": [
+        {
+          "SectionId": "core",
+          "SectionName": "Marks",
+          "Handles": {
+            "NameHandle": "hf1b47448g3791g55abg895eg7c443a80f68e"
+          },
+          "Settings": [
+            {
+              "Id": "enabled",
+              "Name": "Show proficiency marks",
+              "Description": "Marks weapons and armor as Bad, Not Ideal or Good for one character. Off removes every mark.",
+              "Tooltip": "Items in inventory, container and trade slots are rated for one character, a<br>companion's items and a trader's stock included. While trading, that is the party member chosen in the trade window. Otherwise it is your selected character. Equipped items are rated for their wearer. For a Pact of the Blade or Hexblade warlock, a melee weapon they aren't<br>proficient with is Not Ideal rather than Bad, since binding it makes them<br>proficient.",
+              "Handles": {
+                "NameHandle": "hd6f09966g0c3eg5e33g80ffg961ea6a72d5d",
+                "DescriptionHandle": "hd2883b92g1d73g5a1dg8389g79b19a9d3de9",
+                "TooltipHandle": "hc7cc2a52g508ag5e6bg9ee6g91f9458fd2d6"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "equipped_marks",
+              "Name": "Show marks on equipped items",
+              "Tooltip": "Shows a badge on equipped weapons and armor that are Bad or Not Ideal for their<br>wearer. The badge uses that rating's Badge icon and Color from the Looks tab. Good items get none.",
+              "Handles": {
+                "NameHandle": "had224f0ag3571g514egbdb1ga5df7cf57d64",
+                "TooltipHandle": "hce14e8c1g5750g5a2cgafafgc057c591330f"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "equipped_tooltips",
+              "Name": "Explain equipped item badges on hover",
+              "Tooltip": "Hovering the badge on an equipped item shows why it is Bad or Not Ideal, such as<br>Not proficient: Longswords.",
+              "Handles": {
+                "NameHandle": "hb6bdcd13g4cd8g5e74ga693g0663e9384a42",
+                "TooltipHandle": "h7c3b61d7gbff8g5786g9891g8a1da3012d15"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "equipped_marks",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "cell_tooltips",
+              "Name": "Explain item badges on hover",
+              "Tooltip": "Hovering the badge or dot on an item in an inventory, container or trade window<br>shows why it is Bad or Not Ideal, such as Not proficient: Longswords. Good items have no tooltip.",
+              "Handles": {
+                "NameHandle": "h0f5830c1g1ae4g52e1gb64fg5145ba74f056",
+                "TooltipHandle": "he1fbe009g26bag5617g8c7dg1992c51bacdc"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "ware_marks",
+              "Name": "Show marks on Wares",
+              "Tooltip": "Gives Wares the same marks as other items. Off leaves Wares unmarked.",
+              "Handles": {
+                "NameHandle": "hafe249a3g21a5g5c34g9241ge4ca32afe012",
+                "TooltipHandle": "hee270738gcdbfg5688gb221gc452e8b79a37"
+              },
+              "Type": "checkbox",
+              "Default": false
+            },
+            {
+              "Id": "trade_marks",
+              "Name": "Marks in Trade windows",
+              "Tooltip": "How marks show on items in a Trade window, on your side and the trader's. Equipped items keep their badges.<br>Full: the same marks as everywhere else.<br>Subtle: no Dim or Gray, and the Glow, Badge and Dot at 65% strength.<br>Off: no marks.",
+              "Handles": {
+                "NameHandle": "h4ea89746gf80cg5baeg9dffg98cd41d531e1",
+                "TooltipHandle": "h7deb0a61g8eabg528cgad64g76d53365488b",
+                "ChoicesHandles": [
+                  "hdcbf5b19g4a83g5a7fgafe1gf7ebade08cfe",
+                  "h94f15399ge201g5f28ga752g30cebc9ed03e",
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0"
+                ]
+              },
+              "Type": "enum",
+              "Default": "subtle",
+              "Options": {
+                "Choices": [
+                  "full",
+                  "subtle",
+                  "off"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "logging",
+          "SectionName": "Troubleshooting",
+          "Handles": {
+            "NameHandle": "h9aeadd55g7644g5764gb15bg900a4f361e1b"
+          },
+          "Options": {
+            "IsCollapsible": true
+          },
+          "Settings": [
+            {
+              "Id": "debug_level",
+              "Name": "Logging",
+              "Tooltip": "Off: prints any warnings and errors to the Script Extender console, and a line<br>with your settings when a save loads.<br>Basic: also writes a log file, and prints a short line when items are rated or a<br>setting changes.<br>Verbose: also writes a sample of individual item ratings to the log file.<br><br>Log files go to<br>%LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\Script Extender\\ProficiencyAtAGlance. Each save you load starts a new file, and old files are kept.",
+              "Handles": {
+                "NameHandle": "h722a7239ga771g507cgbfbag4b68511e182e",
+                "TooltipHandle": "h020e49aag6bf6g59b4g8b4dg7b848528bee4",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "h76f25500g69e8g5deaga1ffg8eeb1580821a",
+                  "hd28f0d89gf615g5ef4gb512g98b308579e33"
+                ]
+              },
+              "Type": "enum",
+              "Default": "off",
+              "Options": {
+                "Choices": [
+                  "off",
+                  "basic",
+                  "verbose"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TabId": "class_feats",
+      "TabName": "Class & feats",
+      "TabDescription": "Items the character isn't proficient with are always Bad. Choose the rating each penalty below gives; when several apply, the worst wins. Hover a setting to see what it marks.",
+      "Handles": {
+        "NameHandle": "had775a95g702dg5c03g8b75gad1073bc3ac9",
+        "DescriptionHandle": "haaa4bdf9g807dg5105ga459gd30222eb8355"
+      },
+      "Sections": [
+        {
+          "SectionId": "class_armor",
+          "SectionName": "Armor vs class features",
+          "Handles": {
+            "NameHandle": "ha3cebb7dga82bg5b82g8945gd6a44bfc8fc6"
+          },
+          "Settings": [
+            {
+              "Id": "class_armor_tier",
+              "OldId": "pen_class_armor",
+              "Name": "Mark as",
+              "Tooltip": "The rating these penalties give an item. Off ignores them.",
+              "Handles": {
+                "NameHandle": "he7eba002g9399g5a2cgb712g819e94fa3860",
+                "TooltipHandle": "h22f98e60g7012g5b0eg9d52g9f583e683328",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Bad",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "class_armor_monk",
+              "OldId": "ni_monk_armor",
+              "Name": "Monk: shield or armor",
+              "Tooltip": "Marks shields, non-clothing body armor, and Medium or Heavy helmets, gloves, and<br>boots for a monk, since Unarmored Movement doesn't work in them.",
+              "Handles": {
+                "NameHandle": "h4a2d6753g34fbg571ega6d1g2737772816fe",
+                "TooltipHandle": "he860b702g16ffg5f06ga7fcgd9a49bbcd2f1"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "class_armor_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "class_armor_barbarian",
+              "OldId": "ni_barbarian_heavy",
+              "Name": "Barbarian: heavy body armor",
+              "Tooltip": "Marks heavy body armor for a barbarian, since Rage and Fast Movement don't work<br>in it.",
+              "Handles": {
+                "NameHandle": "he80bf380g48efg561eg988dg87e8803fc66f",
+                "TooltipHandle": "he0e0c273g2a28g5e15g86c6g155ef7bad8fa"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "class_armor_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "class_weapon",
+          "SectionName": "Weapons vs class features",
+          "Handles": {
+            "NameHandle": "h26c6bac5g1ba9g5190ga96dg162cc8ab07bd"
+          },
+          "Settings": [
+            {
+              "Id": "class_weapon_tier",
+              "OldId": "pen_class_weapon",
+              "Name": "Mark as",
+              "Tooltip": "The rating these penalties give an item. Off ignores them.",
+              "Handles": {
+                "NameHandle": "hbc43abaagb4eeg5f6egb7aag91afc91dbc61",
+                "TooltipHandle": "he61ec40bg8e13g5063ga781gad6ffffd3d39",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Bad",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "class_weapon_monk",
+              "OldId": "ni_monk_weapon",
+              "Name": "Monk: Heavy or Two-Handed melee weapon",
+              "Tooltip": "Marks Heavy and Two-Handed melee weapons for a monk, since attacks with them<br>grant no Bonus Unarmed Strike.",
+              "Handles": {
+                "NameHandle": "h94331984g0ab7g5553g82b6g92eefc1afa2f",
+                "TooltipHandle": "h08d578adgb019g5d5cg8851gcf1fcf39a7d9"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "class_weapon_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "class_weapon_rogue",
+              "OldId": "ni_sneak_attack",
+              "Name": "Rogue: non-Finesse melee weapon",
+              "Tooltip": "Marks non-Finesse melee weapons for a rogue, since Sneak Attack needs a Finesse<br>or ranged weapon.",
+              "Handles": {
+                "NameHandle": "h57832276g0ba4g5d6cg8ed7g10f3eebec1c9",
+                "TooltipHandle": "h828bb963gaf52g578dga1eag766ebddc158c"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "class_weapon_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "feat_weapon",
+          "SectionName": "Weapons vs feats",
+          "Handles": {
+            "NameHandle": "hb5dbf763ga205g57abg97eag61b5274db434"
+          },
+          "Settings": [
+            {
+              "Id": "feat_tier",
+              "OldId": "pen_feat_weapon",
+              "Name": "Mark as",
+              "Tooltip": "The rating these penalties give an item. Off ignores them.",
+              "Handles": {
+                "NameHandle": "h72a9ace6g8c37g5d4fgb563g12dfad320a84",
+                "TooltipHandle": "h1622385cg768eg59dbg8ef3g5f264fe300f2",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Not ideal",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "feat_defensive_duelist",
+              "Name": "Defensive Duelist",
+              "Tooltip": "Marks non-Finesse main-hand melee weapons for a Defensive Duelist, since the<br>feat's reaction needs a Finesse weapon.",
+              "Handles": {
+                "NameHandle": "h939b7d14ga8feg547bg8526gaa5637deaa5a",
+                "TooltipHandle": "h6d492f15gb298g5fd2g8582gfb69aea00b99"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "feat_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "feat_polearm_master",
+              "Name": "Polearm Master",
+              "Tooltip": "Marks main-hand melee weapons other than Reach weapons, quarterstaffs, and<br>spears for a Polearm Master, since the feat's bonus and opportunity attacks need<br>one of those.",
+              "Handles": {
+                "NameHandle": "h7307ca67gbc1dg59cfg97efg7f23f87f47db",
+                "TooltipHandle": "h3517573fgc87fg57e8gb1f4gfa69ab0b60c4"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "feat_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "hands",
+          "SectionName": "Two-Handed weapon vs off-hand item",
+          "Handles": {
+            "NameHandle": "hb103981fg26ccg59e8g82e5ge7771bbc16ef"
+          },
+          "Settings": [
+            {
+              "Id": "hands_tier",
+              "OldId": "pen_hands",
+              "Name": "Two-Handed weapon vs off-hand item",
+              "Tooltip": "Marks Two-Handed weapons while an off-hand item is equipped, and the reverse,<br>since equipping either unequips the other. Off ignores them.",
+              "Handles": {
+                "NameHandle": "hfae8a006g96abg5499g9474g925bb6dc94e6",
+                "TooltipHandle": "h36aef031gd635g5a65gb853g88ec7bba7eab",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Not ideal",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TabId": "item_drawbacks",
+      "TabName": "Item drawbacks",
+      "TabDescription": "Drawbacks read from items' Boosts and the game's rules, so a mod that lifts a limit also removes the matching mark. Choose the rating each gives; when several apply, the worst wins. Hover a setting to see what it marks.",
+      "Handles": {
+        "NameHandle": "h0c0494cag4b2bg5bc8g973agbab4cea18d48",
+        "DescriptionHandle": "h9088d399ga725g5a1bg8b8bg4a435ed82ab9"
+      },
+      "Sections": [
+        {
+          "SectionId": "ac",
+          "SectionName": "Armor vs AC bonuses",
+          "Handles": {
+            "NameHandle": "heff00fa1g9137g5705gba8eg3d5c6552d112"
+          },
+          "Settings": [
+            {
+              "Id": "ac_tier",
+              "OldId": "pen_ac",
+              "Name": "Mark as",
+              "Tooltip": "The rating these penalties give an item. Off ignores them.",
+              "Handles": {
+                "NameHandle": "h6aa941bag8759g5f2ag9f30gc51e774c442c",
+                "TooltipHandle": "ha710b3cbg6299g54eagada0gb3781220dca9",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Not ideal",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "ac_unarmored",
+              "Name": "Unarmored Defense or Draconic Resilience",
+              "Tooltip": "Marks non-clothing body armor and Medium or Heavy helmets, gloves, and boots,<br>plus shields for a monk, since wearing any of them ends the feature's AC bonus.",
+              "Handles": {
+                "NameHandle": "h97ddcbe8ge363g53e2ga644g94f600da4d42",
+                "TooltipHandle": "h99071776gbcc9g504eg81d0g0b33d3392857"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ac_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "ac_mage_armor",
+              "Name": "Mage Armor",
+              "Tooltip": "Marks non-clothing body armor and Medium or Heavy helmets, gloves, and boots<br>while Mage Armor is active, since wearing armor ends it.",
+              "Handles": {
+                "NameHandle": "hf3ed8928gce54g5b80g9e61g8da5101cc3f2",
+                "TooltipHandle": "ha6a95defg7584g5915gba66gb8280d95b223"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ac_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "ac_items",
+              "Name": "Items like Bracers of Defense",
+              "Tooltip": "Marks shields, non-clothing body armor, and Medium or Heavy helmets, gloves, and<br>boots that would end another equipped item's AC bonus, as with Bracers of<br>Defense. The item already in the same slot doesn't count.",
+              "Handles": {
+                "NameHandle": "h8119eb21g38ccg56d0ga3eegc8e410c56e69",
+                "TooltipHandle": "hea7e0355g048fg5597gb1f3gabaefeb24480"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ac_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "ac_dex_cap",
+              "Name": "Dexterity cap",
+              "Tooltip": "Marks body armor whose Dexterity cap is below this character's Dexterity<br>modifier, so the armor's AC leaves part of the bonus unused. A higher cap from Medium Armor Master counts.",
+              "Handles": {
+                "NameHandle": "h618bfc04gfb7cg5cd6g9e11g18c5f713bd91",
+                "TooltipHandle": "h54d4e4ebg4c2cg59a6gb811gbc06c1c4f90c"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ac_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "ac_penalty",
+              "OldId": "detect_ac",
+              "Name": "AC penalty",
+              "Tooltip": "Marks items that lower this character's Armor Class, when the drawback depends<br>on the wearer, such as on their abilities, race or feats, or on what else they<br>wear.",
+              "Handles": {
+                "NameHandle": "h9d19edeega494g5f4ag96f2g32c728e4ef38",
+                "TooltipHandle": "h84264e9fgf32ag5f8ag8226g1f2091cd4150"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ac_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "ac_bonus_lost",
+              "OldId": "detect_ac_lost",
+              "Name": "Other AC bonuses",
+              "Tooltip": "Marks items that would end an AC bonus or an AC formula from one of this<br>character's passives or equipped items, when its condition reads what the<br>character wears, such as a mod's version of Unarmored Defense. A worn item that keeps the bonus off is marked too. The bonuses above keep their own checkboxes.",
+              "Handles": {
+                "NameHandle": "hc9027db0gf923g5fddg8388gd04a6c849b46",
+                "TooltipHandle": "h5d8c0ec5ga657g5706g9a1ege1ce9836087d"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ac_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "ac_shield_badge",
+              "Name": "AC shield as badge",
+              "Tooltip": "When a mark comes only from these AC penalties, the badge shows the game's AC<br>shield icon instead of the rating's Badge icon.",
+              "Handles": {
+                "NameHandle": "h6f1d0f87gdb01g58cfg9db8ga8d061ca41b3",
+                "TooltipHandle": "h9c952fe8g659cg58f3gb127gd606b737a2d0"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ac_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "movement",
+          "SectionName": "Movement speed",
+          "Handles": {
+            "NameHandle": "h3446c919g604eg5f85g87ecg14b48b41cd9b"
+          },
+          "Settings": [
+            {
+              "Id": "movement_tier",
+              "OldId": "pen_movement",
+              "Name": "Mark as",
+              "Tooltip": "Marks items that would lower this character's movement speed or jump distance,<br>read from Boosts and their conditions, such as armor that slows anyone below its<br>Strength requirement. A drawback every wearer pays is under Drawbacks for every wearer. Monk Unarmored Movement is under Armor vs class features, on the Class & feats<br>tab. Off ignores them.",
+              "Handles": {
+                "NameHandle": "h5a41ce49g03b7g5814g98f4g6472b6585435",
+                "TooltipHandle": "h28eddea2g8b65g5d77g977eg51c46981c718",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Not ideal",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "movement_penalty",
+              "OldId": "detect_movement",
+              "Name": "Movement penalty",
+              "Tooltip": "Marks items that lower this character's movement speed or jump distance, when<br>the drawback depends on the wearer, such as on their abilities, race or feats,<br>or on what else they wear.",
+              "Handles": {
+                "NameHandle": "h174395a6g4e42g5f0dgb6d3g780bd52a8ca8",
+                "TooltipHandle": "h8a475363g76d1g5e43ga599gdafd7f71a2d2"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "movement_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "movement_bonus_lost",
+              "OldId": "detect_movement_lost",
+              "Name": "Movement bonuses",
+              "Tooltip": "Marks items that would end a movement speed bonus from one of this character's<br>passives or equipped items, when its condition reads what the character wears. A worn item that keeps the bonus off is marked too.",
+              "Handles": {
+                "NameHandle": "h004722f3gdf76g57caga0f0g9d1e1237d4bb",
+                "TooltipHandle": "hd01f6c32gd384g5f7ag81ebgcd792da5a0d5"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "movement_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "ability",
+          "SectionName": "Ability scores",
+          "Handles": {
+            "NameHandle": "h275f9052g7176g5dbdgb80fg6546b4c1d503"
+          },
+          "Settings": [
+            {
+              "Id": "ability_tier",
+              "OldId": "pen_detected",
+              "Name": "Mark as",
+              "Tooltip": "Marks items that would lower one of this character's ability scores, read from<br>Boosts and their conditions. A drawback every wearer pays is under Drawbacks for every wearer. Off ignores them.",
+              "Handles": {
+                "NameHandle": "h97cbcb52gda5cg5311g8d32gc4d9c74e06da",
+                "TooltipHandle": "hadd5ab8cg6ad5g54beg8752g4495ccdab46f",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Not ideal",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "ability_penalty",
+              "OldId": "detect_ability",
+              "Name": "Ability penalty",
+              "Tooltip": "Marks items that lower one of this character's ability scores, when the drawback<br>depends on the wearer, such as on their abilities, race or feats, or on what<br>else they wear.",
+              "Handles": {
+                "NameHandle": "h115e99ccgdec5g5c96gb0a3g475a815e9bae",
+                "TooltipHandle": "h18c06178g9b14g510cga5d8g8d367dd93580"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ability_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "ability_bonus_lost",
+              "OldId": "detect_ability_lost",
+              "Name": "Ability bonuses",
+              "Tooltip": "Marks items that would end an ability score bonus from one of this character's<br>passives or equipped items, when its condition reads what the character wears. A worn item that keeps the bonus off is marked too.",
+              "Handles": {
+                "NameHandle": "h0af229d4gf93dg551fgba75g45a7cec137fe",
+                "TooltipHandle": "h5ee98d9eg9273g5f4dga298g67a46da12264"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "ability_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "combat",
+          "SectionName": "Combat",
+          "Handles": {
+            "NameHandle": "hbaefa1e5ge52bg55c9g8ad5g43b9701ff36c"
+          },
+          "Settings": [
+            {
+              "Id": "combat_tier",
+              "Name": "Mark as",
+              "Tooltip": "Marks items that would worsen this character's attack rolls, saving throws,<br>ability checks, initiative, damage, critical hits, hit points, spell save DC or<br>resources, or give attacks against them Advantage, read from Boosts and their<br>conditions. A drawback every wearer pays is under Drawbacks for every wearer. Off ignores them.",
+              "Handles": {
+                "NameHandle": "hf8ea5574g6f3bg55b9gaac2gf7257c047c27",
+                "TooltipHandle": "h463a8fc3g0a6cg52dcg861egfb85fdea8461",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Not ideal",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "combat_penalty",
+              "Name": "Combat penalty",
+              "Tooltip": "Marks items that worsen this character's combat stats (attack rolls, saves,<br>checks, damage, hit points, spell save DC and the like), when the drawback<br>depends on the wearer, such as on their abilities, race or feats, or on what<br>else they wear.",
+              "Handles": {
+                "NameHandle": "he291a508gaf60g5be1g9111g0506a3af16ad",
+                "TooltipHandle": "h3be6c840g8b7fg5e7egba5cg73bbfe9772fb"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "combat_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "combat_bonus_lost",
+              "Name": "Combat bonuses",
+              "Tooltip": "Marks items that would end a combat bonus (to attack rolls, saves, damage, hit<br>points and the like) from one of this character's passives or equipped items,<br>when its condition reads what the character wears. A worn item that keeps the bonus off is marked too.",
+              "Handles": {
+                "NameHandle": "hd15349bagfb34g5441g8191gc636920066ce",
+                "TooltipHandle": "hebead0a7gad7dg5a9bg9348g331cce22f5fe"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "combat_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "universal",
+          "SectionName": "Drawbacks for every wearer",
+          "Handles": {
+            "NameHandle": "he2735e53g1c03g5680gbe52g80517a1403f6"
+          },
+          "Settings": [
+            {
+              "Id": "universal_tier",
+              "OldId": "pen_stealth",
+              "Name": "Mark as",
+              "Tooltip": "Marks items with a drawback that anyone wearing them pays, whatever their<br>abilities or race. Off by default, since such a drawback is part of the item rather than a poor fit<br>for this character.",
+              "Handles": {
+                "NameHandle": "h0da3ff49g3060g54e3gb998ge4fba9be6e4e",
+                "TooltipHandle": "hbdae17edg5362g5b49gb480gedc1c39048e1",
+                "ChoicesHandles": [
+                  "h1cf02fd8gd792g5cd4ga283g0bac2c7896f0",
+                  "hf0e71c39g5ed4g5b89ga277g7bed3355039f",
+                  "h44d8af80gef22g510cg91a6gc5ee22047121"
+                ]
+              },
+              "Type": "radio",
+              "Default": "Off",
+              "Options": {
+                "Choices": [
+                  "Off",
+                  "Not ideal",
+                  "Bad"
+                ]
+              }
+            },
+            {
+              "Id": "universal_stealth",
+              "Name": "Stealth Disadvantage",
+              "Tooltip": "Marks armor that gives Disadvantage on Stealth checks. Medium Armor Master removes the mark wherever it removes the Disadvantage.",
+              "Handles": {
+                "NameHandle": "h47af2550gb806g5278g80a9g637fecefb849",
+                "TooltipHandle": "h63501ba8ga058g5827g814bg2722b808608f"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "universal_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "universal_penalty",
+              "Name": "Other drawbacks",
+              "Tooltip": "Marks items whose Boosts or passives worsen the AC, movement, ability scores,<br>rolls, damage, hit points or resources of anyone wearing them, such as a mod's<br>attack roll penalty on heavy armor.",
+              "Handles": {
+                "NameHandle": "h313de921g4b24g5e6dgb435gb8a135ac22ec",
+                "TooltipHandle": "h5db30849gcc3dg51c5g8fa9g1e2d4db7f151"
+              },
+              "Type": "checkbox",
+              "Default": true,
+              "VisibleIf": {
+                "Conditions": [
+                  {
+                    "SettingId": "universal_tier",
+                    "Operator": "!=",
+                    "ExpectedValue": "Off"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TabId": "looks",
+      "TabName": "Looks",
+      "Sections": [
+        {
+          "SectionId": "bad_marks",
+          "SectionName": "Bad",
+          "Handles": {
+            "NameHandle": "hf29b31bcge345g505egaf48g355b0dc659f7"
+          },
+          "Settings": [
+            {
+              "Id": "bad_glow",
+              "Name": "Glow",
+              "Handles": {
+                "NameHandle": "h9d31eeadg9c99g5e3agb721g1066b1b30f1c"
+              },
+              "Type": "checkbox",
+              "Default": false
+            },
+            {
+              "Id": "bad_badge",
+              "Name": "Badge",
+              "Handles": {
+                "NameHandle": "hd8a9c39dg32d5g5c93g9ba0gbb848ba426c5"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "bad_dot",
+              "Name": "Dot",
+              "Handles": {
+                "NameHandle": "hfee0750dg2b0eg565fg811cgd4138f632fbc"
+              },
+              "Type": "checkbox",
+              "Default": false
+            },
+            {
+              "Id": "bad_dim",
+              "Name": "Dim",
+              "Handles": {
+                "NameHandle": "h712b9bc6ge42ag5fa3g9337g859d90fb3f75"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "bad_gray",
+              "Name": "Gray",
+              "Handles": {
+                "NameHandle": "h3345f2fcg7146g5c46ga66agcc3326758561"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "bad_color_preset",
+              "Name": "Color",
+              "Handles": {
+                "NameHandle": "h1f3b6ea3g4191g544agb5f9g32b65a0d4c1a",
+                "ChoicesHandles": [
+                  "h897bba2bg8f7ag58c3g896fgf29beb2e8e87",
+                  "he6b6d7dcge996g5c08g8668g63eb213d5066",
+                  "h16ac2be2gaadfg5adegaefaga4e5d003edfe",
+                  "h8245f279g7408g5158g8cb3g1ddc81484a8c",
+                  "h4bc0625bg0838g53c6gb496gefdbe13a0553",
+                  "h1e824f7egaff2g5642gb04dg379474f2b9d9"
+                ]
+              },
+              "Type": "enum",
+              "Default": "red",
+              "Options": {
+                "Choices": [
+                  "red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "blue",
+                  "purple"
+                ]
+              },
+              "VisibleIf": {
+                "LogicalOperator": "or",
+                "Conditions": [
+                  {
+                    "SettingId": "bad_glow",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "bad_badge",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "bad_dot",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "equipped_marks",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "bad_badge_icon",
+              "Name": "Badge icon",
+              "Handles": {
+                "NameHandle": "hddf763fcga77fg5cf0g8ffcg94c663d1120c",
+                "ChoicesHandles": [
+                  "hf3a41ee4g5113g5690gb234ge505fd11e707",
+                  "h196cb8f6g73edg54a2ga4dfgd416bed9ce1f",
+                  "h3b1f659fg92fbg55b1g88d7gfcae70170346"
+                ]
+              },
+              "Type": "radio",
+              "Default": "cross_thin",
+              "Options": {
+                "Choices": [
+                  "cross",
+                  "cross_thin",
+                  "skull"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "not_ideal_marks",
+          "SectionName": "Not Ideal",
+          "Handles": {
+            "NameHandle": "h35d11351gccd3g57bbg87e7gdf499df67fcc"
+          },
+          "Settings": [
+            {
+              "Id": "not_ideal_glow",
+              "Name": "Glow",
+              "Handles": {
+                "NameHandle": "h9941a315gb3f0g59b0gbf41g63c331bad00f"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "not_ideal_badge",
+              "Name": "Badge",
+              "Handles": {
+                "NameHandle": "h76b443fbg4aa1g5188g9659g5e479b9cc14d"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "not_ideal_dot",
+              "Name": "Dot",
+              "Handles": {
+                "NameHandle": "h94275638g1faag52aaga6edge955921c5c72"
+              },
+              "Type": "checkbox",
+              "Default": false
+            },
+            {
+              "Id": "not_ideal_dim",
+              "Name": "Dim",
+              "Handles": {
+                "NameHandle": "heb9c1e8dgb165g5c7ega673gb2febfdc5e8a"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "not_ideal_gray",
+              "Name": "Gray",
+              "Handles": {
+                "NameHandle": "ha3eee50bg6714g5442gad45g6c765d5b9283"
+              },
+              "Type": "checkbox",
+              "Default": false
+            },
+            {
+              "Id": "not_ideal_color_preset",
+              "Name": "Color",
+              "Handles": {
+                "NameHandle": "h928bd9b4g6825g5f03g9ee3g48226ce87d7f",
+                "ChoicesHandles": [
+                  "h897bba2bg8f7ag58c3g896fgf29beb2e8e87",
+                  "he6b6d7dcge996g5c08g8668g63eb213d5066",
+                  "h16ac2be2gaadfg5adegaefaga4e5d003edfe",
+                  "h8245f279g7408g5158g8cb3g1ddc81484a8c",
+                  "h4bc0625bg0838g53c6gb496gefdbe13a0553",
+                  "h1e824f7egaff2g5642gb04dg379474f2b9d9"
+                ]
+              },
+              "Type": "enum",
+              "Default": "orange",
+              "Options": {
+                "Choices": [
+                  "red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "blue",
+                  "purple"
+                ]
+              },
+              "VisibleIf": {
+                "LogicalOperator": "or",
+                "Conditions": [
+                  {
+                    "SettingId": "not_ideal_glow",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "not_ideal_badge",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "not_ideal_dot",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "equipped_marks",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "not_ideal_badge_icon",
+              "Name": "Badge icon",
+              "Handles": {
+                "NameHandle": "hd3c3624bg5c99g5895g8208gd7add45ea365",
+                "ChoicesHandles": [
+                  "h45f920c8gc7d3g5b73g9604g14390e791e39",
+                  "h9c30b88dgf797g55b0g8ee6g6bc219c2cbf9",
+                  "h3ac37091ga5f3g5ccfg9696g2bf500bfe33a"
+                ]
+              },
+              "Type": "radio",
+              "Default": "warning",
+              "Options": {
+                "Choices": [
+                  "warning",
+                  "exclamation",
+                  "minus"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "good_marks",
+          "SectionName": "Good",
+          "Handles": {
+            "NameHandle": "hb3c2e581gd172g513cgb62eg209d26485a85"
+          },
+          "Settings": [
+            {
+              "Id": "good_glow",
+              "Name": "Glow",
+              "Handles": {
+                "NameHandle": "h20e50b82g966cg5180g91f3gc9d1e29e3b31"
+              },
+              "Type": "checkbox",
+              "Default": false
+            },
+            {
+              "Id": "good_badge",
+              "Name": "Badge",
+              "Handles": {
+                "NameHandle": "h31e96792g1865g5229gaf79gdcec221cf5fb"
+              },
+              "Type": "checkbox",
+              "Default": true
+            },
+            {
+              "Id": "good_dot",
+              "Name": "Dot",
+              "Handles": {
+                "NameHandle": "hcc6da0f3g39a1g59e1g8435gb7de9f334ed0"
+              },
+              "Type": "checkbox",
+              "Default": false
+            },
+            {
+              "Id": "good_color_preset",
+              "Name": "Color",
+              "Handles": {
+                "NameHandle": "he822460dg6367g54e9gb553g2485023dc9a4",
+                "ChoicesHandles": [
+                  "h897bba2bg8f7ag58c3g896fgf29beb2e8e87",
+                  "he6b6d7dcge996g5c08g8668g63eb213d5066",
+                  "h16ac2be2gaadfg5adegaefaga4e5d003edfe",
+                  "h8245f279g7408g5158g8cb3g1ddc81484a8c",
+                  "h4bc0625bg0838g53c6gb496gefdbe13a0553",
+                  "h1e824f7egaff2g5642gb04dg379474f2b9d9"
+                ]
+              },
+              "Type": "enum",
+              "Default": "green",
+              "Options": {
+                "Choices": [
+                  "red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "blue",
+                  "purple"
+                ]
+              },
+              "VisibleIf": {
+                "LogicalOperator": "or",
+                "Conditions": [
+                  {
+                    "SettingId": "good_glow",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "good_badge",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  },
+                  {
+                    "SettingId": "good_dot",
+                    "Operator": "==",
+                    "ExpectedValue": true
+                  }
+                ]
+              }
+            },
+            {
+              "Id": "good_badge_icon",
+              "Name": "Badge icon",
+              "Handles": {
+                "NameHandle": "h501010c4ge2ecg5442g81d2g65629cf6cc7a",
+                "ChoicesHandles": [
+                  "ha4bfe942g75b9g57a5gaa54ge6a7d8f9b798",
+                  "h2cf432f5g5f8eg5da6gb7c8gc44a232a279b",
+                  "h13f8c69fg1355g5afcg9c1egd0e6eb467a0e",
+                  "hde9e58c5gfa38g5ad9gb4cegc661b8da8e61"
+                ]
+              },
+              "Type": "radio",
+              "Default": "check_thin",
+              "Options": {
+                "Choices": [
+                  "check",
+                  "check_thin",
+                  "check_glow",
+                  "star"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "SectionId": "placement",
+          "SectionName": "Placement",
+          "Handles": {
+            "NameHandle": "hb62415adge2b0g516egbd18g2b0a79596f55"
+          },
+          "Settings": [
+            {
+              "Id": "placement_corners",
+              "OldId": "corners",
+              "Name": "Badge and dot corners",
+              "Type": "enum",
+              "Default": "badge_top_left",
+              "Options": {
+                "Choices": [
+                  "badge_top_left",
+                  "badge_bottom_right"
+                ]
+              },
+              "Description": "Which corners the badge and the dot sit in, on equipped items too.",
+              "Handles": {
+                "NameHandle": "hda9ca770g02f2g5382gaac0g7a7c96add6d3",
+                "DescriptionHandle": "h4eb96423ge2ccg5d9bg9408g0a0daa265c36",
+                "ChoicesHandles": [
+                  "h74239e45g32f7g57cdg858cg5c5e0e070ef4",
+                  "h156a78f2ga380g5aceg8de6g5cf1b93b9278"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "TabDescription": "Choose how each rating marks an item, so Bad, Not Ideal, and Good items stand out at a glance.<br><br>Glow, Badge, and Dot use the rating's Color: Glow is a band fading in from the slot's edge, Badge is a small icon on a dark background in one corner, and Dot is a small dot in the opposite corner. Dim darkens the item, and Gray drains most of its color, rarity border included. On equipped items, Bad and Not Ideal show only the badge, and Good shows nothing.",
+      "Handles": {
+        "NameHandle": "hd864e04bg44f9g57cbg8d4cgc1b357a46604",
+        "DescriptionHandle": "hb7a906fbg8067g5ac1g813eg6cb39166fc00"
+      }
+    }
+  ]
+}

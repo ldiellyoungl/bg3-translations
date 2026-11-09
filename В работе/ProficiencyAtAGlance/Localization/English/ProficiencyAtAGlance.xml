@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="hfbf163c9ge2b2g577agabffg8ae0c7ff1df4" version="1">Proficiency at a Glance</content>
+	<content contentuid="hc4b28b5dg3215g55c8gbe7ag536b4b69f09e" version="1">General</content>
+	<content contentuid="hf1b47448g3791g55abg895eg7c443a80f68e" version="1">Marks</content>
+	<content contentuid="hd6f09966g0c3eg5e33g80ffg961ea6a72d5d" version="1">Show proficiency marks</content>
+	<content contentuid="hd2883b92g1d73g5a1dg8389g79b19a9d3de9" version="4">Marks weapons and armor as Bad, Not Ideal or Good for one character. Off removes every mark.</content>
+	<content contentuid="hc7cc2a52g508ag5e6bg9ee6g91f9458fd2d6" version="5">Items in inventory, container and trade slots are rated for one character, a&lt;br&gt;companion's items and a trader's stock included. While trading, that is the party member chosen in the trade window. Otherwise it is your selected character. Equipped items are rated for their wearer. For a Pact of the Blade or Hexblade warlock, a melee weapon they aren't&lt;br&gt;proficient with is Not Ideal rather than Bad, since binding it makes them&lt;br&gt;proficient.</content>
+	<content contentuid="had224f0ag3571g514egbdb1ga5df7cf57d64" version="2">Show marks on equipped items</content>
+	<content contentuid="hce14e8c1g5750g5a2cgafafgc057c591330f" version="2">Shows a badge on equipped weapons and armor that are Bad or Not Ideal for their&lt;br&gt;wearer. The badge uses that rating's Badge icon and Color from the Looks tab. Good items get none.</content>
+	<content contentuid="hb6bdcd13g4cd8g5e74ga693g0663e9384a42" version="1">Explain equipped item badges on hover</content>
+	<content contentuid="h7c3b61d7gbff8g5786g9891g8a1da3012d15" version="2">Hovering the badge on an equipped item shows why it is Bad or Not Ideal, such as&lt;br&gt;Not proficient: Longswords.</content>
+	<content contentuid="h0f5830c1g1ae4g52e1gb64fg5145ba74f056" version="1">Explain item badges on hover</content>
+	<content contentuid="he1fbe009g26bag5617g8c7dg1992c51bacdc" version="2">Hovering the badge or dot on an item in an inventory, container or trade window&lt;br&gt;shows why it is Bad or Not Ideal, such as Not proficient: Longswords. Good items have no tooltip.</content>
+	<content contentuid="hafe249a3g21a5g5c34g9241ge4ca32afe012" version="1">Show marks on Wares</content>
+	<content contentuid="hee270738gcdbfg5688gb221gc452e8b79a37" version="1">Gives Wares the same marks as other items. Off leaves Wares unmarked.</content>
+	<content contentuid="h4ea89746gf80cg5baeg9dffg98cd41d531e1" version="1">Marks in Trade windows</content>
+	<content contentuid="h7deb0a61g8eabg528cgad64g76d53365488b" version="1">How marks show on items in a Trade window, on your side and the trader's. Equipped items keep their badges.&lt;br&gt;Full: the same marks as everywhere else.&lt;br&gt;Subtle: no Dim or Gray, and the Glow, Badge and Dot at 65% strength.&lt;br&gt;Off: no marks.</content>
+	<content contentuid="hdcbf5b19g4a83g5a7fgafe1gf7ebade08cfe" version="1">Full</content>
+	<content contentuid="h94f15399ge201g5f28ga752g30cebc9ed03e" version="1">Subtle</content>
+	<content contentuid="h1cf02fd8gd792g5cd4ga283g0bac2c7896f0" version="1">Off</content>
+	<content contentuid="h9aeadd55g7644g5764gb15bg900a4f361e1b" version="1">Troubleshooting</content>
+	<content contentuid="h722a7239ga771g507cgbfbag4b68511e182e" version="1">Logging</content>
+	<content contentuid="h020e49aag6bf6g59b4g8b4dg7b848528bee4" version="5">Off: prints any warnings and errors to the Script Extender console, and a line&lt;br&gt;with your settings when a save loads.&lt;br&gt;Basic: also writes a log file, and prints a short line when items are rated or a&lt;br&gt;setting changes.&lt;br&gt;Verbose: also writes a sample of individual item ratings to the log file.&lt;br&gt;&lt;br&gt;Log files go to&lt;br&gt;%LOCALAPPDATA%\Larian Studios\Baldur's Gate 3\Script Extender\ProficiencyAtAGlance. Each save you load starts a new file, and old files are kept.</content>
+	<content contentuid="h76f25500g69e8g5deaga1ffg8eeb1580821a" version="1">Basic</content>
+	<content contentuid="hd28f0d89gf615g5ef4gb512g98b308579e33" version="1">Verbose</content>
+	<content contentuid="had775a95g702dg5c03g8b75gad1073bc3ac9" version="1">Class &amp; feats</content>
+	<content contentuid="haaa4bdf9g807dg5105ga459gd30222eb8355" version="1">Items the character isn't proficient with are always Bad. Choose the rating each penalty below gives; when several apply, the worst wins. Hover a setting to see what it marks.</content>
+	<content contentuid="ha3cebb7dga82bg5b82g8945gd6a44bfc8fc6" version="1">Armor vs class features</content>
+	<content contentuid="he7eba002g9399g5a2cgb712g819e94fa3860" version="1">Mark as</content>
+	<content contentuid="h22f98e60g7012g5b0eg9d52g9f583e683328" version="1">The rating these penalties give an item. Off ignores them.</content>
+	<content contentuid="hf0e71c39g5ed4g5b89ga277g7bed3355039f" version="1">Not Ideal</content>
+	<content contentuid="h44d8af80gef22g510cg91a6gc5ee22047121" version="1">Bad</content>
+	<content contentuid="h4a2d6753g34fbg571ega6d1g2737772816fe" version="1">Monk: shield or armor</content>
+	<content contentuid="he860b702g16ffg5f06ga7fcgd9a49bbcd2f1" version="2">Marks shields, non-clothing body armor, and Medium or Heavy helmets, gloves, and&lt;br&gt;boots for a monk, since Unarmored Movement doesn't work in them.</content>
+	<content contentuid="he80bf380g48efg561eg988dg87e8803fc66f" version="1">Barbarian: heavy body armor</content>
+	<content contentuid="he0e0c273g2a28g5e15g86c6g155ef7bad8fa" version="2">Marks heavy body armor for a barbarian, since Rage and Fast Movement don't work&lt;br&gt;in it.</content>
+	<content contentuid="h26c6bac5g1ba9g5190ga96dg162cc8ab07bd" version="1">Weapons vs class features</content>
+	<content contentuid="hbc43abaagb4eeg5f6egb7aag91afc91dbc61" version="1">Mark as</content>
+	<content contentuid="he61ec40bg8e13g5063ga781gad6ffffd3d39" version="1">The rating these penalties give an item. Off ignores them.</content>
+	<content contentuid="h94331984g0ab7g5553g82b6g92eefc1afa2f" version="1">Monk: Heavy or Two-Handed melee weapon</content>
+	<content contentuid="h08d578adgb019g5d5cg8851gcf1fcf39a7d9" version="2">Marks Heavy and Two-Handed melee weapons for a monk, since attacks with them&lt;br&gt;grant no Bonus Unarmed Strike.</content>
+	<content contentuid="h57832276g0ba4g5d6cg8ed7g10f3eebec1c9" version="1">Rogue: non-Finesse melee weapon</content>
+	<content contentuid="h828bb963gaf52g578dga1eag766ebddc158c" version="2">Marks non-Finesse melee weapons for a rogue, since Sneak Attack needs a Finesse&lt;br&gt;or ranged weapon.</content>
+	<content contentuid="hb5dbf763ga205g57abg97eag61b5274db434" version="1">Weapons vs feats</content>
+	<content contentuid="h72a9ace6g8c37g5d4fgb563g12dfad320a84" version="1">Mark as</content>
+	<content contentuid="h1622385cg768eg59dbg8ef3g5f264fe300f2" version="1">The rating these penalties give an item. Off ignores them.</content>
+	<content contentuid="h939b7d14ga8feg547bg8526gaa5637deaa5a" version="1">Defensive Duelist</content>
+	<content contentuid="h6d492f15gb298g5fd2g8582gfb69aea00b99" version="2">Marks non-Finesse main-hand melee weapons for a Defensive Duelist, since the&lt;br&gt;feat's reaction needs a Finesse weapon.</content>
+	<content contentuid="h7307ca67gbc1dg59cfg97efg7f23f87f47db" version="1">Polearm Master</content>
+	<content contentuid="h3517573fgc87fg57e8gb1f4gfa69ab0b60c4" version="2">Marks main-hand melee weapons other than Reach weapons, quarterstaffs, and&lt;br&gt;spears for a Polearm Master, since the feat's bonus and opportunity attacks need&lt;br&gt;one of those.</content>
+	<content contentuid="hb103981fg26ccg59e8g82e5ge7771bbc16ef" version="1">Two-Handed weapon vs off-hand item</content>
+	<content contentuid="hfae8a006g96abg5499g9474g925bb6dc94e6" version="3">Two-Handed weapon vs off-hand item</content>
+	<content contentuid="h36aef031gd635g5a65gb853g88ec7bba7eab" version="2">Marks Two-Handed weapons while an off-hand item is equipped, and the reverse,&lt;br&gt;since equipping either unequips the other. Off ignores them.</content>
+	<content contentuid="h0c0494cag4b2bg5bc8g973agbab4cea18d48" version="1">Item drawbacks</content>
+	<content contentuid="h9088d399ga725g5a1bg8b8bg4a435ed82ab9" version="1">Drawbacks read from items' Boosts and the game's rules, so a mod that lifts a limit also removes the matching mark. Choose the rating each gives; when several apply, the worst wins. Hover a setting to see what it marks.</content>
+	<content contentuid="heff00fa1g9137g5705gba8eg3d5c6552d112" version="1">Armor vs AC bonuses</content>
+	<content contentuid="h6aa941bag8759g5f2ag9f30gc51e774c442c" version="1">Mark as</content>
+	<content contentuid="ha710b3cbg6299g54eagada0gb3781220dca9" version="1">The rating these penalties give an item. Off ignores them.</content>
+	<content contentuid="h97ddcbe8ge363g53e2ga644g94f600da4d42" version="2">Unarmored Defense or Draconic Resilience</content>
+	<content contentuid="h99071776gbcc9g504eg81d0g0b33d3392857" version="2">Marks non-clothing body armor and Medium or Heavy helmets, gloves, and boots,&lt;br&gt;plus shields for a monk, since wearing any of them ends the feature's AC bonus.</content>
+	<content contentuid="hf3ed8928gce54g5b80g9e61g8da5101cc3f2" version="1">Mage Armor</content>
+	<content contentuid="ha6a95defg7584g5915gba66gb8280d95b223" version="2">Marks non-clothing body armor and Medium or Heavy helmets, gloves, and boots&lt;br&gt;while Mage Armor is active, since wearing armor ends it.</content>
+	<content contentuid="h8119eb21g38ccg56d0ga3eegc8e410c56e69" version="1">Items like Bracers of Defense</content>
+	<content contentuid="hea7e0355g048fg5597gb1f3gabaefeb24480" version="2">Marks shields, non-clothing body armor, and Medium or Heavy helmets, gloves, and&lt;br&gt;boots that would end another equipped item's AC bonus, as with Bracers of&lt;br&gt;Defense. The item already in the same slot doesn't count.</content>
+	<content contentuid="h618bfc04gfb7cg5cd6g9e11g18c5f713bd91" version="1">Dexterity cap</content>
+	<content contentuid="h54d4e4ebg4c2cg59a6gb811gbc06c1c4f90c" version="2">Marks body armor whose Dexterity cap is below this character's Dexterity&lt;br&gt;modifier, so the armor's AC leaves part of the bonus unused. A higher cap from Medium Armor Master counts.</content>
+	<content contentuid="h9d19edeega494g5f4ag96f2g32c728e4ef38" version="1">AC penalty</content>
+	<content contentuid="h84264e9fgf32ag5f8ag8226g1f2091cd4150" version="2">Marks items that lower this character's Armor Class, when the drawback depends&lt;br&gt;on the wearer, such as on their abilities, race or feats, or on what else they&lt;br&gt;wear.</content>
+	<content contentuid="hc9027db0gf923g5fddg8388gd04a6c849b46" version="1">Other AC bonuses</content>
+	<content contentuid="h5d8c0ec5ga657g5706g9a1ege1ce9836087d" version="2">Marks items that would end an AC bonus or an AC formula from one of this&lt;br&gt;character's passives or equipped items, when its condition reads what the&lt;br&gt;character wears, such as a mod's version of Unarmored Defense. A worn item that keeps the bonus off is marked too. The bonuses above keep their own checkboxes.</content>
+	<content contentuid="h6f1d0f87gdb01g58cfg9db8ga8d061ca41b3" version="2">AC shield as badge</content>
+	<content contentuid="h9c952fe8g659cg58f3gb127gd606b737a2d0" version="2">When a mark comes only from these AC penalties, the badge shows the game's AC&lt;br&gt;shield icon instead of the rating's Badge icon.</content>
+	<content contentuid="h3446c919g604eg5f85g87ecg14b48b41cd9b" version="1">Movement speed</content>
+	<content contentuid="h5a41ce49g03b7g5814g98f4g6472b6585435" version="2">Mark as</content>
+	<content contentuid="h28eddea2g8b65g5d77g977eg51c46981c718" version="2">Marks items that would lower this character's movement speed or jump distance,&lt;br&gt;read from Boosts and their conditions, such as armor that slows anyone below its&lt;br&gt;Strength requirement. A drawback every wearer pays is under Drawbacks for every wearer. Monk Unarmored Movement is under Armor vs class features, on the Class &amp; feats&lt;br&gt;tab. Off ignores them.</content>
+	<content contentuid="h174395a6g4e42g5f0dgb6d3g780bd52a8ca8" version="1">Movement penalty</content>
+	<content contentuid="h8a475363g76d1g5e43ga599gdafd7f71a2d2" version="2">Marks items that lower this character's movement speed or jump distance, when&lt;br&gt;the drawback depends on the wearer, such as on their abilities, race or feats,&lt;br&gt;or on what else they wear.</content>
+	<content contentuid="h004722f3gdf76g57caga0f0g9d1e1237d4bb" version="1">Movement bonuses</content>
+	<content contentuid="hd01f6c32gd384g5f7ag81ebgcd792da5a0d5" version="2">Marks items that would end a movement speed bonus from one of this character's&lt;br&gt;passives or equipped items, when its condition reads what the character wears. A worn item that keeps the bonus off is marked too.</content>
+	<content contentuid="h275f9052g7176g5dbdgb80fg6546b4c1d503" version="1">Ability scores</content>
+	<content contentuid="h97cbcb52gda5cg5311g8d32gc4d9c74e06da" version="2">Mark as</content>
+	<content contentuid="hadd5ab8cg6ad5g54beg8752g4495ccdab46f" version="2">Marks items that would lower one of this character's ability scores, read from&lt;br&gt;Boosts and their conditions. A drawback every wearer pays is under Drawbacks for every wearer. Off ignores them.</content>
+	<content contentuid="h115e99ccgdec5g5c96gb0a3g475a815e9bae" version="1">Ability penalty</content>
+	<content contentuid="h18c06178g9b14g510cga5d8g8d367dd93580" version="2">Marks items that lower one of this character's ability scores, when the drawback&lt;br&gt;depends on the wearer, such as on their abilities, race or feats, or on what&lt;br&gt;else they wear.</content>
+	<content contentuid="h0af229d4gf93dg551fgba75g45a7cec137fe" version="1">Ability bonuses</content>
+	<content contentuid="h5ee98d9eg9273g5f4dga298g67a46da12264" version="2">Marks items that would end an ability score bonus from one of this character's&lt;br&gt;passives or equipped items, when its condition reads what the character wears. A worn item that keeps the bonus off is marked too.</content>
+	<content contentuid="hbaefa1e5ge52bg55c9g8ad5g43b9701ff36c" version="1">Combat</content>
+	<content contentuid="hf8ea5574g6f3bg55b9gaac2gf7257c047c27" version="2">Mark as</content>
+	<content contentuid="h463a8fc3g0a6cg52dcg861egfb85fdea8461" version="2">Marks items that would worsen this character's attack rolls, saving throws,&lt;br&gt;ability checks, initiative, damage, critical hits, hit points, spell save DC or&lt;br&gt;resources, or give attacks against them Advantage, read from Boosts and their&lt;br&gt;conditions. A drawback every wearer pays is under Drawbacks for every wearer. Off ignores them.</content>
+	<content contentuid="he291a508gaf60g5be1g9111g0506a3af16ad" version="1">Combat penalty</content>
+	<content contentuid="h3be6c840g8b7fg5e7egba5cg73bbfe9772fb" version="3">Marks items that worsen this character's combat stats (attack rolls, saves,&lt;br&gt;checks, damage, hit points, spell save DC and the like), when the drawback&lt;br&gt;depends on the wearer, such as on their abilities, race or feats, or on what&lt;br&gt;else they wear.</content>
+	<content contentuid="hd15349bagfb34g5441g8191gc636920066ce" version="1">Combat bonuses</content>
+	<content contentuid="hebead0a7gad7dg5a9bg9348g331cce22f5fe" version="3">Marks items that would end a combat bonus (to attack rolls, saves, damage, hit&lt;br&gt;points and the like) from one of this character's passives or equipped items,&lt;br&gt;when its condition reads what the character wears. A worn item that keeps the bonus off is marked too.</content>
+	<content contentuid="he2735e53g1c03g5680gbe52g80517a1403f6" version="1">Drawbacks for every wearer</content>
+	<content contentuid="h0da3ff49g3060g54e3gb998ge4fba9be6e4e" version="2">Mark as</content>
+	<content contentuid="hbdae17edg5362g5b49gb480gedc1c39048e1" version="2">Marks items with a drawback that anyone wearing them pays, whatever their&lt;br&gt;abilities or race. Off by default, since such a drawback is part of the item rather than a poor fit&lt;br&gt;for this character.</content>
+	<content contentuid="h47af2550gb806g5278g80a9g637fecefb849" version="1">Stealth Disadvantage</content>
+	<content contentuid="h63501ba8ga058g5827g814bg2722b808608f" version="1">Marks armor that gives Disadvantage on Stealth checks. Medium Armor Master removes the mark wherever it removes the Disadvantage.</content>
+	<content contentuid="h313de921g4b24g5e6dgb435gb8a135ac22ec" version="1">Other drawbacks</content>
+	<content contentuid="h5db30849gcc3dg51c5g8fa9g1e2d4db7f151" version="2">Marks items whose Boosts or passives worsen the AC, movement, ability scores,&lt;br&gt;rolls, damage, hit points or resources of anyone wearing them, such as a mod's&lt;br&gt;attack roll penalty on heavy armor.</content>
+	<content contentuid="hd864e04bg44f9g57cbg8d4cgc1b357a46604" version="1">Looks</content>
+	<content contentuid="hb7a906fbg8067g5ac1g813eg6cb39166fc00" version="3">Choose how each rating marks an item, so Bad, Not Ideal, and Good items stand out at a glance.&lt;br&gt;&lt;br&gt;Glow, Badge, and Dot use the rating's Color: Glow is a band fading in from the slot's edge, Badge is a small icon on a dark background in one corner, and Dot is a small dot in the opposite corner. Dim darkens the item, and Gray drains most of its color, rarity border included. On equipped items, Bad and Not Ideal show only the badge, and Good shows nothing.</content>
+	<content contentuid="hf29b31bcge345g505egaf48g355b0dc659f7" version="1">Bad</content>
+	<content contentuid="h9d31eeadg9c99g5e3agb721g1066b1b30f1c" version="2">Glow</content>
+	<content contentuid="hd8a9c39dg32d5g5c93g9ba0gbb848ba426c5" version="1">Badge</content>
+	<content contentuid="hfee0750dg2b0eg565fg811cgd4138f632fbc" version="1">Dot</content>
+	<content contentuid="h712b9bc6ge42ag5fa3g9337g859d90fb3f75" version="1">Dim</content>
+	<content contentuid="h3345f2fcg7146g5c46ga66agcc3326758561" version="2">Gray</content>
+	<content contentuid="h1f3b6ea3g4191g544agb5f9g32b65a0d4c1a" version="2">Color</content>
+	<content contentuid="h897bba2bg8f7ag58c3g896fgf29beb2e8e87" version="1">Red</content>
+	<content contentuid="he6b6d7dcge996g5c08g8668g63eb213d5066" version="1">Orange</content>
+	<content contentuid="h16ac2be2gaadfg5adegaefaga4e5d003edfe" version="1">Yellow</content>
+	<content contentuid="h8245f279g7408g5158g8cb3g1ddc81484a8c" version="1">Green</content>
+	<content contentuid="h4bc0625bg0838g53c6gb496gefdbe13a0553" version="1">Blue</content>
+	<content contentuid="h1e824f7egaff2g5642gb04dg379474f2b9d9" version="1">Purple</content>
+	<content contentuid="hddf763fcga77fg5cf0g8ffcg94c663d1120c" version="1">Badge icon</content>
+	<content contentuid="hf3a41ee4g5113g5690gb234ge505fd11e707" version="1">Cross</content>
+	<content contentuid="h196cb8f6g73edg54a2ga4dfgd416bed9ce1f" version="1">Thin cross</content>
+	<content contentuid="h3b1f659fg92fbg55b1g88d7gfcae70170346" version="1">Skull</content>
+	<content contentuid="h35d11351gccd3g57bbg87e7gdf499df67fcc" version="2">Not Ideal</content>
+	<content contentuid="h9941a315gb3f0g59b0gbf41g63c331bad00f" version="2">Glow</content>
+	<content contentuid="h76b443fbg4aa1g5188g9659g5e479b9cc14d" version="1">Badge</content>
+	<content contentuid="h94275638g1faag52aaga6edge955921c5c72" version="1">Dot</content>
+	<content contentuid="heb9c1e8dgb165g5c7ega673gb2febfdc5e8a" version="1">Dim</content>
+	<content contentuid="ha3eee50bg6714g5442gad45g6c765d5b9283" version="2">Gray</content>
+	<content contentuid="h928bd9b4g6825g5f03g9ee3g48226ce87d7f" version="2">Color</content>
+	<content contentuid="hd3c3624bg5c99g5895g8208gd7add45ea365" version="1">Badge icon</content>
+	<content contentuid="h45f920c8gc7d3g5b73g9604g14390e791e39" version="1">Warning</content>
+	<content contentuid="h9c30b88dgf797g55b0g8ee6g6bc219c2cbf9" version="1">Exclamation</content>
+	<content contentuid="h3ac37091ga5f3g5ccfg9696g2bf500bfe33a" version="1">Minus</content>
+	<content contentuid="hb3c2e581gd172g513cgb62eg209d26485a85" version="1">Good</content>
+	<content contentuid="h20e50b82g966cg5180g91f3gc9d1e29e3b31" version="2">Glow</content>
+	<content contentuid="h31e96792g1865g5229gaf79gdcec221cf5fb" version="1">Badge</content>
+	<content contentuid="hcc6da0f3g39a1g59e1g8435gb7de9f334ed0" version="1">Dot</content>
+	<content contentuid="he822460dg6367g54e9gb553g2485023dc9a4" version="2">Color</content>
+	<content contentuid="h501010c4ge2ecg5442g81d2g65629cf6cc7a" version="1">Badge icon</content>
+	<content contentuid="ha4bfe942g75b9g57a5gaa54ge6a7d8f9b798" version="1">Check</content>
+	<content contentuid="h2cf432f5g5f8eg5da6gb7c8gc44a232a279b" version="1">Thin check</content>
+	<content contentuid="h13f8c69fg1355g5afcg9c1egd0e6eb467a0e" version="1">Glowing check</content>
+	<content contentuid="hde9e58c5gfa38g5ad9gb4cegc661b8da8e61" version="1">Star</content>
+	<content contentuid="hb62415adge2b0g516egbd18g2b0a79596f55" version="1">Placement</content>
+	<content contentuid="hda9ca770g02f2g5382gaac0g7a7c96add6d3" version="1">Badge and dot corners</content>
+	<content contentuid="h4eb96423ge2ccg5d9bg9408g0a0daa265c36" version="1">Which corners the badge and the dot sit in, on equipped items too.</content>
+	<content contentuid="h74239e45g32f7g57cdg858cg5c5e0e070ef4" version="1">Badge top-left, Dot bottom-right</content>
+	<content contentuid="h156a78f2ga380g5aceg8de6g5cf1b93b9278" version="1">Badge bottom-right, Dot top-left</content>
+	<content contentuid="h0e01f205g365fg5ac8gab16g7800de3e887a" version="1">[1] for [2]</content>
+	<content contentuid="h5a8eaaf9ga78cg534ag94b3g525cfb7f1de6" version="1">Not proficient: [1]</content>
+	<content contentuid="hb77ab0edg859dg50begae80g4d65ebe90676" version="1">Not proficient until bound: [1]</content>
+	<content contentuid="h26d47b54gf844g5825g9617g4d5dd8670533" version="1">Ends [1]</content>
+	<content contentuid="ha292c828ga613g57dfga38cgb2a6c7188f97" version="1">Ends the AC bonus from [1]</content>
+	<content contentuid="h361b1f00ge867g5538g9f8ag77feba693305" version="1">Ability penalty</content>
+	<content contentuid="he407aa03g08cag5fd9g916dgd713c4d28abe" version="1">Attack roll penalty</content>
+	<content contentuid="hfa1627bbg4597g52a5g9e17gbffdb87cd45a" version="1">Saving throw penalty</content>
+	<content contentuid="hbd970093geae2g5f20ga18dg18f86a43e62f" version="1">Ability check penalty</content>
+	<content contentuid="h82cbdfa0g2a9dg5e2bgaaa6g8ed2c6c66c0a" version="1">Initiative penalty</content>
+	<content contentuid="h7222e905gaa9bg560aga9f3g76f238b51d70" version="1">Damage penalty</content>
+	<content contentuid="h432cb778g19adg59b4gb4e9g220af13decac" version="1">Critical hit penalty</content>
+	<content contentuid="hd30e129eg9410g5a13g9bf1gb7169c3c0905" version="1">Takes more damage</content>
+	<content contentuid="hb040668ag409eg5f82gaca0g278a1757cf5a" version="1">Easier to hit</content>
+	<content contentuid="he4676ff0g8b2cg5aaega500g1fb25b21bb69" version="1">Fewer resources</content>
+	<content contentuid="h7b03fd7dg533cg5038g8f6bg3820dcb56be5" version="1">Hit point penalty</content>
+	<content contentuid="h3bc23d1bg0739g5c55gb739g389b2a74cebb" version="1">Spell save DC penalty</content>
+	<content contentuid="he7e4a66dg8fd1g536dgb2f1gdf9cfb5552f4" version="1">Dexterity bonus capped at +[1]</content>
+	<content contentuid="h91718ff2gf8a6g55c6g916cgf7cc6de6ab9d" version="1">[1]: [2]</content>
+</contentList>

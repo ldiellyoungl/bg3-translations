@@ -1,0 +1,54 @@
+Proficiency at a Glance
+Copyright (C) 2026 InfiniteGeek
+
+Proficiency at a Glance's own Lua and XAML are licensed under the GNU General
+Public License, version 3 (see LICENSE). The game's own templates copied into
+the mod, listed below, are not covered by that licence.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, version 3 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Larian Studios' templates
+-------------------------
+
+Mods/ProficiencyAtAGlance/GUI/Library/Lib_Keyboard.xaml replaces the game's own
+file of that name. Besides the mod's own markup, it holds templates and styles
+copied from the game's XAML, verbatim or with small changes that the comment
+above each copy names. Those copies belong to Larian Studios and are distributed
+under Larian's modding terms, not under the GPLv3.
+
+From Public/Game/GUI/Library/DataTemplates.xaml:
+- the game's inventory slot (its presenter, the presenter's style and three
+  triggers), inside Template.InventorySlot
+- BaseInvContainerItemStyle
+- PaG.InvContainerItemTemplate (the template of BaseInvContainerItemStyle)
+- InvContainerListBoxItemStyle
+
+From Mods/MainUI/GUI/Pages/Trade.xaml:
+- PaG.TradeItemTemplate (the template of the trade list's ListItemStyle)
+- PaG.TradeItemStyle (the trade list's ListItemStyle)
+
+From Public/Game/GUI/Library/CharacterSheetTemplates_k.xaml:
+- PaG.InvContainerItemStyle (from InvContainerItemStyle)
+- PaG.InvWorldContainerItemStyle (from InvWorldContainerItemStyle)
+- PaG.SingleClickItemStyle (from SingleClickBaseInvContainerItemStyle)
+- CharacterInventoryTemplate, PopOutInventoryTemplate, ContainerInventoryTemplate
+  and PartyCharacterInventoryTemplate, each with its ItemContainerStyle pointed
+  at the mod's copy
+- PartyHolderStyle, unchanged, so that it uses the mod's
+  PartyCharacterInventoryTemplate
+- PaG.EquipmentSlotStyle (the game's equipment slot style, plus the mod's overlay)
+- HelmetEQTemplate
+- CharacterEquipmentTemplate
+
+The badge masks (PaG.Mask.*) refer to the game's own icon art by path. The mod
+includes none of that art.
